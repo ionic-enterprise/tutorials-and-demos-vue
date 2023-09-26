@@ -17,7 +17,23 @@ let authResult: AuthResult | null = null;
 const { clearSession, getSession, setSession } = useSession();
 
 const getAuthResult = async (): Promise<AuthResult | null> => {
-  return getSession();
+  let authResult = await getSession();
+  if (authResult && (await AuthConnect.isAccessTokenExpired(authResult))) {
+    authResult = await refreshAuthResult(authResult);
+  }
+  return authResult;
+};
+
+const refreshAuthResult = async (authResult: AuthResult): Promise<AuthResult | null> => {
+  let newAuthResult: AuthResult | null = null;
+  if (await AuthConnect.isRefreshTokenAvailable(authResult)) {
+    try {
+      newAuthResult = await AuthConnect.refreshSession(provider, authResult);
+    } catch (err) {
+      null;
+    }
+  }
+  return newAuthResult;
 };
 
 const saveAuthResult = async (authResult: AuthResult | null): Promise<void> => {
