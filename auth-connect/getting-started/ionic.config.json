@@ -1,0 +1,7 @@
+{
+  "name": "getting-started-ac",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}

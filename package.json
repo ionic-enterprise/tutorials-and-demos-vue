@@ -1,5 +1,5 @@
 {
-  "name": "auth-connect-tutorials-ng",
+  "name": "tutorials-and-demos-vue",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,7 @@
   },
   "keywords": [],
   "author": {
-    "name": "Ionic Customer Success Team, dude",
+    "name": "Ionic Customer Success Team",
     "email": "support@ionic.io"
   },
   "license": "MIT",
