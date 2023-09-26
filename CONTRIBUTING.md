@@ -20,8 +20,7 @@ Typically, a dependency is required within a single project at a time. As such, 
 The best way to run these are to `cd` into the package and run them from that package's root. For example:
 
 ```bash
-cd auth-connect/getting-started
-ionic generate page foo
 pnpm build
+cd auth-connect/getting-started
 npx cap open ios
 ```

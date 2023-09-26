@@ -1,4 +1,4 @@
-# Tutorials and Demos for Angular
+# Tutorials and Demos for Vue
 
 This is a collection of tutorials and demos.
 
