@@ -43,7 +43,7 @@ const isReady: Promise<void> = AuthConnect.setup({
 export const useAuthentication = () => ({
   isAuthenticated: async (): Promise<boolean> => {
     const authResult = await getAuthResult();
-    return !!authResult;
+    return !!authResult && (await AuthConnect.isAccessTokenAvailable(authResult));
   },
   login: async (): Promise<void> => {
     await isReady;

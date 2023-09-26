@@ -4,12 +4,13 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "vue-tsc && vite build && cap sync",
+    "dev": "vite",
+    "lint": "eslint",
     "preview": "vite preview",
-    "test:e2e": "cypress run",
-    "test:unit": "vitest",
-    "lint": "eslint"
+    "test": "vitest run",
+    "test:cov": "vitest run --coverage",
+    "test:dev": "vitest"
   },
   "dependencies": {
     "@capacitor/android": "~5.4.1",
@@ -21,26 +22,26 @@
     "@capacitor/preferences": "~5.0.6",
     "@capacitor/status-bar": "5.0.6",
     "@ionic-enterprise/auth": "~5.0.8",
-    "@ionic/vue": "^7.0.0",
-    "@ionic/vue-router": "^7.0.0",
-    "ionicons": "^7.0.0",
-    "vue": "^3.2.45",
-    "vue-router": "^4.1.6"
+    "@ionic/vue": "^7.4.2",
+    "@ionic/vue-router": "^7.4.2",
+    "ionicons": "^7.1.2",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@capacitor/cli": "5.4.1",
-    "@vitejs/plugin-legacy": "^4.0.2",
-    "@vitejs/plugin-vue": "^4.0.0",
-    "@vue/eslint-config-typescript": "^11.0.2",
-    "@vue/test-utils": "^2.3.0",
-    "cypress": "^12.7.0",
-    "eslint": "^8.35.0",
-    "eslint-plugin-vue": "^9.9.0",
+    "@vitejs/plugin-legacy": "^4.1.1",
+    "@vitejs/plugin-vue": "^4.3.4",
+    "@vue/eslint-config-typescript": "^12.0.0",
+    "@vue/test-utils": "^2.4.1",
+    "cypress": "^13.3.0",
+    "eslint": "^8.50.0",
+    "eslint-plugin-vue": "^9.17.0",
     "jsdom": "^22.1.0",
-    "typescript": "^5.1.6",
-    "vite": "^4.3.9",
-    "vitest": "^0.32.2",
-    "vue-tsc": "^1.0.24"
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vitest": "^0.34.6",
+    "vue-tsc": "^1.8.15"
   },
   "description": "An Ionic project"
 }

@@ -18,7 +18,11 @@ const { clearSession, getSession, setSession } = useSession();
 
 const getAuthResult = async (): Promise<AuthResult | null> => {
   let authResult = await getSession();
-  if (authResult && (await AuthConnect.isAccessTokenExpired(authResult))) {
+  if (
+    authResult &&
+    (await AuthConnect.isAccessTokenAvailable(authResult)) &&
+    (await AuthConnect.isAccessTokenExpired(authResult))
+  ) {
     authResult = await refreshAuthResult(authResult);
   }
   return authResult;
@@ -33,6 +37,7 @@ const refreshAuthResult = async (authResult: AuthResult): Promise<AuthResult | n
       null;
     }
   }
+  await saveAuthResult(newAuthResult);
   return newAuthResult;
 };
 
@@ -59,7 +64,7 @@ const isReady: Promise<void> = AuthConnect.setup({
 export const useAuthentication = () => ({
   isAuthenticated: async (): Promise<boolean> => {
     const authResult = await getAuthResult();
-    return !!authResult;
+    return !!authResult && (await AuthConnect.isAccessTokenAvailable(authResult));
   },
   login: async (): Promise<void> => {
     await isReady;
