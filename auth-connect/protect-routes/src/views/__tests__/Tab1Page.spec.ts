@@ -40,10 +40,25 @@ describe('Tab1Page.vue', () => {
     expect(isAuthenticated).toHaveBeenCalledOnce();
   });
 
+  it('checks for an access token', async () => {
+    const { getAccessToken } = useAuthentication();
+    await mountView();
+    await flushPromises();
+    expect(getAccessToken).toHaveBeenCalledOnce();
+  });
+
   describe('when logged in', () => {
     beforeEach(() => {
-      const { isAuthenticated } = useAuthentication();
+      const { getAccessToken, isAuthenticated } = useAuthentication();
+      (getAccessToken as Mock).mockResolvedValue('i-am-an-access-token');
       (isAuthenticated as Mock).mockResolvedValue(true);
+    });
+
+    it('displays the token', async () => {
+      const wrapper = await mountView();
+      await flushPromises();
+      const token = wrapper.find('pre');
+      expect(token.text()).toBe('i-am-an-access-token');
     });
 
     it('displays the logout button', async () => {
@@ -64,20 +79,39 @@ describe('Tab1Page.vue', () => {
       expect(logout).toHaveBeenCalledOnce();
     });
 
+    it('re-checks the access token', async () => {
+      const { getAccessToken } = useAuthentication();
+      const wrapper = await mountView();
+      await flushPromises();
+      const button = wrapper.findComponent(IonButton);
+      await button.trigger('click');
+      await flushPromises();
+      expect(getAccessToken).toHaveBeenCalledTimes(2);
+    });
+
     it('re-checks the auth status', async () => {
       const { isAuthenticated } = useAuthentication();
       const wrapper = await mountView();
       await flushPromises();
       const button = wrapper.findComponent(IonButton);
       await button.trigger('click');
+      await flushPromises();
       expect(isAuthenticated).toHaveBeenCalledTimes(2);
     });
   });
 
   describe('when logged out', () => {
     beforeEach(() => {
-      const { isAuthenticated } = useAuthentication();
+      const { getAccessToken, isAuthenticated } = useAuthentication();
+      (getAccessToken as Mock).mockResolvedValue(undefined);
       (isAuthenticated as Mock).mockResolvedValue(false);
+    });
+
+    it('does not display a token', async () => {
+      const wrapper = await mountView();
+      await flushPromises();
+      const token = wrapper.find('pre');
+      expect(token.text()).toBe('');
     });
 
     it('displays the login button', async () => {
@@ -98,12 +132,23 @@ describe('Tab1Page.vue', () => {
       expect(login).toHaveBeenCalledOnce();
     });
 
+    it('re-checks the access token', async () => {
+      const { getAccessToken } = useAuthentication();
+      const wrapper = await mountView();
+      await flushPromises();
+      const button = wrapper.findComponent(IonButton);
+      await button.trigger('click');
+      await flushPromises();
+      expect(getAccessToken).toHaveBeenCalledTimes(2);
+    });
+
     it('re-checks the auth status', async () => {
       const { isAuthenticated } = useAuthentication();
       const wrapper = await mountView();
       await flushPromises();
       const button = wrapper.findComponent(IonButton);
       await button.trigger('click');
+      await flushPromises();
       expect(isAuthenticated).toHaveBeenCalledTimes(2);
     });
   });

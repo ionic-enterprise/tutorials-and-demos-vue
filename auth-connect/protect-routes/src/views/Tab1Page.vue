@@ -14,6 +14,8 @@
 
       <ion-button v-if="authenticated" @click="logoutClicked">Logout</ion-button>
       <ion-button v-else @click="loginClicked">Login</ion-button>
+
+      <pre>{{ accessToken }}</pre>
     </ion-content>
   </ion-page>
 </template>
@@ -23,11 +25,13 @@ import { IonButton, IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from 
 import { useAuthentication } from '@/composables/authentication';
 import { ref } from 'vue';
 
-const { isAuthenticated, login, logout } = useAuthentication();
+const { getAccessToken, isAuthenticated, login, logout } = useAuthentication();
+const accessToken = ref<string>();
 const authenticated = ref<boolean>();
 
 const checkAuthentication = async (): Promise<void> => {
   authenticated.value = await isAuthenticated();
+  accessToken.value = await getAccessToken();
 }
 
 const loginClicked = async (): Promise<void> => {

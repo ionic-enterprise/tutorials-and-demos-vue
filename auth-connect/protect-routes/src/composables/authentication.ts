@@ -41,6 +41,11 @@ const isReady: Promise<void> = AuthConnect.setup({
 });
 
 export const useAuthentication = () => ({
+  getAccessToken: async (): Promise<string | undefined> => {
+    await isReady;
+    const res = await getAuthResult();
+    return res?.accessToken;
+  },
   isAuthenticated: async (): Promise<boolean> => {
     const authResult = await getAuthResult();
     return !!authResult && (await AuthConnect.isAccessTokenAvailable(authResult));

@@ -17,6 +17,22 @@ describe('useAuthentication', () => {
     expect(useAuthentication()).toBeTruthy();
   });
 
+  describe('get access token', async () => {
+    it('resolves undefined if the user is not logged in', () => {
+      const { getAccessToken } = useAuthentication();
+      const { getSession } = useSession();
+      (getSession as Mock).mockResolvedValue(null);
+      expect(getAccessToken()).resolves.toBeUndefined();
+    });
+
+    it('resolves the access token if the user is logged in', () => {
+      const { getAccessToken } = useAuthentication();
+      const { getSession } = useSession();
+      (getSession as Mock).mockResolvedValue(testAuthResult);
+      expect(getAccessToken()).resolves.toBe('test-access-token');
+    });
+  });
+
   describe('is authenticated', () => {
     it('resolves false if there is no stored auth result', async () => {
       const { isAuthenticated } = useAuthentication();
