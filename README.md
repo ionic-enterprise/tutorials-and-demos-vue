@@ -22,7 +22,7 @@ The `identity-vault` collection contains applications whose primary purpose is t
 
 ### Demos
 
-The `demos` collection contain applications whose primary purpose does not fit into any of the other package collections. At this time this area is under construction.
+The `demos` collection contain applications whose primary purpose does not fit into any of the other package collections.
 
 ## Building
 
