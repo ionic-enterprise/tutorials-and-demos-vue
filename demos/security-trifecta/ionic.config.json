@@ -1,0 +1,7 @@
+{
+  "name": "security-trifecta-vue",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
