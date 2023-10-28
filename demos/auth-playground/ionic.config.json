@@ -1,0 +1,7 @@
+{
+  "name": "auth-playground-vue",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
