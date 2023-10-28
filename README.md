@@ -26,18 +26,65 @@ The `demos` collection contain applications whose primary purpose does not fit i
 
 ## Building
 
+### Prerequisites
+
 In order to install and build from this repo, you will need:
 
 - [pnpm](https://pnpm.io/)
-- Access to [Auth Connect](https://ionic.io/docs/auth-connect), [Identity Vault](https://ionic.io/docs/identity-vault), and [Secure Storage](https://ionic.io/docs/secure-storage).
+- Make sure you have access to Auth Connect, Identity Vault, and Secure Storage. Also, make sure you have previously registered an application using the [`ionic enterprise register`](https://ionicframework.com/docs/cli/commands/enterprise-register) command (which generates an .npmrc file). Copy the generated file to the root of this project.
 
-If you do not have access to all three products, you can still install and build any given tutorial or demo by copying it to its own directory somewhere.
+If you do not have access to all three solutions, you may be able to build some of the demos by copying them to their own directory and building from there. See the [Build a Stand-alone Project](#build-a-stand-alone-project) section for details.
 
-To build:
+### Build All
 
-- Clone the repo and change directory into it.
-- Copy the `.npmrc` file that contains your Ionic Enterprise key (see our [registration docs](https://ionic.io/docs/enterprise-starter/enterprise-key) for details).
-- `pnpm install`
+If you have purchased access to all three solutions in the Security Trifecta, it is easiest to build all of the demos and tutorials as a set. To do so:
+
+- Clone this repo
+- `cd tutorials-and-demos-vue`
+- Copy your `.npmrc` file to the root of this project if you have not done so yet (see above).
+- `pnpm i`
+- `pnpm test` (optional)
 - `pnpm build`
 
-To run any given project using the development server, use `pnpm --filter [project] start`. For example: `pnpm --filter ./auth-connect/getting-started start`
+You are now ready to run any of the individual demos following the instructions in the next section.
+
+### Running a Package
+
+All projects contain the following scripts:
+
+- `dev`: Run the package in the development server so it can be accessed via the web browser.
+- `android`: Load the package in Android Studio for deploying to a device or simulator.
+- `ios`: Load the package in Xcode for deploying to a device or simulator.
+
+Use the `--filter` option to specify a package. For example, if you are interested in running `tea-taster` use any of the following commands:
+
+- `pnpm --filter ./demos/tea-taster dev`
+- `pnpm --filter ./demos/tea-taster android`
+- `pnpm --filter ./demos/tea-taster ios`
+
+For more advanced uses of the Ionic or Capacitor CLIs you can also change to the package's directory and run them from there.
+
+### Build a Stand-alone Project
+
+If you do not have access to the full suite of `@ionic-enterprise` packages used by these demos, you may still be able to build specific demos. For example, if you only have access to Auth Connect, you can build the demos that _only_ depend on Auth Connect.
+
+Here is an example of doing this for the `tea-taster-iv-ac` demo, which uses Identity Vault and Auth Connect:
+
+- Clone this repo
+- `cd tutorials-and-demos-vue`
+- `cp -r demos/tea-taster-iv-ac ..`
+- `cd ../tea-taster-iv-ac`
+- Copy your `.npmrc` file. Some demos, such as the base `tea-taster` demo, do not depend on any `@ionic-enterprise` packages. For such items, you can skip this step.
+- `pnpm i`
+- `pnpm build`
+- `pnpm dev`
+- etc...
+
+## Credentials
+
+Some of these applications use live backend APIs that require a login. In such cases, unless you have been given your own credentials, please use the following:
+
+- **email:** `test@ionic.io`
+- **password:** `Ion54321`
+
+Happy Coding!

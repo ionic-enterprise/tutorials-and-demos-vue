@@ -4,8 +4,10 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
+    "android": "cap open android",
     "build": "vue-tsc && vite build && cap sync",
     "dev": "vite",
+    "ios": "cap open ios",
     "lint": "eslint",
     "preview": "vite preview",
     "test": "vitest run",
