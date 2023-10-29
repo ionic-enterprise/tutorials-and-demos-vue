@@ -1,9 +1,11 @@
 import { useSessionVault } from '@/composables/session-vault';
+import { Capacitor } from '@capacitor/core';
 import { AuthConnect, AuthResult, CognitoProvider, ProviderOptions, TokenType } from '@ionic-enterprise/auth';
-import { isPlatform } from '@ionic/vue';
 
-const isMobile = isPlatform('hybrid');
-const url = isMobile ? 'msauth://auth-action-complete' : 'http://localhost:8100/auth-action-complete';
+const { clear, getValue, setValue } = useSessionVault();
+
+const isMobile = Capacitor.getPlatform() !== 'web';
+const url = isMobile ? 'msauth://auth-action-complete' : 'http://localhost:8100/login';
 
 const options: ProviderOptions = {
   clientId: '64p9c53l5thd5dikra675suvq9',
@@ -17,6 +19,7 @@ const options: ProviderOptions = {
 const provider = new CognitoProvider();
 
 let initializing: Promise<void> | undefined;
+const authResultKey = 'auth-result';
 
 const performInit = async (): Promise<void> => {
   await AuthConnect.setup({
@@ -34,25 +37,23 @@ const performInit = async (): Promise<void> => {
 
 const performRefresh = async (authResult: AuthResult): Promise<AuthResult | undefined> => {
   let newAuthResult: AuthResult | undefined;
-  const { clearSession, setSession } = useSessionVault();
 
   if (await AuthConnect.isRefreshTokenAvailable(authResult)) {
     try {
       newAuthResult = await AuthConnect.refreshSession(provider, authResult);
-      setSession(newAuthResult);
+      setValue(authResultKey, newAuthResult);
     } catch (err) {
-      await clearSession();
+      await clear();
     }
   } else {
-    await clearSession();
+    await clear();
   }
 
   return newAuthResult;
 };
 
-const getAuthResult = async (): Promise<AuthResult | null | undefined> => {
-  const { getSession } = useSessionVault();
-  let authResult = await getSession();
+const getAuthResult = async (): Promise<AuthResult | undefined> => {
+  let authResult = (await getValue(authResultKey)) as AuthResult | undefined;
   if (authResult && (await AuthConnect.isAccessTokenExpired(authResult))) {
     authResult = await performRefresh(authResult);
   }
@@ -76,12 +77,11 @@ export const useAuth = () => {
     },
     getAccessToken: async (): Promise<string | void> => {
       await initialize();
-      const authResult = await getAuthResult();
+      const authResult = (await getAuthResult()) as AuthResult | undefined;
       return authResult?.accessToken;
     },
     getUserEmail: async (): Promise<string | void> => {
-      const { getSession } = useSessionVault();
-      const authResult = await getSession();
+      const authResult = (await getValue(authResultKey)) as AuthResult | undefined;
       if (authResult) {
         const { email } = (await AuthConnect.decodeToken(TokenType.id, authResult)) as any;
         return email;
@@ -90,16 +90,14 @@ export const useAuth = () => {
     login: async (): Promise<void> => {
       await initialize();
       const authResult = await AuthConnect.login(provider, options);
-      const { setSession } = useSessionVault();
-      setSession(authResult);
+      setValue(authResultKey, authResult);
     },
     logout: async () => {
       await initialize();
-      const { clearSession, getSession } = useSessionVault();
-      const authResult = await getSession();
+      const authResult = (await getValue(authResultKey)) as AuthResult;
       if (authResult) {
         await AuthConnect.logout(provider, authResult);
-        await clearSession();
+        await clear();
       }
     },
   };
