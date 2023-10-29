@@ -1,8 +1,8 @@
-import { Auth0Provider, AuthConnect, AuthResult, ProviderOptions } from '@ionic-enterprise/auth';
-import { isPlatform } from '@ionic/vue';
 import { useSession } from '@/composables/session';
+import { Capacitor } from '@capacitor/core';
+import { Auth0Provider, AuthConnect, AuthResult, ProviderOptions } from '@ionic-enterprise/auth';
 
-const isNative = isPlatform('hybrid');
+const isNative = Capacitor.isNativePlatform();
 const provider = new Auth0Provider();
 const authOptions: ProviderOptions = {
   audience: 'https://io.ionic.demo.ac',
