@@ -80,6 +80,13 @@ Here is an example of doing this for the `tea-taster-iv-ac` demo, which uses Ide
 - `pnpm dev`
 - etc...
 
+## Development Workflow
+
+To develop any if the projects within the mono-repo, use the `--filter` option with a couple of standard scripts. For example, to work on the `tea-taster` demo, open a couple of terminal sessions and run the following commands:
+
+- `pnpm --filter ./demos/tea-taster dev`
+- `pnpm --filter ./demos/tea-taster test:dev`
+
 ## Credentials
 
 Some of these applications use live backend APIs that require a login. In such cases, unless you have been given your own credentials, please use the following:
