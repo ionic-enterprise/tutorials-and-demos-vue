@@ -4,7 +4,8 @@
     <v-card-subtitle data-testid="subtitle">Ionic Security Trifecta Demo</v-card-subtitle>
     <v-card-text>
       <v-form>
-        <v-btn block append-icon="mdi-aws" color="aws" @click="doLogin" data-testid="signin-button">Sign In</v-btn>
+        <v-btn block append-icon="mdi-login" color="primary" @click="doLogin" data-testid="signin-button">Sign
+          In</v-btn>
       </v-form>
       <v-alert class="mt-3" v-model="signinError" type="error" data-testid="signin-error">
         Invalid Credentials. Please try again.

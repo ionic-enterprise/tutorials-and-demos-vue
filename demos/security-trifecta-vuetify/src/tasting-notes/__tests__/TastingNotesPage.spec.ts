@@ -9,6 +9,7 @@ import TastingNoteEditor from '@/tasting-notes/components/TastingNoteEditor.vue'
 import TastingNoteViewer from '@/tasting-notes/components/TastingNoteViewer.vue';
 import { nextTick } from 'vue';
 
+vi.mock('@/auth/composables/auth');
 vi.mock('@/composables/vault-factory');
 vi.mock('@ionic-enterprise/secure-storage');
 vi.mock('@/tasting-notes/composables/tasting-notes');

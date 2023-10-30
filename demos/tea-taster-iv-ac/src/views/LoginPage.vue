@@ -8,22 +8,16 @@
         </ion-card-header>
         <ion-card-content>
           <div class="auth-button-area">
-            <ion-button expand="block" color="aws" @click="signinClicked()" data-testid="signin-button">
-              <ion-icon slot="end" :icon="logoAmazon"></ion-icon>
-              Sign In with AWS
+            <ion-button expand="block" color="primary" @click="signinClicked()" data-testid="signin-button">
+              <ion-icon slot="end" :icon="logInOutline"></ion-icon>
+              Sign In
             </ion-button>
           </div>
         </ion-card-content>
       </ion-card>
     </ion-content>
-    <ion-toast
-      :isOpen="loginFailed"
-      message="Login failed!"
-      color="danger"
-      :duration="3000"
-      position="middle"
-      @didDismiss="loginFailed = false"
-    ></ion-toast>
+    <ion-toast :isOpen="loginFailed" message="Login failed!" color="danger" :duration="3000" position="middle"
+      @didDismiss="loginFailed = false"></ion-toast>
   </ion-page>
 </template>
 
@@ -41,7 +35,7 @@ import {
   IonToast,
 } from '@ionic/vue';
 import { ref } from 'vue';
-import { logoAmazon } from 'ionicons/icons';
+import { logInOutline } from 'ionicons/icons';
 import { useRouter } from 'vue-router';
 import { useAuth } from '@/composables/auth';
 

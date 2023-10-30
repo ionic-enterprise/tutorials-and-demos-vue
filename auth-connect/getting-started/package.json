@@ -36,7 +36,7 @@
     "@vitejs/plugin-vue": "^4.4.0",
     "@vue/eslint-config-typescript": "^12.0.0",
     "@vue/test-utils": "^2.4.1",
-    "cypress": "^13.3.3",
+    "cypress": "^13.4.0",
     "eslint": "^8.52.0",
     "eslint-plugin-vue": "^9.18.1",
     "jsdom": "^22.1.0",

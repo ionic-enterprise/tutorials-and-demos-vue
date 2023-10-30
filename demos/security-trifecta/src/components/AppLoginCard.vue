@@ -5,29 +5,19 @@
       <ion-card-subtitle> Secure Storage Demo Application (Vue) </ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      <ion-select
-        v-if="displayUnlockOptions"
-        label="Session Locking"
-        v-model="unlockMode"
-        data-testid="unlock-opt-select"
-      >
+      <ion-select v-if="displayUnlockOptions" label="Session Locking" v-model="unlockMode"
+        data-testid="unlock-opt-select">
         <ion-select-option v-for="unlockMode of unlockModes" :value="unlockMode.mode" :key="unlockMode.mode">{{
           unlockMode.label
         }}</ion-select-option>
       </ion-select>
-      <ion-button expand="full" color="aws" @click="signinClicked()" data-testid="signin-button">
-        <ion-icon slot="end" :icon="logoAmazon"></ion-icon>
-        Sign In with AWS
+      <ion-button expand="full" color="primary" @click="signinClicked()" data-testid="signin-button">
+        <ion-icon slot="end" :icon="logInOutline"></ion-icon>
+        Sign In
       </ion-button>
     </ion-card-content>
-    <ion-toast
-      :isOpen="loginFailed"
-      message="Login failed!"
-      color="danger"
-      :duration="3000"
-      position="middle"
-      @didDismiss="loginFailed = false"
-    ></ion-toast>
+    <ion-toast :isOpen="loginFailed" message="Login failed!" color="danger" :duration="3000" position="middle"
+      @didDismiss="loginFailed = false"></ion-toast>
     <ion-loading :isOpen="authenticating" message="Authenticating..."></ion-loading>
   </ion-card>
 </template>
@@ -49,7 +39,7 @@ import {
   IonSelectOption,
   IonToast,
 } from '@ionic/vue';
-import { logoAmazon } from 'ionicons/icons';
+import { logInOutline } from 'ionicons/icons';
 import { ref } from 'vue';
 
 const { canUseLocking, setUnlockMode } = useSessionVault();

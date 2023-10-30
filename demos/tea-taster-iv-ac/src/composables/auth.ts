@@ -1,20 +1,20 @@
 import { useSessionVault } from '@/composables/session-vault';
-import { AuthConnect, AuthResult, CognitoProvider, ProviderOptions } from '@ionic-enterprise/auth';
+import { Auth0Provider, AuthConnect, AuthResult, ProviderOptions } from '@ionic-enterprise/auth';
 import { isPlatform } from '@ionic/vue';
 
 const isMobile = isPlatform('hybrid');
 const url = isMobile ? 'msauth://auth-action-complete' : 'http://localhost:8100/auth-action-complete';
 
 const options: ProviderOptions = {
-  clientId: '64p9c53l5thd5dikra675suvq9',
-  discoveryUrl: 'https://cognito-idp.us-east-2.amazonaws.com/us-east-2_YU8VQe29z/.well-known/openid-configuration',
+  audience: 'https://io.ionic.demo.ac',
+  clientId: 'yLasZNUGkZ19DGEjTmAITBfGXzqbvd00',
+  discoveryUrl: 'https://dev-2uspt-sz.us.auth0.com/.well-known/openid-configuration',
+  scope: 'openid email picture profile offline_access',
   logoutUrl: url,
   redirectUri: url,
-  scope: 'openid email profile',
-  audience: '',
 };
 
-const provider = new CognitoProvider();
+const provider = new Auth0Provider();
 
 let initializing: Promise<void> | undefined;
 
@@ -27,7 +27,7 @@ const performInit = async (): Promise<void> => {
     },
     web: {
       uiMode: 'popup',
-      authFlow: 'PKCE',
+      authFlow: 'implicit',
     },
   });
 };
