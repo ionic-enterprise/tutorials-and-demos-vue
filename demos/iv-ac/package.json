@@ -1,6 +1,6 @@
 {
-  "name": "tea-taster-iv-ac",
-  "description": "Tea Tasting Notes",
+  "name": "iv-ac",
+  "description": "Using IV and AC in an Ionic app",
   "author": {
     "name": "Ionic Customer Success Team",
     "email": "support@ionic.io",
