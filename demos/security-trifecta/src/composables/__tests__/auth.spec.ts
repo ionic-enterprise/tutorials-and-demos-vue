@@ -340,8 +340,8 @@ describe('useAuth', () => {
         clientId: 'yLasZNUGkZ19DGEjTmAITBfGXzqbvd00',
         discoveryUrl: 'https://dev-2uspt-sz.us.auth0.com/.well-known/openid-configuration',
         scope: 'openid email picture profile offline_access',
-        redirectUri: 'msauth://auth-action-complete',
-        logoutUrl: 'msauth://auth-action-complete',
+        redirectUri: 'io.ionic.acdemo://auth-action-complete',
+        logoutUrl: 'io.ionic.acdemo://auth-action-complete',
       });
     });
 

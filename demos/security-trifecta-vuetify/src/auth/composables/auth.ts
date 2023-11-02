@@ -5,7 +5,7 @@ import { Auth0Provider, AuthConnect, AuthResult, ProviderOptions, TokenType } fr
 const { clear, getValue, setValue } = useSessionVault();
 
 const isMobile = Capacitor.getPlatform() !== 'web';
-const url = isMobile ? 'msauth://auth-action-complete' : 'http://localhost:8100/login';
+const url = isMobile ? 'io.ionic.acdemo://auth-action-complete' : 'http://localhost:8100/login';
 
 const options: ProviderOptions = {
   audience: 'https://io.ionic.demo.ac',

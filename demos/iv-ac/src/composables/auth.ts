@@ -3,7 +3,7 @@ import { Auth0Provider, AuthConnect, AuthResult, ProviderOptions } from '@ionic-
 import { isPlatform } from '@ionic/vue';
 
 const isMobile = isPlatform('hybrid');
-const url = isMobile ? 'msauth://auth-action-complete' : 'http://localhost:8100/auth-action-complete';
+const url = isMobile ? 'io.ionic.acdemo://auth-action-complete' : 'http://localhost:8100/auth-action-complete';
 
 const options: ProviderOptions = {
   audience: 'https://io.ionic.demo.ac',
