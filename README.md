@@ -68,13 +68,13 @@ For more advanced uses of the Ionic or Capacitor CLIs you can also change to the
 
 If you do not have access to the full suite of `@ionic-enterprise` packages used by these demos, you may still be able to build specific demos. For example, if you only have access to Auth Connect, you can build the demos that _only_ depend on Auth Connect.
 
-Here is an example of doing this for the `tea-taster-iv-ac` demo, which uses Identity Vault and Auth Connect:
+Here is an example of doing this for the `iv-ac` demo, which uses Identity Vault and Auth Connect:
 
 - Clone this repo
 - `cd tutorials-and-demos-vue`
-- `cp -r demos/tea-taster-iv-ac ..`
-- `cd ../tea-taster-iv-ac`
-- Copy your `.npmrc` file. Some demos, such as the base `tea-taster` demo, do not depend on any `@ionic-enterprise` packages. For such items, you can skip this step.
+- `cp -r demos/iv-ac ..`
+- `cd ../iv-ac`
+- Copy your `.npmrc` file. Some demos, such as the `tea-taster` demo, do not depend on any `@ionic-enterprise` packages. For such items, you can skip this step.
 - `pnpm i`
 - `pnpm build`
 - `pnpm dev`
