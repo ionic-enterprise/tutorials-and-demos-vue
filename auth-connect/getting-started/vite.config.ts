@@ -18,7 +18,6 @@ export default defineConfig({
   },
   test: {
     clearMocks: true,
-    globals: true,
     environment: 'jsdom',
   },
 });

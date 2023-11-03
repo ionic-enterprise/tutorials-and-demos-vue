@@ -26,6 +26,7 @@ export default defineConfig({
     port: 8100,
   },
   test: {
+    clearMocks: true,
     deps: {
       inline: ['vuetify'],
     },

@@ -16,7 +16,7 @@ export default defineConfig({
     port: 8100,
   },
   test: {
-    globals: true,
+    clearMocks: true,
     environment: 'jsdom',
   },
 });
