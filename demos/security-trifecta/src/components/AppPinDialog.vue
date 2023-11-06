@@ -11,15 +11,15 @@
   </ion-header>
 
   <ion-content class="ion-padding ion-text-center">
-    <ion-label
-      ><div class="prompt">{{ prompt }}</div></ion-label
-    >
-    <ion-label
-      ><div class="pin">{{ displayPin }}</div></ion-label
-    >
-    <ion-label color="danger"
-      ><div class="error">{{ errorMessage }}</div></ion-label
-    >
+    <ion-label>
+      <div class="prompt">{{ prompt }}</div>
+    </ion-label>
+    <ion-label>
+      <div class="pin">{{ displayPin }}</div>
+    </ion-label>
+    <ion-label color="danger">
+      <div class="error">{{ errorMessage }}</div>
+    </ion-label>
   </ion-content>
 
   <ion-footer>
@@ -148,17 +148,17 @@ if (props.setPasscodeMode) {
 
 <style scoped>
 .prompt {
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: bold;
 }
 
 .pin {
-  font-size: 3em;
+  font-size: 3rem;
   font-weight: bold;
 }
 
 .error {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 

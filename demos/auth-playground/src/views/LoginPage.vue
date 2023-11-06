@@ -9,38 +9,18 @@
         <ion-card-content>
           <ion-list>
             <ion-item>
-              <ion-input
-                data-testid="email-input"
-                label="E-Mail Address"
-                label-placement="floating"
-                name="email"
-                type="email"
-                v-model="email"
-                email
-                required
-              ></ion-input>
+              <ion-input data-testid="email-input" label="E-Mail Address" label-placement="floating" name="email"
+                type="email" v-model="email" email required></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input
-                data-testid="password-input"
-                label="Password"
-                label-placement="floating"
-                name="password"
-                type="password"
-                v-model="password"
-                required
-              >
+              <ion-input data-testid="password-input" label="Password" label-placement="floating" name="password"
+                type="password" v-model="password" required>
               </ion-input>
             </ion-item>
             <ion-item>
               <ion-label>
-                <ion-button
-                  expand="block"
-                  :disabled="!formIsValid"
-                  @click="signIn('Basic')"
-                  data-testid="basic-signin-button"
-                  >Sign In with Email</ion-button
-                >
+                <ion-button expand="block" :disabled="!formIsValid" @click="signIn('Basic')"
+                  data-testid="basic-signin-button">Sign In with Email</ion-button>
               </ion-label>
             </ion-item>
           </ion-list>
@@ -135,7 +115,7 @@ const signIn = async (vendor: AuthVendor): Promise<void> => {
 
 <style scoped>
 .auth-button-area {
-  margin-top: 1em;
+  margin-top: 1rem;
   font-size: large;
 }
 

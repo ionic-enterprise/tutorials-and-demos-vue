@@ -39,5 +39,5 @@ ion-select::part(icon) {
 }
 
 ion-select::part(text) {
-  margin-right: 1em;
+  margin-right: 1rem;
 }

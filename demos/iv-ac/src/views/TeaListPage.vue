@@ -78,6 +78,6 @@ ion-card {
 }
 
 ion-col {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 </style>

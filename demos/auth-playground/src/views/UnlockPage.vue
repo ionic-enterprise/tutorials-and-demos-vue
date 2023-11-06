@@ -5,13 +5,7 @@
         <ion-card-content>
           <ion-card-title>The Playground is Locked</ion-card-title>
 
-          <ion-button
-            class="unlock-button"
-            expand="full"
-            fill="clear"
-            @click="unlockClicked"
-            data-testid="unlock-button"
-          >
+          <ion-button class="unlock-button" expand="full" fill="clear" @click="unlockClicked" data-testid="unlock-button">
             <ion-icon slot="end" :icon="lockOpenOutline"></ion-icon>
             <div>Unlock</div>
           </ion-button>
@@ -63,9 +57,9 @@ const unlockClicked = async (): Promise<void> => {
 
 <style scoped>
 .unlock-button {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  height: 2em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 3rem;
   font-size: xx-large;
 }
 

@@ -55,7 +55,7 @@ const signinClicked = async () => {
 
 <style scoped>
 .auth-button-area {
-  margin-top: 1em;
+  margin-top: 1rem;
   font-size: large;
 }
 

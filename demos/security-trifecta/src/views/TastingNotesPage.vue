@@ -43,14 +43,8 @@
         </ion-fab-button>
       </ion-fab>
     </ion-content>
-    <ion-toast
-      :isOpen="syncComplete"
-      message="Sync is complete!"
-      color="success"
-      :duration="2000"
-      position="middle"
-      @didDismiss="syncComplete = false"
-    ></ion-toast>
+    <ion-toast :isOpen="syncComplete" message="Sync is complete!" color="success" :duration="2000" position="middle"
+      @didDismiss="syncComplete = false"></ion-toast>
   </ion-page>
 </template>
 
@@ -122,6 +116,6 @@ refresh();
 
 <style scoped>
 ion-toggle.ios {
-  margin-left: 1em;
+  margin-left: 1rem;
 }
 </style>

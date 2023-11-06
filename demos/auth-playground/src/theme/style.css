@@ -1,3 +1,7 @@
+html {
+  --ion-dynamic-font: var(--ion-default-dynamic-font);
+}
+
 .error-message {
   color: var(--ion-color-danger, #ff0000);
   font-size: small;
@@ -40,13 +44,13 @@ ion-select::part(icon) {
 }
 
 ion-select::part(text) {
-  margin-right: 1em;
+  margin-right: 1rem;
 }
 
 dd {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 2em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
 }
 
 dt {
