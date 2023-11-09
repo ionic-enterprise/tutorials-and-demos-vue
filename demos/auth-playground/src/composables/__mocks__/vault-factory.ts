@@ -6,6 +6,7 @@ let onUnlockCallback: undefined | (() => Promise<void>);
 const mockVault = {
   config: undefined as IdentityVaultConfig | undefined,
   clear: vi.fn().mockResolvedValue(undefined),
+  initialize: vi.fn(),
   setValue: vi.fn().mockResolvedValue(undefined),
   getValue: vi.fn().mockResolvedValue(undefined),
   getKeys: vi.fn().mockResolvedValue([]),
@@ -28,9 +29,8 @@ const mockVault = {
   }),
 };
 
+mockVault.initialize.mockImplementation(async (config: IdentityVaultConfig) => (mockVault.config = config));
+
 export const useVaultFactory = vi.fn().mockReturnValue({
-  createVault: vi.fn().mockImplementation((config: IdentityVaultConfig) => {
-    mockVault.config = config;
-    return mockVault;
-  }),
+  createVault: vi.fn().mockReturnValue(mockVault),
 });

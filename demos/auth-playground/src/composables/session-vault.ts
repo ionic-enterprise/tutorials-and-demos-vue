@@ -16,33 +16,36 @@ export type UnlockMode = 'Device' | 'SystemPIN' | 'SessionPIN' | 'NeverLock' | '
 const modeKey = 'LastUnlockMode';
 
 const { createVault } = useVaultFactory();
+const vault = createVault();
 
-const vault = createVault({
-  key: 'io.ionic.auth-playground-vue',
-  type: VaultType.SecureStorage,
-  deviceSecurityType: DeviceSecurityType.None,
-  lockAfterBackgrounded: 5000,
-  shouldClearVaultAfterTooManyFailedAttempts: true,
-  customPasscodeInvalidUnlockAttempts: 2,
-  unlockVaultOnLoad: false,
-});
-
-vault.onPasscodeRequested(async (isPasscodeSetRequest: boolean) => {
-  const modal = await modalController.create({
-    backdropDismiss: false,
-    component: AppPinDialog,
-    componentProps: {
-      setPasscodeMode: isPasscodeSetRequest,
-    },
+const initializeVault = async (): Promise<void> => {
+  await vault.initialize({
+    key: 'io.ionic.auth-playground-vue',
+    type: VaultType.SecureStorage,
+    deviceSecurityType: DeviceSecurityType.None,
+    lockAfterBackgrounded: 5000,
+    shouldClearVaultAfterTooManyFailedAttempts: true,
+    customPasscodeInvalidUnlockAttempts: 2,
+    unlockVaultOnLoad: false,
   });
-  await modal.present();
-  const { data } = await modal.onDidDismiss();
-  vault.setCustomPasscode(data || '');
-});
 
-vault.onLock(() => {
-  router.replace('/unlock');
-});
+  vault.onPasscodeRequested(async (isPasscodeSetRequest: boolean) => {
+    const modal = await modalController.create({
+      backdropDismiss: false,
+      component: AppPinDialog,
+      componentProps: {
+        setPasscodeMode: isPasscodeSetRequest,
+      },
+    });
+    await modal.present();
+    const { data } = await modal.onDidDismiss();
+    vault.setCustomPasscode(data || '');
+  });
+
+  vault.onLock(() => {
+    router.replace('/unlock');
+  });
+};
 
 const provision = async (): Promise<void> => {
   if ((await Device.isBiometricsAllowed()) === BiometricPermissionState.Prompt) {
@@ -130,6 +133,8 @@ const lock = async (): Promise<void> => vault.lock();
 const unlock = async (): Promise<void> => vault.unlock();
 
 export const useSessionVault = () => ({
+  initializeVault,
+
   canUnlock,
   initializeUnlockMode,
   setUnlockMode,

@@ -7,6 +7,7 @@ const canUseLocking = vi.fn().mockReturnValue(false);
 const clear = vi.fn().mockResolvedValue(undefined);
 const unlock = vi.fn().mockResolvedValue(undefined);
 const setValue = vi.fn().mockResolvedValue(undefined);
+const initializeVault = vi.fn().mockResolvedValue(undefined);
 const getValue = vi.fn().mockResolvedValue(undefined);
 const initializeUnlockMode = vi.fn().mockResolvedValue(undefined);
 const setUnlockMode = vi.fn().mockResolvedValue(undefined);
@@ -25,6 +26,7 @@ export const useSessionVault = vi.fn().mockReturnValue({
   getValue,
   setValue,
   initializeUnlockMode,
+  initializeVault,
   setUnlockMode,
   onLock,
   lock,

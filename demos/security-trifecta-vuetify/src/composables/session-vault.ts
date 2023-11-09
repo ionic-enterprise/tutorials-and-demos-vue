@@ -12,24 +12,28 @@ import {
 export type UnlockMode = 'Device' | 'SessionPIN' | 'SystemPIN' | 'NeverLock' | 'ForceLogin';
 
 const { createVault } = useVaultFactory();
-const vault = createVault({
-  key: 'io.ionic.csdemosecurestorage',
-  type: VaultType.SecureStorage,
-  deviceSecurityType: DeviceSecurityType.None,
-  lockAfterBackgrounded: 5000,
-  shouldClearVaultAfterTooManyFailedAttempts: true,
-  customPasscodeInvalidUnlockAttempts: 2,
-  unlockVaultOnLoad: false,
-});
+const vault = createVault();
 
-vault.onLock(() => {
-  router.replace('/login');
-});
+const initializeVault = async (): Promise<void> => {
+  await vault.initialize({
+    key: 'io.ionic.csdemosecurestorage',
+    type: VaultType.SecureStorage,
+    deviceSecurityType: DeviceSecurityType.None,
+    lockAfterBackgrounded: 5000,
+    shouldClearVaultAfterTooManyFailedAttempts: true,
+    customPasscodeInvalidUnlockAttempts: 2,
+    unlockVaultOnLoad: !Capacitor.isNativePlatform(),
+  });
 
-vault.onPasscodeRequested(async (isPasscodeSetRequest: boolean) => {
-  console.log(isPasscodeSetRequest);
-  vault.setCustomPasscode('1234');
-});
+  vault.onLock(() => {
+    router.replace('/login');
+  });
+
+  vault.onPasscodeRequested(async (isPasscodeSetRequest: boolean) => {
+    console.log(isPasscodeSetRequest);
+    vault.setCustomPasscode('1234');
+  });
+};
 
 const getValue = async <T>(key: string): Promise<T | null | undefined> => vault.getValue(key);
 const setValue = async <T>(key: string, value: T): Promise<void> => vault.setValue(key, value);
@@ -124,6 +128,7 @@ export const useSessionVault = () => {
     getValue,
     setValue,
     initializeUnlockMode,
+    initializeVault,
     setUnlockMode,
     getVaultType,
   };

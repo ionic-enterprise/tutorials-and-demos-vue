@@ -2,8 +2,6 @@ import { useSessionVault } from '@/composables/session-vault';
 import { Capacitor } from '@capacitor/core';
 import { Auth0Provider, AuthConnect, AuthResult, ProviderOptions, TokenType } from '@ionic-enterprise/auth';
 
-const { clear, getValue, setValue } = useSessionVault();
-
 const isMobile = Capacitor.getPlatform() !== 'web';
 const url = isMobile ? 'io.ionic.acdemo://auth-action-complete' : 'http://localhost:8100/login';
 
@@ -37,6 +35,7 @@ const performInit = async (): Promise<void> => {
 
 const performRefresh = async (authResult: AuthResult): Promise<AuthResult | undefined> => {
   let newAuthResult: AuthResult | undefined;
+  const { clear, setValue } = useSessionVault();
 
   if (await AuthConnect.isRefreshTokenAvailable(authResult)) {
     try {
@@ -53,6 +52,7 @@ const performRefresh = async (authResult: AuthResult): Promise<AuthResult | unde
 };
 
 const getAuthResult = async (): Promise<AuthResult | undefined> => {
+  const { getValue } = useSessionVault();
   let authResult = (await getValue(authResultKey)) as AuthResult | undefined;
   if (authResult && (await AuthConnect.isAccessTokenExpired(authResult))) {
     authResult = await performRefresh(authResult);
@@ -70,6 +70,7 @@ const initialize = async (): Promise<void> => {
 };
 
 export const useAuth = () => {
+  const { clear, getValue, setValue } = useSessionVault();
   return {
     isAuthenticated: async (): Promise<boolean> => {
       await initialize();

@@ -2,6 +2,7 @@ import { vi } from 'vitest';
 
 export const useSessionVault = vi.fn().mockReturnValue({
   canUnlock: vi.fn().mockResolvedValue(false),
+  initializeVault: vi.fn().mockResolvedValue(undefined),
   initializeUnlockMode: vi.fn().mockResolvedValue(undefined),
   setUnlockMode: vi.fn().mockResolvedValue(undefined),
   getConfig: vi.fn().mockReturnValue({}),

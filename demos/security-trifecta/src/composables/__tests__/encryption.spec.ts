@@ -12,12 +12,13 @@ describe('useEncryption', () => {
 
   beforeEach(() => {
     const { createVault } = useVaultFactory();
-    mockVault = createVault({
-      key: 'com.kensodemann.teatasterkeys',
-      type: VaultType.SecureStorage,
-      deviceSecurityType: DeviceSecurityType.None,
-      unlockVaultOnLoad: false,
-    });
+    mockVault = createVault();
+    // mockVault = createVault({
+    // key: 'com.kensodemann.teatasterkeys',
+    // type: VaultType.SecureStorage,
+    // deviceSecurityType: DeviceSecurityType.None,
+    // unlockVaultOnLoad: false,
+    // });
     vi.clearAllMocks();
   });
 

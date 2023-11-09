@@ -1,8 +1,7 @@
 import { useBackendAPI } from '@/composables/backend-api';
 import { useEncryption } from '@/composables/encryption';
 import { useVaultFactory } from '@/composables/vault-factory';
-import { DeviceSecurityType, VaultType } from '@ionic-enterprise/identity-vault';
-import { beforeEach, describe, expect, it, Mock, vi } from 'vitest';
+import { Mock, beforeEach, describe, expect, it, vi } from 'vitest';
 
 vi.mock('@/composables/backend-api');
 vi.mock('@/composables/vault-factory');
@@ -12,12 +11,13 @@ describe('useEncryption', () => {
 
   beforeEach(() => {
     const { createVault } = useVaultFactory();
-    mockVault = createVault({
-      key: 'com.kensodemann.teatasterkeys',
-      type: VaultType.SecureStorage,
-      deviceSecurityType: DeviceSecurityType.None,
-      unlockVaultOnLoad: false,
-    });
+    mockVault = createVault();
+    // mockVault = createVault({
+    // key: 'com.kensodemann.teatasterkeys',
+    // type: VaultType.SecureStorage,
+    // deviceSecurityType: DeviceSecurityType.None,
+    // unlockVaultOnLoad: false,
+    // });
     vi.clearAllMocks();
   });
 

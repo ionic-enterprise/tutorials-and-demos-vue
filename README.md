@@ -58,9 +58,9 @@ All projects contain the following scripts:
 
 Use the `--filter` option to specify a package. For example, if you are interested in running `tea-taster` use any of the following commands:
 
-- `pnpm --filter ./demos/tea-taster dev`
-- `pnpm --filter ./demos/tea-taster android`
-- `pnpm --filter ./demos/tea-taster ios`
+- `pnpm --filter tea-taster dev`
+- `pnpm --filter tea-taster android`
+- `pnpm --filter tea-taster ios`
 
 For more advanced uses of the Ionic or Capacitor CLIs you can also change to the package's directory and run them from there.
 
@@ -84,8 +84,8 @@ Here is an example of doing this for the `iv-ac` demo, which uses Identity Vault
 
 To develop any if the projects within the mono-repo, use the `--filter` option with a couple of standard scripts. For example, to work on the `tea-taster` demo, open a couple of terminal sessions and run the following commands:
 
-- `pnpm --filter ./demos/tea-taster dev`
-- `pnpm --filter ./demos/tea-taster test:dev`
+- `pnpm --filter tea-taster dev`
+- `pnpm --filter tea-taster test:dev`
 
 ## Credentials
 

@@ -142,7 +142,7 @@ describe('AppTastingNoteEditor.vue', () => {
     expect((name.element as HTMLInputElement).value).toEqual('Puer Cake');
     expect((teaCategory.element as HTMLSelectElement).value).toEqual(6);
     expect((notes.element as HTMLInputElement).value).toEqual('Smooth and peaty, the king of puer teas');
-    expect((rating as VueWrapper).props().modelValue).toEqual(5);
+    expect(((rating as VueWrapper).props() as any).modelValue).toEqual(5);
   });
 
   describe('submit button', () => {

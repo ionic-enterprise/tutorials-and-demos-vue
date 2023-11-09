@@ -17,33 +17,37 @@ const key = 'session';
 let session: AuthResult | null | undefined;
 
 const { createVault } = useVaultFactory();
-const vault = createVault({
-  key: 'io.ionic.csdemosecurestorage',
-  type: VaultType.SecureStorage,
-  deviceSecurityType: DeviceSecurityType.None,
-  lockAfterBackgrounded: 5000,
-  shouldClearVaultAfterTooManyFailedAttempts: true,
-  customPasscodeInvalidUnlockAttempts: 2,
-  unlockVaultOnLoad: false,
-});
+const vault = createVault();
 
-vault.onLock(() => {
-  session = undefined;
-  router.replace('/login');
-});
-
-vault.onPasscodeRequested(async (isPasscodeSetRequest: boolean) => {
-  const dlg = await modalController.create({
-    backdropDismiss: false,
-    component: AppPinDialog,
-    componentProps: {
-      setPasscodeMode: isPasscodeSetRequest,
-    },
+const initializeVault = async (): Promise<void> => {
+  await vault.initialize({
+    key: 'io.ionic.csdemosecurestorage',
+    type: VaultType.SecureStorage,
+    deviceSecurityType: DeviceSecurityType.None,
+    lockAfterBackgrounded: 5000,
+    shouldClearVaultAfterTooManyFailedAttempts: true,
+    customPasscodeInvalidUnlockAttempts: 2,
+    unlockVaultOnLoad: !isPlatform('hybrid'),
   });
-  dlg.present();
-  const { data } = await dlg.onDidDismiss();
-  vault.setCustomPasscode(data || '');
-});
+
+  vault.onLock(() => {
+    session = undefined;
+    router.replace('/login');
+  });
+
+  vault.onPasscodeRequested(async (isPasscodeSetRequest: boolean) => {
+    const dlg = await modalController.create({
+      backdropDismiss: false,
+      component: AppPinDialog,
+      componentProps: {
+        setPasscodeMode: isPasscodeSetRequest,
+      },
+    });
+    dlg.present();
+    const { data } = await dlg.onDidDismiss();
+    vault.setCustomPasscode(data || '');
+  });
+};
 
 const getSession = async (): Promise<AuthResult | null | undefined> => {
   if (!session) {
@@ -126,6 +130,7 @@ export const useSessionVault = () => {
     canUseLocking,
     clearSession,
     getSession,
+    initializeVault,
     setSession,
     setUnlockMode,
     getVaultType,

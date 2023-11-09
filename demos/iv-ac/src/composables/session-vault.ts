@@ -19,33 +19,37 @@ const modeKey = 'LastUnlockMode';
 let session: AuthResult | null | undefined;
 
 const { createVault } = useVaultFactory();
-const vault = createVault({
-  key: 'io.ionic.teatastervue',
-  type: VaultType.SecureStorage,
-  deviceSecurityType: DeviceSecurityType.None,
-  lockAfterBackgrounded: 5000,
-  shouldClearVaultAfterTooManyFailedAttempts: true,
-  customPasscodeInvalidUnlockAttempts: 2,
-  unlockVaultOnLoad: false,
-});
+const vault = createVault();
 
-vault.onLock(() => {
-  session = undefined;
-  router.replace('/unlock');
-});
-
-vault.onPasscodeRequested(async (isPasscodeSetRequest: boolean) => {
-  const dlg = await modalController.create({
-    backdropDismiss: false,
-    component: AppPinDialog,
-    componentProps: {
-      setPasscodeMode: isPasscodeSetRequest,
-    },
+const initializeVault = async (): Promise<void> => {
+  await vault.initialize({
+    key: 'io.ionic.teatastervue',
+    type: VaultType.SecureStorage,
+    deviceSecurityType: DeviceSecurityType.None,
+    lockAfterBackgrounded: 5000,
+    shouldClearVaultAfterTooManyFailedAttempts: true,
+    customPasscodeInvalidUnlockAttempts: 2,
+    unlockVaultOnLoad: false,
   });
-  dlg.present();
-  const { data } = await dlg.onDidDismiss();
-  vault.setCustomPasscode(data || '');
-});
+
+  vault.onLock(() => {
+    session = undefined;
+    router.replace('/unlock');
+  });
+
+  vault.onPasscodeRequested(async (isPasscodeSetRequest: boolean) => {
+    const dlg = await modalController.create({
+      backdropDismiss: false,
+      component: AppPinDialog,
+      componentProps: {
+        setPasscodeMode: isPasscodeSetRequest,
+      },
+    });
+    dlg.present();
+    const { data } = await dlg.onDidDismiss();
+    vault.setCustomPasscode(data || '');
+  });
+};
 
 const canUnlock = async (): Promise<boolean> => {
   const { value } = await Preferences.get({ key: modeKey });
@@ -156,6 +160,7 @@ export const useSessionVault = () => {
     getSession,
     getUnlockMode,
     hideContentsInBackground,
+    initializeVault,
     isHidingContentsInBackground,
     setSession,
     setUnlockMode,
