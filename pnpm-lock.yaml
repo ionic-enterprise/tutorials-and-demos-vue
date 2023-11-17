@@ -87,6 +87,9 @@ importers:
       eslint:
         specifier: ^8.53.0
         version: 8.53.0
+      eslint-plugin-cypress:
+        specifier: ~2.15.1
+        version: 2.15.1(eslint@8.53.0)
       eslint-plugin-vue:
         specifier: ^9.18.1
         version: 9.18.1(eslint@8.53.0)
@@ -175,6 +178,9 @@ importers:
       eslint:
         specifier: ^8.53.0
         version: 8.53.0
+      eslint-plugin-cypress:
+        specifier: ~2.15.1
+        version: 2.15.1(eslint@8.53.0)
       eslint-plugin-vue:
         specifier: ^9.18.1
         version: 9.18.1(eslint@8.53.0)
@@ -260,6 +266,9 @@ importers:
       eslint:
         specifier: ^8.53.0
         version: 8.53.0
+      eslint-plugin-cypress:
+        specifier: ~2.15.1
+        version: 2.15.1(eslint@8.53.0)
       eslint-plugin-vue:
         specifier: ^9.18.1
         version: 9.18.1(eslint@8.53.0)
@@ -357,6 +366,9 @@ importers:
       eslint:
         specifier: ^8.53.0
         version: 8.53.0
+      eslint-plugin-cypress:
+        specifier: ~2.15.1
+        version: 2.15.1(eslint@8.53.0)
       eslint-plugin-vue:
         specifier: ~9.18.1
         version: 9.18.1(eslint@8.53.0)
@@ -466,6 +478,9 @@ importers:
       eslint:
         specifier: ^8.53.0
         version: 8.53.0
+      eslint-plugin-cypress:
+        specifier: ~2.15.1
+        version: 2.15.1(eslint@8.53.0)
       eslint-plugin-vue:
         specifier: ^9.18.1
         version: 9.18.1(eslint@8.53.0)
@@ -575,6 +590,9 @@ importers:
       eslint:
         specifier: ^8.53.0
         version: 8.53.0
+      eslint-plugin-cypress:
+        specifier: ~2.15.1
+        version: 2.15.1(eslint@8.53.0)
       eslint-plugin-vue:
         specifier: ^9.18.1
         version: 9.18.1(eslint@8.53.0)
@@ -681,6 +699,9 @@ importers:
       eslint:
         specifier: ^8.53.0
         version: 8.53.0
+      eslint-plugin-cypress:
+        specifier: ~2.15.1
+        version: 2.15.1(eslint@8.53.0)
       eslint-plugin-vue:
         specifier: ^9.18.1
         version: 9.18.1(eslint@8.53.0)
@@ -781,6 +802,9 @@ importers:
       eslint:
         specifier: ^8.53.0
         version: 8.53.0
+      eslint-plugin-cypress:
+        specifier: ~2.15.1
+        version: 2.15.1(eslint@8.53.0)
       eslint-plugin-vue:
         specifier: ^9.18.1
         version: 9.18.1(eslint@8.53.0)
@@ -4535,6 +4559,15 @@ packages:
   /escape-string-regexp@4.0.0:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
+    dev: true
+
+  /eslint-plugin-cypress@2.15.1(eslint@8.53.0):
+    resolution: {integrity: sha512-eLHLWP5Q+I4j2AWepYq0PgFEei9/s5LvjuSqWrxurkg1YZ8ltxdvMNmdSf0drnsNo57CTgYY/NIHHLRSWejR7w==}
+    peerDependencies:
+      eslint: '>= 3.2.1'
+    dependencies:
+      eslint: 8.53.0
+      globals: 13.23.0
     dev: true
 
   /eslint-plugin-vue@9.18.1(eslint@8.53.0):

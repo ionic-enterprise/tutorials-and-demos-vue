@@ -4,7 +4,6 @@ import { useSessionVault } from '@/composables/session-vault';
 import { Device } from '@ionic-enterprise/identity-vault';
 import { flushPromises, mount, VueWrapper } from '@vue/test-utils';
 import { beforeEach, describe, expect, it, Mock, vi } from 'vitest';
-import waitForExpect from 'wait-for-expect';
 
 vi.mock('@/composables/auth');
 vi.mock('@/composables/session-vault');

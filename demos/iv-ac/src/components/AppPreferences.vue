@@ -11,47 +11,25 @@
     <ion-list>
       <ion-list-header> Session Locking </ion-list-header>
       <ion-item>
-        <ion-toggle
-          :enableOnOffLabels="true"
-          v-model="useBiometrics"
-          @ionChange="useBiometricsChanged"
-          :disabled="disableBiometrics"
-          data-testid="bio-button"
-        >
-          Use Biometrics</ion-toggle
-        >
+        <ion-toggle :enableOnOffLabels="true" v-model="useBiometrics" @ionChange="useBiometricsChanged"
+          :disabled="disableBiometrics" data-testid="bio-button">
+          Use Biometrics</ion-toggle>
       </ion-item>
       <ion-item>
-        <ion-toggle
-          :enableOnOffLabels="true"
-          v-model="useSystemPasscode"
-          @ionChange="useSystemPasscodeChanged"
-          :disabled="disableSystemPasscode"
-          data-testid="system-passcode-button"
-        >
-          Use System Passcode</ion-toggle
-        >
+        <ion-toggle :enableOnOffLabels="true" v-model="useSystemPasscode" @ionChange="useSystemPasscodeChanged"
+          :disabled="disableSystemPasscode" data-testid="system-passcode-button">
+          Use System Passcode</ion-toggle>
       </ion-item>
       <ion-item>
-        <ion-toggle
-          :enableOnOffLabels="true"
-          v-model="useCustomPasscode"
-          @ionChange="useCustomPasscodeChanged"
-          :disabled="disableCustomPasscode"
-          data-testid="custom-passcode-button"
-        >
+        <ion-toggle :enableOnOffLabels="true" v-model="useCustomPasscode" @ionChange="useCustomPasscodeChanged"
+          :disabled="disableCustomPasscode" data-testid="custom-passcode-button">
           Use Custom Passcode
         </ion-toggle>
       </ion-item>
       <ion-list-header> Privacy </ion-list-header>
       <ion-item>
-        <ion-toggle
-          :enableOnOffLabels="true"
-          v-model="hideInBackground"
-          @ionChange="hideInBackgroundChanged"
-          :disabled="disableHideInBackground"
-          data-testid="hide-contents-button"
-        >
+        <ion-toggle :enableOnOffLabels="true" v-model="hideInBackground" @ionChange="hideInBackgroundChanged"
+          :disabled="disableHideInBackground" data-testid="hide-contents-button">
           Hide contents in background
         </ion-toggle>
       </ion-item>
@@ -81,7 +59,6 @@ import {
 } from '@ionic/vue';
 import { useRouter } from 'vue-router';
 import { ref } from 'vue';
-import { DeviceSecurityType, VaultType } from '@ionic-enterprise/identity-vault';
 import { useSessionVault } from '@/composables/session-vault';
 
 const router = useRouter();

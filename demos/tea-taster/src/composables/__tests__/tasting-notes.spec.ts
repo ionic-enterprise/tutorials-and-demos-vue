@@ -107,7 +107,7 @@ describe('useTastingNotes', () => {
     beforeEach(async () => await refresh());
 
     describe('a new note', () => {
-      let note: TastingNote = {
+      const note: TastingNote = {
         brand: 'Lipton',
         name: 'Yellow Label',
         notes: 'Overly acidic, highly tannic flavor',
@@ -137,7 +137,7 @@ describe('useTastingNotes', () => {
     });
 
     describe('an existing note', () => {
-      let note: TastingNote = {
+      const note: TastingNote = {
         id: 1,
         brand: 'Lipton',
         name: 'Green Tea',

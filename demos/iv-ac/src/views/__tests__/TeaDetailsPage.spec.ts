@@ -1,11 +1,10 @@
-import { useAuth } from '@/composables/auth';
+import { useTea } from '@/composables/tea';
 import TeaDetailsPage from '@/views/TeaDetailsPage.vue';
 import { IonContent, IonHeader, IonIcon } from '@ionic/vue';
 import { createRouter, createWebHistory } from '@ionic/vue-router';
-import { mount, VueWrapper, flushPromises } from '@vue/test-utils';
-import { beforeEach, describe, expect, it, Mock, vi } from 'vitest';
+import { VueWrapper, flushPromises, mount } from '@vue/test-utils';
+import { Mock, beforeEach, describe, expect, it, vi } from 'vitest';
 import { Router } from 'vue-router';
-import { useTea } from '@/composables/tea';
 
 vi.mock('@/composables/tea');
 

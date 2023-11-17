@@ -1,7 +1,6 @@
 import { useBackendAPI } from '@/composables/backend-api';
 import { useEncryption } from '@/composables/encryption';
 import { useVaultFactory } from '@/composables/vault-factory';
-import { DeviceSecurityType, VaultType } from '@ionic-enterprise/identity-vault';
 import { Mock, beforeEach, describe, expect, it, vi } from 'vitest';
 
 vi.mock('@/composables/backend-api');

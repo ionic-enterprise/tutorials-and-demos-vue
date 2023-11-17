@@ -1,8 +1,8 @@
 import Tab2Page from '@/views/Tab2Page.vue';
-import { describe, expect, it, vi } from 'vitest';
 import { IonTitle } from '@ionic/vue';
 import { createRouter, createWebHistory } from '@ionic/vue-router';
-import { mount, VueWrapper } from '@vue/test-utils';
+import { VueWrapper, mount } from '@vue/test-utils';
+import { describe, expect, it } from 'vitest';
 import { Router } from 'vue-router';
 
 describe('Tab2Page.vue', () => {
