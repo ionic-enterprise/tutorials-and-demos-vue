@@ -57,7 +57,7 @@ const isReady: Promise<void> = AuthConnect.setup({
   },
   web: {
     uiMode: 'popup',
-    authFlow: 'implicit',
+    authFlow: 'PKCE',
   },
 });
 

@@ -27,7 +27,7 @@ const performInit = async (): Promise<void> => {
     },
     web: {
       uiMode: 'popup',
-      authFlow: 'implicit',
+      authFlow: 'PKCE',
     },
   });
 };

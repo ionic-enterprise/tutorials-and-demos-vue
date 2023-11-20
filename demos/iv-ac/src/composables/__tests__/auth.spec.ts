@@ -43,7 +43,7 @@ describe('useAuth', () => {
       },
       web: {
         uiMode: 'popup',
-        authFlow: 'implicit',
+        authFlow: 'PKCE',
       },
     });
   });
