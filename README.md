@@ -1,41 +1,38 @@
 # Tutorials and Demos for Vue
 
-This is a collection of tutorials and demos.
-
-## Packages
-
-### Auth Connect
-
-The `auth-connect` collection contains applications whose primary purpose is to highlight the use of [Auth Connect](https://ionic.io/docs/auth-connect). At this time, all of the projects contained here are examples for our Auth Connect Tutorials.
-
-#### Getting Started
-
-The `auth-connect/getting-started` project is the output of the basic Auth Connect training and serves as the basis for the other targeted tutorials.
-
-#### Refresh Workflow
-
-The `auth-connect/refresh-workflow` project demonstrates one way of implementing a refresh flow within an application that uses Auth Connect. It is sufficient for use as-is but can also be used as the basis for a more complex workflow if needed.
-
-### Identity Vault
-
-The `identity-vault` collection contains applications whose primary purpose is to highlight the use of [Identity Vault](https://ionic.io/docs/auth-connect). At this time this area is under construction.
-
-### Demos
-
-The `demos` collection contain applications whose primary purpose does not fit into any of the other package collections.
+This is a collection of tutorials and demos. For a full listing of the packages, please see the [PACKAGES.md](PACKAGES.md) file.
 
 ## Building
 
-### Prerequisites
+There are two different ways to build and use the demos in this repo:
+
+- Copy individual packges to their own directory. This strategy works best if you _do not_ have access to the full Ionic Security Trifecta and want to run one of the demos that only uses dependencies you have access to. See the [Build a Stand-alone Project](#build-a-stand-alone-project) section for details.
+- Build within this monorepo using this `pnpm`. This strategy works best of you _do_ have access to the full Ionic Security Trifecta and understand the use of `pnpm`. See the [Build All](#build-all) section for details.
+
+### Build a Stand-alone Project
+
+If you do not have access to the full suite of `@ionic-enterprise` packages used by these demos, you may still be able to build specific demos. For example, if you only have access to Auth Connect, you can build the demos that _only_ depend on Auth Connect.
+
+Here is an example of doing this for the `iv-ac` demo, which uses Identity Vault and Auth Connect:
+
+- Clone this repo
+- `cd tutorials-and-demos-vue`
+- `cp -r demos/iv-ac ..`
+- `cd ../iv-ac`
+- Copy your `.npmrc` file. Some demos, such as the `tea-taster` demo, do not depend on any `@ionic-enterprise` packages. For such items, you can skip this step.
+- `npm i`
+- `npm run build`
+- `npm run dev`
+- etc...
+
+**Note:** you can still use `pnpm` commands rather than `npm` commands if you desire.
+
+### Build All
 
 In order to install and build from this repo, you will need:
 
 - [pnpm](https://pnpm.io/)
 - Make sure you have access to Auth Connect, Identity Vault, and Secure Storage. Also, make sure you have previously registered an application using the [`ionic enterprise register`](https://ionicframework.com/docs/cli/commands/enterprise-register) command (which generates an .npmrc file). Copy the generated file to the root of this project.
-
-If you do not have access to all three solutions, you may be able to build some of the demos by copying them to their own directory and building from there. See the [Build a Stand-alone Project](#build-a-stand-alone-project) section for details.
-
-### Build All
 
 If you have purchased access to all three solutions in the Security Trifecta, it is easiest to build all of the demos and tutorials as a set. To do so:
 
@@ -63,22 +60,6 @@ Use the `--filter` option to specify a package. For example, if you are interest
 - `pnpm --filter tea-taster ios`
 
 For more advanced uses of the Ionic or Capacitor CLIs you can also change to the package's directory and run them from there.
-
-### Build a Stand-alone Project
-
-If you do not have access to the full suite of `@ionic-enterprise` packages used by these demos, you may still be able to build specific demos. For example, if you only have access to Auth Connect, you can build the demos that _only_ depend on Auth Connect.
-
-Here is an example of doing this for the `iv-ac` demo, which uses Identity Vault and Auth Connect:
-
-- Clone this repo
-- `cd tutorials-and-demos-vue`
-- `cp -r demos/iv-ac ..`
-- `cd ../iv-ac`
-- Copy your `.npmrc` file. Some demos, such as the `tea-taster` demo, do not depend on any `@ionic-enterprise` packages. For such items, you can skip this step.
-- `pnpm i`
-- `pnpm build`
-- `pnpm dev`
-- etc...
 
 ## Development Workflow
 

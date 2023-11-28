@@ -10,6 +10,10 @@ For this application, "authentication assets" consist of the session information
 
 This application also demonstrates the use of our security solutions outside of an Ionic Framework application.
 
+## Building Note
+
+This app is part of a mono-repo containing other demos but can also be [built on its own](../../README.md#build-a-stand-alone-
+
 ## Identity Vault Usage
 
 This application uses the Identity Vault product to securely store the user's session. Identity Vault is also used to secure the encryption key for the databases so the data can be accessed offline.

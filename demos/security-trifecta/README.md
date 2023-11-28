@@ -8,6 +8,10 @@ The scenario modeled here is where the application has a need for:
 
 For this application, "authentication assets" consist of the session information as well as a key that is used to encrypt the database. For our architecture, the database is shared, and thus the same database encryption key is used across all users. The architecture could easily be expanded so that each user had their own database and their own key.
 
+## Building Note
+
+This app is part of a mono-repo containing other demos but can also be [built on its own](../../README.md#build-a-stand-alone-
+
 ## Identity Vault Usage
 
 This application uses the Identity Vault product to securely store the user's session. Identity Vault is also used to secure the encryption key for the databases so the data can be accessed offline.

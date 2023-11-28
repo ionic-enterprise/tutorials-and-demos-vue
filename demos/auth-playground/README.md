@@ -8,6 +8,10 @@ The purpose of this application is to show the use of much of the `Vault` and `D
 
 One final note: this app may or may not work on an emulator. When working with biometrics it is highly suggested that you test only on actual devices and skip the emulators.
 
+## Building Note
+
+This app is part of a mono-repo containing other demos but can also be [built on its own](../../README.md#build-a-stand-alone-
+
 ## Significant Architecture
 
 ### The Authentication Services
