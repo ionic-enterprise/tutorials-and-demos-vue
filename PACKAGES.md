@@ -25,6 +25,11 @@ The `auth-connect/refresh-workflow` project demonstrates one way of implementing
 that uses Auth Connect. It is sufficient for use as-is but can also be used as the basis for a more complex workflow
 if needed.
 
+### ac-current-ui
+
+The `auth-connect/current-ui` project demonstrates how to implement the `current` authentication flow within a web
+based application.
+
 ## Identity Vault
 
 The `identity-vault` collection contains applications whose primary purpose is to highlight the use of
