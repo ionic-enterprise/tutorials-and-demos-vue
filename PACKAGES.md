@@ -6,23 +6,29 @@ This repo contains the following collection of packages:
 - Identity Vault (under development)
 - Demos
 
-If you are having difficulty building any of these demos inside of the monorepo, please see the instructions on [how to extract and build a demo on its own](README.md#build-a-stand-alone-project).
+If you are having difficulty building any of these demos inside of the monorepo, please see the instructions on
+[how to extract and build a demo on its own](README.md#build-a-stand-alone-project).
 
 ## Auth Connect
 
-The `auth-connect` collection contains applications whose primary purpose is to highlight the use of [Auth Connect](https://ionic.io/docs/auth-connect). At this time, all of the projects contained here are examples for our Auth Connect Tutorials.
+The `auth-connect` collection contains applications whose primary purpose is to highlight the use of
+[Auth Connect](https://ionic.io/docs/auth-connect). At this time, all of the projects contained here are examples for our Auth Connect Tutorials.
 
-### Getting Started
+### ac-getting-started
 
-The `auth-connect/getting-started` project is the output of the basic Auth Connect training and serves as the basis for the other targeted tutorials.
+The `auth-connect/getting-started` project is the output of the basic Auth Connect training and serves as the basis for
+the other targeted tutorials.
 
-### Refresh Workflow
+### ac-refresh-workflow
 
-The `auth-connect/refresh-workflow` project demonstrates one way of implementing a refresh flow within an application that uses Auth Connect. It is sufficient for use as-is but can also be used as the basis for a more complex workflow if needed.
+The `auth-connect/refresh-workflow` project demonstrates one way of implementing a refresh flow within an application
+that uses Auth Connect. It is sufficient for use as-is but can also be used as the basis for a more complex workflow
+if needed.
 
 ## Identity Vault
 
-The `identity-vault` collection contains applications whose primary purpose is to highlight the use of [Identity Vault](https://ionic.io/docs/auth-connect). At this time this area is under construction.
+The `identity-vault` collection contains applications whose primary purpose is to highlight the use of
+[Identity Vault](https://ionic.io/docs/auth-connect). At this time this area is under construction.
 
 ## Demos
 
@@ -30,19 +36,30 @@ The `demos` collection contain applications whose primary purpose does not fit i
 
 ### auth-playground
 
-This application highlights the use of the Ionic Enterprise <a href="https://ionic.io/docs/auth-connect" target="_blank">Auth Connect</a> and <a href="https://ionic.io/docs/identity-vault/" target="_blank">Identity Vault</a> products in a Vue application. The application runs on both Android and iOS. In addition, it supports running in the web, allowing developers to remain in the more comfortable and productive web-based development environments while working on the application. Since the web does not have a secure biometrically locked key storage mechanism, however, the full potential of Identity Vault is only accessible through the native platforms.
+This application highlights the use of the Ionic Enterprise [Auth Connect](https://ionic.io/docs/auth-connect)
+and [Identity Vault](https://ionic.io/docs/identity-vault/) products in a Vue application. The application runs on
+both Android and iOS. In addition, it supports running in the web, allowing developers to remain in the more comfortable
+and productive web-based development environments while working on the application. Since the web does not have a
+secure biometrically locked key storage mechanism, however, the full potential of Identity Vault is only accessible
+through the native platforms.
 
-This application uses <a href="https://capacitorjs.com/docs" target="_blank">Capacitor</a> to provide the native layer. This is the preferred technology to use for the native layer. The Customer Success team highly suggests using it over Cordova. However, Identity Vault and Auth Connect can both be used with either technology.
+This application uses [Capacitor](https://capacitorjs.com/docs) to provide the native layer. This is the preferred
+technology to use for the native layer. The Customer Success team highly suggests using it over Cordova. However,
+Identity Vault and Auth Connect can both be used with either technology.
 
-The purpose of this application is to show the use of much of the `Vault` and `Device` APIs of Identity Vault as well as how Identity Vault and Auth Connect work together to provide a secure authentication solution.
+The purpose of this application is to show the use of much of the `Vault` and `Device` APIs of Identity Vault as well
+as how Identity Vault and Auth Connect work together to provide a secure authentication solution.
 
 ### iv-ac
 
-This is a variation of the [Tea Taster](#tea-taster) application that uses Auth Connect for authentication and Identity Vault for securely storing the authentication result. The purpose of this demo is to show an example of the usage of these products within the context of a small but functional application.
+This is a variation of the [Tea Taster](#tea-taster) application that uses Auth Connect for authentication and
+Identity Vault for securely storing the authentication result. The purpose of this demo is to show an example of
+the usage of these products within the context of a small but functional application.
 
 ### security-trifecta
 
-This application demonstrates the use of all three Ionic Security Trifecta in conjunction with one another. It uses these products as follows:
+This application demonstrates the use of all three Ionic Security Trifecta in conjunction with one another.
+It uses these products as follows:
 
 - **Authentication:**
   - **Auth Connect** handles the OIDC authentication.
@@ -70,4 +87,4 @@ This is the Security Trifecta application that does not use the Ionic Framework.
 
 ### tea-taster
 
-This application is the output of the <a href="https://ionic-training-decks.firebaseapp.com/course/framework/tabs/vue/page/0" target="_blank">three day Ionic Enterprise Training.
+This application is the output of the [Ionic Enterprise Training](https://ionic-training-decks.firebaseapp.com/course/framework/tabs/vue/page/0).
