@@ -1,5 +1,5 @@
 {
-  "name": "auth-playground",
+  "name": "demo-auth-playground",
   "description": "Identity Vault and Auth Connect Playground",
   "version": "0.0.1",
   "type": "module",

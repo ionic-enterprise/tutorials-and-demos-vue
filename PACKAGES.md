@@ -45,7 +45,7 @@ The `identity-vault` collection contains applications whose primary purpose is t
 
 The `demos` collection contain applications whose primary purpose does not fit into any of the other package collections.
 
-### `auth-playground`
+### `demo-auth-playground`
 
 This application highlights the use of the Ionic Enterprise [Auth Connect](https://ionic.io/docs/auth-connect)
 and [Identity Vault](https://ionic.io/docs/identity-vault/) products in a Vue application. The application runs on
@@ -61,13 +61,13 @@ Identity Vault and Auth Connect can both be used with either technology.
 The purpose of this application is to show the use of much of the `Vault` and `Device` APIs of Identity Vault as well
 as how Identity Vault and Auth Connect work together to provide a secure authentication solution.
 
-### `iv-ac`
+### `demo-iv-ac`
 
 This is a variation of the [Tea Taster](#tea-taster) application that uses Auth Connect for authentication and
 Identity Vault for securely storing the authentication result. The purpose of this demo is to show an example of
 the usage of these products within the context of a small but functional application.
 
-### `security-trifecta`
+### `demo-security-trifecta`
 
 This application demonstrates the use of all three Ionic Security Trifecta in conjunction with one another.
 It uses these products as follows:
@@ -92,10 +92,10 @@ It uses these products as follows:
   - **Identity Vault** manages the encryption key via a sepereate vault from the authentication vault. This ensures that the encryption key stays out of the code, and is available to the user even when they are off line.
   - The key-value storage mechanism stores data in an encrypted database on mobile. On web, the data is simply stored in local storage and is not encrypted in any way.
 
-### `security-trifecta-vuetify`
+### `demo-security-trifecta-vuetify`
 
 This is the Security Trifecta application that does not use the Ionic Framework.
 
-### `tea-taster`
+### `demo-tea-taster`
 
 This application is the output of the [Ionic Enterprise Training](https://ionic-training-decks.firebaseapp.com/course/framework/tabs/vue/page/0).
