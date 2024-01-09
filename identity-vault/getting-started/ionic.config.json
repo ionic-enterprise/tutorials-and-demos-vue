@@ -1,0 +1,7 @@
+{
+  "name": "iv-getting-started",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
