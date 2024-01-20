@@ -4,12 +4,12 @@
       <ion-list v-if="showUnlock">
         <ion-item>
           <ion-label>
-            <ion-button expand="block" @click="performUnlockFlow">Unlock</ion-button>
+            <ion-button expand="block" @click="performUnlockFlow" data-testid="unlock">Unlock</ion-button>
           </ion-label>
         </ion-item>
         <ion-item>
           <ion-label>
-            <ion-button expand="block" @click="redoLogin">Redo Login</ion-button>
+            <ion-button expand="block" @click="redoLogin" data-testid="redo-login">Redo Login</ion-button>
           </ion-label>
         </ion-item>
       </ion-list>

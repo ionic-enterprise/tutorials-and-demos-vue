@@ -15,28 +15,31 @@
       <ion-list>
         <ion-item>
           <ion-label>
-            <ion-button expand="block" color="danger" @click="logoutClicked">Logout</ion-button>
+            <ion-button expand="block" color="danger" @click="logoutClicked" data-testid="logout">Logout</ion-button>
           </ion-label>
         </ion-item>
         <ion-item>
           <ion-label>
-            <ion-button expand="block" color="secondary" @click="updateUnlockMode('BiometricsWithPasscode')">Use
+            <ion-button expand="block" color="secondary" @click="updateUnlockMode('BiometricsWithPasscode')"
+              data-testid="use-biometrics">Use
               Biometrics</ion-button>
           </ion-label>
         </ion-item>
         <ion-item>
           <ion-label>
-            <ion-button expand="block" color="secondary" @click="updateUnlockMode('InMemory')">Use In Memory</ion-button>
+            <ion-button expand="block" color="secondary" @click="updateUnlockMode('InMemory')"
+              data-testid="use-in-memory">Use In Memory</ion-button>
           </ion-label>
         </ion-item>
         <ion-item>
           <ion-label>
-            <ion-button expand="block" color="secondary" @click="updateUnlockMode('SecureStorage')">Use Secure
+            <ion-button expand="block" color="secondary" @click="updateUnlockMode('SecureStorage')"
+              data-testid="use-secure-storage">Use Secure
               Storage</ion-button>
           </ion-label>
         </ion-item>
         <ion-item>
-          <div>
+          <div data-testid="session">
             <div>{{ session?.email }}</div>
             <div>{{ session?.firstName }} {{ session?.lastName }}</div>
             <div>{{ session?.accessToken }}</div>

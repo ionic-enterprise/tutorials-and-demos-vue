@@ -70,9 +70,11 @@ const updateUnlockMode = async (mode: UnlockMode): Promise<void> => {
       : mode === 'InMemory'
         ? VaultType.InMemory
         : VaultType.SecureStorage;
+  const deviceSecurityType = type === VaultType.DeviceSecurity ? DeviceSecurityType.Both : DeviceSecurityType.None;
   await vault.updateConfig({
     ...(vault.config as IdentityVaultConfig),
     type,
+    deviceSecurityType,
   });
 };
 
