@@ -1,6 +1,5 @@
 import { useAuthentication } from '@/composables/authentication';
 import { useSessionVault } from '@/composables/session-vault';
-import { Session } from '@/models/session';
 import LoginPage from '@/views/LoginPage.vue';
 import StartPage from '@/views/StartPage.vue';
 import Tab1Page from '@/views/Tab1Page.vue';
