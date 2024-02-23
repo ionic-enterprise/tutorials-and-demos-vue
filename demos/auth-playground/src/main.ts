@@ -29,11 +29,11 @@ import './theme/custom-colors.css';
 import './theme/style.css';
 
 const { initializeVault } = useSessionVault();
-const app = createApp(App).use(IonicVue).use(router);
 
 Device.setHideScreenOnBackground(true);
 
-router.isReady().then(async () => {
-  await initializeVault();
+initializeVault().then(async () => {
+  const app = createApp(App).use(IonicVue).use(router);
+  await router.isReady();
   app.mount('#app');
 });

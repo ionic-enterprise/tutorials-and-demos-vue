@@ -25,9 +25,9 @@ import '@ionic/vue/css/display.css';
 import './theme/variables.css';
 
 const { initializeVault } = useSessionVault();
-const app = createApp(App).use(IonicVue).use(router);
 
-router.isReady().then(async () => {
-  await initializeVault();
+initializeVault().then(async () => {
+  const app = createApp(App).use(IonicVue).use(router);
+  await router.isReady();
   app.mount('#app');
 });
