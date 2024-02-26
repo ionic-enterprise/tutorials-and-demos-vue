@@ -165,7 +165,7 @@ describe('useSessionVault', () => {
       });
     });
 
-    it('updates to in secure storage', async () => {
+    it('updates to secure storage', async () => {
       const { updateUnlockMode } = useSessionVault();
       await updateUnlockMode('BiometricsWithPasscode');
       vi.clearAllMocks();

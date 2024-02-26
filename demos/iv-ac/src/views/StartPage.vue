@@ -5,18 +5,18 @@
 </template>
 
 <script setup lang="ts">
-import { IonContent, IonPage } from '@ionic/vue';
-import { useRouter } from 'vue-router';
-import { useSessionVault } from '@/composables/session-vault';
+import { IonContent, IonPage } from "@ionic/vue";
+import { useRouter } from "vue-router";
+import { useSessionVault } from "@/composables/session-vault";
 const { canUnlock } = useSessionVault();
 const router = useRouter();
-// This strategy takes you to the login page if there is a session to be unlocked.
+// This strategy takes you to the unlock page if there is a session to be unlocked.
 // From there, the user can choose to unlock or sign in again.
 canUnlock().then((x: boolean) => {
   if (x) {
-    router.replace('/unlock');
+    router.replace("/unlock");
   } else {
-    router.replace('/tabs/teas');
+    router.replace("/tabs/teas");
   }
 });
 // If you comment out the above strategy and go with this one, when there is a locked session,

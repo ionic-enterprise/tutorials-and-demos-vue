@@ -3,7 +3,13 @@ import { useVaultFactory } from '@/composables/vault-factory';
 import router from '@/router';
 import { Preferences } from '@capacitor/preferences';
 import { AuthResult } from '@ionic-enterprise/auth';
-import { BiometricPermissionState, Device, DeviceSecurityType, VaultType } from '@ionic-enterprise/identity-vault';
+import {
+  AndroidBiometricCryptoPreference,
+  BiometricPermissionState,
+  Device,
+  DeviceSecurityType,
+  VaultType,
+} from '@ionic-enterprise/identity-vault';
 import { isPlatform } from '@ionic/vue';
 import { Mock, beforeEach, describe, expect, it, vi } from 'vitest';
 
@@ -49,6 +55,7 @@ describe('useSessionVault', () => {
         shouldClearVaultAfterTooManyFailedAttempts: true,
         customPasscodeInvalidUnlockAttempts: 2,
         unlockVaultOnLoad: false,
+        androidBiometricsPreferStrongVaultOrSystemPasscode: AndroidBiometricCryptoPreference.StrongVault,
       });
     });
   });

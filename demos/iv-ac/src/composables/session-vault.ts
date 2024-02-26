@@ -3,7 +3,13 @@ import { useVaultFactory } from '@/composables/vault-factory';
 import router from '@/router';
 import { Preferences } from '@capacitor/preferences';
 import { AuthResult } from '@ionic-enterprise/auth';
-import { BiometricPermissionState, Device, DeviceSecurityType, VaultType } from '@ionic-enterprise/identity-vault';
+import {
+  AndroidBiometricCryptoPreference,
+  BiometricPermissionState,
+  Device,
+  DeviceSecurityType,
+  VaultType,
+} from '@ionic-enterprise/identity-vault';
 import { isPlatform, modalController } from '@ionic/vue';
 
 export type UnlockMode =
@@ -19,7 +25,15 @@ const modeKey = 'LastUnlockMode';
 let session: AuthResult | null | undefined;
 
 const { createVault } = useVaultFactory();
-const vault = createVault();
+const vault = createVault({
+  key: 'io.ionic.teatastervue',
+  type: VaultType.SecureStorage,
+  deviceSecurityType: DeviceSecurityType.None,
+  lockAfterBackgrounded: 5000,
+  shouldClearVaultAfterTooManyFailedAttempts: true,
+  customPasscodeInvalidUnlockAttempts: 2,
+  unlockVaultOnLoad: false,
+});
 
 const initializeVault = async (): Promise<void> => {
   await vault.initialize({
@@ -30,6 +44,7 @@ const initializeVault = async (): Promise<void> => {
     shouldClearVaultAfterTooManyFailedAttempts: true,
     customPasscodeInvalidUnlockAttempts: 2,
     unlockVaultOnLoad: false,
+    androidBiometricsPreferStrongVaultOrSystemPasscode: AndroidBiometricCryptoPreference.StrongVault,
   });
 
   vault.onLock(() => {
@@ -60,13 +75,6 @@ const canHideContentsInBackground = (): boolean => isPlatform('hybrid');
 const canUseBiometrics = async (): Promise<boolean> => isPlatform('hybrid') && (await Device.isBiometricsEnabled());
 const canUseCustomPasscode = (): boolean => isPlatform('hybrid');
 const canUseSystemPasscode = async (): Promise<boolean> => isPlatform('hybrid') && (await Device.isSystemPasscodeSet());
-
-const getSession = async (): Promise<AuthResult | null | undefined> => {
-  if (!session) {
-    session = await vault.getValue(sessionKey);
-  }
-  return session;
-};
 
 const hideContentsInBackground = async (value: boolean): Promise<void> => {
   await Device.setHideScreenOnBackground(value, true);
@@ -147,6 +155,19 @@ const clearSession = async (): Promise<void> => {
   session = undefined;
   await vault.clear();
   await setUnlockMode('SecureStorage');
+};
+
+const getSession = async (): Promise<AuthResult | null | undefined> => {
+  if (!session) {
+    try {
+      session = await vault.getValue(sessionKey);
+    } catch (e: any) {
+      if (e.code !== 8) {
+        await clearSession();
+      }
+    }
+  }
+  return session;
 };
 
 export const useSessionVault = () => {
