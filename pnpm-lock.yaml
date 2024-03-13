@@ -24,38 +24,38 @@ importers:
   auth-connect/current-ui:
     dependencies:
       '@capacitor/android':
-        specifier: ~5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ~5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/app':
         specifier: 5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/core':
-        specifier: 5.7.2
-        version: 5.7.2
+        specifier: 5.7.3
+        version: 5.7.3
       '@capacitor/haptics':
         specifier: 5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/ios':
-        specifier: ~5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ~5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/keyboard':
         specifier: 5.0.8
-        version: 5.0.8(@capacitor/core@5.7.2)
+        version: 5.0.8(@capacitor/core@5.7.3)
       '@capacitor/preferences':
         specifier: ~5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/status-bar':
         specifier: 5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@ionic-enterprise/auth':
         specifier: ~5.1.3
-        version: 5.1.3(@capacitor/core@5.7.2)
+        version: 5.1.3(@capacitor/core@5.7.3)
       '@ionic/vue':
-        specifier: ^7.7.4
-        version: 7.7.4
+        specifier: ^7.8.0
+        version: 7.8.0
       '@ionic/vue-router':
-        specifier: ^7.7.4
-        version: 7.7.4
+        specifier: ^7.8.0
+        version: 7.8.0
       ionicons:
         specifier: ^7.2.2
         version: 7.2.2
@@ -67,23 +67,23 @@ importers:
         version: 4.3.0(vue@3.4.21)
     devDependencies:
       '@capacitor/cli':
-        specifier: 5.7.2
-        version: 5.7.2
+        specifier: 5.7.3
+        version: 5.7.3
       '@vitejs/plugin-legacy':
         specifier: ^5.3.2
-        version: 5.3.2(terser@5.29.1)(vite@5.1.5)
+        version: 5.3.2(terser@5.29.2)(vite@5.1.6)
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
-        version: 5.0.4(vite@5.1.5)(vue@3.4.21)
+        version: 5.0.4(vite@5.1.6)(vue@3.4.21)
       '@vue/eslint-config-typescript':
         specifier: ^13.0.0
-        version: 13.0.0(eslint-plugin-vue@9.22.0)(eslint@8.57.0)(typescript@5.4.2)
+        version: 13.0.0(eslint-plugin-vue@9.23.0)(eslint@8.57.0)(typescript@5.4.2)
       '@vue/test-utils':
-        specifier: ^2.4.4
-        version: 2.4.4(vue@3.4.21)
+        specifier: ^2.4.5
+        version: 2.4.5
       cypress:
-        specifier: ^13.6.6
-        version: 13.6.6
+        specifier: ^13.7.0
+        version: 13.7.0
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -91,8 +91,8 @@ importers:
         specifier: ~2.15.1
         version: 2.15.1(eslint@8.57.0)
       eslint-plugin-vue:
-        specifier: ^9.22.0
-        version: 9.22.0(eslint@8.57.0)
+        specifier: ^9.23.0
+        version: 9.23.0(eslint@8.57.0)
       jsdom:
         specifier: ^24.0.0
         version: 24.0.0
@@ -100,11 +100,11 @@ importers:
         specifier: ^5.4.2
         version: 5.4.2
       vite:
-        specifier: ^5.1.5
-        version: 5.1.5(terser@5.29.1)
+        specifier: ^5.1.6
+        version: 5.1.6(terser@5.29.2)
       vitest:
-        specifier: ^1.3.1
-        version: 1.3.1(jsdom@24.0.0)(terser@5.29.1)
+        specifier: ^1.4.0
+        version: 1.4.0(jsdom@24.0.0)(terser@5.29.2)
       vue-tsc:
         specifier: ^2.0.6
         version: 2.0.6(typescript@5.4.2)
@@ -112,38 +112,38 @@ importers:
   auth-connect/getting-started:
     dependencies:
       '@capacitor/android':
-        specifier: ~5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ~5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/app':
         specifier: 5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/core':
-        specifier: 5.7.2
-        version: 5.7.2
+        specifier: 5.7.3
+        version: 5.7.3
       '@capacitor/haptics':
         specifier: 5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/ios':
-        specifier: ~5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ~5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/keyboard':
         specifier: 5.0.8
-        version: 5.0.8(@capacitor/core@5.7.2)
+        version: 5.0.8(@capacitor/core@5.7.3)
       '@capacitor/preferences':
         specifier: ~5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/status-bar':
         specifier: 5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@ionic-enterprise/auth':
         specifier: ~5.1.3
-        version: 5.1.3(@capacitor/core@5.7.2)
+        version: 5.1.3(@capacitor/core@5.7.3)
       '@ionic/vue':
-        specifier: ^7.7.4
-        version: 7.7.4
+        specifier: ^7.8.0
+        version: 7.8.0
       '@ionic/vue-router':
-        specifier: ^7.7.4
-        version: 7.7.4
+        specifier: ^7.8.0
+        version: 7.8.0
       ionicons:
         specifier: ^7.2.2
         version: 7.2.2
@@ -155,23 +155,23 @@ importers:
         version: 4.3.0(vue@3.4.21)
     devDependencies:
       '@capacitor/cli':
-        specifier: 5.7.2
-        version: 5.7.2
+        specifier: 5.7.3
+        version: 5.7.3
       '@vitejs/plugin-legacy':
         specifier: ^5.3.2
-        version: 5.3.2(terser@5.29.1)(vite@5.1.5)
+        version: 5.3.2(terser@5.29.2)(vite@5.1.6)
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
-        version: 5.0.4(vite@5.1.5)(vue@3.4.21)
+        version: 5.0.4(vite@5.1.6)(vue@3.4.21)
       '@vue/eslint-config-typescript':
         specifier: ^13.0.0
-        version: 13.0.0(eslint-plugin-vue@9.22.0)(eslint@8.57.0)(typescript@5.4.2)
+        version: 13.0.0(eslint-plugin-vue@9.23.0)(eslint@8.57.0)(typescript@5.4.2)
       '@vue/test-utils':
-        specifier: ^2.4.4
-        version: 2.4.4(vue@3.4.21)
+        specifier: ^2.4.5
+        version: 2.4.5
       cypress:
-        specifier: ^13.6.6
-        version: 13.6.6
+        specifier: ^13.7.0
+        version: 13.7.0
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -179,8 +179,8 @@ importers:
         specifier: ~2.15.1
         version: 2.15.1(eslint@8.57.0)
       eslint-plugin-vue:
-        specifier: ^9.22.0
-        version: 9.22.0(eslint@8.57.0)
+        specifier: ^9.23.0
+        version: 9.23.0(eslint@8.57.0)
       jsdom:
         specifier: ^24.0.0
         version: 24.0.0
@@ -188,11 +188,11 @@ importers:
         specifier: ^5.4.2
         version: 5.4.2
       vite:
-        specifier: ^5.1.5
-        version: 5.1.5(terser@5.29.1)
+        specifier: ^5.1.6
+        version: 5.1.6(terser@5.29.2)
       vitest:
-        specifier: ^1.3.1
-        version: 1.3.1(jsdom@24.0.0)(terser@5.29.1)
+        specifier: ^1.4.0
+        version: 1.4.0(jsdom@24.0.0)(terser@5.29.2)
       vue-tsc:
         specifier: ^2.0.6
         version: 2.0.6(typescript@5.4.2)
@@ -200,41 +200,41 @@ importers:
   auth-connect/protect-routes:
     dependencies:
       '@capacitor/android':
-        specifier: ~5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ~5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/app':
         specifier: 5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/core':
-        specifier: 5.7.2
-        version: 5.7.2
+        specifier: 5.7.3
+        version: 5.7.3
       '@capacitor/haptics':
         specifier: 5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/ios':
-        specifier: ~5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ~5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/keyboard':
         specifier: 5.0.8
-        version: 5.0.8(@capacitor/core@5.7.2)
+        version: 5.0.8(@capacitor/core@5.7.3)
       '@capacitor/preferences':
         specifier: ~5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/status-bar':
         specifier: 5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@ionic-enterprise/auth':
         specifier: ~5.1.3
-        version: 5.1.3(@capacitor/core@5.7.2)
+        version: 5.1.3(@capacitor/core@5.7.3)
       '@ionic/vue':
-        specifier: ^7.7.4
-        version: 7.7.4
+        specifier: ^7.8.0
+        version: 7.8.0
       '@ionic/vue-router':
-        specifier: ^7.7.4
-        version: 7.7.4
+        specifier: ^7.8.0
+        version: 7.8.0
       axios:
-        specifier: ~1.6.7
-        version: 1.6.7
+        specifier: ~1.6.8
+        version: 1.6.8
       ionicons:
         specifier: ^7.2.2
         version: 7.2.2
@@ -246,23 +246,23 @@ importers:
         version: 4.3.0(vue@3.4.21)
     devDependencies:
       '@capacitor/cli':
-        specifier: 5.7.2
-        version: 5.7.2
+        specifier: 5.7.3
+        version: 5.7.3
       '@vitejs/plugin-legacy':
         specifier: ^5.3.2
-        version: 5.3.2(terser@5.29.1)(vite@5.1.5)
+        version: 5.3.2(terser@5.29.2)(vite@5.1.6)
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
-        version: 5.0.4(vite@5.1.5)(vue@3.4.21)
+        version: 5.0.4(vite@5.1.6)(vue@3.4.21)
       '@vue/eslint-config-typescript':
         specifier: ^13.0.0
-        version: 13.0.0(eslint-plugin-vue@9.22.0)(eslint@8.57.0)(typescript@5.4.2)
+        version: 13.0.0(eslint-plugin-vue@9.23.0)(eslint@8.57.0)(typescript@5.4.2)
       '@vue/test-utils':
-        specifier: ^2.4.4
-        version: 2.4.4(vue@3.4.21)
+        specifier: ^2.4.5
+        version: 2.4.5
       cypress:
-        specifier: ^13.6.6
-        version: 13.6.6
+        specifier: ^13.7.0
+        version: 13.7.0
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -270,8 +270,8 @@ importers:
         specifier: ~2.15.1
         version: 2.15.1(eslint@8.57.0)
       eslint-plugin-vue:
-        specifier: ^9.22.0
-        version: 9.22.0(eslint@8.57.0)
+        specifier: ^9.23.0
+        version: 9.23.0(eslint@8.57.0)
       jsdom:
         specifier: ^24.0.0
         version: 24.0.0
@@ -279,11 +279,11 @@ importers:
         specifier: ^5.4.2
         version: 5.4.2
       vite:
-        specifier: ^5.1.5
-        version: 5.1.5(terser@5.29.1)
+        specifier: ^5.1.6
+        version: 5.1.6(terser@5.29.2)
       vitest:
-        specifier: ^1.3.1
-        version: 1.3.1(jsdom@24.0.0)(terser@5.29.1)
+        specifier: ^1.4.0
+        version: 1.4.0(jsdom@24.0.0)(terser@5.29.2)
       vue-tsc:
         specifier: ^2.0.6
         version: 2.0.6(typescript@5.4.2)
@@ -291,38 +291,38 @@ importers:
   auth-connect/refresh-workflow:
     dependencies:
       '@capacitor/android':
-        specifier: ~5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ~5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/app':
         specifier: 5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/core':
-        specifier: 5.7.2
-        version: 5.7.2
+        specifier: 5.7.3
+        version: 5.7.3
       '@capacitor/haptics':
         specifier: 5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/ios':
-        specifier: ~5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ~5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/keyboard':
         specifier: 5.0.8
-        version: 5.0.8(@capacitor/core@5.7.2)
+        version: 5.0.8(@capacitor/core@5.7.3)
       '@capacitor/preferences':
         specifier: ~5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/status-bar':
         specifier: 5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@ionic-enterprise/auth':
         specifier: ~5.1.3
-        version: 5.1.3(@capacitor/core@5.7.2)
+        version: 5.1.3(@capacitor/core@5.7.3)
       '@ionic/vue':
-        specifier: ^7.7.4
-        version: 7.7.4
+        specifier: ^7.8.0
+        version: 7.8.0
       '@ionic/vue-router':
-        specifier: ^7.7.4
-        version: 7.7.4
+        specifier: ^7.8.0
+        version: 7.8.0
       ionicons:
         specifier: ^7.2.2
         version: 7.2.2
@@ -334,23 +334,23 @@ importers:
         version: 4.3.0(vue@3.4.21)
     devDependencies:
       '@capacitor/cli':
-        specifier: 5.7.2
-        version: 5.7.2
+        specifier: 5.7.3
+        version: 5.7.3
       '@vitejs/plugin-legacy':
         specifier: ^5.3.2
-        version: 5.3.2(terser@5.29.1)(vite@5.1.5)
+        version: 5.3.2(terser@5.29.2)(vite@5.1.6)
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
-        version: 5.0.4(vite@5.1.5)(vue@3.4.21)
+        version: 5.0.4(vite@5.1.6)(vue@3.4.21)
       '@vue/eslint-config-typescript':
         specifier: ^13.0.0
-        version: 13.0.0(eslint-plugin-vue@9.22.0)(eslint@8.57.0)(typescript@5.4.2)
+        version: 13.0.0(eslint-plugin-vue@9.23.0)(eslint@8.57.0)(typescript@5.4.2)
       '@vue/test-utils':
-        specifier: ^2.4.4
-        version: 2.4.4(vue@3.4.21)
+        specifier: ^2.4.5
+        version: 2.4.5
       cypress:
-        specifier: ^13.6.6
-        version: 13.6.6
+        specifier: ^13.7.0
+        version: 13.7.0
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -358,8 +358,8 @@ importers:
         specifier: ~2.15.1
         version: 2.15.1(eslint@8.57.0)
       eslint-plugin-vue:
-        specifier: ^9.22.0
-        version: 9.22.0(eslint@8.57.0)
+        specifier: ^9.23.0
+        version: 9.23.0(eslint@8.57.0)
       jsdom:
         specifier: ^24.0.0
         version: 24.0.0
@@ -367,11 +367,11 @@ importers:
         specifier: ^5.4.2
         version: 5.4.2
       vite:
-        specifier: ^5.1.5
-        version: 5.1.5(terser@5.29.1)
+        specifier: ^5.1.6
+        version: 5.1.6(terser@5.29.2)
       vitest:
-        specifier: ^1.3.1
-        version: 1.3.1(jsdom@24.0.0)(terser@5.29.1)
+        specifier: ^1.4.0
+        version: 1.4.0(jsdom@24.0.0)(terser@5.29.2)
       vue-tsc:
         specifier: ^2.0.6
         version: 2.0.6(typescript@5.4.2)
@@ -379,47 +379,47 @@ importers:
   demos/auth-playground:
     dependencies:
       '@capacitor/android':
-        specifier: ^5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ^5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/app':
         specifier: ^5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/core':
-        specifier: ^5.7.2
-        version: 5.7.2
+        specifier: ^5.7.3
+        version: 5.7.3
       '@capacitor/haptics':
         specifier: ^5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/ios':
-        specifier: ^5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ^5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/keyboard':
         specifier: ^5.0.8
-        version: 5.0.8(@capacitor/core@5.7.2)
+        version: 5.0.8(@capacitor/core@5.7.3)
       '@capacitor/preferences':
         specifier: ^5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/status-bar':
         specifier: ^5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@ionic-enterprise/auth':
         specifier: ~5.1.3
-        version: 5.1.3(@capacitor/core@5.7.2)
+        version: 5.1.3(@capacitor/core@5.7.3)
       '@ionic-enterprise/identity-vault':
         specifier: ~5.12.4
         version: 5.12.4(typescript@5.4.2)
       '@ionic/vue':
-        specifier: ~7.7.4
-        version: 7.7.4
+        specifier: ~7.8.0
+        version: 7.8.0
       '@ionic/vue-router':
-        specifier: ~7.7.4
-        version: 7.7.4
+        specifier: ~7.8.0
+        version: 7.8.0
       '@vitest/coverage-v8':
-        specifier: ~1.3.1
-        version: 1.3.1(vitest@1.3.1)
+        specifier: ~1.4.0
+        version: 1.4.0(vitest@1.4.0)
       axios:
-        specifier: ~1.6.7
-        version: 1.6.7
+        specifier: ~1.6.8
+        version: 1.6.8
       ionicons:
         specifier: ^7.2.2
         version: 7.2.2
@@ -437,20 +437,20 @@ importers:
         version: 1.4.0
     devDependencies:
       '@capacitor/cli':
-        specifier: ^5.7.2
-        version: 5.7.2
+        specifier: ^5.7.3
+        version: 5.7.3
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
-        version: 5.0.4(vite@5.1.5)(vue@3.4.21)
+        version: 5.0.4(vite@5.1.6)(vue@3.4.21)
       '@vue/eslint-config-typescript':
         specifier: ~13.0.0
-        version: 13.0.0(eslint-plugin-vue@9.22.0)(eslint@8.57.0)(typescript@5.4.2)
+        version: 13.0.0(eslint-plugin-vue@9.23.0)(eslint@8.57.0)(typescript@5.4.2)
       '@vue/test-utils':
-        specifier: ^2.4.4
-        version: 2.4.4(vue@3.4.21)
+        specifier: ^2.4.5
+        version: 2.4.5
       cypress:
-        specifier: ~13.6.6
-        version: 13.6.6
+        specifier: ~13.7.0
+        version: 13.7.0
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -458,8 +458,8 @@ importers:
         specifier: ~2.15.1
         version: 2.15.1(eslint@8.57.0)
       eslint-plugin-vue:
-        specifier: ~9.22.0
-        version: 9.22.0(eslint@8.57.0)
+        specifier: ~9.23.0
+        version: 9.23.0(eslint@8.57.0)
       jsdom:
         specifier: ~24.0.0
         version: 24.0.0
@@ -467,11 +467,11 @@ importers:
         specifier: ~5.4.2
         version: 5.4.2
       vite:
-        specifier: ^5.1.5
-        version: 5.1.5(@types/node@20.11.25)
+        specifier: ^5.1.6
+        version: 5.1.6(@types/node@20.11.28)
       vitest:
-        specifier: ~1.3.1
-        version: 1.3.1(jsdom@24.0.0)
+        specifier: ~1.4.0
+        version: 1.4.0(jsdom@24.0.0)
       vue-tsc:
         specifier: ^2.0.6
         version: 2.0.6(typescript@5.4.2)
@@ -482,53 +482,53 @@ importers:
   demos/iv-ac:
     dependencies:
       '@capacitor/android':
-        specifier: ^5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ^5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/app':
         specifier: ^5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/core':
-        specifier: ^5.7.2
-        version: 5.7.2
+        specifier: ^5.7.3
+        version: 5.7.3
       '@capacitor/haptics':
         specifier: ^5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/ios':
-        specifier: ^5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ^5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/keyboard':
         specifier: ^5.0.8
-        version: 5.0.8(@capacitor/core@5.7.2)
+        version: 5.0.8(@capacitor/core@5.7.3)
       '@capacitor/preferences':
         specifier: ^5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/share':
         specifier: ^5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/splash-screen':
         specifier: ^5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/status-bar':
         specifier: ^5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@ionic-enterprise/auth':
         specifier: ~5.1.3
-        version: 5.1.3(@capacitor/core@5.7.2)
+        version: 5.1.3(@capacitor/core@5.7.3)
       '@ionic-enterprise/identity-vault':
         specifier: ~5.12.4
         version: 5.12.4(typescript@5.4.2)
       '@ionic/vue':
-        specifier: ^7.7.4
-        version: 7.7.4
+        specifier: ^7.8.0
+        version: 7.8.0
       '@ionic/vue-router':
-        specifier: ^7.7.4
-        version: 7.7.4
+        specifier: ^7.8.0
+        version: 7.8.0
       '@vitest/coverage-v8':
-        specifier: ~1.3.1
-        version: 1.3.1(vitest@1.3.1)
+        specifier: ~1.4.0
+        version: 1.4.0(vitest@1.4.0)
       axios:
-        specifier: ~1.6.7
-        version: 1.6.7
+        specifier: ~1.6.8
+        version: 1.6.8
       ionicons:
         specifier: ^7.2.2
         version: 7.2.2
@@ -547,22 +547,22 @@ importers:
     devDependencies:
       '@capacitor/assets':
         specifier: ~3.0.4
-        version: 3.0.4(@types/node@20.11.25)(typescript@5.4.2)
+        version: 3.0.4(@types/node@20.11.28)(typescript@5.4.2)
       '@capacitor/cli':
-        specifier: ~5.7.2
-        version: 5.7.2
+        specifier: ~5.7.3
+        version: 5.7.3
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
-        version: 5.0.4(vite@5.1.5)(vue@3.4.21)
+        version: 5.0.4(vite@5.1.6)(vue@3.4.21)
       '@vue/eslint-config-typescript':
         specifier: ^13.0.0
-        version: 13.0.0(eslint-plugin-vue@9.22.0)(eslint@8.57.0)(typescript@5.4.2)
+        version: 13.0.0(eslint-plugin-vue@9.23.0)(eslint@8.57.0)(typescript@5.4.2)
       '@vue/test-utils':
-        specifier: ^2.4.4
-        version: 2.4.4(vue@3.4.21)
+        specifier: ^2.4.5
+        version: 2.4.5
       cypress:
-        specifier: ^13.6.6
-        version: 13.6.6
+        specifier: ^13.7.0
+        version: 13.7.0
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -570,8 +570,8 @@ importers:
         specifier: ~2.15.1
         version: 2.15.1(eslint@8.57.0)
       eslint-plugin-vue:
-        specifier: ^9.22.0
-        version: 9.22.0(eslint@8.57.0)
+        specifier: ^9.23.0
+        version: 9.23.0(eslint@8.57.0)
       jsdom:
         specifier: ~24.0.0
         version: 24.0.0
@@ -579,11 +579,11 @@ importers:
         specifier: ~5.4.2
         version: 5.4.2
       vite:
-        specifier: ^5.1.5
-        version: 5.1.5(@types/node@20.11.25)
+        specifier: ^5.1.6
+        version: 5.1.6(@types/node@20.11.28)
       vitest:
-        specifier: ~1.3.1
-        version: 1.3.1(@types/node@20.11.25)(jsdom@24.0.0)
+        specifier: ~1.4.0
+        version: 1.4.0(@types/node@20.11.28)(jsdom@24.0.0)
       vue-tsc:
         specifier: ^2.0.6
         version: 2.0.6(typescript@5.4.2)
@@ -594,47 +594,47 @@ importers:
   demos/security-trifecta:
     dependencies:
       '@capacitor/android':
-        specifier: ^5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ^5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/app':
         specifier: ^5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/core':
-        specifier: ^5.7.2
-        version: 5.7.2
+        specifier: ^5.7.3
+        version: 5.7.3
       '@capacitor/haptics':
         specifier: ^5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/ios':
-        specifier: ^5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ^5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/keyboard':
         specifier: ^5.0.8
-        version: 5.0.8(@capacitor/core@5.7.2)
+        version: 5.0.8(@capacitor/core@5.7.3)
       '@capacitor/splash-screen':
         specifier: ^5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/status-bar':
         specifier: ^5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@ionic-enterprise/auth':
         specifier: ~5.1.3
-        version: 5.1.3(@capacitor/core@5.7.2)
+        version: 5.1.3(@capacitor/core@5.7.3)
       '@ionic-enterprise/identity-vault':
         specifier: ~5.12.4
         version: 5.12.4(typescript@5.4.2)
       '@ionic-enterprise/secure-storage':
-        specifier: ^3.0.2
-        version: 3.0.2(@awesome-cordova-plugins/core@6.6.0)(rxjs@7.8.1)
+        specifier: ^3.0.3
+        version: 3.0.3(@awesome-cordova-plugins/core@6.6.0)(rxjs@7.8.1)
       '@ionic/vue':
-        specifier: ~7.7.4
-        version: 7.7.4
+        specifier: ~7.8.0
+        version: 7.8.0
       '@ionic/vue-router':
-        specifier: ~7.7.4
-        version: 7.7.4
+        specifier: ~7.8.0
+        version: 7.8.0
       axios:
-        specifier: ~1.6.7
-        version: 1.6.7
+        specifier: ~1.6.8
+        version: 1.6.8
       core-js:
         specifier: ^3.36.0
         version: 3.36.0
@@ -656,25 +656,25 @@ importers:
     devDependencies:
       '@capacitor/assets':
         specifier: ~3.0.4
-        version: 3.0.4(@types/node@20.11.25)(typescript@5.4.2)
+        version: 3.0.4(@types/node@20.11.28)(typescript@5.4.2)
       '@capacitor/cli':
-        specifier: ^5.7.2
-        version: 5.7.2
+        specifier: ^5.7.3
+        version: 5.7.3
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
-        version: 5.0.4(vite@5.1.5)(vue@3.4.21)
+        version: 5.0.4(vite@5.1.6)(vue@3.4.21)
       '@vitest/coverage-v8':
-        specifier: ~1.3.1
-        version: 1.3.1(vitest@1.3.1)
+        specifier: ~1.4.0
+        version: 1.4.0(vitest@1.4.0)
       '@vue/eslint-config-typescript':
         specifier: ^13.0.0
-        version: 13.0.0(eslint-plugin-vue@9.22.0)(eslint@8.57.0)(typescript@5.4.2)
+        version: 13.0.0(eslint-plugin-vue@9.23.0)(eslint@8.57.0)(typescript@5.4.2)
       '@vue/test-utils':
-        specifier: ^2.4.4
-        version: 2.4.4(vue@3.4.21)
+        specifier: ^2.4.5
+        version: 2.4.5
       cypress:
-        specifier: ^13.6.6
-        version: 13.6.6
+        specifier: ^13.7.0
+        version: 13.7.0
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -682,8 +682,8 @@ importers:
         specifier: ~2.15.1
         version: 2.15.1(eslint@8.57.0)
       eslint-plugin-vue:
-        specifier: ^9.22.0
-        version: 9.22.0(eslint@8.57.0)
+        specifier: ^9.23.0
+        version: 9.23.0(eslint@8.57.0)
       jsdom:
         specifier: ~24.0.0
         version: 24.0.0
@@ -691,11 +691,11 @@ importers:
         specifier: ~5.4.2
         version: 5.4.2
       vite:
-        specifier: ^5.1.5
-        version: 5.1.5(@types/node@20.11.25)
+        specifier: ^5.1.6
+        version: 5.1.6(@types/node@20.11.28)
       vitest:
-        specifier: ~1.3.1
-        version: 1.3.1(@types/node@20.11.25)(jsdom@24.0.0)
+        specifier: ~1.4.0
+        version: 1.4.0(@types/node@20.11.28)(jsdom@24.0.0)
       vue-tsc:
         specifier: ^2.0.6
         version: 2.0.6(typescript@5.4.2)
@@ -706,38 +706,38 @@ importers:
   demos/security-trifecta-vuetify:
     dependencies:
       '@capacitor/android':
-        specifier: ^5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ^5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/core':
-        specifier: ^5.7.2
-        version: 5.7.2
+        specifier: ^5.7.3
+        version: 5.7.3
       '@capacitor/ios':
-        specifier: ^5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ^5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/splash-screen':
         specifier: ^5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@ionic-enterprise/auth':
         specifier: ~5.1.3
-        version: 5.1.3(@capacitor/core@5.7.2)
+        version: 5.1.3(@capacitor/core@5.7.3)
       '@ionic-enterprise/identity-vault':
         specifier: ~5.12.4
         version: 5.12.4(typescript@5.4.2)
       '@ionic-enterprise/secure-storage':
-        specifier: ~3.0.2
-        version: 3.0.2(@awesome-cordova-plugins/core@6.6.0)(rxjs@7.8.1)
+        specifier: ~3.0.3
+        version: 3.0.3(@awesome-cordova-plugins/core@6.6.0)(rxjs@7.8.1)
       '@mdi/font':
         specifier: ~7.4.47
         version: 7.4.47
       '@vitest/coverage-v8':
-        specifier: ~1.3.1
-        version: 1.3.1(vitest@1.3.1)
+        specifier: ~1.4.0
+        version: 1.4.0(vitest@1.4.0)
       '@vue/test-utils':
-        specifier: ~2.4.4
-        version: 2.4.4(vue@3.4.21)
+        specifier: ~2.4.5
+        version: 2.4.5
       axios:
-        specifier: ~1.6.7
-        version: 1.6.7
+        specifier: ~1.6.8
+        version: 1.6.8
       jsdom:
         specifier: ~24.0.0
         version: 24.0.0
@@ -748,8 +748,8 @@ importers:
         specifier: ~4.12.6
         version: 4.12.6(vue@3.4.21)
       vitest:
-        specifier: ~1.3.1
-        version: 1.3.1(@types/node@20.11.25)(jsdom@24.0.0)
+        specifier: ~1.4.0
+        version: 1.4.0(@types/node@20.11.28)(jsdom@24.0.0)
       vue:
         specifier: ^3.4.21
         version: 3.4.21(typescript@5.4.2)
@@ -757,8 +757,8 @@ importers:
         specifier: ^4.3.0
         version: 4.3.0(vue@3.4.21)
       vuetify:
-        specifier: ^3.5.8
-        version: 3.5.8(typescript@5.4.2)(vite-plugin-vuetify@2.0.3)(vue@3.4.21)
+        specifier: ^3.5.9
+        version: 3.5.9(typescript@5.4.2)(vite-plugin-vuetify@2.0.3)(vue@3.4.21)
       webfontloader:
         specifier: ^1.6.28
         version: 1.6.28
@@ -768,22 +768,22 @@ importers:
     devDependencies:
       '@capacitor/assets':
         specifier: ~3.0.4
-        version: 3.0.4(@types/node@20.11.25)(typescript@5.4.2)
+        version: 3.0.4(@types/node@20.11.28)(typescript@5.4.2)
       '@capacitor/cli':
-        specifier: ^5.7.2
-        version: 5.7.2
+        specifier: ^5.7.3
+        version: 5.7.3
       '@types/node':
-        specifier: ~20.11.25
-        version: 20.11.25
+        specifier: ~20.11.28
+        version: 20.11.28
       '@types/webfontloader':
         specifier: ^1.6.38
         version: 1.6.38
       '@vitejs/plugin-vue':
         specifier: ~5.0.4
-        version: 5.0.4(vite@5.1.5)(vue@3.4.21)
+        version: 5.0.4(vite@5.1.6)(vue@3.4.21)
       '@vue/eslint-config-typescript':
         specifier: ~13.0.0
-        version: 13.0.0(eslint-plugin-vue@9.22.0)(eslint@8.57.0)(typescript@5.4.2)
+        version: 13.0.0(eslint-plugin-vue@9.23.0)(eslint@8.57.0)(typescript@5.4.2)
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -791,17 +791,17 @@ importers:
         specifier: ~2.15.1
         version: 2.15.1(eslint@8.57.0)
       eslint-plugin-vue:
-        specifier: ^9.22.0
-        version: 9.22.0(eslint@8.57.0)
+        specifier: ^9.23.0
+        version: 9.23.0(eslint@8.57.0)
       typescript:
         specifier: ~5.4.2
         version: 5.4.2
       vite:
-        specifier: ~5.1.5
-        version: 5.1.5(@types/node@20.11.25)
+        specifier: ~5.1.6
+        version: 5.1.6(@types/node@20.11.28)
       vite-plugin-vuetify:
         specifier: ^2.0.3
-        version: 2.0.3(vite@5.1.5)(vue@3.4.21)(vuetify@3.5.8)
+        version: 2.0.3(vite@5.1.6)(vue@3.4.21)(vuetify@3.5.9)
       vue-tsc:
         specifier: ^2.0.6
         version: 2.0.6(typescript@5.4.2)
@@ -812,47 +812,47 @@ importers:
   demos/tea-taster:
     dependencies:
       '@capacitor/android':
-        specifier: ^5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ^5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/app':
         specifier: ^5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/core':
-        specifier: ^5.7.2
-        version: 5.7.2
+        specifier: ^5.7.3
+        version: 5.7.3
       '@capacitor/haptics':
         specifier: ^5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/ios':
-        specifier: ^5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ^5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/keyboard':
         specifier: ^5.0.8
-        version: 5.0.8(@capacitor/core@5.7.2)
+        version: 5.0.8(@capacitor/core@5.7.3)
       '@capacitor/preferences':
         specifier: ^5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/share':
         specifier: ^5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/splash-screen':
         specifier: ^5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/status-bar':
         specifier: ^5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@ionic/vue':
-        specifier: ^7.7.4
-        version: 7.7.4
+        specifier: ^7.8.0
+        version: 7.8.0
       '@ionic/vue-router':
-        specifier: ^7.7.4
-        version: 7.7.4
+        specifier: ^7.8.0
+        version: 7.8.0
       '@vitest/coverage-v8':
-        specifier: ~1.3.1
-        version: 1.3.1(vitest@1.3.1)
+        specifier: ~1.4.0
+        version: 1.4.0(vitest@1.4.0)
       axios:
-        specifier: ~1.6.7
-        version: 1.6.7
+        specifier: ~1.6.8
+        version: 1.6.8
       ionicons:
         specifier: ^7.2.2
         version: 7.2.2
@@ -871,22 +871,22 @@ importers:
     devDependencies:
       '@capacitor/assets':
         specifier: ~3.0.4
-        version: 3.0.4(@types/node@20.11.25)(typescript@5.4.2)
+        version: 3.0.4(@types/node@20.11.28)(typescript@5.4.2)
       '@capacitor/cli':
-        specifier: ^5.7.2
-        version: 5.7.2
+        specifier: ^5.7.3
+        version: 5.7.3
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
-        version: 5.0.4(vite@5.1.5)(vue@3.4.21)
+        version: 5.0.4(vite@5.1.6)(vue@3.4.21)
       '@vue/eslint-config-typescript':
         specifier: ^13.0.0
-        version: 13.0.0(eslint-plugin-vue@9.22.0)(eslint@8.57.0)(typescript@5.4.2)
+        version: 13.0.0(eslint-plugin-vue@9.23.0)(eslint@8.57.0)(typescript@5.4.2)
       '@vue/test-utils':
-        specifier: ^2.4.4
-        version: 2.4.4(vue@3.4.21)
+        specifier: ^2.4.5
+        version: 2.4.5
       cypress:
-        specifier: ^13.6.6
-        version: 13.6.6
+        specifier: ^13.7.0
+        version: 13.7.0
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -894,8 +894,8 @@ importers:
         specifier: ~2.15.1
         version: 2.15.1(eslint@8.57.0)
       eslint-plugin-vue:
-        specifier: ^9.22.0
-        version: 9.22.0(eslint@8.57.0)
+        specifier: ^9.23.0
+        version: 9.23.0(eslint@8.57.0)
       jsdom:
         specifier: ~24.0.0
         version: 24.0.0
@@ -903,11 +903,11 @@ importers:
         specifier: ~5.4.2
         version: 5.4.2
       vite:
-        specifier: ^5.1.5
-        version: 5.1.5(@types/node@20.11.25)
+        specifier: ^5.1.6
+        version: 5.1.6(@types/node@20.11.28)
       vitest:
-        specifier: ~1.3.1
-        version: 1.3.1(@types/node@20.11.25)(jsdom@24.0.0)
+        specifier: ~1.4.0
+        version: 1.4.0(@types/node@20.11.28)(jsdom@24.0.0)
       vue-tsc:
         specifier: ^2.0.6
         version: 2.0.6(typescript@5.4.2)
@@ -918,35 +918,35 @@ importers:
   identity-vault/device-api:
     dependencies:
       '@capacitor/android':
-        specifier: ^5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ^5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/app':
         specifier: 5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/core':
-        specifier: 5.7.2
-        version: 5.7.2
+        specifier: 5.7.3
+        version: 5.7.3
       '@capacitor/haptics':
         specifier: 5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/ios':
-        specifier: ^5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ^5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/keyboard':
         specifier: 5.0.8
-        version: 5.0.8(@capacitor/core@5.7.2)
+        version: 5.0.8(@capacitor/core@5.7.3)
       '@capacitor/status-bar':
         specifier: 5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@ionic-enterprise/identity-vault':
         specifier: ~5.12.4
         version: 5.12.4(typescript@5.4.2)
       '@ionic/vue':
-        specifier: ^7.7.4
-        version: 7.7.4
+        specifier: ^7.8.0
+        version: 7.8.0
       '@ionic/vue-router':
-        specifier: ^7.7.4
-        version: 7.7.4
+        specifier: ^7.8.0
+        version: 7.8.0
       ionicons:
         specifier: ^7.2.2
         version: 7.2.2
@@ -958,44 +958,44 @@ importers:
         version: 4.3.0(vue@3.4.21)
     devDependencies:
       '@capacitor/cli':
-        specifier: 5.7.2
-        version: 5.7.2
+        specifier: 5.7.3
+        version: 5.7.3
       '@vitejs/plugin-legacy':
         specifier: ^5.3.2
-        version: 5.3.2(terser@5.29.1)(vite@5.1.5)
+        version: 5.3.2(terser@5.29.2)(vite@5.1.6)
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
-        version: 5.0.4(vite@5.1.5)(vue@3.4.21)
+        version: 5.0.4(vite@5.1.6)(vue@3.4.21)
       '@vue/eslint-config-typescript':
         specifier: ^13.0.0
-        version: 13.0.0(eslint-plugin-vue@9.22.0)(eslint@8.57.0)(typescript@5.4.2)
+        version: 13.0.0(eslint-plugin-vue@9.23.0)(eslint@8.57.0)(typescript@5.4.2)
       '@vue/test-utils':
-        specifier: ^2.4.4
-        version: 2.4.4(vue@3.4.21)
+        specifier: ^2.4.5
+        version: 2.4.5
       cypress:
-        specifier: ^13.6.6
-        version: 13.6.6
+        specifier: ^13.7.0
+        version: 13.7.0
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
       eslint-plugin-vue:
-        specifier: ^9.22.0
-        version: 9.22.0(eslint@8.57.0)
+        specifier: ^9.23.0
+        version: 9.23.0(eslint@8.57.0)
       jsdom:
         specifier: ^24.0.0
         version: 24.0.0
       terser:
-        specifier: ^5.29.1
-        version: 5.29.1
+        specifier: ^5.29.2
+        version: 5.29.2
       typescript:
         specifier: ^5.4.2
         version: 5.4.2
       vite:
-        specifier: ^5.1.5
-        version: 5.1.5(terser@5.29.1)
+        specifier: ^5.1.6
+        version: 5.1.6(terser@5.29.2)
       vitest:
-        specifier: ^1.3.1
-        version: 1.3.1(jsdom@24.0.0)(terser@5.29.1)
+        specifier: ^1.4.0
+        version: 1.4.0(jsdom@24.0.0)(terser@5.29.2)
       vue-tsc:
         specifier: ^2.0.6
         version: 2.0.6(typescript@5.4.2)
@@ -1003,35 +1003,35 @@ importers:
   identity-vault/getting-started:
     dependencies:
       '@capacitor/android':
-        specifier: ^5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ^5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/app':
         specifier: 5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/core':
-        specifier: 5.7.2
-        version: 5.7.2
+        specifier: 5.7.3
+        version: 5.7.3
       '@capacitor/haptics':
         specifier: 5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/ios':
-        specifier: ^5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ^5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/keyboard':
         specifier: 5.0.8
-        version: 5.0.8(@capacitor/core@5.7.2)
+        version: 5.0.8(@capacitor/core@5.7.3)
       '@capacitor/status-bar':
         specifier: 5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@ionic-enterprise/identity-vault':
         specifier: ~5.12.4
         version: 5.12.4(typescript@5.4.2)
       '@ionic/vue':
-        specifier: ^7.7.4
-        version: 7.7.4
+        specifier: ^7.8.0
+        version: 7.8.0
       '@ionic/vue-router':
-        specifier: ^7.7.4
-        version: 7.7.4
+        specifier: ^7.8.0
+        version: 7.8.0
       ionicons:
         specifier: ^7.2.2
         version: 7.2.2
@@ -1043,44 +1043,44 @@ importers:
         version: 4.3.0(vue@3.4.21)
     devDependencies:
       '@capacitor/cli':
-        specifier: 5.7.2
-        version: 5.7.2
+        specifier: 5.7.3
+        version: 5.7.3
       '@vitejs/plugin-legacy':
         specifier: ^5.3.2
-        version: 5.3.2(terser@5.29.1)(vite@5.1.5)
+        version: 5.3.2(terser@5.29.2)(vite@5.1.6)
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
-        version: 5.0.4(vite@5.1.5)(vue@3.4.21)
+        version: 5.0.4(vite@5.1.6)(vue@3.4.21)
       '@vue/eslint-config-typescript':
         specifier: ^13.0.0
-        version: 13.0.0(eslint-plugin-vue@9.22.0)(eslint@8.57.0)(typescript@5.4.2)
+        version: 13.0.0(eslint-plugin-vue@9.23.0)(eslint@8.57.0)(typescript@5.4.2)
       '@vue/test-utils':
-        specifier: ^2.4.4
-        version: 2.4.4(vue@3.4.21)
+        specifier: ^2.4.5
+        version: 2.4.5
       cypress:
-        specifier: ^13.6.6
-        version: 13.6.6
+        specifier: ^13.7.0
+        version: 13.7.0
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
       eslint-plugin-vue:
-        specifier: ^9.22.0
-        version: 9.22.0(eslint@8.57.0)
+        specifier: ^9.23.0
+        version: 9.23.0(eslint@8.57.0)
       jsdom:
         specifier: ^24.0.0
         version: 24.0.0
       terser:
-        specifier: ^5.29.1
-        version: 5.29.1
+        specifier: ^5.29.2
+        version: 5.29.2
       typescript:
         specifier: ^5.4.2
         version: 5.4.2
       vite:
-        specifier: ^5.1.5
-        version: 5.1.5(terser@5.29.1)
+        specifier: ^5.1.6
+        version: 5.1.6(terser@5.29.2)
       vitest:
-        specifier: ^1.3.1
-        version: 1.3.1(jsdom@24.0.0)(terser@5.29.1)
+        specifier: ^1.4.0
+        version: 1.4.0(jsdom@24.0.0)(terser@5.29.2)
       vue-tsc:
         specifier: ^2.0.6
         version: 2.0.6(typescript@5.4.2)
@@ -1088,35 +1088,35 @@ importers:
   identity-vault/startup-strategies:
     dependencies:
       '@capacitor/android':
-        specifier: ^5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ^5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/app':
         specifier: 5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/core':
-        specifier: 5.7.2
-        version: 5.7.2
+        specifier: 5.7.3
+        version: 5.7.3
       '@capacitor/haptics':
         specifier: 5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@capacitor/ios':
-        specifier: ^5.7.2
-        version: 5.7.2(@capacitor/core@5.7.2)
+        specifier: ^5.7.3
+        version: 5.7.3(@capacitor/core@5.7.3)
       '@capacitor/keyboard':
         specifier: 5.0.8
-        version: 5.0.8(@capacitor/core@5.7.2)
+        version: 5.0.8(@capacitor/core@5.7.3)
       '@capacitor/status-bar':
         specifier: 5.0.7
-        version: 5.0.7(@capacitor/core@5.7.2)
+        version: 5.0.7(@capacitor/core@5.7.3)
       '@ionic-enterprise/identity-vault':
         specifier: ~5.12.4
         version: 5.12.4(typescript@5.4.2)
       '@ionic/vue':
-        specifier: ^7.7.4
-        version: 7.7.4
+        specifier: ^7.8.0
+        version: 7.8.0
       '@ionic/vue-router':
-        specifier: ^7.7.4
-        version: 7.7.4
+        specifier: ^7.8.0
+        version: 7.8.0
       ionicons:
         specifier: ^7.2.2
         version: 7.2.2
@@ -1128,44 +1128,44 @@ importers:
         version: 4.3.0(vue@3.4.21)
     devDependencies:
       '@capacitor/cli':
-        specifier: 5.7.2
-        version: 5.7.2
+        specifier: 5.7.3
+        version: 5.7.3
       '@vitejs/plugin-legacy':
         specifier: ^5.3.2
-        version: 5.3.2(terser@5.29.1)(vite@5.1.5)
+        version: 5.3.2(terser@5.29.2)(vite@5.1.6)
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
-        version: 5.0.4(vite@5.1.5)(vue@3.4.21)
+        version: 5.0.4(vite@5.1.6)(vue@3.4.21)
       '@vue/eslint-config-typescript':
         specifier: ^13.0.0
-        version: 13.0.0(eslint-plugin-vue@9.22.0)(eslint@8.57.0)(typescript@5.4.2)
+        version: 13.0.0(eslint-plugin-vue@9.23.0)(eslint@8.57.0)(typescript@5.4.2)
       '@vue/test-utils':
-        specifier: ^2.4.4
-        version: 2.4.4(vue@3.4.21)
+        specifier: ^2.4.5
+        version: 2.4.5
       cypress:
-        specifier: ^13.6.6
-        version: 13.6.6
+        specifier: ^13.7.0
+        version: 13.7.0
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
       eslint-plugin-vue:
-        specifier: ^9.22.0
-        version: 9.22.0(eslint@8.57.0)
+        specifier: ^9.23.0
+        version: 9.23.0(eslint@8.57.0)
       jsdom:
         specifier: ^24.0.0
         version: 24.0.0
       terser:
-        specifier: ^5.29.1
-        version: 5.29.1
+        specifier: ^5.29.2
+        version: 5.29.2
       typescript:
         specifier: ^5.4.2
         version: 5.4.2
       vite:
-        specifier: ^5.1.5
-        version: 5.1.5(terser@5.29.1)
+        specifier: ^5.1.6
+        version: 5.1.6(terser@5.29.2)
       vitest:
-        specifier: ^1.3.1
-        version: 1.3.1(jsdom@24.0.0)(terser@5.29.1)
+        specifier: ^1.4.0
+        version: 1.4.0(jsdom@24.0.0)(terser@5.29.2)
       vue-tsc:
         specifier: ^2.0.6
         version: 2.0.6(typescript@5.4.2)
@@ -1320,8 +1320,8 @@ packages:
       - supports-color
     dev: true
 
-  /@babel/helper-define-polyfill-provider@0.6.0(@babel/core@7.24.0):
-    resolution: {integrity: sha512-efwOM90nCG6YeT8o3PCyBVSxRfmILxCNL+TNI8CGQl7a62M0Wd9VkV+XHwIlkOz1r4b+lxu6gBjdWiOMdUCrCQ==}
+  /@babel/helper-define-polyfill-provider@0.6.1(@babel/core@7.24.0):
+    resolution: {integrity: sha512-o7SDgTJuvx5vLKD6SFvkydkSMBvahDKGiNJzG22IZYXhiqoe9efY7zocICBgzHV4IRg5wdgl2nEL/tulKIEIbA==}
     peerDependencies:
       '@babel/core': ^7.4.0 || ^8.0.0-0 <8.0.0
     dependencies:
@@ -2314,7 +2314,7 @@ packages:
       '@babel/plugin-transform-unicode-regex': 7.23.3(@babel/core@7.24.0)
       '@babel/plugin-transform-unicode-sets-regex': 7.23.3(@babel/core@7.24.0)
       '@babel/preset-modules': 0.1.6-no-external-plugins(@babel/core@7.24.0)
-      babel-plugin-polyfill-corejs2: 0.4.9(@babel/core@7.24.0)
+      babel-plugin-polyfill-corejs2: 0.4.10(@babel/core@7.24.0)
       babel-plugin-polyfill-corejs3: 0.9.0(@babel/core@7.24.0)
       babel-plugin-polyfill-regenerator: 0.5.5(@babel/core@7.24.0)
       core-js-compat: 3.36.0
@@ -2383,31 +2383,31 @@ packages:
   /@bcoe/v8-coverage@0.2.3:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
 
-  /@capacitor/android@5.7.2(@capacitor/core@5.7.2):
-    resolution: {integrity: sha512-T4U+15R/1PyokW0Le92j7AV19kuO25his2ymF2xf2I04fZUDj8RjmXA+za7i3K8vhxtKkTdY2dPAywrfNAM09Q==}
+  /@capacitor/android@5.7.3(@capacitor/core@5.7.3):
+    resolution: {integrity: sha512-l4FoagqyoId+D/597fG8pPfmVrNevzWzbtkJkbGtQZS5rqRR4HCNoJn0LAMs812o9bfuxGdE1T3MjpehGOe0Rw==}
     peerDependencies:
       '@capacitor/core': ^5.7.0
     dependencies:
-      '@capacitor/core': 5.7.2
+      '@capacitor/core': 5.7.3
     dev: false
 
-  /@capacitor/app@5.0.7(@capacitor/core@5.7.2):
+  /@capacitor/app@5.0.7(@capacitor/core@5.7.3):
     resolution: {integrity: sha512-oad0jwQu+vgQDukeS9UV56yG10dlxkAGGl26IQpZlTmg3dTI9qSJtvhmlLfkF0nEtoj5IsVQUPE+NLH1oZkgGQ==}
     peerDependencies:
       '@capacitor/core': ^5.0.0
     dependencies:
-      '@capacitor/core': 5.7.2
+      '@capacitor/core': 5.7.3
     dev: false
 
-  /@capacitor/assets@3.0.4(@types/node@20.11.25)(typescript@5.4.2):
+  /@capacitor/assets@3.0.4(@types/node@20.11.28)(typescript@5.4.2):
     resolution: {integrity: sha512-9t/u2i9vSEWDfarzDJmQEgi07Tozyw2mKZYTkybb2Zkc8ufqR0S6ZzDBmWbsTtOTVwRr0uU9Rx3c8AVbA1xDtA==}
     engines: {node: '>=10.3.0'}
     hasBin: true
     dependencies:
-      '@capacitor/cli': 5.7.2
+      '@capacitor/cli': 5.7.3
       '@ionic/utils-array': 2.1.6
       '@ionic/utils-fs': 3.1.7
-      '@trapezedev/project': 7.0.10(@types/node@20.11.25)(typescript@5.4.2)
+      '@trapezedev/project': 7.0.10(@types/node@20.11.28)(typescript@5.4.2)
       commander: 8.3.0
       debug: 4.3.4(supports-color@8.1.1)
       fs-extra: 10.1.0
@@ -2425,8 +2425,8 @@ packages:
       - typescript
     dev: true
 
-  /@capacitor/cli@5.7.2:
-    resolution: {integrity: sha512-dTW48klx39Mm2twkRU5pHw7tFRGtGk80fw5psopmbx8Ep5FG08HprqnwK5DXsFPhgJaC+ax4VDwmFCvb8uAGFA==}
+  /@capacitor/cli@5.7.3:
+    resolution: {integrity: sha512-bfc2QraYS5AsMyYCrhKqcPlZ9bFpsCfnjLKTWLLPJOgOhCdTALPIbzTEtjHyjMPMfch3SFuxdfog57PCCKyJWg==}
     engines: {node: '>=16.0.0'}
     hasBin: true
     dependencies:
@@ -2451,66 +2451,66 @@ packages:
       - supports-color
     dev: true
 
-  /@capacitor/core@5.7.2:
-    resolution: {integrity: sha512-/OUtfINmk7ke32VtKIHRAy8NlunbeK+aCqCHOS+fvtr7nUsOJXPkYgbgqZp/CWXET/gSK1xxMecaVBzpE98UKA==}
+  /@capacitor/core@5.7.3:
+    resolution: {integrity: sha512-xEuQmP+h0tugl2N+qRcdrUavZydvTnnmtvqu/OtCBb/bKZo2PDRFft7MxuQRE2GxXs6kLy3cvwzhDAHB3a+9mw==}
     dependencies:
       tslib: 2.6.2
     dev: false
 
-  /@capacitor/haptics@5.0.7(@capacitor/core@5.7.2):
+  /@capacitor/haptics@5.0.7(@capacitor/core@5.7.3):
     resolution: {integrity: sha512-/j+7Qa4BxQA5aOU43cwXuiudfSXfoHFsAVfcehH5DkSjxLykZKWHEuE4uFJXqdkSIbAHjS37D0Sde6ENP6G/MA==}
     peerDependencies:
       '@capacitor/core': ^5.0.0
     dependencies:
-      '@capacitor/core': 5.7.2
+      '@capacitor/core': 5.7.3
     dev: false
 
-  /@capacitor/ios@5.7.2(@capacitor/core@5.7.2):
-    resolution: {integrity: sha512-msh+Kqjv/MyVCrSH0zVtwxptXnsgky4FENUq+Xdaa1pqEglmpHlUKod1Jf7qhfAhTLhHPyokOZMvaIyTtoSwCA==}
+  /@capacitor/ios@5.7.3(@capacitor/core@5.7.3):
+    resolution: {integrity: sha512-ntgayMTQlBZeZiONkqjLGQs2zFVMFghu/hsPcINgXxU53Mvticf2BBNRMmdR20eVHg2UbbJx9SLl8UlOvgQ4sA==}
     peerDependencies:
       '@capacitor/core': ^5.7.0
     dependencies:
-      '@capacitor/core': 5.7.2
+      '@capacitor/core': 5.7.3
     dev: false
 
-  /@capacitor/keyboard@5.0.8(@capacitor/core@5.7.2):
+  /@capacitor/keyboard@5.0.8(@capacitor/core@5.7.3):
     resolution: {integrity: sha512-XYyBzGlzjgLPqyPVdu5McGLYV6+G2efVR4I3l5cF1B27M6U/oFqv9CQU74WNG08nee28bfccboNpv6eWCLYn1A==}
     peerDependencies:
       '@capacitor/core': ^5.0.0
     dependencies:
-      '@capacitor/core': 5.7.2
+      '@capacitor/core': 5.7.3
     dev: false
 
-  /@capacitor/preferences@5.0.7(@capacitor/core@5.7.2):
+  /@capacitor/preferences@5.0.7(@capacitor/core@5.7.3):
     resolution: {integrity: sha512-JvfGP1m8nITWEFdBpKR9HXNeBjLKwO0q1pry7Z5lYrYmCrbyRBLWzaGZGll8py4KmGWL3F5+PZvhrpT4gPoeAQ==}
     peerDependencies:
       '@capacitor/core': ^5.0.0
     dependencies:
-      '@capacitor/core': 5.7.2
+      '@capacitor/core': 5.7.3
     dev: false
 
-  /@capacitor/share@5.0.7(@capacitor/core@5.7.2):
+  /@capacitor/share@5.0.7(@capacitor/core@5.7.3):
     resolution: {integrity: sha512-4GraggRRxwhstxIdF9JyOEBq4QTufqFOekdB4P9GeiQYWJoA5VraSR1mwy4Trke1VFfaBjz/nGi4WQOJdHIAgg==}
     peerDependencies:
       '@capacitor/core': ^5.0.0
     dependencies:
-      '@capacitor/core': 5.7.2
+      '@capacitor/core': 5.7.3
     dev: false
 
-  /@capacitor/splash-screen@5.0.7(@capacitor/core@5.7.2):
+  /@capacitor/splash-screen@5.0.7(@capacitor/core@5.7.3):
     resolution: {integrity: sha512-2aAhhZPi7GU8DDs9dhH4OnMJ3rTscPS/TYKzm03fzhBby6ykSXY6HqKgaWdhfCR4TvLsHf0VKpWZu4ZHD0S7iQ==}
     peerDependencies:
       '@capacitor/core': ^5.0.0
     dependencies:
-      '@capacitor/core': 5.7.2
+      '@capacitor/core': 5.7.3
     dev: false
 
-  /@capacitor/status-bar@5.0.7(@capacitor/core@5.7.2):
+  /@capacitor/status-bar@5.0.7(@capacitor/core@5.7.3):
     resolution: {integrity: sha512-KblB3gV2LDMEjx3fQoNBAzxb+Tr+2mv68SfFLLDCMiMUD3Eile2TAWRWd1yxy496pDFTOs2BJtup8++iuuuJ/w==}
     peerDependencies:
       '@capacitor/core': ^5.0.0
     dependencies:
-      '@capacitor/core': 5.7.2
+      '@capacitor/core': 5.7.3
     dev: false
 
   /@colors/colors@1.5.0:
@@ -2806,13 +2806,13 @@ packages:
     engines: {node: '>=6.9.0'}
     dev: true
 
-  /@ionic-enterprise/auth@5.1.3(@capacitor/core@5.7.2):
+  /@ionic-enterprise/auth@5.1.3(@capacitor/core@5.7.3):
     resolution: {integrity: sha512-2/EM4RxnCcHFT66hsBw8bbTuFkIEViXa8pwi6k+APQRaH4vYPF5ZzX8QJsICPLo9TtQ8A7nT51Th3n3EzHVpuQ==}
     engines: {cordovaDependencies: {3.0.0: {cordova: '>100'}}}
     peerDependencies:
       '@capacitor/core': ^5.0.0
     dependencies:
-      '@capacitor/core': 5.7.2
+      '@capacitor/core': 5.7.3
       js-sha256: 0.9.0
       url-parse: 1.5.10
     dev: false
@@ -2827,8 +2827,8 @@ packages:
       typescript: 5.4.2
     dev: false
 
-  /@ionic-enterprise/secure-storage@3.0.2(@awesome-cordova-plugins/core@6.6.0)(rxjs@7.8.1):
-    resolution: {integrity: sha512-H2im1uXsaak44firL5R9KP+xrWDyxrqwwv6Zd+TkmizjFXamPOFs4qUqbDXDQAIrXKRzAsXzJ4JeNE84qYl5RA==}
+  /@ionic-enterprise/secure-storage@3.0.3(@awesome-cordova-plugins/core@6.6.0)(rxjs@7.8.1):
+    resolution: {integrity: sha512-rdv9IPDVWY6oEN0K148dD3KwpsEjISI/Kst1MkEad6rtOZ5stt0Y1Upyks1hRllRIXxUolxfI9OCkDaDFI9W/g==}
     peerDependencies:
       '@awesome-cordova-plugins/core': ^6.0.0
       rxjs: ^5.5.0 || ^6.5.0 || ^7.3.0
@@ -2850,10 +2850,10 @@ packages:
       - supports-color
     dev: true
 
-  /@ionic/core@7.7.4:
-    resolution: {integrity: sha512-zThio3ZfbTu+3eM6QBdyeEk5OBc7M0ApFwSlP/G7rrFVcTPm12FNvG9VPD+aN5NwnYy0EsV3hlMkxbawoqjVLw==}
+  /@ionic/core@7.8.0:
+    resolution: {integrity: sha512-rogQw6lWH367E5XQnovbAIB4pT1YmuTz7OvyQm0cp4pO2/64faKyTGteSxc99stG01CoARW+pjJN1K09hfKFPw==}
     dependencies:
-      '@stencil/core': 4.12.5
+      '@stencil/core': 4.12.6
       ionicons: 7.2.2
       tslib: 2.6.2
     dev: false
@@ -2972,16 +2972,16 @@ packages:
       - supports-color
     dev: true
 
-  /@ionic/vue-router@7.7.4:
-    resolution: {integrity: sha512-zWm3ptGp1TQB4cV/Q8YEIvOO48Ol797sasJLaHQlJOvUvbbT9EIGW3RuqnV7e1HkJ2AYX4GXUTfJ+xOT2ITC6Q==}
+  /@ionic/vue-router@7.8.0:
+    resolution: {integrity: sha512-eoBznpasYngVCdeU1PiYdzbUGPXP85IZlduJrSa/B+UkZVTx33WTjTNP/GYC2NhMYVrei8eS/fmg7pafIWZHPQ==}
     dependencies:
-      '@ionic/vue': 7.7.4
+      '@ionic/vue': 7.8.0
     dev: false
 
-  /@ionic/vue@7.7.4:
-    resolution: {integrity: sha512-THrMMoQHU2Ym+JaTj/dm/FV8FyB7ZXmc6kierZ/+BSvOncIekla8Afe6Qk2c2U1afOPos0MBINf9xXkwxnHfIw==}
+  /@ionic/vue@7.8.0:
+    resolution: {integrity: sha512-IXOUO9SQHXU3Ec/9u6u2JPNcu9VL8jamvM+elzBam7e0GDSQ56cyYDRnptROBdfBYop2EGiNJvzjWxAuZnM6kw==}
     dependencies:
-      '@ionic/core': 7.7.4
+      '@ionic/core': 7.8.0
       ionicons: 7.2.2
     dev: false
 
@@ -3022,8 +3022,8 @@ packages:
     resolution: {integrity: sha512-R8gLRTZeyp03ymzP/6Lil/28tGeGEzhx1q2k703KGWRAI1VdvPIXdG70VJc2pAMw3NA6JKL5hhFu1sJX0Mnn/A==}
     engines: {node: '>=6.0.0'}
 
-  /@jridgewell/source-map@0.3.5:
-    resolution: {integrity: sha512-UTYAUj/wviwdsMfzoSJspJxbkH5o1snzwX0//0ENX1u/55kkZZkcTZP6u9bwKGkv+dkk9at4m1Cpt0uY80kcpQ==}
+  /@jridgewell/source-map@0.3.6:
+    resolution: {integrity: sha512-1ZJTZebgqllO79ue2bm3rIGud/bOe0pP5BjSRCRxxYkEZS8STV7zN84UBbiYu7jy+eCKSnVIUgoWWE/tt+shMQ==}
     dependencies:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
@@ -3086,92 +3086,92 @@ packages:
       prettier: 2.8.8
     dev: true
 
-  /@rollup/rollup-android-arm-eabi@4.12.1:
-    resolution: {integrity: sha512-iU2Sya8hNn1LhsYyf0N+L4Gf9Qc+9eBTJJJsaOGUp+7x4n2M9dxTt8UvhJl3oeftSjblSlpCfvjA/IfP3g5VjQ==}
+  /@rollup/rollup-android-arm-eabi@4.13.0:
+    resolution: {integrity: sha512-5ZYPOuaAqEH/W3gYsRkxQATBW3Ii1MfaT4EQstTnLKViLi2gLSQmlmtTpGucNP3sXEpOiI5tdGhjdE111ekyEg==}
     cpu: [arm]
     os: [android]
     requiresBuild: true
     optional: true
 
-  /@rollup/rollup-android-arm64@4.12.1:
-    resolution: {integrity: sha512-wlzcWiH2Ir7rdMELxFE5vuM7D6TsOcJ2Yw0c3vaBR3VOsJFVTx9xvwnAvhgU5Ii8Gd6+I11qNHwndDscIm0HXg==}
+  /@rollup/rollup-android-arm64@4.13.0:
+    resolution: {integrity: sha512-BSbaCmn8ZadK3UAQdlauSvtaJjhlDEjS5hEVVIN3A4bbl3X+otyf/kOJV08bYiRxfejP3DXFzO2jz3G20107+Q==}
     cpu: [arm64]
     os: [android]
     requiresBuild: true
     optional: true
 
-  /@rollup/rollup-darwin-arm64@4.12.1:
-    resolution: {integrity: sha512-YRXa1+aZIFN5BaImK+84B3uNK8C6+ynKLPgvn29X9s0LTVCByp54TB7tdSMHDR7GTV39bz1lOmlLDuedgTwwHg==}
+  /@rollup/rollup-darwin-arm64@4.13.0:
+    resolution: {integrity: sha512-Ovf2evVaP6sW5Ut0GHyUSOqA6tVKfrTHddtmxGQc1CTQa1Cw3/KMCDEEICZBbyppcwnhMwcDce9ZRxdWRpVd6g==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     optional: true
 
-  /@rollup/rollup-darwin-x64@4.12.1:
-    resolution: {integrity: sha512-opjWJ4MevxeA8FhlngQWPBOvVWYNPFkq6/25rGgG+KOy0r8clYwL1CFd+PGwRqqMFVQ4/Qd3sQu5t7ucP7C/Uw==}
+  /@rollup/rollup-darwin-x64@4.13.0:
+    resolution: {integrity: sha512-U+Jcxm89UTK592vZ2J9st9ajRv/hrwHdnvyuJpa5A2ngGSVHypigidkQJP+YiGL6JODiUeMzkqQzbCG3At81Gg==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     optional: true
 
-  /@rollup/rollup-linux-arm-gnueabihf@4.12.1:
-    resolution: {integrity: sha512-uBkwaI+gBUlIe+EfbNnY5xNyXuhZbDSx2nzzW8tRMjUmpScd6lCQYKY2V9BATHtv5Ef2OBq6SChEP8h+/cxifQ==}
+  /@rollup/rollup-linux-arm-gnueabihf@4.13.0:
+    resolution: {integrity: sha512-8wZidaUJUTIR5T4vRS22VkSMOVooG0F4N+JSwQXWSRiC6yfEsFMLTYRFHvby5mFFuExHa/yAp9juSphQQJAijQ==}
     cpu: [arm]
     os: [linux]
     requiresBuild: true
     optional: true
 
-  /@rollup/rollup-linux-arm64-gnu@4.12.1:
-    resolution: {integrity: sha512-0bK9aG1kIg0Su7OcFTlexkVeNZ5IzEsnz1ept87a0TUgZ6HplSgkJAnFpEVRW7GRcikT4GlPV0pbtVedOaXHQQ==}
+  /@rollup/rollup-linux-arm64-gnu@4.13.0:
+    resolution: {integrity: sha512-Iu0Kno1vrD7zHQDxOmvweqLkAzjxEVqNhUIXBsZ8hu8Oak7/5VTPrxOEZXYC1nmrBVJp0ZcL2E7lSuuOVaE3+w==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     optional: true
 
-  /@rollup/rollup-linux-arm64-musl@4.12.1:
-    resolution: {integrity: sha512-qB6AFRXuP8bdkBI4D7UPUbE7OQf7u5OL+R94JE42Z2Qjmyj74FtDdLGeriRyBDhm4rQSvqAGCGC01b8Fu2LthQ==}
+  /@rollup/rollup-linux-arm64-musl@4.13.0:
+    resolution: {integrity: sha512-C31QrW47llgVyrRjIwiOwsHFcaIwmkKi3PCroQY5aVq4H0A5v/vVVAtFsI1nfBngtoRpeREvZOkIhmRwUKkAdw==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     optional: true
 
-  /@rollup/rollup-linux-riscv64-gnu@4.12.1:
-    resolution: {integrity: sha512-sHig3LaGlpNgDj5o8uPEoGs98RII8HpNIqFtAI8/pYABO8i0nb1QzT0JDoXF/pxzqO+FkxvwkHZo9k0NJYDedg==}
+  /@rollup/rollup-linux-riscv64-gnu@4.13.0:
+    resolution: {integrity: sha512-Oq90dtMHvthFOPMl7pt7KmxzX7E71AfyIhh+cPhLY9oko97Zf2C9tt/XJD4RgxhaGeAraAXDtqxvKE1y/j35lA==}
     cpu: [riscv64]
     os: [linux]
     requiresBuild: true
     optional: true
 
-  /@rollup/rollup-linux-x64-gnu@4.12.1:
-    resolution: {integrity: sha512-nD3YcUv6jBJbBNFvSbp0IV66+ba/1teuBcu+fBBPZ33sidxitc6ErhON3JNavaH8HlswhWMC3s5rgZpM4MtPqQ==}
+  /@rollup/rollup-linux-x64-gnu@4.13.0:
+    resolution: {integrity: sha512-yUD/8wMffnTKuiIsl6xU+4IA8UNhQ/f1sAnQebmE/lyQ8abjsVyDkyRkWop0kdMhKMprpNIhPmYlCxgHrPoXoA==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     optional: true
 
-  /@rollup/rollup-linux-x64-musl@4.12.1:
-    resolution: {integrity: sha512-7/XVZqgBby2qp/cO0TQ8uJK+9xnSdJ9ct6gSDdEr4MfABrjTyrW6Bau7HQ73a2a5tPB7hno49A0y1jhWGDN9OQ==}
+  /@rollup/rollup-linux-x64-musl@4.13.0:
+    resolution: {integrity: sha512-9RyNqoFNdF0vu/qqX63fKotBh43fJQeYC98hCaf89DYQpv+xu0D8QFSOS0biA7cGuqJFOc1bJ+m2rhhsKcw1hw==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     optional: true
 
-  /@rollup/rollup-win32-arm64-msvc@4.12.1:
-    resolution: {integrity: sha512-CYc64bnICG42UPL7TrhIwsJW4QcKkIt9gGlj21gq3VV0LL6XNb1yAdHVp1pIi9gkts9gGcT3OfUYHjGP7ETAiw==}
+  /@rollup/rollup-win32-arm64-msvc@4.13.0:
+    resolution: {integrity: sha512-46ue8ymtm/5PUU6pCvjlic0z82qWkxv54GTJZgHrQUuZnVH+tvvSP0LsozIDsCBFO4VjJ13N68wqrKSeScUKdA==}
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
     optional: true
 
-  /@rollup/rollup-win32-ia32-msvc@4.12.1:
-    resolution: {integrity: sha512-LN+vnlZ9g0qlHGlS920GR4zFCqAwbv2lULrR29yGaWP9u7wF5L7GqWu9Ah6/kFZPXPUkpdZwd//TNR+9XC9hvA==}
+  /@rollup/rollup-win32-ia32-msvc@4.13.0:
+    resolution: {integrity: sha512-P5/MqLdLSlqxbeuJ3YDeX37srC8mCflSyTrUsgbU1c/U9j6l2g2GiIdYaGD9QjdMQPMSgYm7hgg0551wHyIluw==}
     cpu: [ia32]
     os: [win32]
     requiresBuild: true
     optional: true
 
-  /@rollup/rollup-win32-x64-msvc@4.12.1:
-    resolution: {integrity: sha512-n+vkrSyphvmU0qkQ6QBNXCGr2mKjhP08mPRM/Xp5Ck2FV4NrHU+y6axzDeixUrCBHVUS51TZhjqrKBBsHLKb2Q==}
+  /@rollup/rollup-win32-x64-msvc@4.13.0:
+    resolution: {integrity: sha512-UKXUQNbO3DOhzLRwHSpa0HnhhCgNODvfoPWv2FCXme8N/ANFfhIPMGuOT+QuKd16+B5yxZ0HdpNlqPvTMS1qfw==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
@@ -3180,8 +3180,8 @@ packages:
   /@sinclair/typebox@0.27.8:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
 
-  /@stencil/core@4.12.5:
-    resolution: {integrity: sha512-vSyFjY7XSEx0ufa9SebOd437CvnneaTXlCpuGDhjUDxAjGBlu6ie5qHyubobVGBth//aErc6wZPHc6W75Vp3iQ==}
+  /@stencil/core@4.12.6:
+    resolution: {integrity: sha512-15JO2TdaxGVKNdLZb/2TtDa+juj3XGD/V0y/disgdzYYSnajgSh06nwODfdHz9eTUh1Hisz+KIo857I1rCZrfg==}
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
     dev: false
@@ -3190,7 +3190,7 @@ packages:
     resolution: {integrity: sha512-k822Is3jGroqOTKF0gAFm80LmhFJWBAyZvNtyuXq6uQUzDDe2fj/gHwixP6VFzlpaWKLP7IuR609Xv8gwJCXyg==}
     dev: true
 
-  /@trapezedev/project@7.0.10(@types/node@20.11.25)(typescript@5.4.2):
+  /@trapezedev/project@7.0.10(@types/node@20.11.28)(typescript@5.4.2):
     resolution: {integrity: sha512-UjwsStjhHq/+D1bWREmFDoyKql+qFIgJX93zQLg7R6CyWZUdtlGP2hU3l7tsVRtjJBVXpVu5mj8tdwJJoABO3A==}
     dependencies:
       '@ionic/utils-fs': 3.1.7
@@ -3215,7 +3215,7 @@ packages:
       replace: 1.2.2
       tempy: 1.0.1
       tmp: 0.2.3
-      ts-node: 10.9.2(@types/node@20.11.25)(typescript@5.4.2)
+      ts-node: 10.9.2(@types/node@20.11.28)(typescript@5.4.2)
       xcode: 3.0.1
       xml-js: 1.6.11
       xpath: 0.0.32
@@ -3255,7 +3255,7 @@ packages:
   /@types/fs-extra@8.1.5:
     resolution: {integrity: sha512-0dzKcwO+S8s2kuF5Z9oUWatQJj5Uq/iqphEtE3GQJVRRYm/tD1LglU2UnXi2A8jLq5umkGouOXOR9y0n613ZwQ==}
     dependencies:
-      '@types/node': 20.11.25
+      '@types/node': 20.11.28
     dev: true
 
   /@types/istanbul-lib-coverage@2.0.6:
@@ -3269,8 +3269,8 @@ packages:
     resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==}
     dev: true
 
-  /@types/node@20.11.25:
-    resolution: {integrity: sha512-TBHyJxk2b7HceLVGFcpAUjsa5zIdsPWlR6XHfyGzd0SFu+/NFgQgMAl96MSDZgQDvJAvV6BKsFOrt6zIL09JDw==}
+  /@types/node@20.11.28:
+    resolution: {integrity: sha512-M/GPWVS2wLkSkNHVeLkrF2fD5Lx5UC4PxA0uZcKc6QqbIQUJyW1jVjueJYi1z8n0I5PxYrtpnPnWglE+y9A0KA==}
     dependencies:
       undici-types: 5.26.5
 
@@ -3302,12 +3302,12 @@ packages:
     resolution: {integrity: sha512-oJoftv0LSuaDZE3Le4DbKX+KS9G36NzOeSap90UIK0yMA/NhKJhqlSGtNDORNRaIbQfzjXDrQa0ytJ6mNRGz/Q==}
     requiresBuild: true
     dependencies:
-      '@types/node': 20.11.25
+      '@types/node': 20.11.28
     dev: true
     optional: true
 
-  /@typescript-eslint/eslint-plugin@7.1.1(@typescript-eslint/parser@7.1.1)(eslint@8.57.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-zioDz623d0RHNhvx0eesUmGfIjzrk18nSBC8xewepKXbBvN/7c1qImV7Hg8TI1URTxKax7/zxfxj3Uph8Chcuw==}
+  /@typescript-eslint/eslint-plugin@7.2.0(@typescript-eslint/parser@7.2.0)(eslint@8.57.0)(typescript@5.4.2):
+    resolution: {integrity: sha512-mdekAHOqS9UjlmyF/LSs6AIEvfceV749GFxoBAjwAv0nkevfKHWQFDMcBZWUiIC5ft6ePWivXoS36aKQ0Cy3sw==}
     engines: {node: ^16.0.0 || >=18.0.0}
     peerDependencies:
       '@typescript-eslint/parser': ^7.0.0
@@ -3318,11 +3318,11 @@ packages:
         optional: true
     dependencies:
       '@eslint-community/regexpp': 4.10.0
-      '@typescript-eslint/parser': 7.1.1(eslint@8.57.0)(typescript@5.4.2)
-      '@typescript-eslint/scope-manager': 7.1.1
-      '@typescript-eslint/type-utils': 7.1.1(eslint@8.57.0)(typescript@5.4.2)
-      '@typescript-eslint/utils': 7.1.1(eslint@8.57.0)(typescript@5.4.2)
-      '@typescript-eslint/visitor-keys': 7.1.1
+      '@typescript-eslint/parser': 7.2.0(eslint@8.57.0)(typescript@5.4.2)
+      '@typescript-eslint/scope-manager': 7.2.0
+      '@typescript-eslint/type-utils': 7.2.0(eslint@8.57.0)(typescript@5.4.2)
+      '@typescript-eslint/utils': 7.2.0(eslint@8.57.0)(typescript@5.4.2)
+      '@typescript-eslint/visitor-keys': 7.2.0
       debug: 4.3.4(supports-color@8.1.1)
       eslint: 8.57.0
       graphemer: 1.4.0
@@ -3335,8 +3335,8 @@ packages:
       - supports-color
     dev: true
 
-  /@typescript-eslint/parser@7.1.1(eslint@8.57.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-ZWUFyL0z04R1nAEgr9e79YtV5LbafdOtN7yapNbn1ansMyaegl2D4bL7vHoJ4HPSc4CaLwuCVas8CVuneKzplQ==}
+  /@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.2):
+    resolution: {integrity: sha512-5FKsVcHTk6TafQKQbuIVkXq58Fnbkd2wDL4LB7AURN7RUOu1utVP+G8+6u3ZhEroW3DF6hyo3ZEXxgKgp4KeCg==}
     engines: {node: ^16.0.0 || >=18.0.0}
     peerDependencies:
       eslint: ^8.56.0
@@ -3345,10 +3345,10 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@typescript-eslint/scope-manager': 7.1.1
-      '@typescript-eslint/types': 7.1.1
-      '@typescript-eslint/typescript-estree': 7.1.1(typescript@5.4.2)
-      '@typescript-eslint/visitor-keys': 7.1.1
+      '@typescript-eslint/scope-manager': 7.2.0
+      '@typescript-eslint/types': 7.2.0
+      '@typescript-eslint/typescript-estree': 7.2.0(typescript@5.4.2)
+      '@typescript-eslint/visitor-keys': 7.2.0
       debug: 4.3.4(supports-color@8.1.1)
       eslint: 8.57.0
       typescript: 5.4.2
@@ -3356,16 +3356,16 @@ packages:
       - supports-color
     dev: true
 
-  /@typescript-eslint/scope-manager@7.1.1:
-    resolution: {integrity: sha512-cirZpA8bJMRb4WZ+rO6+mnOJrGFDd38WoXCEI57+CYBqta8Yc8aJym2i7vyqLL1vVYljgw0X27axkUXz32T8TA==}
+  /@typescript-eslint/scope-manager@7.2.0:
+    resolution: {integrity: sha512-Qh976RbQM/fYtjx9hs4XkayYujB/aPwglw2choHmf3zBjB4qOywWSdt9+KLRdHubGcoSwBnXUH2sR3hkyaERRg==}
     engines: {node: ^16.0.0 || >=18.0.0}
     dependencies:
-      '@typescript-eslint/types': 7.1.1
-      '@typescript-eslint/visitor-keys': 7.1.1
+      '@typescript-eslint/types': 7.2.0
+      '@typescript-eslint/visitor-keys': 7.2.0
     dev: true
 
-  /@typescript-eslint/type-utils@7.1.1(eslint@8.57.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-5r4RKze6XHEEhlZnJtR3GYeCh1IueUHdbrukV2KSlLXaTjuSfeVF8mZUVPLovidCuZfbVjfhi4c0DNSa/Rdg5g==}
+  /@typescript-eslint/type-utils@7.2.0(eslint@8.57.0)(typescript@5.4.2):
+    resolution: {integrity: sha512-xHi51adBHo9O9330J8GQYQwrKBqbIPJGZZVQTHHmy200hvkLZFWJIFtAG/7IYTWUyun6DE6w5InDReePJYJlJA==}
     engines: {node: ^16.0.0 || >=18.0.0}
     peerDependencies:
       eslint: ^8.56.0
@@ -3374,8 +3374,8 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@typescript-eslint/typescript-estree': 7.1.1(typescript@5.4.2)
-      '@typescript-eslint/utils': 7.1.1(eslint@8.57.0)(typescript@5.4.2)
+      '@typescript-eslint/typescript-estree': 7.2.0(typescript@5.4.2)
+      '@typescript-eslint/utils': 7.2.0(eslint@8.57.0)(typescript@5.4.2)
       debug: 4.3.4(supports-color@8.1.1)
       eslint: 8.57.0
       ts-api-utils: 1.3.0(typescript@5.4.2)
@@ -3384,13 +3384,13 @@ packages:
       - supports-color
     dev: true
 
-  /@typescript-eslint/types@7.1.1:
-    resolution: {integrity: sha512-KhewzrlRMrgeKm1U9bh2z5aoL4s7K3tK5DwHDn8MHv0yQfWFz/0ZR6trrIHHa5CsF83j/GgHqzdbzCXJ3crx0Q==}
+  /@typescript-eslint/types@7.2.0:
+    resolution: {integrity: sha512-XFtUHPI/abFhm4cbCDc5Ykc8npOKBSJePY3a3s+lwumt7XWJuzP5cZcfZ610MIPHjQjNsOLlYK8ASPaNG8UiyA==}
     engines: {node: ^16.0.0 || >=18.0.0}
     dev: true
 
-  /@typescript-eslint/typescript-estree@7.1.1(typescript@5.4.2):
-    resolution: {integrity: sha512-9ZOncVSfr+sMXVxxca2OJOPagRwT0u/UHikM2Rd6L/aB+kL/QAuTnsv6MeXtjzCJYb8PzrXarypSGIPx3Jemxw==}
+  /@typescript-eslint/typescript-estree@7.2.0(typescript@5.4.2):
+    resolution: {integrity: sha512-cyxS5WQQCoBwSakpMrvMXuMDEbhOo9bNHHrNcEWis6XHx6KF518tkF1wBvKIn/tpq5ZpUYK7Bdklu8qY0MsFIA==}
     engines: {node: ^16.0.0 || >=18.0.0}
     peerDependencies:
       typescript: '*'
@@ -3398,8 +3398,8 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@typescript-eslint/types': 7.1.1
-      '@typescript-eslint/visitor-keys': 7.1.1
+      '@typescript-eslint/types': 7.2.0
+      '@typescript-eslint/visitor-keys': 7.2.0
       debug: 4.3.4(supports-color@8.1.1)
       globby: 11.1.0
       is-glob: 4.0.3
@@ -3411,8 +3411,8 @@ packages:
       - supports-color
     dev: true
 
-  /@typescript-eslint/utils@7.1.1(eslint@8.57.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-thOXM89xA03xAE0lW7alstvnyoBUbBX38YtY+zAUcpRPcq9EIhXPuJ0YTv948MbzmKh6e1AUszn5cBFK49Umqg==}
+  /@typescript-eslint/utils@7.2.0(eslint@8.57.0)(typescript@5.4.2):
+    resolution: {integrity: sha512-YfHpnMAGb1Eekpm3XRK8hcMwGLGsnT6L+7b2XyRv6ouDuJU1tZir1GS2i0+VXRatMwSI1/UfcyPe53ADkU+IuA==}
     engines: {node: ^16.0.0 || >=18.0.0}
     peerDependencies:
       eslint: ^8.56.0
@@ -3420,9 +3420,9 @@ packages:
       '@eslint-community/eslint-utils': 4.4.0(eslint@8.57.0)
       '@types/json-schema': 7.0.15
       '@types/semver': 7.5.8
-      '@typescript-eslint/scope-manager': 7.1.1
-      '@typescript-eslint/types': 7.1.1
-      '@typescript-eslint/typescript-estree': 7.1.1(typescript@5.4.2)
+      '@typescript-eslint/scope-manager': 7.2.0
+      '@typescript-eslint/types': 7.2.0
+      '@typescript-eslint/typescript-estree': 7.2.0(typescript@5.4.2)
       eslint: 8.57.0
       semver: 7.6.0
     transitivePeerDependencies:
@@ -3430,11 +3430,11 @@ packages:
       - typescript
     dev: true
 
-  /@typescript-eslint/visitor-keys@7.1.1:
-    resolution: {integrity: sha512-yTdHDQxY7cSoCcAtiBzVzxleJhkGB9NncSIyMYe2+OGON1ZsP9zOPws/Pqgopa65jvknOjlk/w7ulPlZ78PiLQ==}
+  /@typescript-eslint/visitor-keys@7.2.0:
+    resolution: {integrity: sha512-c6EIQRHhcpl6+tO8EMR+kjkkV+ugUNXOmeASA1rlzkd8EPIriavpWoiEz1HR/VLhbVIdhqnV6E7JZm00cBDx2A==}
     engines: {node: ^16.0.0 || >=18.0.0}
     dependencies:
-      '@typescript-eslint/types': 7.1.1
+      '@typescript-eslint/types': 7.2.0
       eslint-visitor-keys: 3.4.3
     dev: true
 
@@ -3442,7 +3442,7 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@vitejs/plugin-legacy@5.3.2(terser@5.29.1)(vite@5.1.5):
+  /@vitejs/plugin-legacy@5.3.2(terser@5.29.2)(vite@5.1.6):
     resolution: {integrity: sha512-8moCOrIMaZ/Rjln0Q6GsH6s8fAt1JOI3k8nmfX4tXUxE5KAExVctSyOBk+A25GClsdSWqIk2yaUthH3KJ2X4tg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
@@ -3457,73 +3457,74 @@ packages:
       magic-string: 0.30.8
       regenerator-runtime: 0.14.1
       systemjs: 6.14.3
-      terser: 5.29.1
-      vite: 5.1.5(terser@5.29.1)
+      terser: 5.29.2
+      vite: 5.1.6(terser@5.29.2)
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@vitejs/plugin-vue@5.0.4(vite@5.1.5)(vue@3.4.21):
+  /@vitejs/plugin-vue@5.0.4(vite@5.1.6)(vue@3.4.21):
     resolution: {integrity: sha512-WS3hevEszI6CEVEx28F8RjTX97k3KsrcY6kvTg7+Whm5y3oYvcqzVeGCU3hxSAn4uY2CLCkeokkGKpoctccilQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       vite: ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.1.5(terser@5.29.1)
+      vite: 5.1.6(terser@5.29.2)
       vue: 3.4.21(typescript@5.4.2)
     dev: true
 
-  /@vitest/coverage-v8@1.3.1(vitest@1.3.1):
-    resolution: {integrity: sha512-UuBnkSJUNE9rdHjDCPyJ4fYuMkoMtnghes1XohYa4At0MS3OQSAo97FrbwSLRshYsXThMZy1+ybD/byK5llyIg==}
+  /@vitest/coverage-v8@1.4.0(vitest@1.4.0):
+    resolution: {integrity: sha512-4hDGyH1SvKpgZnIByr9LhGgCEuF9DKM34IBLCC/fVfy24Z3+PZ+Ii9hsVBsHvY1umM1aGPEjceRkzxCfcQ10wg==}
     peerDependencies:
-      vitest: 1.3.1
+      vitest: 1.4.0
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 0.2.3
       debug: 4.3.4(supports-color@8.1.1)
       istanbul-lib-coverage: 3.2.2
       istanbul-lib-report: 3.0.1
-      istanbul-lib-source-maps: 4.0.1
+      istanbul-lib-source-maps: 5.0.4
       istanbul-reports: 3.1.7
       magic-string: 0.30.8
       magicast: 0.3.3
       picocolors: 1.0.0
       std-env: 3.7.0
+      strip-literal: 2.0.0
       test-exclude: 6.0.0
       v8-to-istanbul: 9.2.0
-      vitest: 1.3.1(jsdom@24.0.0)
+      vitest: 1.4.0(jsdom@24.0.0)
     transitivePeerDependencies:
       - supports-color
 
-  /@vitest/expect@1.3.1:
-    resolution: {integrity: sha512-xofQFwIzfdmLLlHa6ag0dPV8YsnKOCP1KdAeVVh34vSjN2dcUiXYCD9htu/9eM7t8Xln4v03U9HLxLpPlsXdZw==}
+  /@vitest/expect@1.4.0:
+    resolution: {integrity: sha512-Jths0sWCJZ8BxjKe+p+eKsoqev1/T8lYcrjavEaz8auEJ4jAVY0GwW3JKmdVU4mmNPLPHixh4GNXP7GFtAiDHA==}
     dependencies:
-      '@vitest/spy': 1.3.1
-      '@vitest/utils': 1.3.1
+      '@vitest/spy': 1.4.0
+      '@vitest/utils': 1.4.0
       chai: 4.4.1
 
-  /@vitest/runner@1.3.1:
-    resolution: {integrity: sha512-5FzF9c3jG/z5bgCnjr8j9LNq/9OxV2uEBAITOXfoe3rdZJTdO7jzThth7FXv/6b+kdY65tpRQB7WaKhNZwX+Kg==}
+  /@vitest/runner@1.4.0:
+    resolution: {integrity: sha512-EDYVSmesqlQ4RD2VvWo3hQgTJ7ZrFQ2VSJdfiJiArkCerDAGeyF1i6dHkmySqk573jLp6d/cfqCN+7wUB5tLgg==}
     dependencies:
-      '@vitest/utils': 1.3.1
+      '@vitest/utils': 1.4.0
       p-limit: 5.0.0
       pathe: 1.1.2
 
-  /@vitest/snapshot@1.3.1:
-    resolution: {integrity: sha512-EF++BZbt6RZmOlE3SuTPu/NfwBF6q4ABS37HHXzs2LUVPBLx2QoY/K0fKpRChSo8eLiuxcbCVfqKgx/dplCDuQ==}
+  /@vitest/snapshot@1.4.0:
+    resolution: {integrity: sha512-saAFnt5pPIA5qDGxOHxJ/XxhMFKkUSBJmVt5VgDsAqPTX6JP326r5C/c9UuCMPoXNzuudTPsYDZCoJ5ilpqG2A==}
     dependencies:
       magic-string: 0.30.8
       pathe: 1.1.2
       pretty-format: 29.7.0
 
-  /@vitest/spy@1.3.1:
-    resolution: {integrity: sha512-xAcW+S099ylC9VLU7eZfdT9myV67Nor9w9zhf0mGCYJSO+zM2839tOeROTdikOi/8Qeusffvxb/MyBSOja1Uig==}
+  /@vitest/spy@1.4.0:
+    resolution: {integrity: sha512-Ywau/Qs1DzM/8Uc+yA77CwSegizMlcgTJuYGAi0jujOteJOUf1ujunHThYo243KG9nAyWT3L9ifPYZ5+As/+6Q==}
     dependencies:
       tinyspy: 2.2.1
 
-  /@vitest/utils@1.3.1:
-    resolution: {integrity: sha512-d3Waie/299qqRyHTm2DjADeTaNdNSVsnwHPWrs20JMpjh6eiVq7ggggweO8rc4arhf6rRkWuHKwvxGvejUXZZQ==}
+  /@vitest/utils@1.4.0:
+    resolution: {integrity: sha512-mx3Yd1/6e2Vt/PUC98DcqTirtfxUyAZ32uK82r8rZzbtBeBo+nqgnjx/LvqQdWsrvNtm14VmurNgcf4nqY5gJg==}
     dependencies:
       diff-sequences: 29.6.3
       estree-walker: 3.0.3
@@ -3556,7 +3557,7 @@ packages:
       '@vue/shared': 3.4.21
       entities: 4.5.0
       estree-walker: 2.0.2
-      source-map-js: 1.0.2
+      source-map-js: 1.1.0
 
   /@vue/compiler-dom@3.4.21:
     resolution: {integrity: sha512-IZC6FKowtT1sl0CR5DpXSiEB5ayw75oT2bma1BEhV7RRR1+cfwLrxc2Z8Zq/RGFzJ8w5r9QtCOvTjQgdn0IKmA==}
@@ -3574,8 +3575,8 @@ packages:
       '@vue/shared': 3.4.21
       estree-walker: 2.0.2
       magic-string: 0.30.8
-      postcss: 8.4.35
-      source-map-js: 1.0.2
+      postcss: 8.4.36
+      source-map-js: 1.1.0
 
   /@vue/compiler-ssr@3.4.21:
     resolution: {integrity: sha512-M5+9nI2lPpAsgXOGQobnIueVqc9sisBFexh5yMIMRAPYLa7+5wEJs8iqOZc1WAa9WQbx9GR2twgznU8LTIiZ4Q==}
@@ -3587,7 +3588,7 @@ packages:
     resolution: {integrity: sha512-LgPscpE3Vs0x96PzSSB4IGVSZXZBZHpfxs+ZA1d+VEPwHdOXowy/Y2CsvCAIFrf+ssVU1pD1jidj505EpUnfbA==}
     dev: false
 
-  /@vue/eslint-config-typescript@13.0.0(eslint-plugin-vue@9.22.0)(eslint@8.57.0)(typescript@5.4.2):
+  /@vue/eslint-config-typescript@13.0.0(eslint-plugin-vue@9.23.0)(eslint@8.57.0)(typescript@5.4.2):
     resolution: {integrity: sha512-MHh9SncG/sfqjVqjcuFLOLD6Ed4dRAis4HNt0dXASeAuLqIAx4YMB1/m2o4pUKK1vCt8fUvYG8KKX2Ot3BVZTg==}
     engines: {node: ^18.18.0 || >=20.0.0}
     peerDependencies:
@@ -3598,10 +3599,10 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@typescript-eslint/eslint-plugin': 7.1.1(@typescript-eslint/parser@7.1.1)(eslint@8.57.0)(typescript@5.4.2)
-      '@typescript-eslint/parser': 7.1.1(eslint@8.57.0)(typescript@5.4.2)
+      '@typescript-eslint/eslint-plugin': 7.2.0(@typescript-eslint/parser@7.2.0)(eslint@8.57.0)(typescript@5.4.2)
+      '@typescript-eslint/parser': 7.2.0(eslint@8.57.0)(typescript@5.4.2)
       eslint: 8.57.0
-      eslint-plugin-vue: 9.22.0(eslint@8.57.0)
+      eslint-plugin-vue: 9.23.0(eslint@8.57.0)
       typescript: 5.4.2
       vue-eslint-parser: 9.4.2(eslint@8.57.0)
     transitivePeerDependencies:
@@ -3656,20 +3657,13 @@ packages:
   /@vue/shared@3.4.21:
     resolution: {integrity: sha512-PuJe7vDIi6VYSinuEbUIQgMIRZGgM8e4R+G+/dQTk0X1NEdvgvvgv7m+rfmDH1gZzyA1OjjoWskvHlfRNfQf3g==}
 
-  /@vue/test-utils@2.4.4(vue@3.4.21):
-    resolution: {integrity: sha512-8jkRxz8pNhClAf4Co4ZrpAoFISdvT3nuSkUlY6Ys6rmTpw3DMWG/X3mw3gQ7QJzgCZO9f+zuE2kW57fi09MW7Q==}
-    peerDependencies:
-      '@vue/server-renderer': ^3.0.1
-      vue: ^3.0.1
-    peerDependenciesMeta:
-      '@vue/server-renderer':
-        optional: true
+  /@vue/test-utils@2.4.5:
+    resolution: {integrity: sha512-oo2u7vktOyKUked36R93NB7mg2B+N7Plr8lxp2JBGwr18ch6EggFjixSCdIVVLkT6Qr0z359Xvnafc9dcKyDUg==}
     dependencies:
       js-beautify: 1.15.1
-      vue: 3.4.21(typescript@5.4.2)
-      vue-component-type-helpers: 1.8.27
+      vue-component-type-helpers: 2.0.6
 
-  /@vuetify/loader-shared@2.0.3(vue@3.4.21)(vuetify@3.5.8):
+  /@vuetify/loader-shared@2.0.3(vue@3.4.21)(vuetify@3.5.9):
     resolution: {integrity: sha512-Ss3GC7eJYkp2SF6xVzsT7FAruEmdihmn4OCk2+UocREerlXKWgOKKzTN5PN3ZVN5q05jHHrsNhTuWbhN61Bpdg==}
     peerDependencies:
       vue: ^3.0.0
@@ -3677,7 +3671,7 @@ packages:
     dependencies:
       upath: 2.0.1
       vue: 3.4.21(typescript@5.4.2)
-      vuetify: 3.5.8(typescript@5.4.2)(vite-plugin-vuetify@2.0.3)(vue@3.4.21)
+      vuetify: 3.5.9(typescript@5.4.2)(vite-plugin-vuetify@2.0.3)(vue@3.4.21)
 
   /@xml-tools/parser@1.0.11:
     resolution: {integrity: sha512-aKqQ077XnR+oQtHJlrAflaZaL7qZsulWc/i/ZEooar5JiWj1eLt0+Wg28cpa+XLney107wXqneC+oG1IZvxkTA==}
@@ -3878,10 +3872,10 @@ packages:
     resolution: {integrity: sha512-NmWvPnx0F1SfrQbYwOi7OeaNGokp9XhzNioJ/CSBs8Qa4vxug81mhJEAVZwxXuBmYB5KDRfMq/F3RR0BIU7sWg==}
     dev: true
 
-  /axios@1.6.7:
-    resolution: {integrity: sha512-/hDJGff6/c7u0hDkvkGxR/oy6CbCs8ziCsC7SqmhjfozqiJGc8Z11wrv9z9lYfY4K8l+H9TpjcMDX0xOZmx+RA==}
+  /axios@1.6.8:
+    resolution: {integrity: sha512-v/ZHtJDU39mDpyBoFVkETcd/uNdxrWRrg3bKpOKzXFA6Bvqopts6ALSMU3y6ijYxbw2B+wPrIv46egTzJXCLGQ==}
     dependencies:
-      follow-redirects: 1.15.5
+      follow-redirects: 1.15.6
       form-data: 4.0.0
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
@@ -3892,14 +3886,14 @@ packages:
     resolution: {integrity: sha512-5Tk1HLk6b6ctmjIkAcU/Ujv/1WqiDl0F0JdRCR80VsOcUlHcu7pWeWRlOqQLHfDEsVx9YH/aif5AG4ehoCtTmg==}
     dev: true
 
-  /babel-plugin-polyfill-corejs2@0.4.9(@babel/core@7.24.0):
-    resolution: {integrity: sha512-BXIWIaO3MewbXWdJdIGDWZurv5OGJlFNo7oy20DpB3kWDVJLcY2NRypRsRUbRe5KMqSNLuOGnWTFQQtY5MAsRw==}
+  /babel-plugin-polyfill-corejs2@0.4.10(@babel/core@7.24.0):
+    resolution: {integrity: sha512-rpIuu//y5OX6jVU+a5BCn1R5RSZYWAl2Nar76iwaOdycqb6JPxediskWFMMl7stfwNJR4b7eiQvh5fB5TEQJTQ==}
     peerDependencies:
       '@babel/core': ^7.4.0 || ^8.0.0-0 <8.0.0
     dependencies:
       '@babel/compat-data': 7.23.5
       '@babel/core': 7.24.0
-      '@babel/helper-define-polyfill-provider': 0.6.0(@babel/core@7.24.0)
+      '@babel/helper-define-polyfill-provider': 0.6.1(@babel/core@7.24.0)
       semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
@@ -3937,19 +3931,19 @@ packages:
     dev: true
     optional: true
 
-  /bare-fs@2.2.1:
-    resolution: {integrity: sha512-+CjmZANQDFZWy4PGbVdmALIwmt33aJg8qTkVjClU6X4WmZkTPBDxRHiBn7fpqEWEfF3AC2io++erpViAIQbSjg==}
+  /bare-fs@2.2.2:
+    resolution: {integrity: sha512-X9IqgvyB0/VA5OZJyb5ZstoN62AzD7YxVGog13kkfYWYqJYcK0kcqLZ6TrmH5qr4/8//ejVcX4x/a0UvaogXmA==}
     requiresBuild: true
     dependencies:
       bare-events: 2.2.1
-      bare-os: 2.2.0
+      bare-os: 2.2.1
       bare-path: 2.1.0
       streamx: 2.16.1
     dev: true
     optional: true
 
-  /bare-os@2.2.0:
-    resolution: {integrity: sha512-hD0rOPfYWOMpVirTACt4/nK8mC55La12K5fY1ij8HAdfQakD62M+H4o4tpfKzVGLgRDTuk3vjA4GqGXXCeFbag==}
+  /bare-os@2.2.1:
+    resolution: {integrity: sha512-OwPyHgBBMkhC29Hl3O4/YfxW9n7mdTr2+SsO29XBWKKJsbgj3mnorDB80r5TiCQgQstgE5ga1qNYrpes6NvX2w==}
     requiresBuild: true
     dev: true
     optional: true
@@ -3958,7 +3952,7 @@ packages:
     resolution: {integrity: sha512-DIIg7ts8bdRKwJRJrUMy/PICEaQZaPGZ26lsSx9MJSwIhSrcdHn7/C8W+XmnG/rKi6BaRcz+JO00CjZteybDtw==}
     requiresBuild: true
     dependencies:
-      bare-os: 2.2.0
+      bare-os: 2.2.1
     dev: true
     optional: true
 
@@ -3977,8 +3971,8 @@ packages:
     engines: {node: '>=0.6'}
     dev: true
 
-  /binary-extensions@2.2.0:
-    resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
+  /binary-extensions@2.3.0:
+    resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
     engines: {node: '>=8'}
     dev: true
 
@@ -4056,8 +4050,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001597
-      electron-to-chromium: 1.4.699
+      caniuse-lite: 1.0.30001599
+      electron-to-chromium: 1.4.708
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
     dev: true
@@ -4116,8 +4110,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /caniuse-lite@1.0.30001597:
-    resolution: {integrity: sha512-7LjJvmQU6Sj7bL0j5b5WY/3n7utXUJvAe1lxhsHDbLmwX9mdL86Yjtr+5SRCyf8qME4M7pU2hswj0FpyBVCv9w==}
+  /caniuse-lite@1.0.30001599:
+    resolution: {integrity: sha512-LRAQHZ4yT1+f9LemSMeqdMpMxZcc4RMWdj4tiFe3G8tNkWK+E58g+/tzotb5cU6TbcVJLr4fySiAW7XmxQvZQA==}
     dev: true
 
   /caseless@0.12.0:
@@ -4591,8 +4585,8 @@ packages:
   /csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
 
-  /cypress@13.6.6:
-    resolution: {integrity: sha512-S+2S9S94611hXimH9a3EAYt81QM913ZVA03pUmGDfLTFa5gyp85NJ8dJGSlEAEmyRsYkioS1TtnWtbv/Fzt11A==}
+  /cypress@13.7.0:
+    resolution: {integrity: sha512-UimjRSJJYdTlvkChcdcfywKJ6tUYuwYuk/n1uMMglrvi+ZthNhoRYcxnWgTqUtkl17fXrPAsD5XT2rcQYN1xKA==}
     engines: {node: ^16.0.0 || ^18.0.0 || >=20.0.0}
     hasBin: true
     requiresBuild: true
@@ -4865,8 +4859,8 @@ packages:
       minimatch: 9.0.1
       semver: 7.6.0
 
-  /electron-to-chromium@1.4.699:
-    resolution: {integrity: sha512-I7q3BbQi6e4tJJN5CRcyvxhK0iJb34TV8eJQcgh+fR2fQ8miMgZcEInckCo1U9exDHbfz7DLDnFn8oqH/VcRKw==}
+  /electron-to-chromium@1.4.708:
+    resolution: {integrity: sha512-iWgEEvREL4GTXXHKohhh33+6Y8XkPI5eHihDmm8zUk5Zo7HICEW+wI/j5kJ2tbuNUCXJ/sNXa03ajW635DiJXA==}
     dev: true
 
   /elementtree@0.1.7:
@@ -4990,8 +4984,8 @@ packages:
       globals: 13.24.0
     dev: true
 
-  /eslint-plugin-vue@9.22.0(eslint@8.57.0):
-    resolution: {integrity: sha512-7wCXv5zuVnBtZE/74z4yZ0CM8AjH6bk4MQGm7hZjUC2DBppKU5ioeOk5LGSg/s9a1ZJnIsdPLJpXnu1Rc+cVHg==}
+  /eslint-plugin-vue@9.23.0(eslint@8.57.0):
+    resolution: {integrity: sha512-Bqd/b7hGYGrlV+wP/g77tjyFmp81lh5TMw0be9093X02SyelxRRfCI6/IsGq/J7Um0YwB9s0Ry0wlFyjPdmtUw==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
@@ -5000,7 +4994,7 @@ packages:
       eslint: 8.57.0
       natural-compare: 1.4.0
       nth-check: 2.1.1
-      postcss-selector-parser: 6.0.15
+      postcss-selector-parser: 6.0.16
       semver: 7.6.0
       vue-eslint-parser: 9.4.2(eslint@8.57.0)
       xml-name-validator: 4.0.0
@@ -5277,8 +5271,8 @@ packages:
     resolution: {integrity: sha512-X8cqMLLie7KsNUDSdzeN8FYK9rEt4Dt67OsG/DNGnYTSDBG4uFAJFBnUeiV+zCVAvwFy56IjM9sH51jVaEhNxw==}
     dev: true
 
-  /follow-redirects@1.15.5:
-    resolution: {integrity: sha512-vSFWUON1B+yAw1VN4xMfxgn5fTUiaOzAJCKBwIIgT/+7CuGy9+r+5gITvP62j3RmaD5Ph65UaERdOSRGUzZtgw==}
+  /follow-redirects@1.15.6:
+    resolution: {integrity: sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==}
     engines: {node: '>=4.0'}
     peerDependencies:
       debug: '*'
@@ -5742,7 +5736,7 @@ packages:
   /ionicons@7.2.2:
     resolution: {integrity: sha512-I3iYIfc9Q9FRifWyFSwTAvbEABWlWY32i0sAVDDPGYnaIZVugkLCZFbEcrphW6ixVPg8tt1oLwalo/JJwbEqnA==}
     dependencies:
-      '@stencil/core': 4.12.5
+      '@stencil/core': 4.12.6
     dev: false
 
   /is-arrayish@0.2.1:
@@ -5757,7 +5751,7 @@ packages:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
     engines: {node: '>=8'}
     dependencies:
-      binary-extensions: 2.2.0
+      binary-extensions: 2.3.0
     dev: true
 
   /is-ci@3.0.1:
@@ -5898,13 +5892,13 @@ packages:
       make-dir: 4.0.0
       supports-color: 7.2.0
 
-  /istanbul-lib-source-maps@4.0.1:
-    resolution: {integrity: sha512-n3s8EwkdFIJCG3BPKBYvskgXGoy88ARzvegkitk60NxRdwltLOTaH7CUiMRXvwYorl0Q712iEjcWB+fK/MrWVw==}
+  /istanbul-lib-source-maps@5.0.4:
+    resolution: {integrity: sha512-wHOoEsNJTVltaJp8eVkm8w+GVkVNHT2YDYo53YdzQEL2gWm1hBX5cGFR9hQJtuGLebidVX7et3+dmDZrmclduw==}
     engines: {node: '>=10'}
     dependencies:
+      '@jridgewell/trace-mapping': 0.3.25
       debug: 4.3.4(supports-color@8.1.1)
       istanbul-lib-coverage: 3.2.2
-      source-map: 0.6.1
     transitivePeerDependencies:
       - supports-color
 
@@ -6280,7 +6274,7 @@ packages:
     dependencies:
       '@babel/parser': 7.24.0
       '@babel/types': 7.24.0
-      source-map-js: 1.0.2
+      source-map-js: 1.1.0
 
   /make-dir@4.0.0:
     resolution: {integrity: sha512-hXdUTZYIVOt1Ex//jAQi+wTZZpUpwBj/0QsOzqegb3rGMMeJiSEu5xLHnYfBrRV4RH2+OCSOO95Is/7x1WJ4bw==}
@@ -6465,7 +6459,7 @@ packages:
       acorn: 8.11.3
       pathe: 1.1.2
       pkg-types: 1.0.3
-      ufo: 1.4.0
+      ufo: 1.5.2
 
   /modify-values@1.0.1:
     resolution: {integrity: sha512-xV2bxeN6F7oYjZWTe/YPAy6MN2M+sL4u/Rlm2AHCIVGfo2p1yGmBHQ6vHehl4bRTZBdHu3TSkWdYgkwpYzAGSw==}
@@ -6884,21 +6878,21 @@ packages:
       xmlbuilder: 15.1.1
     dev: true
 
-  /postcss-selector-parser@6.0.15:
-    resolution: {integrity: sha512-rEYkQOMUCEMhsKbK66tbEU9QVIxbhN18YiniAwA7XQYTVBqrBy+P2p5JcdqsHgKM2zWylp8d7J6eszocfds5Sw==}
+  /postcss-selector-parser@6.0.16:
+    resolution: {integrity: sha512-A0RVJrX+IUkVZbW3ClroRWurercFhieevHB38sr2+l9eUClMqome3LmEmnhlNy+5Mr2EYN6B2Kaw9wYdd+VHiw==}
     engines: {node: '>=4'}
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
     dev: true
 
-  /postcss@8.4.35:
-    resolution: {integrity: sha512-u5U8qYpBCpN13BsiEB0CbR1Hhh4Gc0zLFuedrHJKMctHCHAGrMdG0PRM/KErzAL3CU6/eckEtmHNB3x6e3c0vA==}
+  /postcss@8.4.36:
+    resolution: {integrity: sha512-/n7eumA6ZjFHAsbX30yhHup/IMkOmlmvtEi7P+6RMYf+bGJSUHc3geH4a0NSZxAz/RJfiS9tooCTs9LAVYUZKw==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
       nanoid: 3.3.7
       picocolors: 1.0.0
-      source-map-js: 1.0.2
+      source-map-js: 1.1.0
 
   /prebuild-install@7.1.2:
     resolution: {integrity: sha512-UnNke3IQb6sgarcZIDU3gbMeTp/9SSU1DAIkil7PrqG1vZlBtY5msYccSKSHDqa3hNg436IXK+SNImReuA1wEQ==}
@@ -7243,26 +7237,26 @@ packages:
     resolution: {integrity: sha512-OlwfYEgA2RdboZohpldlvJ1xngOins5d7ejqnIBWr9KaMxsnBqotpptRXTyfNRLnFpqzX6sTDt+X+a+6udnU8g==}
     dev: false
 
-  /rollup@4.12.1:
-    resolution: {integrity: sha512-ggqQKvx/PsB0FaWXhIvVkSWh7a/PCLQAsMjBc+nA2M8Rv2/HG0X6zvixAB7KyZBRtifBUhy5k8voQX/mRnABPg==}
+  /rollup@4.13.0:
+    resolution: {integrity: sha512-3YegKemjoQnYKmsBlOHfMLVPPA5xLkQ8MHLLSw/fBrFaVkEayL51DilPpNNLq1exr98F2B1TzrV0FUlN3gWRPg==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
     dependencies:
       '@types/estree': 1.0.5
     optionalDependencies:
-      '@rollup/rollup-android-arm-eabi': 4.12.1
-      '@rollup/rollup-android-arm64': 4.12.1
-      '@rollup/rollup-darwin-arm64': 4.12.1
-      '@rollup/rollup-darwin-x64': 4.12.1
-      '@rollup/rollup-linux-arm-gnueabihf': 4.12.1
-      '@rollup/rollup-linux-arm64-gnu': 4.12.1
-      '@rollup/rollup-linux-arm64-musl': 4.12.1
-      '@rollup/rollup-linux-riscv64-gnu': 4.12.1
-      '@rollup/rollup-linux-x64-gnu': 4.12.1
-      '@rollup/rollup-linux-x64-musl': 4.12.1
-      '@rollup/rollup-win32-arm64-msvc': 4.12.1
-      '@rollup/rollup-win32-ia32-msvc': 4.12.1
-      '@rollup/rollup-win32-x64-msvc': 4.12.1
+      '@rollup/rollup-android-arm-eabi': 4.13.0
+      '@rollup/rollup-android-arm64': 4.13.0
+      '@rollup/rollup-darwin-arm64': 4.13.0
+      '@rollup/rollup-darwin-x64': 4.13.0
+      '@rollup/rollup-linux-arm-gnueabihf': 4.13.0
+      '@rollup/rollup-linux-arm64-gnu': 4.13.0
+      '@rollup/rollup-linux-arm64-musl': 4.13.0
+      '@rollup/rollup-linux-riscv64-gnu': 4.13.0
+      '@rollup/rollup-linux-x64-gnu': 4.13.0
+      '@rollup/rollup-linux-x64-musl': 4.13.0
+      '@rollup/rollup-win32-arm64-msvc': 4.13.0
+      '@rollup/rollup-win32-ia32-msvc': 4.13.0
+      '@rollup/rollup-win32-x64-msvc': 4.13.0
       fsevents: 2.3.3
 
   /rrweb-cssom@0.6.0:
@@ -7464,8 +7458,8 @@ packages:
       is-fullwidth-code-point: 5.0.0
     dev: true
 
-  /source-map-js@1.0.2:
-    resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
+  /source-map-js@1.1.0:
+    resolution: {integrity: sha512-9vC2SfsJzlej6MAaMPLu8HiBSHGdRAJ9hVFYN1ibZoNkeanmDmLUcIrj6G9DGL7XMJ54AKg/G75akXl1/izTOw==}
     engines: {node: '>=0.10.0'}
 
   /source-map-support@0.5.21:
@@ -7478,6 +7472,7 @@ packages:
   /source-map@0.6.1:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
+    dev: true
 
   /spdx-correct@3.2.0:
     resolution: {integrity: sha512-kN9dJbvnySHULIluDHy32WHRUu3Og7B9sbY7tsFLctQkIqnMh3hErYgdMjTYuqmcXX+lK5T1lnUt3G7zNswmZA==}
@@ -7690,7 +7685,7 @@ packages:
       pump: 3.0.0
       tar-stream: 3.1.7
     optionalDependencies:
-      bare-fs: 2.2.1
+      bare-fs: 2.2.2
       bare-path: 2.1.0
     dev: true
 
@@ -7741,12 +7736,12 @@ packages:
       unique-string: 2.0.0
     dev: true
 
-  /terser@5.29.1:
-    resolution: {integrity: sha512-lZQ/fyaIGxsbGxApKmoPTODIzELy3++mXhS5hOqaAWZjQtpq/hFHAc+rm29NND1rYRxRWKcjuARNwULNXa5RtQ==}
+  /terser@5.29.2:
+    resolution: {integrity: sha512-ZiGkhUBIM+7LwkNjXYJq8svgkd+QK3UUr0wJqY4MieaezBSAIPgbSPZyIx0idM6XWK5CMzSWa8MJIzmRcB8Caw==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
-      '@jridgewell/source-map': 0.3.5
+      '@jridgewell/source-map': 0.3.6
       acorn: 8.11.3
       commander: 2.20.3
       source-map-support: 0.5.21
@@ -7870,7 +7865,7 @@ packages:
       typescript: 5.4.2
     dev: true
 
-  /ts-node@10.9.2(@types/node@20.11.25)(typescript@5.4.2):
+  /ts-node@10.9.2(@types/node@20.11.28)(typescript@5.4.2):
     resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
     hasBin: true
     peerDependencies:
@@ -7889,7 +7884,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.11.25
+      '@types/node': 20.11.28
       acorn: 8.11.3
       acorn-walk: 8.3.2
       arg: 4.1.3
@@ -7979,8 +7974,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  /ufo@1.4.0:
-    resolution: {integrity: sha512-Hhy+BhRBleFjpJ2vchUNN40qgkh0366FWJGqVLYBHev0vpHTrXSA0ryT+74UiW6KWsldNurQMKGqCm1M2zBciQ==}
+  /ufo@1.5.2:
+    resolution: {integrity: sha512-eiutMaL0J2MKdhcOM1tUy13pIrYnyR87fEd8STJQFrrAwImwvlXkxlZEjaKah8r2viPohld08lt73QfLG1NxMg==}
 
   /uglify-js@3.17.4:
     resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
@@ -8120,8 +8115,8 @@ packages:
       extsprintf: 1.3.0
     dev: true
 
-  /vite-node@1.3.1:
-    resolution: {integrity: sha512-azbRrqRxlWTJEVbzInZCTchx0X69M/XPTCz4H+TLvlTcR/xH/3hkRqhOakT41fMJCMzXTu4UvegkZiEoJAWvng==}
+  /vite-node@1.4.0:
+    resolution: {integrity: sha512-VZDAseqjrHgNd4Kh8icYHWzTKSCZMhia7GyHfhtzLW33fZlG9SwsB6CEhgyVOWkJfJ2pFLrp/Gj1FSfAiqH9Lw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     dependencies:
@@ -8129,7 +8124,7 @@ packages:
       debug: 4.3.4(supports-color@8.1.1)
       pathe: 1.1.2
       picocolors: 1.0.0
-      vite: 5.1.5(@types/node@20.11.25)
+      vite: 5.1.6(@types/node@20.11.28)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -8140,8 +8135,8 @@ packages:
       - supports-color
       - terser
 
-  /vite-node@1.3.1(@types/node@20.11.25):
-    resolution: {integrity: sha512-azbRrqRxlWTJEVbzInZCTchx0X69M/XPTCz4H+TLvlTcR/xH/3hkRqhOakT41fMJCMzXTu4UvegkZiEoJAWvng==}
+  /vite-node@1.4.0(@types/node@20.11.28):
+    resolution: {integrity: sha512-VZDAseqjrHgNd4Kh8icYHWzTKSCZMhia7GyHfhtzLW33fZlG9SwsB6CEhgyVOWkJfJ2pFLrp/Gj1FSfAiqH9Lw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     dependencies:
@@ -8149,7 +8144,7 @@ packages:
       debug: 4.3.4(supports-color@8.1.1)
       pathe: 1.1.2
       picocolors: 1.0.0
-      vite: 5.1.5(@types/node@20.11.25)
+      vite: 5.1.6(@types/node@20.11.28)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -8160,8 +8155,8 @@ packages:
       - supports-color
       - terser
 
-  /vite-node@1.3.1(terser@5.29.1):
-    resolution: {integrity: sha512-azbRrqRxlWTJEVbzInZCTchx0X69M/XPTCz4H+TLvlTcR/xH/3hkRqhOakT41fMJCMzXTu4UvegkZiEoJAWvng==}
+  /vite-node@1.4.0(terser@5.29.2):
+    resolution: {integrity: sha512-VZDAseqjrHgNd4Kh8icYHWzTKSCZMhia7GyHfhtzLW33fZlG9SwsB6CEhgyVOWkJfJ2pFLrp/Gj1FSfAiqH9Lw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     dependencies:
@@ -8169,7 +8164,7 @@ packages:
       debug: 4.3.4(supports-color@8.1.1)
       pathe: 1.1.2
       picocolors: 1.0.0
-      vite: 5.1.5(terser@5.29.1)
+      vite: 5.1.6(terser@5.29.2)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -8181,7 +8176,7 @@ packages:
       - terser
     dev: true
 
-  /vite-plugin-vuetify@2.0.3(vite@5.1.5)(vue@3.4.21)(vuetify@3.5.8):
+  /vite-plugin-vuetify@2.0.3(vite@5.1.6)(vue@3.4.21)(vuetify@3.5.9):
     resolution: {integrity: sha512-HbYajgGgb/noaVKNRhnnXIiQZrNXfNIeanUGAwXgOxL6h/KULS40Uf51Kyz8hNmdegF+DwjgXXI/8J1PNS83xw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
@@ -8189,17 +8184,17 @@ packages:
       vue: ^3.0.0
       vuetify: ^3.0.0
     dependencies:
-      '@vuetify/loader-shared': 2.0.3(vue@3.4.21)(vuetify@3.5.8)
+      '@vuetify/loader-shared': 2.0.3(vue@3.4.21)(vuetify@3.5.9)
       debug: 4.3.4(supports-color@8.1.1)
       upath: 2.0.1
-      vite: 5.1.5(@types/node@20.11.25)
+      vite: 5.1.6(@types/node@20.11.28)
       vue: 3.4.21(typescript@5.4.2)
-      vuetify: 3.5.8(typescript@5.4.2)(vite-plugin-vuetify@2.0.3)(vue@3.4.21)
+      vuetify: 3.5.9(typescript@5.4.2)(vite-plugin-vuetify@2.0.3)(vue@3.4.21)
     transitivePeerDependencies:
       - supports-color
 
-  /vite@5.1.5(@types/node@20.11.25):
-    resolution: {integrity: sha512-BdN1xh0Of/oQafhU+FvopafUp6WaYenLU/NFoL5WyJL++GxkNfieKzBhM24H3HVsPQrlAqB7iJYTHabzaRed5Q==}
+  /vite@5.1.6(@types/node@20.11.28):
+    resolution: {integrity: sha512-yYIAZs9nVfRJ/AiOLCA91zzhjsHUgMjB+EigzFb6W2XTLO8JixBCKCjvhKZaye+NKYHCrkv3Oh50dH9EdLU2RA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -8226,15 +8221,15 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.11.25
+      '@types/node': 20.11.28
       esbuild: 0.19.12
-      postcss: 8.4.35
-      rollup: 4.12.1
+      postcss: 8.4.36
+      rollup: 4.13.0
     optionalDependencies:
       fsevents: 2.3.3
 
-  /vite@5.1.5(terser@5.29.1):
-    resolution: {integrity: sha512-BdN1xh0Of/oQafhU+FvopafUp6WaYenLU/NFoL5WyJL++GxkNfieKzBhM24H3HVsPQrlAqB7iJYTHabzaRed5Q==}
+  /vite@5.1.6(terser@5.29.2):
+    resolution: {integrity: sha512-yYIAZs9nVfRJ/AiOLCA91zzhjsHUgMjB+EigzFb6W2XTLO8JixBCKCjvhKZaye+NKYHCrkv3Oh50dH9EdLU2RA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -8262,22 +8257,22 @@ packages:
         optional: true
     dependencies:
       esbuild: 0.19.12
-      postcss: 8.4.35
-      rollup: 4.12.1
-      terser: 5.29.1
+      postcss: 8.4.36
+      rollup: 4.13.0
+      terser: 5.29.2
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
 
-  /vitest@1.3.1(@types/node@20.11.25)(jsdom@24.0.0):
-    resolution: {integrity: sha512-/1QJqXs8YbCrfv/GPQ05wAZf2eakUPLPa18vkJAKE7RXOKfVHqMZZ1WlTjiwl6Gcn65M5vpNUB6EFLnEdRdEXQ==}
+  /vitest@1.4.0(@types/node@20.11.28)(jsdom@24.0.0):
+    resolution: {integrity: sha512-gujzn0g7fmwf83/WzrDTnncZt2UiXP41mHuFYFrdwaLRVQ6JYQEiME2IfEjU3vcFL3VKa75XhI3lFgn+hfVsQw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
       '@edge-runtime/vm': '*'
       '@types/node': ^18.0.0 || >=20.0.0
-      '@vitest/browser': 1.3.1
-      '@vitest/ui': 1.3.1
+      '@vitest/browser': 1.4.0
+      '@vitest/ui': 1.4.0
       happy-dom: '*'
       jsdom: '*'
     peerDependenciesMeta:
@@ -8294,12 +8289,12 @@ packages:
       jsdom:
         optional: true
     dependencies:
-      '@types/node': 20.11.25
-      '@vitest/expect': 1.3.1
-      '@vitest/runner': 1.3.1
-      '@vitest/snapshot': 1.3.1
-      '@vitest/spy': 1.3.1
-      '@vitest/utils': 1.3.1
+      '@types/node': 20.11.28
+      '@vitest/expect': 1.4.0
+      '@vitest/runner': 1.4.0
+      '@vitest/snapshot': 1.4.0
+      '@vitest/spy': 1.4.0
+      '@vitest/utils': 1.4.0
       acorn-walk: 8.3.2
       chai: 4.4.1
       debug: 4.3.4(supports-color@8.1.1)
@@ -8313,8 +8308,8 @@ packages:
       strip-literal: 2.0.0
       tinybench: 2.6.0
       tinypool: 0.8.2
-      vite: 5.1.5(@types/node@20.11.25)
-      vite-node: 1.3.1(@types/node@20.11.25)
+      vite: 5.1.6(@types/node@20.11.28)
+      vite-node: 1.4.0(@types/node@20.11.28)
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
       - less
@@ -8325,15 +8320,15 @@ packages:
       - supports-color
       - terser
 
-  /vitest@1.3.1(jsdom@24.0.0):
-    resolution: {integrity: sha512-/1QJqXs8YbCrfv/GPQ05wAZf2eakUPLPa18vkJAKE7RXOKfVHqMZZ1WlTjiwl6Gcn65M5vpNUB6EFLnEdRdEXQ==}
+  /vitest@1.4.0(jsdom@24.0.0):
+    resolution: {integrity: sha512-gujzn0g7fmwf83/WzrDTnncZt2UiXP41mHuFYFrdwaLRVQ6JYQEiME2IfEjU3vcFL3VKa75XhI3lFgn+hfVsQw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
       '@edge-runtime/vm': '*'
       '@types/node': ^18.0.0 || >=20.0.0
-      '@vitest/browser': 1.3.1
-      '@vitest/ui': 1.3.1
+      '@vitest/browser': 1.4.0
+      '@vitest/ui': 1.4.0
       happy-dom: '*'
       jsdom: '*'
     peerDependenciesMeta:
@@ -8350,11 +8345,11 @@ packages:
       jsdom:
         optional: true
     dependencies:
-      '@vitest/expect': 1.3.1
-      '@vitest/runner': 1.3.1
-      '@vitest/snapshot': 1.3.1
-      '@vitest/spy': 1.3.1
-      '@vitest/utils': 1.3.1
+      '@vitest/expect': 1.4.0
+      '@vitest/runner': 1.4.0
+      '@vitest/snapshot': 1.4.0
+      '@vitest/spy': 1.4.0
+      '@vitest/utils': 1.4.0
       acorn-walk: 8.3.2
       chai: 4.4.1
       debug: 4.3.4(supports-color@8.1.1)
@@ -8368,8 +8363,8 @@ packages:
       strip-literal: 2.0.0
       tinybench: 2.6.0
       tinypool: 0.8.2
-      vite: 5.1.5(@types/node@20.11.25)
-      vite-node: 1.3.1
+      vite: 5.1.6(@types/node@20.11.28)
+      vite-node: 1.4.0
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
       - less
@@ -8380,15 +8375,15 @@ packages:
       - supports-color
       - terser
 
-  /vitest@1.3.1(jsdom@24.0.0)(terser@5.29.1):
-    resolution: {integrity: sha512-/1QJqXs8YbCrfv/GPQ05wAZf2eakUPLPa18vkJAKE7RXOKfVHqMZZ1WlTjiwl6Gcn65M5vpNUB6EFLnEdRdEXQ==}
+  /vitest@1.4.0(jsdom@24.0.0)(terser@5.29.2):
+    resolution: {integrity: sha512-gujzn0g7fmwf83/WzrDTnncZt2UiXP41mHuFYFrdwaLRVQ6JYQEiME2IfEjU3vcFL3VKa75XhI3lFgn+hfVsQw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
       '@edge-runtime/vm': '*'
       '@types/node': ^18.0.0 || >=20.0.0
-      '@vitest/browser': 1.3.1
-      '@vitest/ui': 1.3.1
+      '@vitest/browser': 1.4.0
+      '@vitest/ui': 1.4.0
       happy-dom: '*'
       jsdom: '*'
     peerDependenciesMeta:
@@ -8405,11 +8400,11 @@ packages:
       jsdom:
         optional: true
     dependencies:
-      '@vitest/expect': 1.3.1
-      '@vitest/runner': 1.3.1
-      '@vitest/snapshot': 1.3.1
-      '@vitest/spy': 1.3.1
-      '@vitest/utils': 1.3.1
+      '@vitest/expect': 1.4.0
+      '@vitest/runner': 1.4.0
+      '@vitest/snapshot': 1.4.0
+      '@vitest/spy': 1.4.0
+      '@vitest/utils': 1.4.0
       acorn-walk: 8.3.2
       chai: 4.4.1
       debug: 4.3.4(supports-color@8.1.1)
@@ -8423,8 +8418,8 @@ packages:
       strip-literal: 2.0.0
       tinybench: 2.6.0
       tinypool: 0.8.2
-      vite: 5.1.5(terser@5.29.1)
-      vite-node: 1.3.1(terser@5.29.1)
+      vite: 5.1.6(terser@5.29.2)
+      vite-node: 1.4.0(terser@5.29.2)
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
       - less
@@ -8436,8 +8431,8 @@ packages:
       - terser
     dev: true
 
-  /vue-component-type-helpers@1.8.27:
-    resolution: {integrity: sha512-0vOfAtI67UjeO1G6UiX5Kd76CqaQ67wrRZiOe7UAb9Jm6GzlUr/fC7CV90XfwapJRjpCMaZFhv1V0ajWRmE9Dg==}
+  /vue-component-type-helpers@2.0.6:
+    resolution: {integrity: sha512-qdGXCtoBrwqk1BT6r2+1Wcvl583ZVkuSZ3or7Y1O2w5AvWtlvvxwjGhmz5DdPJS9xqRdDlgTJ/38ehWnEi0tFA==}
 
   /vue-eslint-parser@9.4.2(eslint@8.57.0):
     resolution: {integrity: sha512-Ry9oiGmCAK91HrKMtCrKFWmSFWvYkpGglCeFAIqDdr9zdXmMMpJOmUJS7WWsW7fX81h6mwHmUZCQQ1E0PkSwYQ==}
@@ -8500,8 +8495,8 @@ packages:
       '@vue/shared': 3.4.21
       typescript: 5.4.2
 
-  /vuetify@3.5.8(typescript@5.4.2)(vite-plugin-vuetify@2.0.3)(vue@3.4.21):
-    resolution: {integrity: sha512-8nGS+lKejZkev55HFwIfsRt+9fOqbeDQNmXxfmLKAlnUT8FtynVwbjAwHMtX/OQAQ3ZwRaR1ptqQQmx3OgxzbQ==}
+  /vuetify@3.5.9(typescript@5.4.2)(vite-plugin-vuetify@2.0.3)(vue@3.4.21):
+    resolution: {integrity: sha512-tA3N2uWZFNSZRFNnXN841x4rWozYXKC0fGW/mJIwcKkQiI0+gmVCETtjF8bnOS7L1s0buWzw94uYTlXQa5AQ4w==}
     engines: {node: ^12.20 || >=14.13}
     peerDependencies:
       typescript: '>=4.7'
@@ -8520,7 +8515,7 @@ packages:
         optional: true
     dependencies:
       typescript: 5.4.2
-      vite-plugin-vuetify: 2.0.3(vite@5.1.5)(vue@3.4.21)(vuetify@3.5.8)
+      vite-plugin-vuetify: 2.0.3(vite@5.1.6)(vue@3.4.21)(vuetify@3.5.9)
       vue: 3.4.21(typescript@5.4.2)
 
   /w3c-xmlserializer@5.0.0:

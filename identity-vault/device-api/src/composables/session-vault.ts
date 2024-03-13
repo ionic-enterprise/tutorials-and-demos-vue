@@ -18,12 +18,17 @@ const vault: Vault | BrowserVault = createVault();
 const session = ref<Session | null>(null);
 
 const initializeVault = async (): Promise<void> => {
-  await vault.initialize({
-    key: 'io.ionic.gettingstartediv',
-    type: VaultType.InMemory,
-    deviceSecurityType: DeviceSecurityType.None,
-    lockAfterBackgrounded: 30000,
-  });
+  try {
+    await vault.initialize({
+      key: 'io.ionic.gettingstartediv',
+      type: VaultType.InMemory,
+      deviceSecurityType: DeviceSecurityType.None,
+      lockAfterBackgrounded: 30000,
+    });
+  } catch (e: unknown) {
+    await vault.clear();
+    await updateUnlockMode('InMemory');
+  }
 
   vault.onLock(() => (session.value = null));
 };

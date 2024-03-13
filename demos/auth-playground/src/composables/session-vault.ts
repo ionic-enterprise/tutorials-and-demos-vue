@@ -1,3 +1,7 @@
+import AppPinDialog from '@/components/AppPinDialog.vue';
+import { useVaultFactory } from '@/composables/vault-factory';
+import router from '@/router';
+import { Preferences } from '@capacitor/preferences';
 import {
   BiometricPermissionState,
   Device,
@@ -5,11 +9,7 @@ import {
   IdentityVaultConfig,
   VaultType,
 } from '@ionic-enterprise/identity-vault';
-import { useVaultFactory } from '@/composables/vault-factory';
 import { isPlatform, modalController } from '@ionic/vue';
-import AppPinDialog from '@/components/AppPinDialog.vue';
-import { Preferences } from '@capacitor/preferences';
-import router from '@/router';
 
 export type UnlockMode = 'Device' | 'SystemPIN' | 'SessionPIN' | 'NeverLock' | 'ForceLogin';
 
@@ -19,15 +19,20 @@ const { createVault } = useVaultFactory();
 const vault = createVault();
 
 const initializeVault = async (): Promise<void> => {
-  await vault.initialize({
-    key: 'io.ionic.auth-playground-vue',
-    type: VaultType.SecureStorage,
-    deviceSecurityType: DeviceSecurityType.None,
-    lockAfterBackgrounded: 5000,
-    shouldClearVaultAfterTooManyFailedAttempts: true,
-    customPasscodeInvalidUnlockAttempts: 2,
-    unlockVaultOnLoad: false,
-  });
+  try {
+    await vault.initialize({
+      key: 'io.ionic.auth-playground-vue',
+      type: VaultType.SecureStorage,
+      deviceSecurityType: DeviceSecurityType.None,
+      lockAfterBackgrounded: 5000,
+      shouldClearVaultAfterTooManyFailedAttempts: true,
+      customPasscodeInvalidUnlockAttempts: 2,
+      unlockVaultOnLoad: false,
+    });
+  } catch (e: unknown) {
+    await vault.clear();
+    await setUnlockMode('NeverLock');
+  }
 
   vault.onPasscodeRequested(async (isPasscodeSetRequest: boolean) => {
     const modal = await modalController.create({

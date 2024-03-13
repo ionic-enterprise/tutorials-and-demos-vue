@@ -15,15 +15,20 @@ const { createVault } = useVaultFactory();
 const vault = createVault();
 
 const initializeVault = async (): Promise<void> => {
-  await vault.initialize({
-    key: 'io.ionic.csdemosecurestorage',
-    type: VaultType.SecureStorage,
-    deviceSecurityType: DeviceSecurityType.None,
-    lockAfterBackgrounded: 5000,
-    shouldClearVaultAfterTooManyFailedAttempts: true,
-    customPasscodeInvalidUnlockAttempts: 2,
-    unlockVaultOnLoad: !Capacitor.isNativePlatform(),
-  });
+  try {
+    await vault.initialize({
+      key: 'io.ionic.csdemosecurestorage',
+      type: VaultType.SecureStorage,
+      deviceSecurityType: DeviceSecurityType.None,
+      lockAfterBackgrounded: 5000,
+      shouldClearVaultAfterTooManyFailedAttempts: true,
+      customPasscodeInvalidUnlockAttempts: 2,
+      unlockVaultOnLoad: !Capacitor.isNativePlatform(),
+    });
+  } catch (e: unknown) {
+    await vault.clear();
+    await setUnlockMode('NeverLock');
+  }
 
   vault.onLock(() => {
     router.replace('/login');
