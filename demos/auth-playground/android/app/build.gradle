@@ -8,7 +8,7 @@ android {
         }
     }
     namespace "io.ionic.authplaygroundvue"
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "io.ionic.authplaygroundvue"
         minSdkVersion rootProject.ext.minSdkVersion

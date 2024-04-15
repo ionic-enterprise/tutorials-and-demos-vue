@@ -8,7 +8,7 @@ android {
         }
     }
     namespace "io.ionic.sectrivuetify"
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "io.ionic.sectrivuetify"
         minSdkVersion rootProject.ext.minSdkVersion

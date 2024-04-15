@@ -4,11 +4,11 @@ android {
 
     packagingOptions {
         resources {
-            excludes += ['META-INF/NOTICE', 'META-INF/LICENSE']
+            excludes += ['META-INF/NOTICE', 'META-INF/LICENSE', 'META-INF/NOTICE', 'META-INF/LICENSE']
         }
     }
     namespace "io.ionic.starter"
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "io.ionic.starter"
         minSdkVersion rootProject.ext.minSdkVersion
