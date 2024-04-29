@@ -24,10 +24,10 @@
     "@capacitor/keyboard": "^6.0.0",
     "@capacitor/status-bar": "^6.0.0",
     "@ionic-enterprise/identity-vault": "~5.13.0",
-    "@ionic/vue": "^8.0.0",
-    "@ionic/vue-router": "^8.0.0",
+    "@ionic/vue": "^8.0.1",
+    "@ionic/vue-router": "^8.0.1",
     "ionicons": "^7.3.1",
-    "vue": "^3.4.23",
+    "vue": "^3.4.26",
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
@@ -36,15 +36,15 @@
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/eslint-config-typescript": "^13.0.0",
     "@vue/test-utils": "^2.4.5",
-    "cypress": "^13.7.3",
+    "cypress": "^13.8.1",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.25.0",
     "jsdom": "^24.0.0",
-    "terser": "^5.30.3",
+    "terser": "^5.31.0",
     "typescript": "^5.4.5",
-    "vite": "^5.2.9",
-    "vitest": "^1.5.0",
-    "vue-tsc": "^2.0.13"
+    "vite": "^5.2.10",
+    "vitest": "^1.5.2",
+    "vue-tsc": "^2.0.14"
   },
   "description": "An Ionic project"
 }

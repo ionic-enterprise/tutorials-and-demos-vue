@@ -4,7 +4,7 @@ android {
 
     packagingOptions {
         resources {
-            excludes += ['META-INF/NOTICE', 'META-INF/LICENSE']
+            excludes += ['META-INF/NOTICE', 'META-INF/LICENSE', 'META-INF/NOTICE', 'META-INF/LICENSE']
         }
     }
     namespace "io.ionic.sectrivuetify"
@@ -21,9 +21,6 @@ android {
              // Default: https://android.googlesource.com/platform/frameworks/base/+/282e181b58cf72b6ca770dc7ca5f91f135444502/tools/aapt/AaptAssets.cpp#61
             ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
-        manifestPlaceholders = [
-            'AUTH_URL_SCHEME': 'io.ionic.acdemo' /// CHANGE THIS TO YOUR CUSTOM AUTH SCHEME
-        ]
     }
     buildTypes {
         release {
