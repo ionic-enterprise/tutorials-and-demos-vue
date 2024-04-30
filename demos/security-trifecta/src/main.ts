@@ -23,6 +23,7 @@ import '@ionic/vue/css/text-alignment.css';
 import '@ionic/vue/css/text-transformation.css';
 
 /* Theme variables */
+import '@ionic/vue/css/palettes/dark.class.css';
 import './theme/style.css';
 import './theme/variables.css';
 

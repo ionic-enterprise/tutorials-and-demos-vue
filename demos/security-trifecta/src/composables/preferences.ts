@@ -6,7 +6,7 @@ const prefersDarkMode = ref(false);
 
 watch(prefersDarkMode, async (value) => {
   await setValue('darkMode', value);
-  document.body.classList.toggle('dark', value);
+  document.documentElement.classList.toggle('ion-palette-dark', value);
 });
 
 const load = async () => {

@@ -24,6 +24,7 @@ import '@ionic/vue/css/flex-utils.css';
 import '@ionic/vue/css/display.css';
 
 /* Theme variables */
+import '@ionic/vue/css/palettes/dark.system.css';
 import './theme/variables.css';
 import './theme/custom-colors.css';
 import './theme/style.css';
