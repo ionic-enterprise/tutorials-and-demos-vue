@@ -34,6 +34,7 @@
     "@capacitor/cli": "^6.0.0",
     "@vitejs/plugin-legacy": "^5.3.2",
     "@vitejs/plugin-vue": "^5.0.4",
+    "@vitest/coverage-v8": "~1.5.3",
     "@vue/eslint-config-typescript": "^13.0.0",
     "@vue/test-utils": "^2.4.5",
     "cypress": "^13.8.1",
@@ -43,8 +44,8 @@
     "terser": "^5.31.0",
     "typescript": "^5.4.5",
     "vite": "^5.2.10",
-    "vitest": "^1.5.2",
-    "vue-tsc": "^2.0.14"
+    "vitest": "^1.5.3",
+    "vue-tsc": "^2.0.15"
   },
   "description": "An Ionic project"
 }

@@ -24,16 +24,14 @@
     "@ionic-enterprise/identity-vault": "~5.13.0",
     "@ionic-enterprise/secure-storage": "~3.0.3",
     "@mdi/font": "~7.4.47",
-    "@vitest/coverage-v8": "~1.5.2",
     "@vue/test-utils": "~2.4.5",
     "axios": "~1.6.8",
     "jsdom": "~24.0.0",
     "roboto-fontface": "^0.10.0",
     "vee-validate": "~4.12.6",
-    "vitest": "~1.5.2",
     "vue": "^3.4.26",
     "vue-router": "^4.3.2",
-    "vuetify": "^3.5.17",
+    "vuetify": "^3.6.1",
     "webfontloader": "^1.6.28",
     "yup": "~1.4.0"
   },
@@ -43,6 +41,7 @@
     "@types/node": "~20.12.7",
     "@types/webfontloader": "^1.6.38",
     "@vitejs/plugin-vue": "~5.0.4",
+    "@vitest/coverage-v8": "~1.5.3",
     "@vue/eslint-config-typescript": "~13.0.0",
     "eslint": "^8.57.0",
     "eslint-plugin-cypress": "~2.15.2",
@@ -50,7 +49,8 @@
     "typescript": "~5.4.5",
     "vite": "~5.2.10",
     "vite-plugin-vuetify": "^2.0.3",
-    "vue-tsc": "^2.0.14",
+    "vitest": "~1.5.3",
+    "vue-tsc": "^2.0.15",
     "wait-for-expect": "~3.0.2"
   }
 }

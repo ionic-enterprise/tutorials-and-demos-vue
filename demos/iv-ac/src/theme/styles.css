@@ -1,7 +1,3 @@
-html {
-  --ion-dynamic-font: var(--ion-default-dynamic-font);
-}
-
 .main-content {
   --background: linear-gradient(white, var(--ion-color-secondary));
 }

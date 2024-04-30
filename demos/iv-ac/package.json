@@ -39,7 +39,6 @@
     "@ionic-enterprise/identity-vault": "~5.13.0",
     "@ionic/vue": "^8.0.1",
     "@ionic/vue-router": "^8.0.1",
-    "@vitest/coverage-v8": "~1.5.2",
     "axios": "~1.6.8",
     "ionicons": "^7.3.1",
     "vee-validate": "~4.12.6",
@@ -51,6 +50,7 @@
     "@capacitor/assets": "~3.0.5",
     "@capacitor/cli": "^6.0.0",
     "@vitejs/plugin-vue": "^5.0.4",
+    "@vitest/coverage-v8": "~1.5.3",
     "@vue/eslint-config-typescript": "^13.0.0",
     "@vue/test-utils": "^2.4.5",
     "cypress": "^13.8.1",
@@ -60,8 +60,8 @@
     "jsdom": "~24.0.0",
     "typescript": "~5.4.5",
     "vite": "^5.2.10",
-    "vitest": "~1.5.2",
-    "vue-tsc": "^2.0.14",
+    "vitest": "~1.5.3",
+    "vue-tsc": "^2.0.15",
     "wait-for-expect": "~3.0.2"
   }
 }
