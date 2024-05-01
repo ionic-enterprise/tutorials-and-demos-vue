@@ -7,7 +7,7 @@
     "build": "pnpm run -r build",
     "lint": "pnpm run -r lint",
     "prepare": "husky",
-    "test": "pnpm run -r test"
+    "test": "pnpm run --filter !demo-security-trifecta-vuetify test && pnpm run --filter demo-security-trifecta-vuetify test"
   },
   "keywords": [],
   "author": {
