@@ -9,7 +9,7 @@ import {
 } from '@ionic-enterprise/identity-vault';
 import { ref } from 'vue';
 
-export type UnlockMode = 'BiometricsWithPasscode' | 'InMemory' | 'SecureStorage';
+export type UnlockMode = 'BiometricsWithPasscode' | 'CustomPasscode' | 'InMemory' | 'SecureStorage';
 
 const { createVault } = useVaultFactory();
 const vault: Vault | BrowserVault = createVault();
@@ -29,6 +29,11 @@ const initializeVault = async (): Promise<void> => {
   }
 
   vault.onLock(() => (session.value = null));
+
+  vault.onPasscodeRequested(async (isPasscodeSetRequest: boolean) => {
+    alert(`passcode requested ${isPasscodeSetRequest}`);
+    await vault.setCustomPasscode('1234');
+  });
 };
 
 const storeSession = async (s: Session): Promise<void> => {
@@ -72,9 +77,11 @@ const updateUnlockMode = async (mode: UnlockMode): Promise<void> => {
   const type =
     mode === 'BiometricsWithPasscode'
       ? VaultType.DeviceSecurity
-      : mode === 'InMemory'
-        ? VaultType.InMemory
-        : VaultType.SecureStorage;
+      : mode === 'CustomPasscode'
+        ? VaultType.CustomPasscode
+        : mode === 'InMemory'
+          ? VaultType.InMemory
+          : VaultType.SecureStorage;
   const deviceSecurityType = type === VaultType.DeviceSecurity ? DeviceSecurityType.Both : DeviceSecurityType.None;
   await vault.updateConfig({
     ...(vault.config as IdentityVaultConfig),

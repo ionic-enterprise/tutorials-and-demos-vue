@@ -27,6 +27,12 @@
         </ion-item>
         <ion-item>
           <ion-label>
+            <ion-button expand="block" color="secondary" @click="updateUnlockMode('CustomPasscode')"
+              data-testid="use-in-memory">Use Custom Passcode</ion-button>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
             <ion-button expand="block" color="secondary" @click="updateUnlockMode('InMemory')"
               data-testid="use-in-memory">Use In Memory</ion-button>
           </ion-label>
