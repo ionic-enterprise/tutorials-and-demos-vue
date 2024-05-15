@@ -31,7 +31,6 @@ const initializeVault = async (): Promise<void> => {
   vault.onLock(() => (session.value = null));
 
   vault.onPasscodeRequested(async (isPasscodeSetRequest: boolean) => {
-    alert(`passcode requested ${isPasscodeSetRequest}`);
     await vault.setCustomPasscode('1234');
   });
 };
