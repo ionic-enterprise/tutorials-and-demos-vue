@@ -7,7 +7,9 @@ import {
   Vault,
   VaultType,
 } from '@ionic-enterprise/identity-vault';
+import { modalController } from '@ionic/vue';
 import { ref } from 'vue';
+import AppPinDialog from '@/components/AppPinDialog.vue';
 
 export type UnlockMode = 'BiometricsWithPasscode' | 'CustomPasscode' | 'InMemory' | 'SecureStorage';
 
@@ -31,7 +33,16 @@ const initializeVault = async (): Promise<void> => {
   vault.onLock(() => (session.value = null));
 
   vault.onPasscodeRequested(async (isPasscodeSetRequest: boolean) => {
-    await vault.setCustomPasscode('1234');
+    const modal = await modalController.create({
+      component: AppPinDialog,
+      backdropDismiss: false,
+      componentProps: {
+        setPasscodeMode: isPasscodeSetRequest,
+      },
+    });
+    await modal.present();
+    const { data } = await modal.onWillDismiss();
+    await vault.setCustomPasscode(data || '');
   });
 };
 
