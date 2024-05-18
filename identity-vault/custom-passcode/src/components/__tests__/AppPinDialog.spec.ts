@@ -185,7 +185,7 @@ describe('AppPinDialog', () => {
       });
     });
 
-    describe('presssing the cancel button', () => {
+    describe('pressing the cancel button', () => {
       it('closes the modal', async () => {
         modalController.dismiss = vi.fn();
         const cancel = wrapper.find('[data-testid="cancel-button"]');

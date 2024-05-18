@@ -85,6 +85,17 @@ describe('Tab1 Page', () => {
     });
   });
 
+  describe('use custom passcode button', () => {
+    it('updates the unlock mode', async () => {
+      const { updateUnlockMode } = useSessionVault();
+      const wrapper = await mountView();
+      const btn = wrapper.find('[data-testid="use-custom-passcode"]');
+      await btn.trigger('click');
+      expect(updateUnlockMode).toHaveBeenCalledOnce();
+      expect(updateUnlockMode).toHaveBeenCalledWith('CustomPasscode');
+    });
+  });
+
   describe('use in memory button', () => {
     it('updates the unlock mode', async () => {
       const { updateUnlockMode } = useSessionVault();
