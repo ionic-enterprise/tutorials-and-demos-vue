@@ -8,14 +8,22 @@
         </ion-button>
       </ion-buttons>
       <ion-buttons slot="end">
-        <ion-button :strong="true" data-testid="submit-button" @click="submit">Enter
+        <ion-button :strong="true" data-testid="submit-button" @click="submit" :disabled="disableEnter">Enter
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
 
   <ion-content class="ion-padding ion-text-center">
-    <div>Under Construction</div>
+    <ion-label data-testid="prompt">
+      <div class="prompt">{{ prompt }}</div>
+    </ion-label>
+    <ion-label data-testid="display-pin">
+      <div class="pin">{{ displayPin }}</div>
+    </ion-label>
+    <ion-label color="danger" data-testid="error-message">
+      <div class="error">{{ errorMessage }}</div>
+    </ion-label>
   </ion-content>
 
   <ion-footer>
@@ -46,8 +54,10 @@
             data-testclass="number-button">0</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button color="tertiary" expand="block" @click="remove()" :disabled="disableDelete"
-            data-testid="delete-button">Delete</ion-button>
+          <ion-button icon-only color="tertiary" expand="block" @click="remove()" :disabled="disableDelete"
+            data-testid="delete-button">
+            <ion-icon :icon="backspace"></ion-icon>
+          </ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -63,37 +73,62 @@ import {
   IonFooter,
   IonGrid,
   IonHeader,
+  IonLabel,
   IonRow,
   IonTitle,
   IonToolbar,
   modalController,
 } from '@ionic/vue';
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
+import { backspace } from 'ionicons/icons';
 
 // eslint-disable-next-line no-undef
 const props = defineProps({
   setPasscodeMode: Boolean,
 });
 
-const disableDelete = false;
-const disableInput = false;
+let verifyPin = '';
 
+const disableDelete = computed(() => !pin.value.length);
+const disableEnter = computed(() => !(pin.value.length > 3));
+const disableInput = computed(() => pin.value.length > 8);
+
+const errorMessage = ref('');
+const pin = ref('');
+const prompt = ref('');
 const title = ref('');
 
+const displayPin = computed(() => '*********'.slice(0, pin.value.length));
+
 const append = (n: number) => {
-  console.log('append', n);
+  errorMessage.value = '';
+  pin.value = pin.value.concat(n.toString());
 };
 
 const remove = () => {
-  console.log('remove');
+  if (pin.value) {
+    pin.value = pin.value.slice(0, pin.value.length - 1);
+  }
 };
 
 const initSetPasscodeMode = () => {
   title.value = 'Create PIN';
+  prompt.value = 'Create Session PIN';
+  verifyPin = '';
+  pin.value = '';
 };
 
 const initUnlockMode = () => {
   title.value = 'Unlock';
+  prompt.value = 'Enter PIN to Unlock';
+  verifyPin = '';
+  pin.value = '';
+};
+
+const initVerifyMode = () => {
+  prompt.value = 'Verify PIN';
+  verifyPin = pin.value;
+  pin.value = '';
 };
 
 const cancel = () => {
@@ -101,7 +136,18 @@ const cancel = () => {
 };
 
 const submit = () => {
-  modalController.dismiss('1234');
+  if (props.setPasscodeMode) {
+    if (!verifyPin) {
+      initVerifyMode();
+    } else if (verifyPin === pin.value) {
+      modalController.dismiss(pin.value);
+    } else {
+      errorMessage.value = 'PINs do not match';
+      initSetPasscodeMode();
+    }
+  } else {
+    modalController.dismiss(pin.value);
+  }
 };
 
 if (props.setPasscodeMode) {
@@ -110,3 +156,24 @@ if (props.setPasscodeMode) {
   initUnlockMode();
 }
 </script>
+
+<style scoped>
+.prompt {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.pin {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.error {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+ion-grid {
+  padding-bottom: 32px;
+}
+</style>
