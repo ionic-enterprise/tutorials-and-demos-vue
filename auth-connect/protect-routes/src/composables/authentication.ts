@@ -28,35 +28,32 @@ const saveAuthResult = async (authResult: AuthResult | null): Promise<void> => {
   }
 };
 
-const isReady: Promise<void> = AuthConnect.setup({
-  platform: isNative ? 'capacitor' : 'web',
-  logLevel: 'DEBUG',
-  ios: {
-    webView: 'private',
-  },
-  web: {
-    uiMode: 'popup',
-    authFlow: 'PKCE',
-  },
-});
-
 export const useAuthentication = () => ({
   getAccessToken: async (): Promise<string | undefined> => {
-    await isReady;
     const res = await getAuthResult();
     return res?.accessToken;
   },
+  initializeAuthentication: async (): Promise<void> =>
+    AuthConnect.setup({
+      platform: isNative ? 'capacitor' : 'web',
+      logLevel: 'DEBUG',
+      ios: {
+        webView: 'private',
+      },
+      web: {
+        uiMode: 'popup',
+        authFlow: 'PKCE',
+      },
+    }),
   isAuthenticated: async (): Promise<boolean> => {
     const authResult = await getAuthResult();
     return !!authResult && (await AuthConnect.isAccessTokenAvailable(authResult));
   },
   login: async (): Promise<void> => {
-    await isReady;
     authResult = await AuthConnect.login(provider, authOptions);
     await saveAuthResult(authResult);
   },
   logout: async (): Promise<void> => {
-    await isReady;
     const authResult = await getAuthResult();
     if (authResult) {
       await AuthConnect.logout(provider, authResult);

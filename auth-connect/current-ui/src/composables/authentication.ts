@@ -28,21 +28,8 @@ const saveAuthResult = async (authResult: AuthResult | null): Promise<void> => {
   }
 };
 
-const isReady: Promise<void> = AuthConnect.setup({
-  platform: isNative ? 'capacitor' : 'web',
-  logLevel: 'DEBUG',
-  ios: {
-    webView: 'private',
-  },
-  web: {
-    uiMode: 'current',
-    authFlow: 'PKCE',
-  },
-});
-
 export const useAuthentication = () => ({
   handleAuthCallback: async (): Promise<void> => {
-    await isReady;
     const params = new URLSearchParams(window.location.search);
     if (params.size > 0) {
       const queryEntries = Object.fromEntries(params.entries());
@@ -52,17 +39,27 @@ export const useAuthentication = () => ({
     }
     await saveAuthResult(authResult);
   },
+  initializeAuthentication: async (): Promise<void> =>
+    AuthConnect.setup({
+      platform: isNative ? 'capacitor' : 'web',
+      logLevel: 'DEBUG',
+      ios: {
+        webView: 'private',
+      },
+      web: {
+        uiMode: 'current',
+        authFlow: 'PKCE',
+      },
+    }),
   isAuthenticated: async (): Promise<boolean> => {
     const authResult = await getAuthResult();
     return !!authResult && (await AuthConnect.isAccessTokenAvailable(authResult));
   },
   login: async (): Promise<void> => {
-    await isReady;
     authResult = await AuthConnect.login(provider, authOptions);
     await saveAuthResult(authResult);
   },
   logout: async (): Promise<void> => {
-    await isReady;
     const authResult = await getAuthResult();
     if (authResult) {
       await AuthConnect.logout(provider, authResult);

@@ -26,23 +26,22 @@ describe('useAuth', () => {
     Capacitor.getPlatform = vi.fn().mockReturnValue('iOS');
   });
 
-  it('initializes once', async () => {
-    const { isAuthenticated, login, logout } = useAuth();
-    await isAuthenticated();
-    await login();
-    await isAuthenticated();
-    await logout();
-    expect(AuthConnect.setup).toHaveBeenCalledTimes(1);
-    expect(AuthConnect.setup).toHaveBeenCalledWith({
-      platform: 'capacitor',
-      logLevel: 'DEBUG',
-      ios: {
-        webView: 'private',
-      },
-      web: {
-        uiMode: 'popup',
-        authFlow: 'implicit',
-      },
+  describe('initialize auth', () => {
+    it('sets up auth connect', async () => {
+      const { initializeAuth } = useAuth();
+      await initializeAuth();
+      expect(AuthConnect.setup).toHaveBeenCalledTimes(1);
+      expect(AuthConnect.setup).toHaveBeenCalledWith({
+        platform: 'capacitor',
+        logLevel: 'DEBUG',
+        ios: {
+          webView: 'private',
+        },
+        web: {
+          uiMode: 'popup',
+          authFlow: 'implicit',
+        },
+      });
     });
   });
 

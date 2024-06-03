@@ -84,8 +84,8 @@ describe('auth', () => {
 
       describe('logout', () => {
         const verifyLogoutCall = async (): Promise<void> => {
-          const { isAuthenticated, logout } = useAuth();
-          await isAuthenticated(); // prime the pump if need be
+          const { initializeAuthService, logout } = useAuth();
+          await initializeAuthService();
           const mockAuth = vendor === 'Basic' ? getMockBasicAuth() : getMockOIDCAuth();
           await logout();
           expect(mockAuth.logout).toHaveBeenCalledTimes(1);
@@ -97,48 +97,8 @@ describe('auth', () => {
             (Preferences.get as Mock).mockResolvedValue({ value: vendor });
           });
 
-          it('gets the current vendor', async () => {
-            const { logout } = useAuth();
-            await logout();
-            expect(Preferences.get).toHaveBeenCalledTimes(1);
-            expect(Preferences.get).toHaveBeenCalledWith({ key: 'AuthVendor' });
-          });
-
-          it('sets up the OIDC service for the current vendor', async () => {
-            const { logout } = useAuth();
-            await logout();
-
-            if (vendor === 'Basic') {
-              expect(true).toBeTruthy();
-            } else {
-              const mockAuth = getMockOIDCAuth();
-              expect(mockAuth.setAuthProvider).toHaveBeenCalledTimes(1);
-              expect(mockAuth.setAuthProvider).toHaveBeenCalledWith(vendor);
-            }
-          });
-
           it('performs the logout', async () => {
             await verifyLogoutCall();
-          });
-        });
-
-        describe('without a previously set vendor', () => {
-          beforeEach(() => {
-            (Preferences.get as Mock).mockResolvedValue({ value: undefined });
-          });
-          it('gets the current vendor', async () => {
-            const { logout } = useAuth();
-            await logout();
-            expect(Preferences.get).toHaveBeenCalledTimes(1);
-            expect(Preferences.get).toHaveBeenCalledWith({ key: 'AuthVendor' });
-          });
-
-          it('does not construct the service for the current vendor', async () => {
-            const { logout } = useAuth();
-            await logout();
-
-            expect(BasicAuthenticationService).not.toHaveBeenCalled();
-            expect(OIDCAuthenticationService).not.toHaveBeenCalled();
           });
         });
 
@@ -175,8 +135,8 @@ describe('auth', () => {
 
       describe('is authenticated', () => {
         const verifyIsAuthCall = async (): Promise<void> => {
-          const { isAuthenticated } = useAuth();
-          await isAuthenticated(); // prime the pump if need be
+          const { initializeAuthService, isAuthenticated } = useAuth();
+          await initializeAuthService();
           const mockAuth = vendor === 'Basic' ? getMockBasicAuth() : getMockOIDCAuth();
           (mockAuth.isAuthenticated as Mock).mockResolvedValue(true);
           expect(await isAuthenticated()).toBe(true);
@@ -189,26 +149,6 @@ describe('auth', () => {
             (Preferences.get as Mock).mockResolvedValue({ value: vendor });
           });
 
-          it('gets the current provider', async () => {
-            const { isAuthenticated } = useAuth();
-            await isAuthenticated();
-            expect(Preferences.get).toHaveBeenCalledTimes(1);
-            expect(Preferences.get).toHaveBeenCalledWith({ key: 'AuthVendor' });
-          });
-
-          it('sets up up the OIDC service for the current vendor', async () => {
-            const { isAuthenticated } = useAuth();
-            await isAuthenticated();
-
-            if (vendor === 'Basic') {
-              expect(true).toBeTruthy();
-            } else {
-              const mockAuth = getMockOIDCAuth();
-              expect(mockAuth.setAuthProvider).toHaveBeenCalledTimes(1);
-              expect(mockAuth.setAuthProvider).toHaveBeenCalledWith(vendor);
-            }
-          });
-
           it('resolves the value using the service', async () => {
             await verifyIsAuthCall();
           });
@@ -217,20 +157,6 @@ describe('auth', () => {
         describe('without a previously set vendor', () => {
           beforeEach(() => {
             (Preferences.get as Mock).mockResolvedValue({ value: undefined });
-          });
-          it('gets the current vendor', async () => {
-            const { isAuthenticated } = useAuth();
-            await isAuthenticated();
-            expect(Preferences.get).toHaveBeenCalledTimes(1);
-            expect(Preferences.get).toHaveBeenCalledWith({ key: 'AuthVendor' });
-          });
-
-          it('does not construct the service for the current provider', async () => {
-            const { isAuthenticated } = useAuth();
-            await isAuthenticated();
-
-            expect(BasicAuthenticationService).not.toHaveBeenCalled();
-            expect(OIDCAuthenticationService).not.toHaveBeenCalled();
           });
 
           it('resolves false', async () => {
@@ -247,21 +173,6 @@ describe('auth', () => {
               vendor === 'Basic' ? 'test@testy.com' : undefined,
               vendor === 'Basic' ? 'passw0rd' : undefined,
             );
-            (Preferences.get as Mock).mockResolvedValue({ value: vendor });
-          });
-
-          it('does not get the current vendor', async () => {
-            const { isAuthenticated } = useAuth();
-            await isAuthenticated();
-            expect(Preferences.get).not.toHaveBeenCalled();
-          });
-
-          const { isAuthenticated } = useAuth();
-          it('does not construct a service', async () => {
-            vi.clearAllMocks();
-            await isAuthenticated();
-            expect(BasicAuthenticationService).not.toHaveBeenCalled();
-            expect(OIDCAuthenticationService).not.toHaveBeenCalled();
           });
 
           it('resolves the value using the service', async () => {
@@ -272,8 +183,8 @@ describe('auth', () => {
 
       describe('get access token', () => {
         const verifyGetAccessTokenCall = async (): Promise<void> => {
-          const { getAccessToken } = useAuth();
-          await getAccessToken(); // prime the pump if need be
+          const { initializeAuthService, getAccessToken } = useAuth();
+          await initializeAuthService();
           const mockAuth = vendor === 'Basic' ? getMockBasicAuth() : getMockOIDCAuth();
           (mockAuth.getAccessToken as Mock).mockResolvedValue('thisIsAToken');
           expect(await getAccessToken()).toEqual('thisIsAToken');
@@ -286,26 +197,6 @@ describe('auth', () => {
             (Preferences.get as Mock).mockResolvedValue({ value: vendor });
           });
 
-          it('gets the current vendor', async () => {
-            const { getAccessToken } = useAuth();
-            await getAccessToken();
-            expect(Preferences.get).toHaveBeenCalledTimes(1);
-            expect(Preferences.get).toHaveBeenCalledWith({ key: 'AuthVendor' });
-          });
-
-          it('sets up the OIDC service for the current vendor', async () => {
-            const { getAccessToken } = useAuth();
-            await getAccessToken();
-
-            if (vendor === 'Basic') {
-              expect(true).toBeTruthy();
-            } else {
-              const mockAuth = getMockOIDCAuth();
-              expect(mockAuth.setAuthProvider).toHaveBeenCalledTimes(1);
-              expect(mockAuth.setAuthProvider).toHaveBeenCalledWith(vendor);
-            }
-          });
-
           it('resolves the value using the service', async () => {
             await verifyGetAccessTokenCall();
           });
@@ -315,20 +206,7 @@ describe('auth', () => {
           beforeEach(() => {
             (Preferences.get as Mock).mockResolvedValue({ value: undefined });
           });
-          it('gets the current vendor', async () => {
-            const { getAccessToken } = useAuth();
-            await getAccessToken();
-            expect(Preferences.get).toHaveBeenCalledTimes(1);
-            expect(Preferences.get).toHaveBeenCalledWith({ key: 'AuthVendor' });
-          });
 
-          it('does not construct the service for the current vendor', async () => {
-            const { getAccessToken } = useAuth();
-            await getAccessToken();
-
-            expect(BasicAuthenticationService).not.toHaveBeenCalled();
-            expect(OIDCAuthenticationService).not.toHaveBeenCalled();
-          });
           it('resolves undefined', async () => {
             const { getAccessToken } = useAuth();
             expect(await getAccessToken()).toBeUndefined();
@@ -343,21 +221,6 @@ describe('auth', () => {
               vendor === 'Basic' ? 'test@testy.com' : undefined,
               vendor === 'Basic' ? 'passw0rd' : undefined,
             );
-            (Preferences.get as Mock).mockResolvedValue({ value: vendor });
-          });
-
-          it('does not get the current vendor', async () => {
-            const { getAccessToken } = useAuth();
-            await getAccessToken();
-            expect(Preferences.get).not.toHaveBeenCalled();
-          });
-
-          const { getAccessToken } = useAuth();
-          it('does not construct a service', async () => {
-            vi.clearAllMocks();
-            await getAccessToken();
-            expect(BasicAuthenticationService).not.toHaveBeenCalled();
-            expect(OIDCAuthenticationService).not.toHaveBeenCalled();
           });
 
           it('resolves the value using the service', async () => {

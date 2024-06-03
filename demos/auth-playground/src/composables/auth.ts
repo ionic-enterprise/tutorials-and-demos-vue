@@ -48,24 +48,22 @@ const login = async (provider: AuthVendor, username?: string, password?: string)
 };
 
 const logout = async (): Promise<void> => {
-  await initializeAuthService();
   await authService?.logout();
   authService = undefined;
 };
 
 const getAccessToken = async (): Promise<string | undefined> => {
-  await initializeAuthService();
   return await authService?.getAccessToken();
 };
 
 const isAuthenticated = async (): Promise<boolean> => {
-  await initializeAuthService();
   return authService ? await authService.isAuthenticated() : false;
 };
 
 export const useAuth = (): any => {
   return {
     getAccessToken,
+    initializeAuthService,
     isAuthenticated,
     login,
     logout,

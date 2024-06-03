@@ -5,6 +5,7 @@ import router from './router';
 import { IonicVue } from '@ionic/vue';
 import { Device } from '@ionic-enterprise/identity-vault';
 
+import { useAuth } from '@/composables/auth';
 import { useSessionVault } from '@/composables/session-vault';
 
 /* Core CSS required for Ionic components to work properly */
@@ -29,11 +30,12 @@ import './theme/variables.css';
 import './theme/custom-colors.css';
 import './theme/style.css';
 
+const { initializeAuthService } = useAuth();
 const { initializeVault } = useSessionVault();
 
 Device.setHideScreenOnBackground(true);
 
-initializeVault().then(async () => {
+Promise.all([initializeAuthService(), initializeVault()]).then(async () => {
   const app = createApp(App).use(IonicVue).use(router);
   await router.isReady();
   app.mount('#app');

@@ -16,22 +16,6 @@ const options: ProviderOptions = {
 
 const provider = new Auth0Provider();
 
-let initializing: Promise<void> | undefined;
-
-const performInit = async (): Promise<void> => {
-  await AuthConnect.setup({
-    platform: isMobile ? 'capacitor' : 'web',
-    logLevel: 'DEBUG',
-    ios: {
-      webView: 'private',
-    },
-    web: {
-      uiMode: 'popup',
-      authFlow: 'PKCE',
-    },
-  });
-};
-
 const performRefresh = async (authResult: AuthResult): Promise<AuthResult | undefined> => {
   let newAuthResult: AuthResult | undefined;
   const { clearSession, setSession } = useSessionVault();
@@ -59,23 +43,22 @@ const getAuthResult = async (): Promise<AuthResult | null | undefined> => {
   return authResult;
 };
 
-const initialize = async (): Promise<void> => {
-  if (!initializing) {
-    initializing = new Promise((resolve) => {
-      performInit().then(() => resolve());
-    });
-  }
-  return initializing;
-};
-
 export const useAuth = () => {
   return {
-    isAuthenticated: async (): Promise<boolean> => {
-      await initialize();
-      return !!(await getAuthResult());
-    },
+    initializeAuth: async (): Promise<void> =>
+      AuthConnect.setup({
+        platform: isMobile ? 'capacitor' : 'web',
+        logLevel: 'DEBUG',
+        ios: {
+          webView: 'private',
+        },
+        web: {
+          uiMode: 'popup',
+          authFlow: 'PKCE',
+        },
+      }),
+    isAuthenticated: async (): Promise<boolean> => !!(await getAuthResult()),
     getAccessToken: async (): Promise<string | void> => {
-      await initialize();
       const authResult = await getAuthResult();
       return authResult?.accessToken;
     },
@@ -88,13 +71,11 @@ export const useAuth = () => {
       }
     },
     login: async (): Promise<void> => {
-      await initialize();
       const authResult = await AuthConnect.login(provider, options);
       const { setSession } = useSessionVault();
       setSession(authResult);
     },
     logout: async () => {
-      await initialize();
       const { clearSession, getSession } = useSessionVault();
       const authResult = await getSession();
       if (authResult) {
