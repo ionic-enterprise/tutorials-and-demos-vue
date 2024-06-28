@@ -19,7 +19,7 @@ dependencies {
     implementation project(':ionic-enterprise-auth')
 
 }
-apply from: "../../../../node_modules/.pnpm/@ionic-enterprise+identity-vault@5.14.0_typescript@5.4.5/node_modules/@ionic-enterprise/identity-vault/src/android/ionicnativeauth.gradle"
+apply from: "../../../../node_modules/.pnpm/@ionic-enterprise+identity-vault@5.14.2_typescript@5.5.2/node_modules/@ionic-enterprise/identity-vault/src/android/ionicnativeauth.gradle"
 
 if (hasProperty('postBuildExtras')) {
   postBuildExtras()
