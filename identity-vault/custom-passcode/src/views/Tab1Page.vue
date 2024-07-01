@@ -46,10 +46,11 @@
         </ion-item>
         <ion-item>
           <div data-testid="session">
-            <div>{{ session?.email }}</div>
+            {{ session }}
+            <!-- <div>{{ session?.email }}</div>
             <div>{{ session?.firstName }} {{ session?.lastName }}</div>
             <div>{{ session?.accessToken }}</div>
-            <div>{{ session?.refreshToken }}</div>
+<div>{{ session?.refreshToken }}</div> -->
           </div>
         </ion-item>
       </ion-list>

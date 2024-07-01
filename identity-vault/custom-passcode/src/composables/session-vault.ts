@@ -15,7 +15,7 @@ export type UnlockMode = 'BiometricsWithPasscode' | 'CustomPasscode' | 'InMemory
 
 const { createVault } = useVaultFactory();
 const vault: Vault | BrowserVault = createVault();
-const session = ref<Session | null>(null);
+const session = ref<string | null>(null);
 
 const initializeVault = async (): Promise<void> => {
   try {
@@ -47,15 +47,16 @@ const initializeVault = async (): Promise<void> => {
 };
 
 const storeSession = async (s: Session): Promise<void> => {
-  vault.setValue('session', s);
-  session.value = s;
+  const s1 = 'ccc66ced-f27c-4556-9b6d-3585e9953c29';
+  vault.setValue('session', s1);
+  session.value = s1;
 };
 
 const getSession = async (): Promise<void> => {
   if (await vault.isEmpty()) {
     session.value = null;
   } else {
-    session.value = await vault.getValue<Session>('session');
+    session.value = await vault.getValue<string>('session');
   }
 };
 
@@ -71,7 +72,7 @@ const lockSession = async (): Promise<void> => {
 
 const unlockSession = async (): Promise<void> => {
   await vault.unlock();
-  session.value = await vault.getValue<Session>('session');
+  session.value = await vault.getValue<string>('session');
 };
 
 const sessionIsLocked = async (): Promise<boolean> => {
