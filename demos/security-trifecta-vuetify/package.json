@@ -28,7 +28,7 @@
     "axios": "~1.7.2",
     "jsdom": "~24.1.0",
     "roboto-fontface": "^0.10.0",
-    "vee-validate": "~4.13.1",
+    "vee-validate": "~4.13.2",
     "vue": "^3.4.31",
     "vue-router": "^4.4.0",
     "vuetify": "^3.6.11",
@@ -38,10 +38,10 @@
   "devDependencies": {
     "@capacitor/assets": "~3.0.5",
     "@capacitor/cli": "^6.1.0",
-    "@types/node": "~20.14.9",
+    "@types/node": "~20.14.10",
     "@types/webfontloader": "^1.6.38",
     "@vitejs/plugin-vue": "~5.0.5",
-    "@vitest/coverage-v8": "~1.6.0",
+    "@vitest/coverage-v8": "~2.0.0",
     "@vue/eslint-config-typescript": "~13.0.0",
     "@vue/test-utils": "~2.4.6",
     "eslint": "^8.57.0",
@@ -50,8 +50,8 @@
     "typescript": "~5.5.3",
     "vite": "~5.3.3",
     "vite-plugin-vuetify": "^2.0.3",
-    "vitest": "~1.6.0",
-    "vue-tsc": "^2.0.24",
+    "vitest": "~2.0.0",
+    "vue-tsc": "^2.0.26",
     "wait-for-expect": "~3.0.2"
   }
 }
