@@ -3,9 +3,7 @@
     <ion-toolbar>
       <ion-title>{{ title }}</ion-title>
       <ion-buttons v-if="!setPasscodeMode" slot="start">
-        <ion-button @click="cancel" data-testid="cancel-button">
-          Cancel
-        </ion-button>
+        <ion-button @click="cancel" data-testid="cancel-button"> Cancel </ion-button>
       </ion-buttons>
       <ion-buttons slot="end">
         <ion-button :strong="true" data-testid="submit-button" @click="submit" :disabled="disableEnter">Enter
@@ -47,8 +45,7 @@
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col>
-        </ion-col>
+        <ion-col> </ion-col>
         <ion-col>
           <ion-button expand="block" fill="outline" @click="append(0)" :disabled="disableInput"
             data-testclass="number-button">0</ion-button>
@@ -111,6 +108,21 @@ const remove = () => {
   }
 };
 
+const handleGetPasscodeFlow = () => {
+  modalController.dismiss(pin.value);
+};
+
+const handleSetPasscodeFlow = () => {
+  if (!verifyPin) {
+    initVerifyMode();
+  } else if (verifyPin === pin.value) {
+    modalController.dismiss(pin.value);
+  } else {
+    errorMessage.value = 'PINs do not match';
+    initSetPasscodeMode();
+  }
+};
+
 const initSetPasscodeMode = () => {
   title.value = 'Create PIN';
   prompt.value = 'Create Session PIN';
@@ -137,16 +149,9 @@ const cancel = () => {
 
 const submit = () => {
   if (props.setPasscodeMode) {
-    if (!verifyPin) {
-      initVerifyMode();
-    } else if (verifyPin === pin.value) {
-      modalController.dismiss(pin.value);
-    } else {
-      errorMessage.value = 'PINs do not match';
-      initSetPasscodeMode();
-    }
+    handleSetPasscodeFlow();
   } else {
-    modalController.dismiss(pin.value);
+    handleGetPasscodeFlow();
   }
 };
 

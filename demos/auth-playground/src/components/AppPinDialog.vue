@@ -97,6 +97,21 @@ const disableInput = computed(() => pin.value.length > 8);
 
 const displayPin = computed(() => '*********'.slice(0, pin.value.length));
 
+const handleGetPasscodeFlow = () => {
+  modalController.dismiss(pin.value);
+};
+
+const handleSetPasscodeFlow = () => {
+  if (!verifyPin) {
+    initVerifyMode();
+  } else if (verifyPin === pin.value) {
+    modalController.dismiss(pin.value);
+  } else {
+    errorMessage.value = "PINs do not match";
+    initSetPasscodeMode();
+  }
+};
+
 const initSetPasscodeMode = () => {
   prompt.value = 'Create Session PIN';
   title.value = 'Create PIN';
@@ -127,16 +142,9 @@ const cancel = () => {
 
 const enter = () => {
   if (props.setPasscodeMode) {
-    if (!verifyPin) {
-      initVerifyMode();
-    } else if (verifyPin === pin.value) {
-      modalController.dismiss(pin.value);
-    } else {
-      errorMessage.value = 'PINs do not match';
-      initSetPasscodeMode();
-    }
+    handleSetPasscodeFlow();
   } else {
-    modalController.dismiss(pin.value);
+    handleGetPasscodeFlow();
   }
 };
 
