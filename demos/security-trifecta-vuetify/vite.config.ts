@@ -27,9 +27,12 @@ export default defineConfig({
   },
   test: {
     clearMocks: true,
-    deps: {
-      inline: ['vuetify'],
-    },
+    globals: true,
     environment: 'jsdom',
+    server: {
+      deps: {
+        inline: ['vuetify'],
+      },
+    },
   },
 });
