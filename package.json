@@ -18,7 +18,7 @@
   "prettier": "@ionic/prettier-config",
   "devDependencies": {
     "@ionic/prettier-config": "^4.0.0",
-    "husky": "^9.1.4",
+    "husky": "^9.1.5",
     "lint-staged": "^15.2.9",
     "prettier": "^3.3.3"
   }
