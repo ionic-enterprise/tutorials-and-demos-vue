@@ -605,6 +605,15 @@ importers:
 
   demos/prime-tea:
     dependencies:
+      '@capacitor/android':
+        specifier: ^6.1.2
+        version: 6.1.2(@capacitor/core@6.1.2)
+      '@capacitor/core':
+        specifier: ^6.1.2
+        version: 6.1.2
+      '@capacitor/ios':
+        specifier: ^6.1.2
+        version: 6.1.2(@capacitor/core@6.1.2)
       vue:
         specifier: ^3.4.29
         version: 3.4.38(typescript@5.4.5)
@@ -612,6 +621,9 @@ importers:
         specifier: ^4.3.3
         version: 4.4.3(vue@3.4.38(typescript@5.4.5))
     devDependencies:
+      '@capacitor/cli':
+        specifier: ^6.1.2
+        version: 6.1.2
       '@ionic/prettier-config':
         specifier: ^4.0.0
         version: 4.0.0(prettier@3.3.3)

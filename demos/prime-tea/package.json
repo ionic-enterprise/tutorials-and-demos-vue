@@ -4,20 +4,26 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "run-p type-check \"build-only {@}\" --",
+    "android": "cap open android",
+    "build": "run-p type-check \"build-only {@}\" -- && cap sync",
     "build-only": "vite build",
     "dev": "vite",
     "format": "prettier --write src/",
+    "ios": "cap open ios",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "preview": "vite preview",
     "test:unit": "vitest",
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/ios": "^6.1.2",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
   },
   "devDependencies": {
+    "@capacitor/cli": "^6.1.2",
     "@ionic/prettier-config": "^4.0.0",
     "@rushstack/eslint-patch": "^1.8.0",
     "@tsconfig/node20": "^20.1.4",
