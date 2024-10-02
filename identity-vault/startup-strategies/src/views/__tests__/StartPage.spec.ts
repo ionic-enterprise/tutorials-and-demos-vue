@@ -10,7 +10,7 @@ import { createRouter, createWebHistory, Router } from 'vue-router';
 vi.mock('@/composables/authentication');
 vi.mock('@/composables/session-vault');
 
-describe('Tab1 Page', () => {
+describe('Start Page', () => {
   let router: Router;
 
   const mountView = async (): Promise<VueWrapper<any>> => {
@@ -39,12 +39,6 @@ describe('Tab1 Page', () => {
     const wrapper = await mountView();
     const titles = wrapper.findAllComponents('ion-title') as Array<VueWrapper>;
     expect(titles).toHaveLength(0);
-  });
-
-  it('does not display the unlock and redo login buttons', async () => {
-    const wrapper = await mountView();
-    const buttons = wrapper.findAllComponents('ion-button') as Array<VueWrapper>;
-    expect(buttons).toHaveLength(0);
   });
 
   describe('on view did enter', () => {
@@ -150,74 +144,13 @@ describe('Tab1 Page', () => {
           (sessionIsLocked as Mock).mockResolvedValue(true);
         });
 
-        it('does not redirect anywhere', async () => {
+        it('redirects to the unlock page', async () => {
           const wrapper = await mountView();
           router.replace = vi.fn();
           wrapper.vm.onIonViewDidEnter[0]();
           await flushPromises();
-          expect(router.replace).not.toHaveBeenCalled();
-        });
-
-        it('displays the buttons', async () => {
-          const wrapper = await mountView();
-          wrapper.vm.onIonViewDidEnter[0]();
-          await flushPromises();
-          const buttons = wrapper.findAllComponents('ion-button') as Array<VueWrapper>;
-          expect(buttons).toHaveLength(2);
-          expect(buttons[0].text()).toBe('Unlock');
-          expect(buttons[1].text()).toBe('Redo Login');
-        });
-      });
-
-      describe('pressing the redo login button', () => {
-        let wrapper: VueWrapper<any>;
-        beforeEach(async () => {
-          wrapper = await mountView();
-          router.replace = vi.fn();
-          wrapper.vm.onIonViewDidEnter[0]();
-          await flushPromises();
-          vi.clearAllMocks();
-        });
-
-        it('performs a logout', async () => {
-          const { logout } = useAuthentication();
-          const buttons = wrapper.findAllComponents('ion-button') as Array<VueWrapper>;
-          await buttons[1].trigger('click');
-          await flushPromises();
-          expect(logout).toHaveBeenCalledOnce();
-        });
-
-        it('redirects to the login page', async () => {
-          const buttons = wrapper.findAllComponents('ion-button') as Array<VueWrapper>;
-          await buttons[1].trigger('click');
-          await flushPromises();
           expect(router.replace).toHaveBeenCalledOnce();
-          expect(router.replace).toHaveBeenCalledWith('/login');
-        });
-      });
-
-      describe('pressing the unlock button ', () => {
-        let wrapper: VueWrapper<any>;
-        beforeEach(async () => {
-          wrapper = await mountView();
-          router.replace = vi.fn();
-          wrapper.vm.onIonViewDidEnter[0]();
-          await flushPromises();
-          vi.clearAllMocks();
-        });
-
-        it('runs through the unlock process', async () => {
-          const { sessionIsLocked, unlockSession } = useSessionVault();
-          (sessionIsLocked as Mock).mockResolvedValue(false).mockResolvedValueOnce(true);
-          (unlockSession as Mock).mockResolvedValue(undefined);
-          const { isAuthenticated } = useAuthentication();
-          (isAuthenticated as Mock).mockResolvedValue(true);
-          const buttons = wrapper.findAllComponents('ion-button') as Array<VueWrapper>;
-          await buttons[0].trigger('click');
-          await flushPromises();
-          expect(unlockSession).toHaveBeenCalledOnce();
-          expect(router.replace).toHaveBeenCalledOnce();
-          expect(router.replace).toHaveBeenCalledWith('/tabs/tab1');
+          expect(router.replace).toHaveBeenCalledWith('/unlock');
         });
       });
     });

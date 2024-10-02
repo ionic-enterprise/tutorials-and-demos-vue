@@ -11,11 +11,15 @@ import { useRouter } from 'vue-router';
 import { useSessionVault } from './composables/session-vault';
 
 const router = useRouter();
-const { session, sessionIsLocked } = useSessionVault();
+const { session, sessionIsLocked, unlockSession } = useSessionVault();
 
 watch(session, async () => {
   if (await sessionIsLocked()) {
-    router.replace('/');
+    try {
+      await unlockSession();
+    } catch (err: unknown) {
+      router.replace('/unlock');
+    }
   }
 })
 </script>

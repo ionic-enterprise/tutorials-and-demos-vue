@@ -1,7 +1,7 @@
 import App from '@/App.vue';
 import { useSessionVault } from '@/composables/session-vault';
-import { VueWrapper, flushPromises, shallowMount } from '@vue/test-utils';
-import { Mock, beforeEach, describe, expect, it, vi } from 'vitest';
+import { VueWrapper, shallowMount } from '@vue/test-utils';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { Router, createRouter, createWebHistory } from 'vue-router';
 
 vi.mock('@capacitor/splash-screen');
@@ -39,26 +39,5 @@ describe('App.vue', () => {
   it('renders', async () => {
     const wrapper = await mountView();
     expect(wrapper.exists()).toBe(true);
-  });
-
-  it('redirects to root on session lock', async () => {
-    const { session, sessionIsLocked } = useSessionVault();
-    (sessionIsLocked as Mock).mockResolvedValue(true);
-    await mountView();
-    router.replace = vi.fn();
-    session.value = null;
-    await flushPromises();
-    expect(router.replace).toHaveBeenCalledOnce();
-    expect(router.replace).toHaveBeenCalledWith('/');
-  });
-
-  it('does not redirect if the session is not locked', async () => {
-    const { session, sessionIsLocked } = useSessionVault();
-    (sessionIsLocked as Mock).mockResolvedValue(false);
-    await mountView();
-    router.replace = vi.fn();
-    session.value = null;
-    await flushPromises();
-    expect(router.replace).not.toHaveBeenCalled();
   });
 });

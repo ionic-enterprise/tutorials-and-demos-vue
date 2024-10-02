@@ -16,6 +16,10 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/LoginPage.vue'),
   },
   {
+    path: '/unlock',
+    component: () => import('@/views/UnlockPage.vue'),
+  },
+  {
     path: '/tabs/',
     component: () => import('@/views/TabsPage.vue'),
     children: [
