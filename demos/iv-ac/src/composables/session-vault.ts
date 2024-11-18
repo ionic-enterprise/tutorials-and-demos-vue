@@ -167,7 +167,7 @@ const getSession = async (): Promise<AuthResult | null | undefined> => {
     try {
       session = await vault.getValue(sessionKey);
     } catch (e: any) {
-      if (e.code !== 8) {
+      if (e.code !== 8 && e.code !== 6) {
         await clearSession();
       }
     }
