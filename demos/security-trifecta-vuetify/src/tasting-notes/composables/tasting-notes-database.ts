@@ -40,16 +40,12 @@ const reset = async (): Promise<void> => {
         tx.executeSql(
           "UPDATE TastingNotes SET syncStatus = null WHERE syncStatus = 'UPDATE' AND userEmail = ?",
           [email],
-          () => {
-            null;
-          },
+          () => {},
         );
         tx.executeSql(
           "DELETE FROM TastingNotes WHERE syncStatus in ('DELETE', 'INSERT') AND userEmail = ?",
           [email],
-          () => {
-            null;
-          },
+          () => {},
         );
       });
     }
@@ -65,9 +61,7 @@ const remove = async (note: TastingNote): Promise<void> => {
         tx.executeSql(
           "UPDATE TastingNotes SET syncStatus = 'DELETE' WHERE userEmail = ? AND id = ?",
           [email, note.id],
-          () => {
-            null;
-          },
+          () => {},
         );
       });
     }
@@ -91,9 +85,7 @@ const trim = async (idsToKeep: Array<number>): Promise<void> => {
         tx.executeSql(
           `DELETE FROM TastingNotes WHERE userEmail = ? AND id not in (${params(idsToKeep.length)})`,
           [email, ...idsToKeep],
-          () => {
-            null;
-          },
+          () => {},
         );
       });
     }
@@ -116,9 +108,7 @@ const add = async (note: TastingNote): Promise<TastingNote | undefined> => {
               'INSERT INTO TastingNotes (id, name, brand, notes, rating, teaCategoryId, userEmail, syncStatus)' +
                 " VALUES (?, ?, ?, ?, ?, ?, ?, 'INSERT')",
               [note.id, note.name, note.brand, note.notes, note.rating, note.teaCategoryId, email],
-              () => {
-                null;
-              },
+              () => {},
             );
           },
         );
@@ -139,9 +129,7 @@ const update = async (note: TastingNote): Promise<TastingNote | undefined> => {
             " syncStatus = CASE syncStatus WHEN 'INSERT' THEN 'INSERT' else 'UPDATE' end" +
             ' WHERE userEmail = ? AND id = ?',
           [note.name, note.brand, note.notes, note.rating, note.teaCategoryId, email, note.id],
-          () => {
-            null;
-          },
+          () => {},
         );
       });
     }
@@ -180,9 +168,7 @@ const upsert = async (note: TastingNote): Promise<void> => {
             email,
             note.id,
           ],
-          () => {
-            null;
-          },
+          () => {},
         );
       });
     }

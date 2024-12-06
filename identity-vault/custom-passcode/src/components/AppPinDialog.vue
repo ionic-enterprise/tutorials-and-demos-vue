@@ -6,7 +6,8 @@
         <ion-button @click="cancel" data-testid="cancel-button"> Cancel </ion-button>
       </ion-buttons>
       <ion-buttons slot="end">
-        <ion-button :strong="true" data-testid="submit-button" @click="submit" :disabled="disableEnter">Enter
+        <ion-button :strong="true" data-testid="submit-button" @click="submit" :disabled="disableEnter"
+          >Enter
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
@@ -28,31 +29,61 @@
     <ion-grid>
       <ion-row>
         <ion-col v-for="n of [1, 2, 3]" :key="n">
-          <ion-button expand="block" fill="outline" @click="append(n)" :disabled="disableInput"
-            data-testclass="number-button">{{ n }}</ion-button>
+          <ion-button
+            expand="block"
+            fill="outline"
+            @click="append(n)"
+            :disabled="disableInput"
+            data-testclass="number-button"
+            >{{ n }}</ion-button
+          >
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col v-for="n of [4, 5, 6]" :key="n">
-          <ion-button expand="block" fill="outline" @click="append(n)" :disabled="disableInput"
-            data-testclass="number-button">{{ n }}</ion-button>
+          <ion-button
+            expand="block"
+            fill="outline"
+            @click="append(n)"
+            :disabled="disableInput"
+            data-testclass="number-button"
+            >{{ n }}</ion-button
+          >
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col v-for="n of [7, 8, 9]" :key="n">
-          <ion-button expand="block" fill="outline" @click="append(n)" :disabled="disableInput"
-            data-testclass="number-button">{{ n }}</ion-button>
+          <ion-button
+            expand="block"
+            fill="outline"
+            @click="append(n)"
+            :disabled="disableInput"
+            data-testclass="number-button"
+            >{{ n }}</ion-button
+          >
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col> </ion-col>
         <ion-col>
-          <ion-button expand="block" fill="outline" @click="append(0)" :disabled="disableInput"
-            data-testclass="number-button">0</ion-button>
+          <ion-button
+            expand="block"
+            fill="outline"
+            @click="append(0)"
+            :disabled="disableInput"
+            data-testclass="number-button"
+            >0</ion-button
+          >
         </ion-col>
         <ion-col>
-          <ion-button icon-only color="tertiary" expand="block" @click="remove()" :disabled="disableDelete"
-            data-testid="delete-button">
+          <ion-button
+            icon-only
+            color="tertiary"
+            expand="block"
+            @click="remove()"
+            :disabled="disableDelete"
+            data-testid="delete-button"
+          >
             <ion-icon :icon="backspace"></ion-icon>
           </ion-button>
         </ion-col>
@@ -79,7 +110,6 @@ import {
 import { computed, ref } from 'vue';
 import { backspace } from 'ionicons/icons';
 
-// eslint-disable-next-line no-undef
 const props = defineProps({
   setPasscodeMode: Boolean,
 });

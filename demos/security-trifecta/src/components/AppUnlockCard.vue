@@ -54,6 +54,7 @@ const unlockClicked = async () => {
   try {
     await getSession();
     emit('unlocked');
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (err) {
     errorMessage.value = 'Unlock failed';
   }

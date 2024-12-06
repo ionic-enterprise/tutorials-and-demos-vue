@@ -5,7 +5,13 @@
         <ion-card-content>
           <ion-card-title>The Tasting Room is Locked</ion-card-title>
 
-          <ion-button class="unlock-button" expand="full" fill="clear" @click="unlockClicked" data-testid="unlock-button">
+          <ion-button
+            class="unlock-button"
+            expand="full"
+            fill="clear"
+            @click="unlockClicked"
+            data-testid="unlock-button"
+          >
             <ion-icon slot="end" :icon="lockOpenOutline"></ion-icon>
             <div>Unlock</div>
           </ion-button>
@@ -38,9 +44,8 @@ const unlockClicked = async (): Promise<void> => {
   try {
     await getSession();
     await router.replace('/');
-  } catch (err) {
-    null;
-  }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  } catch (err) {}
 };
 </script>
 

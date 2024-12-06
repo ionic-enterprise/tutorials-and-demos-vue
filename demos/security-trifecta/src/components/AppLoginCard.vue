@@ -5,8 +5,12 @@
       <ion-card-subtitle> Secure Storage Demo Application (Vue) </ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      <ion-select v-if="displayUnlockOptions" label="Session Locking" v-model="unlockMode"
-        data-testid="unlock-opt-select">
+      <ion-select
+        v-if="displayUnlockOptions"
+        label="Session Locking"
+        v-model="unlockMode"
+        data-testid="unlock-opt-select"
+      >
         <ion-select-option v-for="unlockMode of unlockModes" :value="unlockMode.mode" :key="unlockMode.mode">{{
           unlockMode.label
         }}</ion-select-option>
@@ -16,8 +20,14 @@
         Sign In
       </ion-button>
     </ion-card-content>
-    <ion-toast :isOpen="loginFailed" message="Login failed!" color="danger" :duration="3000" position="middle"
-      @didDismiss="loginFailed = false"></ion-toast>
+    <ion-toast
+      :isOpen="loginFailed"
+      message="Login failed!"
+      color="danger"
+      :duration="3000"
+      position="middle"
+      @didDismiss="loginFailed = false"
+    ></ion-toast>
     <ion-loading :isOpen="authenticating" message="Authenticating..."></ion-loading>
   </ion-card>
 </template>
@@ -86,6 +96,7 @@ const signinClicked = async () => {
     await login();
     await setUnlockMode(unlockMode.value);
     emit('success');
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (err) {
     loginFailed.value = true;
   } finally {

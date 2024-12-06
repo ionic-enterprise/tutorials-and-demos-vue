@@ -8,16 +8,11 @@ const getAll = async (): Promise<Array<TeaCategory>> => {
   const handle = await getHandle();
   if (handle) {
     await handle.transaction((tx) =>
-      tx.executeSql(
-        'SELECT id, name, description FROM TeaCategories ORDER BY name',
-        [],
-        // tslint:disable-next-line:variable-name
-        (_t: any, r: any) => {
-          for (let i = 0; i < r.rows.length; i++) {
-            cats.push(r.rows.item(i));
-          }
-        },
-      ),
+      tx.executeSql('SELECT id, name, description FROM TeaCategories ORDER BY name', [], (_t: any, r: any) => {
+        for (let i = 0; i < r.rows.length; i++) {
+          cats.push(r.rows.item(i));
+        }
+      }),
     );
   }
   return cats;
@@ -32,9 +27,7 @@ const upsert = async (cat: TeaCategory): Promise<void> => {
           ' ON CONFLICT(id) DO' +
           ' UPDATE SET name = ?, description = ? where id = ?',
         [cat.id, cat.name, cat.description, cat.name, cat.description, cat.id],
-        () => {
-          null;
-        },
+        () => {},
       );
     });
   }
@@ -52,9 +45,11 @@ const trim = async (idsToKeep: Array<number>): Promise<void> => {
   const handle = await getHandle();
   if (handle) {
     await handle.transaction((tx) => {
-      tx.executeSql(`DELETE FROM TeaCategories WHERE id not in (${params(idsToKeep.length)})`, [...idsToKeep], () => {
-        null;
-      });
+      tx.executeSql(
+        `DELETE FROM TeaCategories WHERE id not in (${params(idsToKeep.length)})`,
+        [...idsToKeep],
+        () => {},
+      );
     });
   }
 };

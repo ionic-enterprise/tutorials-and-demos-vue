@@ -96,7 +96,6 @@ export class OIDCAuthenticationService implements Authenticator {
       const res = await AuthConnect.login(this.provider, this.options);
       setValue(this.authResultKey, res);
     } catch (err: any) {
-      // eslint-disable-next-line
       console.log('login error:', err);
       const message: string = err.errorMessage;
       if (this.options === azureOptions && message !== undefined && message.includes('AADB2C90118')) {
@@ -186,6 +185,7 @@ export class OIDCAuthenticationService implements Authenticator {
       try {
         newAuthResult = await AuthConnect.refreshSession(this.provider, authResult);
         setValue(this.authResultKey, newAuthResult);
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (err) {
         await clear();
       }

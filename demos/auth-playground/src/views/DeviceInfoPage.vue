@@ -159,6 +159,7 @@ const showBiometricPrompt = async () => {
   try {
     await Device.showBiometricPrompt({ iosBiometricsLocalizedReason: 'This is only a test' });
     await displayBioResult('Success!!');
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (err) {
     await displayBioResult('Failed. User likely cancelled the operation.');
   }

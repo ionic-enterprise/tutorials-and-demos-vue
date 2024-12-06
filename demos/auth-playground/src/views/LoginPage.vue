@@ -9,18 +9,38 @@
         <ion-card-content>
           <ion-list>
             <ion-item>
-              <ion-input data-testid="email-input" label="E-Mail Address" label-placement="floating" name="email"
-                type="email" v-model="email" email required></ion-input>
+              <ion-input
+                data-testid="email-input"
+                label="E-Mail Address"
+                label-placement="floating"
+                name="email"
+                type="email"
+                v-model="email"
+                email
+                required
+              ></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input data-testid="password-input" label="Password" label-placement="floating" name="password"
-                type="password" v-model="password" required>
+              <ion-input
+                data-testid="password-input"
+                label="Password"
+                label-placement="floating"
+                name="password"
+                type="password"
+                v-model="password"
+                required
+              >
               </ion-input>
             </ion-item>
             <ion-item>
               <ion-label>
-                <ion-button expand="block" :disabled="!formIsValid" @click="signIn('Basic')"
-                  data-testid="basic-signin-button">Sign In with Email</ion-button>
+                <ion-button
+                  expand="block"
+                  :disabled="!formIsValid"
+                  @click="signIn('Basic')"
+                  data-testid="basic-signin-button"
+                  >Sign In with Email</ion-button
+                >
               </ion-label>
             </ion-item>
           </ion-list>
@@ -107,6 +127,7 @@ const signIn = async (vendor: AuthVendor): Promise<void> => {
     await (vendor === 'Basic' ? login(vendor, email.value, password.value) : login(vendor));
     await initializeUnlockMode();
     router.replace('/');
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (err) {
     errorMessage.value = 'Invalid email and/or password';
   }

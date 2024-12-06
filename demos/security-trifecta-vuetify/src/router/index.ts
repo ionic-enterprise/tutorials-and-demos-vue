@@ -5,7 +5,7 @@ import { createRouter, createWebHistory, NavigationGuardNext, RouteLocationNorma
 const routes = [
   {
     path: '/',
-    component: () => import('@/layouts/default/Default.vue'),
+    component: () => import('@/layouts/default/DefaultLayout.vue'),
     children: [
       {
         path: '',
@@ -22,7 +22,7 @@ const routes = [
   },
   {
     path: '/auth-action-complete',
-    component: () => import('@/layouts/stand-alone/StandAlone.vue'),
+    component: () => import('@/layouts/stand-alone/StandAloneLayout.vue'),
     children: [
       {
         path: '',
@@ -33,7 +33,7 @@ const routes = [
   },
   {
     path: '/login',
-    component: () => import('@/layouts/stand-alone/StandAlone.vue'),
+    component: () => import('@/layouts/stand-alone/StandAloneLayout.vue'),
     children: [
       {
         path: '',
@@ -44,7 +44,7 @@ const routes = [
   },
   {
     path: '/logout',
-    component: () => import('@/layouts/stand-alone/StandAlone.vue'),
+    component: () => import('@/layouts/stand-alone/StandAloneLayout.vue'),
     children: [
       {
         path: '',

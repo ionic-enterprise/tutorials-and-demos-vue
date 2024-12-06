@@ -29,6 +29,7 @@ const initializeVault = async (): Promise<void> => {
       customPasscodeInvalidUnlockAttempts: 2,
       unlockVaultOnLoad: false,
     });
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (e: unknown) {
     await vault.clear();
     await setUnlockMode('NeverLock');
@@ -56,9 +57,8 @@ const provision = async (): Promise<void> => {
   if ((await Device.isBiometricsAllowed()) === BiometricPermissionState.Prompt) {
     try {
       await Device.showBiometricPrompt({ iosBiometricsLocalizedReason: 'Please authenticate to continue' });
-    } catch (error) {
-      null;
-    }
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (error) {}
   }
 };
 

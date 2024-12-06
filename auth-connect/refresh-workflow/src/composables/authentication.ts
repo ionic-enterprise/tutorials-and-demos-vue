@@ -33,9 +33,8 @@ const refreshAuthResult = async (authResult: AuthResult): Promise<AuthResult | n
   if (await AuthConnect.isRefreshTokenAvailable(authResult)) {
     try {
       newAuthResult = await AuthConnect.refreshSession(provider, authResult);
-    } catch (err) {
-      null;
-    }
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (err) {}
   }
   await saveAuthResult(newAuthResult);
   return newAuthResult;

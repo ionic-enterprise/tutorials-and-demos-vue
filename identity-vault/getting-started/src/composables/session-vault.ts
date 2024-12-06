@@ -23,7 +23,8 @@ const initializeVault = async (): Promise<void> => {
       deviceSecurityType: DeviceSecurityType.None,
       lockAfterBackgrounded: 2000,
     });
-  } catch (e: unknown) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  } catch (err: unknown) {
     await vault.clear();
     await updateUnlockMode('SecureStorage');
   }

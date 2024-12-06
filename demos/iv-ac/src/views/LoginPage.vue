@@ -16,8 +16,14 @@
         </ion-card-content>
       </ion-card>
     </ion-content>
-    <ion-toast :isOpen="loginFailed" message="Login failed!" color="danger" :duration="3000" position="middle"
-      @didDismiss="loginFailed = false"></ion-toast>
+    <ion-toast
+      :isOpen="loginFailed"
+      message="Login failed!"
+      color="danger"
+      :duration="3000"
+      position="middle"
+      @didDismiss="loginFailed = false"
+    ></ion-toast>
   </ion-page>
 </template>
 
@@ -47,6 +53,7 @@ const signinClicked = async () => {
   try {
     await login();
     router.replace('/');
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (e) {
     loginFailed.value = true;
   }

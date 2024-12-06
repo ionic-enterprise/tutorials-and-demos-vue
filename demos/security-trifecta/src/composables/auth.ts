@@ -24,6 +24,7 @@ const performRefresh = async (authResult: AuthResult): Promise<AuthResult | unde
     try {
       newAuthResult = await AuthConnect.refreshSession(provider, authResult);
       setSession(newAuthResult);
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (err) {
       await clearSession();
     }

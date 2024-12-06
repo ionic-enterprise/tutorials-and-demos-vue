@@ -5,10 +5,6 @@ import { useSessionVault } from '@/composables/session-vault';
 export class BasicAuthenticationService implements Authenticator {
   private key = 'auth-token';
 
-  constructor() {
-    null;
-  }
-
   async login(email: string, password: string): Promise<void> {
     const { client } = useBackendAPI();
     const { setValue } = useSessionVault();

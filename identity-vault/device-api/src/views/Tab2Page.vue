@@ -67,14 +67,16 @@
         </ion-list-header>
         <ion-item>
           <ion-label>
-            <ion-button expand="block" :disabled="!isBiometricsEnabled" @click="showBiometricPrompt">Show Biometric
-              Prompt</ion-button>
+            <ion-button expand="block" :disabled="!isBiometricsEnabled" @click="showBiometricPrompt"
+              >Show Biometric Prompt</ion-button
+            >
           </ion-label>
         </ion-item>
         <ion-item>
           <ion-label>
-            <ion-button expand="block" @click="toggleHideScreenOnBackground">{{ isHideScreenOnBackgroundEnabled ?
-              'Disable' : 'Enable' }} Security Screen</ion-button>
+            <ion-button expand="block" @click="toggleHideScreenOnBackground"
+              >{{ isHideScreenOnBackgroundEnabled ? 'Disable' : 'Enable' }} Security Screen</ion-button
+            >
           </ion-label>
         </ion-item>
       </ion-list>
@@ -94,9 +96,9 @@ import {
   IonPage,
   IonToolbar,
   IonTitle,
-} from "@ionic/vue";
-import { ref } from "vue";
-import { Device } from "@ionic-enterprise/identity-vault";
+} from '@ionic/vue';
+import { ref } from 'vue';
+import { Device } from '@ionic-enterprise/identity-vault';
 
 const hasSecureHardware = ref<boolean>(false);
 const isBiometricsSupported = ref<boolean>(false);
@@ -125,18 +127,19 @@ const initialize = async (): Promise<void> => {
 const toggleHideScreenOnBackground = async (): Promise<void> => {
   await Device.setHideScreenOnBackground(!isHideScreenOnBackgroundEnabled.value);
   isHideScreenOnBackgroundEnabled.value = await Device.isHideScreenOnBackgroundEnabled();
-}
+};
 
 const showBiometricPrompt = async (): Promise<void> => {
   try {
     await Device.showBiometricPrompt({
       iosBiometricsLocalizedReason: 'Just to show you how this works',
     });
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (e) {
     // This is the most likely scenario
     alert('user cancelled biometrics prompt');
   }
-}
+};
 
 initialize();
 </script>
