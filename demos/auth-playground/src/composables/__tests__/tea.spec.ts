@@ -71,7 +71,7 @@ describe('useTea', () => {
       },
     ];
     httpResultTeas = expectedTeas.map((t: Tea) => {
-      /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { image, rating, ...tea } = { ...t };
       return tea;
     });

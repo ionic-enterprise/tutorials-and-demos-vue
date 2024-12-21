@@ -96,8 +96,7 @@ const signinClicked = async () => {
     await login();
     await setUnlockMode(unlockMode.value);
     emit('success');
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  } catch (err) {
+  } catch {
     loginFailed.value = true;
   } finally {
     authenticating.value = false;

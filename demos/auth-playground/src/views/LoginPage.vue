@@ -127,8 +127,7 @@ const signIn = async (vendor: AuthVendor): Promise<void> => {
     await (vendor === 'Basic' ? login(vendor, email.value, password.value) : login(vendor));
     await initializeUnlockMode();
     router.replace('/');
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  } catch (err) {
+  } catch {
     errorMessage.value = 'Invalid email and/or password';
   }
 };

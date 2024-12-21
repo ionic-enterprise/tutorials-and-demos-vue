@@ -53,8 +53,7 @@ const signinClicked = async () => {
   try {
     await login();
     router.replace('/');
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  } catch (e) {
+  } catch {
     loginFailed.value = true;
   }
 };

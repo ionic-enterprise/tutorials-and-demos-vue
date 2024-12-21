@@ -47,8 +47,7 @@ const initializeVault = async (): Promise<void> => {
       unlockVaultOnLoad: false,
       androidBiometricsPreferStrongVaultOrSystemPasscode: AndroidBiometricCryptoPreference.StrongVault,
     });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  } catch (e: unknown) {
+  } catch {
     await vault.clear();
     await setUnlockMode('SecureStorage');
   }
@@ -101,8 +100,7 @@ const provision = async (): Promise<void> => {
   if ((await Device.isBiometricsAllowed()) === BiometricPermissionState.Prompt) {
     try {
       await Device.showBiometricPrompt({ iosBiometricsLocalizedReason: 'Please authenticate to continue' });
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (error) {}
+    } catch {}
   }
 };
 

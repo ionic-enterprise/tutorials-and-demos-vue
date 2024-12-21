@@ -44,8 +44,7 @@ const unlockClicked = async (): Promise<void> => {
   try {
     await getSession();
     await router.replace('/');
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  } catch (err) {}
+  } catch {}
 };
 </script>
 

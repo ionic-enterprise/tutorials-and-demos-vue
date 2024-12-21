@@ -28,8 +28,7 @@ const performUnlock = async (): Promise<void> => {
   if (await sessionIsLocked()) {
     try {
       await unlockSession();
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (err: unknown) {
+    } catch {
       router.replace('/unlock');
     }
   }

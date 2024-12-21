@@ -47,8 +47,7 @@ const tryUnlock = async (): Promise<void> => {
   try {
     await unlock();
     await router.replace('/');
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  } catch (err) {}
+  } catch {}
 };
 
 const unlockClicked = async (): Promise<void> => {

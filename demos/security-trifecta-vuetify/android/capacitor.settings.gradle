@@ -6,4 +6,4 @@ include ':capacitor-splash-screen'
 project(':capacitor-splash-screen').projectDir = new File('../../../node_modules/.pnpm/@capacitor+splash-screen@6.0.3_@capacitor+core@6.2.0/node_modules/@capacitor/splash-screen/android')
 
 include ':ionic-enterprise-auth'
-project(':ionic-enterprise-auth').projectDir = new File('../../../node_modules/.pnpm/@ionic-enterprise+auth@6.0.3_@capacitor+core@6.2.0/node_modules/@ionic-enterprise/auth/android')
+project(':ionic-enterprise-auth').projectDir = new File('../../../node_modules/.pnpm/@ionic-enterprise+auth@6.0.4_@capacitor+core@6.2.0/node_modules/@ionic-enterprise/auth/android')

@@ -134,8 +134,7 @@ const showBiometricPrompt = async (): Promise<void> => {
     await Device.showBiometricPrompt({
       iosBiometricsLocalizedReason: 'Just to show you how this works',
     });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  } catch (e) {
+  } catch {
     // This is the most likely scenario
     alert('user cancelled biometrics prompt');
   }

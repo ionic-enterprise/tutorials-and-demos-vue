@@ -34,8 +34,7 @@ const doLogin = async () => {
     await sync();
     await initializeUnlockMode();
     emit('success');
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  } catch (err) {
+  } catch {
     signinError.value = true;
   }
 };

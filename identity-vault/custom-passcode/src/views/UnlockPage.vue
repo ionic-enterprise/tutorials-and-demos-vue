@@ -51,7 +51,6 @@ const unlock = async (): Promise<void> => {
   try {
     await unlockSession();
     router.replace('/tabs/tab1');
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  } catch (err: unknown) {}
+  } catch {}
 };
 </script>

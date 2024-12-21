@@ -185,8 +185,7 @@ export class OIDCAuthenticationService implements Authenticator {
       try {
         newAuthResult = await AuthConnect.refreshSession(this.provider, authResult);
         setValue(this.authResultKey, newAuthResult);
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      } catch (err) {
+      } catch {
         await clear();
       }
     } else {

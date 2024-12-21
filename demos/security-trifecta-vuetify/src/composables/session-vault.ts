@@ -25,8 +25,7 @@ const initializeVault = async (): Promise<void> => {
       customPasscodeInvalidUnlockAttempts: 2,
       unlockVaultOnLoad: !Capacitor.isNativePlatform(),
     });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  } catch (e: unknown) {
+  } catch {
     await vault.clear();
     await setUnlockMode('NeverLock');
   }
