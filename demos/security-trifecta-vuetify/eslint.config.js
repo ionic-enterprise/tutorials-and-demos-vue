@@ -25,16 +25,6 @@ export default [
     },
   },
   {
-    ignores: [
-      '.DS_Store',
-      'coverage/',
-      'dist/',
-      'ios/',
-      'android/',
-      'src-tauri/target',
-      '.env.*',
-      '*.log*',
-      'src/vite-env.d.ts',
-    ],
+    ignores: ['.DS_Store', 'coverage/', 'dist/', 'ios/', 'android/', '.env.*', '*.log*', 'src/vite-env.d.ts'],
   },
 ];

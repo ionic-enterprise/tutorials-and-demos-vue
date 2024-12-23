@@ -25,6 +25,6 @@ export default [
     },
   },
   {
-    ignores: ['.DS_Store', 'coverage/', 'dist/', 'ios/', 'android/', 'src-tauri/target', '.env.*', '*.log*'],
+    ignores: ['.DS_Store', 'coverage/', 'dist/', 'ios/', 'android/', '.env.*', '*.log*'],
   },
 ];
