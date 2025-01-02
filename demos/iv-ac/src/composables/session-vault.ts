@@ -1,6 +1,5 @@
 import AppPinDialog from '@/components/AppPinDialog.vue';
 import { useVaultFactory } from '@/composables/vault-factory';
-import router from '@/router';
 import { Preferences } from '@capacitor/preferences';
 import { AuthResult } from '@ionic-enterprise/auth';
 import {
@@ -11,6 +10,7 @@ import {
   VaultType,
 } from '@ionic-enterprise/identity-vault';
 import { isPlatform, modalController } from '@ionic/vue';
+import { ref } from 'vue';
 
 export type UnlockMode =
   | 'Biometrics'
@@ -22,7 +22,7 @@ export type UnlockMode =
 const sessionKey = 'session';
 const hideInBackgroundKey = 'hide-in-background';
 const modeKey = 'LastUnlockMode';
-let session: AuthResult | null | undefined;
+const session = ref<AuthResult | null | undefined>();
 
 const { createVault } = useVaultFactory();
 const vault = createVault({
@@ -52,10 +52,7 @@ const initializeVault = async (): Promise<void> => {
     await setUnlockMode('SecureStorage');
   }
 
-  vault.onLock(() => {
-    session = undefined;
-    router.replace('/unlock');
-  });
+  vault.onLock(() => (session.value = undefined));
 
   vault.onPasscodeRequested(async (isPasscodeSetRequest: boolean) => {
     const dlg = await modalController.create({
@@ -69,11 +66,6 @@ const initializeVault = async (): Promise<void> => {
     const { data } = await dlg.onDidDismiss();
     vault.setCustomPasscode(data || '');
   });
-};
-
-const canUnlock = async (): Promise<boolean> => {
-  const { value } = await Preferences.get({ key: modeKey });
-  return (value || 'SecureStorage') !== 'SecureStorage' && !(await vault.isEmpty()) && (await vault.isLocked());
 };
 
 const canHideContentsInBackground = (): boolean => isPlatform('hybrid');
@@ -92,7 +84,7 @@ const isHidingContentsInBackground = async (): Promise<boolean> => {
 };
 
 const setSession = async (s: AuthResult): Promise<void> => {
-  session = s;
+  session.value = s;
   return vault.setValue(sessionKey, s);
 };
 
@@ -155,27 +147,37 @@ const setUnlockMode = async (unlockMode: UnlockMode): Promise<void> => {
 };
 
 const clearSession = async (): Promise<void> => {
-  session = undefined;
+  session.value = undefined;
   await vault.clear();
   await setUnlockMode('SecureStorage');
 };
 
 const getSession = async (): Promise<AuthResult | null | undefined> => {
-  if (!session) {
+  if (!session.value) {
     try {
-      session = await vault.getValue(sessionKey);
+      session.value = await vault.getValue(sessionKey);
     } catch (e: any) {
       if (e.code !== 8 && e.code !== 6) {
         await clearSession();
       }
     }
   }
-  return session;
+  return session.value;
+};
+
+const unlockSession = async (): Promise<void> => {
+  await vault.unlock();
+  session.value = await vault.getValue('session');
+};
+
+const sessionIsLocked = async (): Promise<boolean> => {
+  const { value } = await Preferences.get({ key: modeKey });
+  return (value || 'SecureStorage') !== 'SecureStorage' && !(await vault.isEmpty()) && (await vault.isLocked());
 };
 
 export const useSessionVault = () => {
   return {
-    canUnlock,
+    session,
     canHideContentsInBackground,
     canUseBiometrics,
     canUseCustomPasscode,
@@ -188,5 +190,7 @@ export const useSessionVault = () => {
     isHidingContentsInBackground,
     setSession,
     setUnlockMode,
+    sessionIsLocked,
+    unlockSession,
   };
 };

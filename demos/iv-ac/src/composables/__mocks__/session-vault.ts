@@ -1,9 +1,11 @@
+import { AuthResult } from '@ionic-enterprise/auth';
 import { vi } from 'vitest';
+import { ref } from 'vue';
 
 let onLockCallback: (() => Promise<void>) | undefined;
 
+const session = ref<AuthResult | null | undefined>(null);
 const canHideContentsInBackground = vi.fn().mockResolvedValue(false);
-const canUnlock = vi.fn().mockResolvedValue(false);
 const canUseBiometrics = vi.fn().mockResolvedValue(false);
 const canUseCustomPasscode = vi.fn().mockResolvedValue(false);
 const canUseSystemPasscode = vi.fn().mockResolvedValue(false);
@@ -13,7 +15,9 @@ const getSession = vi.fn().mockResolvedValue(undefined);
 const getUnlockMode = vi.fn().mockResolvedValue('SecureStorage');
 const hideContentsInBackground = vi.fn().mockResolvedValue(undefined);
 const isHidingContentsInBackground = vi.fn().mockResolvedValue(undefined);
+const sessionIsLocked = vi.fn().mockResolvedValue(false);
 const setUnlockMode = vi.fn().mockResolvedValue(undefined);
+const unlockSession = vi.fn().mockResolvedValue(undefined);
 const onLock = vi.fn().mockImplementation((cb: () => Promise<void>) => (onLockCallback = cb));
 const lock = vi.fn().mockImplementation(() => {
   if (onLockCallback) {
@@ -22,8 +26,8 @@ const lock = vi.fn().mockImplementation(() => {
 });
 
 export const useSessionVault = () => ({
+  session,
   canHideContentsInBackground,
-  canUnlock,
   canUseBiometrics,
   canUseCustomPasscode,
   canUseSystemPasscode,
@@ -36,4 +40,6 @@ export const useSessionVault = () => ({
   setUnlockMode,
   onLock,
   lock,
+  sessionIsLocked,
+  unlockSession,
 });

@@ -5,22 +5,37 @@
 </template>
 
 <script setup lang="ts">
-import { IonContent, IonPage } from "@ionic/vue";
-import { useRouter } from "vue-router";
-import { useSessionVault } from "@/composables/session-vault";
-const { canUnlock } = useSessionVault();
+import { useAuth } from '@/composables/auth';
+import { useSessionVault } from '@/composables/session-vault';
+import { IonContent, IonPage, onIonViewDidEnter } from '@ionic/vue';
+import { useRouter } from 'vue-router';
+
+const { isAuthenticated } = useAuth();
+const { sessionIsLocked, unlockSession } = useSessionVault();
 const router = useRouter();
-// This strategy takes you to the unlock page if there is a session to be unlocked.
-// From there, the user can choose to unlock or sign in again.
-canUnlock().then((x: boolean) => {
-  if (x) {
-    router.replace("/unlock");
-  } else {
-    router.replace("/tabs/teas");
+
+const performNavigation = async (): Promise<void> => {
+  if (!(await sessionIsLocked())) {
+    if (await isAuthenticated()) {
+      router.replace('/tabs/teas');
+    } else {
+      router.replace('/login');
+    }
   }
+};
+
+const performUnlock = async (): Promise<void> => {
+  if (await sessionIsLocked()) {
+    try {
+      await unlockSession();
+    } catch {
+      router.replace('/unlock');
+    }
+  }
+};
+
+onIonViewDidEnter(async () => {
+  await performUnlock();
+  await performNavigation();
 });
-// If you comment out the above strategy and go with this one, when there is a locked session,
-// the user will be prompted to unlock the vault automatically by the auth-guard when it tries
-// to get the session.
-// router.replace('/tabs/teas');
 </script>

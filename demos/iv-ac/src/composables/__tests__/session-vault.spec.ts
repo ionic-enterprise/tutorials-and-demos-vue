@@ -1,6 +1,5 @@
 import { UnlockMode, useSessionVault } from '@/composables/session-vault';
 import { useVaultFactory } from '@/composables/vault-factory';
-import router from '@/router';
 import { Preferences } from '@capacitor/preferences';
 import { AuthResult } from '@ionic-enterprise/auth';
 import {
@@ -352,7 +351,7 @@ describe('useSessionVault', () => {
       );
     });
 
-    describe('canUnlock', () => {
+    describe('sessionIsLocked', () => {
       it.each([
         [false, 'SecureStorage' as UnlockMode, false, true],
         [false, 'SecureStorage' as UnlockMode, true, true],
@@ -375,8 +374,8 @@ describe('useSessionVault', () => {
           (mockVault.isEmpty as Mock).mockResolvedValue(empty);
           (mockVault.isLocked as Mock).mockResolvedValue(locked);
           (Preferences.get as Mock).mockResolvedValue({ value: mode });
-          const { canUnlock } = useSessionVault();
-          expect(await canUnlock()).toBe(expected);
+          const { sessionIsLocked } = useSessionVault();
+          expect(await sessionIsLocked()).toBe(expected);
         },
       );
     });
@@ -393,12 +392,6 @@ describe('useSessionVault', () => {
         mockVault.lock();
         await getSession();
         expect(mockVault.getValue).toHaveBeenCalledTimes(1);
-      });
-
-      it('goes to the unlock page', () => {
-        mockVault.lock();
-        expect(router.replace).toHaveBeenCalledTimes(1);
-        expect(router.replace).toHaveBeenCalledWith('/unlock');
       });
     });
   });
