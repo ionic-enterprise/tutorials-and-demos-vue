@@ -153,16 +153,16 @@ const clearSession = async (): Promise<void> => {
 };
 
 const getSession = async (): Promise<AuthResult | null | undefined> => {
-  if (!session.value) {
-    try {
-      session.value = await vault.getValue(sessionKey);
-    } catch (e: any) {
-      if (e.code !== 8 && e.code !== 6) {
-        await clearSession();
-      }
+  let s: AuthResult | null | undefined = null;
+  try {
+    s = await vault.getValue(sessionKey);
+    session.value = s;
+  } catch (e: any) {
+    if (e.code !== 8 && e.code !== 6) {
+      await clearSession();
     }
   }
-  return session.value;
+  return s;
 };
 
 const unlockSession = async (): Promise<void> => {

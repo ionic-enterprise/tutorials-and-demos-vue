@@ -204,12 +204,6 @@ describe('useSessionVault', () => {
     });
 
     describe('setSession', () => {
-      it('sets the session', async () => {
-        const { getSession, setSession } = useSessionVault();
-        await setSession(testSession as AuthResult);
-        expect(await getSession()).toEqual(testSession);
-      });
-
       it('stores the session in the vault', async () => {
         const { setSession } = useSessionVault();
         await setSession(testSession as AuthResult);
@@ -261,21 +255,6 @@ describe('useSessionVault', () => {
         expect(await getSession()).toEqual(testSession);
         expect(mockVault.getValue).toHaveBeenCalledTimes(1);
         expect(mockVault.getValue).toHaveBeenCalledWith('session');
-      });
-
-      it('caches the retrieved session', async () => {
-        const { getSession } = useSessionVault();
-        (mockVault.getValue as Mock).mockResolvedValue(testSession);
-        await getSession();
-        await getSession();
-        expect(mockVault.getValue).toHaveBeenCalledTimes(1);
-      });
-
-      it('caches the session set via setSession', async () => {
-        const { getSession, setSession } = useSessionVault();
-        await setSession(testSession as AuthResult);
-        expect(await getSession()).toEqual(testSession);
-        expect(mockVault.getValue).not.toHaveBeenCalled();
       });
     });
 
