@@ -12,7 +12,7 @@ def capacitor_pods
   pod 'Capacitor', :path => '../../../../node_modules/.pnpm/@capacitor+ios@6.2.0_@capacitor+core@6.2.0/node_modules/@capacitor/ios'
   pod 'CapacitorCordova', :path => '../../../../node_modules/.pnpm/@capacitor+ios@6.2.0_@capacitor+core@6.2.0/node_modules/@capacitor/ios'
   pod 'CapacitorSplashScreen', :path => '../../../../node_modules/.pnpm/@capacitor+splash-screen@6.0.3_@capacitor+core@6.2.0/node_modules/@capacitor/splash-screen'
-  pod 'IonicEnterpriseAuth', :path => '../../../../node_modules/.pnpm/@ionic-enterprise+auth@6.0.4_@capacitor+core@6.2.0/node_modules/@ionic-enterprise/auth'
+  pod 'IonicEnterpriseAuth', :path => '../../../../node_modules/.pnpm/@ionic-enterprise+auth@6.0.5_@capacitor+core@6.2.0/node_modules/@ionic-enterprise/auth'
   pod 'CordovaPlugins', :path => '../capacitor-cordova-ios-plugins'
 end
 
