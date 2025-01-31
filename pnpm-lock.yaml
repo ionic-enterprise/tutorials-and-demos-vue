@@ -800,6 +800,91 @@ importers:
         specifier: ^3.0.2
         version: 3.0.2
 
+  demos/sqlcipher-kv-pair:
+    dependencies:
+      '@capacitor/android':
+        specifier: ^7.0.1
+        version: 7.0.1(@capacitor/core@7.0.1)
+      '@capacitor/app':
+        specifier: ^7.0.0
+        version: 7.0.0(@capacitor/core@7.0.1)
+      '@capacitor/core':
+        specifier: ^7.0.1
+        version: 7.0.1
+      '@capacitor/haptics':
+        specifier: ^7.0.0
+        version: 7.0.0(@capacitor/core@7.0.1)
+      '@capacitor/ios':
+        specifier: ^7.0.1
+        version: 7.0.1(@capacitor/core@7.0.1)
+      '@capacitor/keyboard':
+        specifier: ^7.0.0
+        version: 7.0.0(@capacitor/core@7.0.1)
+      '@capacitor/status-bar':
+        specifier: ^7.0.0
+        version: 7.0.0(@capacitor/core@7.0.1)
+      '@ionic/vue':
+        specifier: ^8.4.2
+        version: 8.4.2
+      '@ionic/vue-router':
+        specifier: ^8.4.2
+        version: 8.4.2
+      date-fns:
+        specifier: ^4.1.0
+        version: 4.1.0
+      ionicons:
+        specifier: ^7.4.0
+        version: 7.4.0
+      vue:
+        specifier: ^3.5.13
+        version: 3.5.13(typescript@5.7.3)
+      vue-router:
+        specifier: ^4.5.0
+        version: 4.5.0(vue@3.5.13(typescript@5.7.3))
+    devDependencies:
+      '@capacitor/cli':
+        specifier: ^7.0.1
+        version: 7.0.1
+      '@vitejs/plugin-legacy':
+        specifier: ^6.0.0
+        version: 6.0.0(terser@5.37.0)(vite@6.0.11(@types/node@22.12.0)(terser@5.37.0)(yaml@2.7.0))
+      '@vitejs/plugin-vue':
+        specifier: ^5.2.1
+        version: 5.2.1(vite@6.0.11(@types/node@22.12.0)(terser@5.37.0)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))
+      '@vue/eslint-config-typescript':
+        specifier: ^14.3.0
+        version: 14.3.0(eslint-plugin-vue@9.32.0(eslint@9.19.0))(eslint@9.19.0)(typescript@5.7.3)
+      '@vue/test-utils':
+        specifier: ^2.4.6
+        version: 2.4.6
+      eslint:
+        specifier: ^9.19.0
+        version: 9.19.0
+      eslint-plugin-vue:
+        specifier: ^9.32.0
+        version: 9.32.0(eslint@9.19.0)
+      globals:
+        specifier: ^15.14.0
+        version: 15.14.0
+      jsdom:
+        specifier: ^26.0.0
+        version: 26.0.0
+      terser:
+        specifier: ^5.37.0
+        version: 5.37.0
+      typescript:
+        specifier: ~5.7.3
+        version: 5.7.3
+      vite:
+        specifier: ~6.0.11
+        version: 6.0.11(@types/node@22.12.0)(terser@5.37.0)(yaml@2.7.0)
+      vitest:
+        specifier: ^3.0.4
+        version: 3.0.4(@types/node@22.12.0)(jsdom@26.0.0)(terser@5.37.0)(yaml@2.7.0)
+      vue-tsc:
+        specifier: ^2.2.0
+        version: 2.2.0(typescript@5.7.3)
+
   demos/tea-taster:
     dependencies:
       '@capacitor/android':
@@ -2996,6 +3081,9 @@ packages:
   data-urls@5.0.0:
     resolution: {integrity: sha512-ZYP5VBHshaDAiVZxjbRVcFJpc+4xGgT0bK3vzy1HLN8jTO975HEbuYzZJcHoQEY5K1a0z8YayJkyVETa08eNTg==}
     engines: {node: '>=18'}
+
+  date-fns@4.1.0:
+    resolution: {integrity: sha512-Ukq0owbQXxa/U3EGtsdVBkR1w7KOQ5gIBqdH2hkvknzZPYvBxb/aa6E8L7tmjFtkwZBu3UXBbjIgPo/Ez4xaNg==}
 
   dateformat@3.0.3:
     resolution: {integrity: sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==}
@@ -7166,6 +7254,8 @@ snapshots:
     dependencies:
       whatwg-mimetype: 4.0.0
       whatwg-url: 14.1.0
+
+  date-fns@4.1.0: {}
 
   dateformat@3.0.3: {}
 

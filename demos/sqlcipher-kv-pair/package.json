@@ -1,0 +1,51 @@
+{
+  "name": "demo-sqlcipher-kv-pair",
+  "description": "Demo showing how to role your own KV pair service to make replacement of Secure Storage with SQLCipher easier",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "android": "cap open android",
+    "build": "npm run build:web && cap sync",
+    "build:web": "vue-tsc && vite build",
+    "dev": "vite",
+    "ios": "cap open ios",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:cov": "vitest run --coverage",
+    "test:dev": "vitest"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.0.1",
+    "@capacitor/app": "^7.0.0",
+    "@capacitor/core": "^7.0.1",
+    "@capacitor/haptics": "^7.0.0",
+    "@capacitor/ios": "^7.0.1",
+    "@capacitor/keyboard": "^7.0.0",
+    "@capacitor/status-bar": "^7.0.0",
+    "@ionic/vue": "^8.4.2",
+    "@ionic/vue-router": "^8.4.2",
+    "date-fns": "^4.1.0",
+    "ionicons": "^7.4.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.0.1",
+    "@vitejs/plugin-legacy": "^6.0.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/eslint-config-typescript": "^14.3.0",
+    "@vue/test-utils": "^2.4.6",
+    "eslint": "^9.19.0",
+    "eslint-plugin-vue": "^9.32.0",
+    "globals": "^15.14.0",
+    "jsdom": "^26.0.0",
+    "terser": "^5.37.0",
+    "typescript": "~5.7.3",
+    "vite": "~6.0.11",
+    "vitest": "^3.0.4",
+    "vue-tsc": "^2.2.0"
+  }
+}
