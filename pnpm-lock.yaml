@@ -619,7 +619,7 @@ importers:
         version: 5.14.5(typescript@5.7.3)
       '@ionic-enterprise/secure-storage':
         specifier: ^3.0.4
-        version: 3.0.4(@awesome-cordova-plugins/core@6.9.0(rxjs@7.8.1))(rxjs@7.8.1)
+        version: 3.0.4(@awesome-cordova-plugins/core@6.14.0(rxjs@7.8.1))(rxjs@7.8.1)
       '@ionic/vue':
         specifier: ^8.4.3
         version: 8.4.3
@@ -716,7 +716,7 @@ importers:
         version: 5.14.5(typescript@5.7.3)
       '@ionic-enterprise/secure-storage':
         specifier: ^3.0.4
-        version: 3.0.4(@awesome-cordova-plugins/core@6.9.0(rxjs@7.8.1))(rxjs@7.8.1)
+        version: 3.0.4(@awesome-cordova-plugins/core@6.14.0(rxjs@7.8.1))(rxjs@7.8.1)
       '@mdi/font':
         specifier: ^7.4.47
         version: 7.4.47
@@ -802,6 +802,12 @@ importers:
 
   demos/sqlcipher-kv-pair:
     dependencies:
+      '@awesome-cordova-plugins/core':
+        specifier: ^6.14.0
+        version: 6.14.0(rxjs@7.8.1)
+      '@awesome-cordova-plugins/sqlite':
+        specifier: ^6.14.0
+        version: 6.14.0(@awesome-cordova-plugins/core@6.14.0(rxjs@7.8.1))(rxjs@7.8.1)
       '@capacitor/android':
         specifier: ^7.0.1
         version: 7.0.1(@capacitor/core@7.0.1)
@@ -829,6 +835,9 @@ importers:
       '@ionic/vue-router':
         specifier: ^8.4.3
         version: 8.4.3
+      cordova-sqlcipher-adapter:
+        specifier: ^0.6.0
+        version: 0.6.0
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
@@ -1349,8 +1358,8 @@ packages:
   '@asamuzakjp/css-color@2.8.3':
     resolution: {integrity: sha512-GIc76d9UI1hCvOATjZPyHFmE5qhRccp3/zGfMPapK3jBi+yocEzp6BBB0UnfRYP9NP4FANqUZYb0hnfs3TM3hw==}
 
-  '@awesome-cordova-plugins/core@6.9.0':
-    resolution: {integrity: sha512-3iO4xth4mVqJB1SMwA72I8Cb6FnCQwHkP2OUXpCxRNvC8ZUswQ+Mqgq2y3nL24sgD0GoybwtysGegM+jF3zteA==}
+  '@awesome-cordova-plugins/core@6.14.0':
+    resolution: {integrity: sha512-oJdmzR8DA/dyZnKlXBnjav0ZNTCacGMEWZOxnrnXqr3I7nVEK0Kr2EIJx7CtAIXxFCpEjQQTH7loFur86O3xpw==}
     peerDependencies:
       rxjs: ^5.5.0 || ^6.5.0 || ^7.3.0
 
@@ -3034,6 +3043,9 @@ packages:
   copy-anything@3.0.5:
     resolution: {integrity: sha512-yCEafptTtb4bk7GLEQoM8KVJpxAfdBJYaXyzQEgQQQgYrZiDp8SJmGKlYza6CYjEDNstAdNdKA3UuoULlEbS6w==}
     engines: {node: '>=12.13'}
+
+  cordova-sqlcipher-adapter@0.6.0:
+    resolution: {integrity: sha512-uKTjy4T7FhFxvg9absMQTDPRJs/RtcahAPEcrYnIzos2oLrC89nxW8IzQQ/uUWfF206W6TYU6EMPGDThNQYeqA==}
 
   core-js-compat@3.40.0:
     resolution: {integrity: sha512-0XEDpr5y5mijvw8Lbc6E5AkjrHfp7eEoPlu36SWeAbcL8fn1G1ANe8DBlo2XoNN89oVpxWwOjYIPVzR4ZvsKCQ==}
@@ -5231,14 +5243,14 @@ snapshots:
       '@csstools/css-tokenizer': 3.0.3
       lru-cache: 10.4.3
 
-  '@awesome-cordova-plugins/core@6.9.0(rxjs@7.8.1)':
+  '@awesome-cordova-plugins/core@6.14.0(rxjs@7.8.1)':
     dependencies:
       '@types/cordova': 11.0.3
       rxjs: 7.8.1
 
-  '@awesome-cordova-plugins/sqlite@6.14.0(@awesome-cordova-plugins/core@6.9.0(rxjs@7.8.1))(rxjs@7.8.1)':
+  '@awesome-cordova-plugins/sqlite@6.14.0(@awesome-cordova-plugins/core@6.14.0(rxjs@7.8.1))(rxjs@7.8.1)':
     dependencies:
-      '@awesome-cordova-plugins/core': 6.9.0(rxjs@7.8.1)
+      '@awesome-cordova-plugins/core': 6.14.0(rxjs@7.8.1)
       '@types/cordova': 11.0.3
       rxjs: 7.8.1
 
@@ -6157,10 +6169,10 @@ snapshots:
       tslib: 1.14.1
       typescript: 5.7.3
 
-  '@ionic-enterprise/secure-storage@3.0.4(@awesome-cordova-plugins/core@6.9.0(rxjs@7.8.1))(rxjs@7.8.1)':
+  '@ionic-enterprise/secure-storage@3.0.4(@awesome-cordova-plugins/core@6.14.0(rxjs@7.8.1))(rxjs@7.8.1)':
     dependencies:
-      '@awesome-cordova-plugins/core': 6.9.0(rxjs@7.8.1)
-      '@awesome-cordova-plugins/sqlite': 6.14.0(@awesome-cordova-plugins/core@6.9.0(rxjs@7.8.1))(rxjs@7.8.1)
+      '@awesome-cordova-plugins/core': 6.14.0(rxjs@7.8.1)
+      '@awesome-cordova-plugins/sqlite': 6.14.0(@awesome-cordova-plugins/core@6.14.0(rxjs@7.8.1))(rxjs@7.8.1)
       '@types/cordova': 11.0.3
       rxjs: 7.8.1
 
@@ -7210,6 +7222,8 @@ snapshots:
   copy-anything@3.0.5:
     dependencies:
       is-what: 4.1.16
+
+  cordova-sqlcipher-adapter@0.6.0: {}
 
   core-js-compat@3.40.0:
     dependencies:
