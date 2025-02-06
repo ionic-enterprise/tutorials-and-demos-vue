@@ -1,4 +1,4 @@
-export const useKeys = () => ({
+export const useEncryptionKeys = () => ({
   // In a real application, you would likely generate this if it did not exist and
   // then store it somewhere secure such as in Identity Vault or on your backend API.
   //

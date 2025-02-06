@@ -2,12 +2,12 @@ import { Capacitor } from '@capacitor/core';
 import { useWebKVStore } from './web-kv-store';
 import { useMobileKVStore } from './mobile-kv-store';
 
-export const useStorage = () => {
+export const useInboxStorage = () => {
   const isMobile = Capacitor.isNativePlatform();
 
   if (isMobile) {
-    return useMobileKVStore();
+    return useMobileKVStore('inbox');
   } else {
-    return useWebKVStore();
+    return useWebKVStore('inbox');
   }
 };

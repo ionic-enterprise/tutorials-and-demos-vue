@@ -1,3 +1,5 @@
+import { KeyValuePair, KeyValueKey, KeyValueCollection } from './kv-types';
+
 let db: IDBDatabase | null = null;
 
 const initialize = (): Promise<void> => {
@@ -8,7 +10,7 @@ const initialize = (): Promise<void> => {
   request.onupgradeneeded = (event: IDBVersionChangeEvent) => {
     db = (event as any).target.result as IDBDatabase;
     db.onerror = (evt: unknown) => console.error('Error in indexDB KV store', evt);
-    db.createObjectStore('data', { keyPath: 'key' });
+    db.createObjectStore('inbox', { keyPath: 'key' });
   };
 
   return new Promise((resolve, reject) => {
@@ -20,58 +22,60 @@ const initialize = (): Promise<void> => {
   });
 };
 
-const clear = (): Promise<void> => {
-  return new Promise((resolve) => {
-    if (!db) return resolve();
-    const dataObjectStore = db.transaction('data', 'readwrite').objectStore('data');
-    const req = dataObjectStore.clear();
-    req.onsuccess = () => resolve();
-  });
-};
+export const useWebKVStore = (collection: KeyValueCollection) => {
+  const clear = (): Promise<void> => {
+    return new Promise((resolve) => {
+      if (!db) return resolve();
+      const dataObjectStore = db.transaction(collection, 'readwrite').objectStore(collection);
+      const req = dataObjectStore.clear();
+      req.onsuccess = () => resolve();
+    });
+  };
 
-const getAll = (): Promise<{ key: any; value: any }[]> => {
-  return new Promise((resolve) => {
-    if (!db) return resolve([]);
-    const dataObjectStore = db.transaction('data', 'readonly').objectStore('data');
-    const req = dataObjectStore.getAll();
-    req.onsuccess = (evt: any) => resolve(evt.target.result || []);
-  });
-};
+  const getAll = (): Promise<KeyValuePair[]> => {
+    return new Promise((resolve) => {
+      if (!db) return resolve([]);
+      const dataObjectStore = db.transaction(collection, 'readonly').objectStore(collection);
+      const req = dataObjectStore.getAll();
+      req.onsuccess = (evt: any) => resolve(evt.target.result || []);
+    });
+  };
 
-const getValue = (key: any): Promise<any | undefined> => {
-  return new Promise((resolve) => {
-    if (!db) return resolve(undefined);
-    const dataObjectStore = db.transaction('data', 'readonly').objectStore('data');
-    const req = dataObjectStore.get(key);
-    req.onsuccess = (evt: any) => resolve(evt.target.result?.value);
-  });
-};
+  const getValue = (key: KeyValueKey): Promise<any | undefined> => {
+    return new Promise((resolve) => {
+      if (!db) return resolve(undefined);
+      const dataObjectStore = db.transaction(collection, 'readonly').objectStore(collection);
+      const req = dataObjectStore.get(key);
+      req.onsuccess = (evt: any) => resolve(evt.target.result?.value);
+    });
+  };
 
-const removeValue = (key: any): Promise<void> => {
-  return new Promise((resolve) => {
-    if (!db) return resolve();
-    const dataObjectStore = db.transaction('data', 'readwrite').objectStore('data');
-    const req = dataObjectStore.delete(key);
-    req.onsuccess = () => resolve();
-  });
-};
+  const removeValue = (key: KeyValueKey): Promise<void> => {
+    return new Promise((resolve) => {
+      if (!db) return resolve();
+      const dataObjectStore = db.transaction(collection, 'readwrite').objectStore(collection);
+      const req = dataObjectStore.delete(key);
+      req.onsuccess = () => resolve();
+    });
+  };
 
-const setValue = (key: any, value: any): Promise<void> => {
-  return new Promise((resolve) => {
-    if (!db) return resolve();
-    const dataObjectStore = db.transaction('data', 'readwrite').objectStore('data');
-    const req = dataObjectStore.put({ key, value });
-    req.onsuccess = () => resolve();
-  });
-};
+  const setValue = (key: KeyValueKey, value: any): Promise<void> => {
+    return new Promise((resolve) => {
+      if (!db) return resolve();
+      const dataObjectStore = db.transaction(collection, 'readwrite').objectStore(collection);
+      const req = dataObjectStore.put({ key, value });
+      req.onsuccess = () => resolve();
+    });
+  };
 
-const getKeys = (): Promise<any[]> => {
-  return new Promise((resolve) => {
-    if (!db) return resolve([]);
-    const dataObjectStore = db.transaction('data', 'readonly').objectStore('data');
-    const req = dataObjectStore.getAllKeys();
-    req.onsuccess = (evt: any) => resolve(evt.target.result);
-  });
-};
+  const getKeys = (): Promise<KeyValueKey[]> => {
+    return new Promise((resolve) => {
+      if (!db) return resolve([]);
+      const dataObjectStore = db.transaction(collection, 'readonly').objectStore(collection);
+      const req = dataObjectStore.getAllKeys();
+      req.onsuccess = (evt: any) => resolve(evt.target.result);
+    });
+  };
 
-export const useWebKVStore = () => ({ initialize, clear, getAll, getKeys, getValue, removeValue, setValue });
+  return { initialize, clear, getAll, getKeys, getValue, removeValue, setValue };
+};

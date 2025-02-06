@@ -1,5 +1,5 @@
 import { ref } from 'vue';
-import { useStorage } from './storage';
+import { useInboxStorage } from './inbox-storage';
 import { format } from 'date-fns';
 
 export interface EmailMessage {
@@ -77,7 +77,7 @@ const messagePool: EmailMessage[] = [
   },
 ];
 
-const { initialize: initializeStorage, clear, getAll, getKeys, getValue, removeValue, setValue } = useStorage();
+const { initialize: initializeStorage, clear, getAll, getKeys, getValue, removeValue, setValue } = useInboxStorage();
 
 const messages = ref<EmailMessage[]>([]);
 
