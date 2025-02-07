@@ -99,6 +99,7 @@ import {
 } from '@ionic/vue';
 import { ref } from 'vue';
 import { Device } from '@ionic-enterprise/identity-vault';
+import { PrivacyScreen } from '@capacitor/privacy-screen';
 
 const hasSecureHardware = ref<boolean>(false);
 const isBiometricsSupported = ref<boolean>(false);
@@ -119,14 +120,20 @@ const initialize = async (): Promise<void> => {
   biometricStrengthLevel.value = await Device.getBiometricStrengthLevel();
   isBiometricsAllowed.value = await Device.isBiometricsAllowed();
   isBiometricsEnabled.value = await Device.isBiometricsEnabled();
-  isHideScreenOnBackgroundEnabled.value = await Device.isHideScreenOnBackgroundEnabled();
+  const { enabled } = await PrivacyScreen.isEnabled();
+  isHideScreenOnBackgroundEnabled.value = enabled;
   isLockedOutOfBiometrics.value = await Device.isLockedOutOfBiometrics();
   isSystemPasscodeSet.value = await Device.isSystemPasscodeSet();
 };
 
 const toggleHideScreenOnBackground = async (): Promise<void> => {
-  await Device.setHideScreenOnBackground(!isHideScreenOnBackgroundEnabled.value);
-  isHideScreenOnBackgroundEnabled.value = await Device.isHideScreenOnBackgroundEnabled();
+  if (isHideScreenOnBackgroundEnabled.value) {
+    await PrivacyScreen.disable();
+  } else {
+    await PrivacyScreen.enable();
+  }
+  const { enabled } = await PrivacyScreen.isEnabled();
+  isHideScreenOnBackgroundEnabled.value = enabled;
 };
 
 const showBiometricPrompt = async (): Promise<void> => {

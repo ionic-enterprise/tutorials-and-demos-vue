@@ -128,6 +128,7 @@ import {
   Device,
   SupportedBiometricType,
 } from '@ionic-enterprise/identity-vault';
+import { PrivacyScreen } from '@capacitor/privacy-screen';
 
 const hasSecureHardware = ref(false);
 const biometricsSupported = ref(false);
@@ -146,13 +147,17 @@ Device.isBiometricsEnabled().then((x) => (biometricsEnabled.value = x));
 Device.isBiometricsAllowed().then((x) => (biometricsAllowed.value = x));
 Device.getBiometricStrengthLevel().then((x) => (biometricStrength.value = x));
 Device.isSystemPasscodeSet().then((x) => (systemPasscode.value = x));
-Device.isHideScreenOnBackgroundEnabled().then((x) => (privacyScreen.value = x));
 Device.isLockedOutOfBiometrics().then((x) => (lockedOut.value = x));
 Device.getAvailableHardware().then((x) => (availableHardware.value = x));
+PrivacyScreen.isEnabled().then((x) => (privacyScreen.value = x.enabled));
 
 const togglePrivacy = async () => {
-  await Device.setHideScreenOnBackground(!privacyScreen.value);
-  privacyScreen.value = await Device.isHideScreenOnBackgroundEnabled();
+  if (privacyScreen.value) {
+    await PrivacyScreen.disable();
+  } else {
+    await PrivacyScreen.enable();
+  }
+  PrivacyScreen.isEnabled().then((x) => (privacyScreen.value = x.enabled));
 };
 
 const showBiometricPrompt = async () => {

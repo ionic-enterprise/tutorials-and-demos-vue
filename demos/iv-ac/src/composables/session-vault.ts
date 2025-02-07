@@ -1,6 +1,7 @@
 import AppPinDialog from '@/components/AppPinDialog.vue';
 import { useVaultFactory } from '@/composables/vault-factory';
 import { Preferences } from '@capacitor/preferences';
+import { PrivacyScreen } from '@capacitor/privacy-screen';
 import { AuthResult } from '@ionic-enterprise/auth';
 import {
   AndroidBiometricCryptoPreference,
@@ -74,7 +75,11 @@ const canUseCustomPasscode = (): boolean => isPlatform('hybrid');
 const canUseSystemPasscode = async (): Promise<boolean> => isPlatform('hybrid') && (await Device.isSystemPasscodeSet());
 
 const hideContentsInBackground = async (value: boolean): Promise<void> => {
-  await Device.setHideScreenOnBackground(value, true);
+  if (value) {
+    await PrivacyScreen.enable({ android: { dimBackground: true } });
+  } else {
+    await PrivacyScreen.disable();
+  }
   return Preferences.set({ key: hideInBackgroundKey, value: JSON.stringify(value) });
 };
 

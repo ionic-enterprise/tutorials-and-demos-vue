@@ -1,6 +1,6 @@
 import { useAuth } from '@/composables/auth';
 import { useSessionVault } from '@/composables/session-vault';
-import { Device } from '@ionic-enterprise/identity-vault';
+import { PrivacyScreen } from '@capacitor/privacy-screen';
 import { IonicVue } from '@ionic/vue';
 import { createApp } from 'vue';
 import App from './App.vue';
@@ -28,7 +28,7 @@ import '@ionic/vue/css/palettes/dark.class.css';
 import './theme/style.css';
 import './theme/variables.css';
 
-Device.setHideScreenOnBackground(true);
+PrivacyScreen.enable();
 
 const { initializeAuth } = useAuth();
 const { initializeEncryption } = useEncryption();

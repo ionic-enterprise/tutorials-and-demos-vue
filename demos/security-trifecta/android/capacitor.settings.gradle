@@ -11,6 +11,9 @@ project(':capacitor-haptics').projectDir = new File('../../../node_modules/.pnpm
 include ':capacitor-keyboard'
 project(':capacitor-keyboard').projectDir = new File('../../../node_modules/.pnpm/@capacitor+keyboard@7.0.0_@capacitor+core@7.0.1/node_modules/@capacitor/keyboard/android')
 
+include ':capacitor-privacy-screen'
+project(':capacitor-privacy-screen').projectDir = new File('../node_modules/@capacitor/privacy-screen/android')
+
 include ':capacitor-splash-screen'
 project(':capacitor-splash-screen').projectDir = new File('../../../node_modules/.pnpm/@capacitor+splash-screen@7.0.0_@capacitor+core@7.0.1/node_modules/@capacitor/splash-screen/android')
 

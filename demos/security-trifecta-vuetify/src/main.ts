@@ -1,14 +1,14 @@
 import { useAuth } from '@/auth/composables/auth';
 import { useSessionVault } from '@/composables/session-vault';
 import { registerPlugins } from '@/plugins';
-import { Device } from '@ionic-enterprise/identity-vault';
+import { PrivacyScreen } from '@capacitor/privacy-screen';
 import { createApp } from 'vue';
 import App from './App.vue';
 import { useEncryption } from './composables/encryption';
 import './styles/Button.css';
 import './styles/responsive.css';
 
-Device.setHideScreenOnBackground(true);
+PrivacyScreen.enable();
 
 const { initializeAuth } = useAuth();
 const { initializeEncryption } = useEncryption();

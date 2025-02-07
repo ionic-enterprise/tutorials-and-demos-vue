@@ -101,6 +101,7 @@ import {
   IonFooter,
   IonGrid,
   IonHeader,
+  IonIcon,
   IonLabel,
   IonRow,
   IonTitle,

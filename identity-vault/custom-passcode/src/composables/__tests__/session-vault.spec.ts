@@ -143,9 +143,9 @@ describe('useSessionVault', () => {
         (mockVault as any).isEmpty.mockResolvedValue(false);
       });
 
-      it('resolves false', () => {
+      it('resolves false', async () => {
         const { sessionIsLocked } = useSessionVault();
-        expect(sessionIsLocked()).resolves.toBe(false);
+        await expect(sessionIsLocked()).resolves.toBe(false);
       });
     });
 
@@ -158,9 +158,9 @@ describe('useSessionVault', () => {
         (mockVault as any).isEmpty.mockResolvedValue(false);
       });
 
-      it('resolves false', () => {
+      it('resolves false', async () => {
         const { sessionIsLocked } = useSessionVault();
-        expect(sessionIsLocked()).resolves.toBe(false);
+        await expect(sessionIsLocked()).resolves.toBe(false);
       });
     });
 
@@ -171,25 +171,25 @@ describe('useSessionVault', () => {
         await updateUnlockMode('BiometricsWithPasscode');
       });
 
-      it('resolves true if not empty and locked', () => {
+      it('resolves true if not empty and locked', async () => {
         (mockVault as any).isLocked.mockResolvedValue(true);
         (mockVault as any).isEmpty.mockResolvedValue(false);
         const { sessionIsLocked } = useSessionVault();
-        expect(sessionIsLocked()).resolves.toBe(true);
+        await expect(sessionIsLocked()).resolves.toBe(true);
       });
 
-      it('resolves false if empty and locked', () => {
+      it('resolves false if empty and locked', async () => {
         (mockVault as any).isLocked.mockResolvedValue(true);
         (mockVault as any).isEmpty.mockResolvedValue(true);
         const { sessionIsLocked } = useSessionVault();
-        expect(sessionIsLocked()).resolves.toBe(false);
+        await expect(sessionIsLocked()).resolves.toBe(false);
       });
 
-      it('resolves false if not empty and not locked', () => {
+      it('resolves false if not empty and not locked', async () => {
         (mockVault as any).isLocked.mockResolvedValue(false);
         (mockVault as any).isEmpty.mockResolvedValue(false);
         const { sessionIsLocked } = useSessionVault();
-        expect(sessionIsLocked()).resolves.toBe(false);
+        await expect(sessionIsLocked()).resolves.toBe(false);
       });
     });
   });

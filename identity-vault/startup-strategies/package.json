@@ -23,7 +23,7 @@
     "@capacitor/ios": "^7.0.1",
     "@capacitor/keyboard": "^7.0.0",
     "@capacitor/status-bar": "^7.0.0",
-    "@ionic-enterprise/identity-vault": "^5.14.5",
+    "@ionic-enterprise/identity-vault": "^6.0.1",
     "@ionic/vue": "^8.4.2",
     "@ionic/vue-router": "^8.4.2",
     "ionicons": "^7.4.0",

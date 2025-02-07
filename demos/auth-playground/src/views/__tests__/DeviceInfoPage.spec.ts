@@ -1,7 +1,5 @@
-import { Router } from 'vue-router';
-import { flushPromises, mount, VueWrapper } from '@vue/test-utils';
 import DeviceInfoPage from '@/views/DeviceInfoPage.vue';
-import { createRouter, createWebHistory } from '@ionic/vue-router';
+import { PrivacyScreen } from '@capacitor/privacy-screen';
 import {
   BiometricPermissionState,
   BiometricSecurityStrength,
@@ -9,9 +7,13 @@ import {
   SupportedBiometricType,
 } from '@ionic-enterprise/identity-vault';
 import { alertController, isPlatform } from '@ionic/vue';
-import waitForExpect from 'wait-for-expect';
+import { createRouter, createWebHistory } from '@ionic/vue-router';
+import { flushPromises, mount, VueWrapper } from '@vue/test-utils';
 import { beforeEach, describe, expect, it, Mock, vi } from 'vitest';
+import { Router } from 'vue-router';
+import waitForExpect from 'wait-for-expect';
 
+vi.mock('@capacitor/privacy-screen');
 vi.mock('@/composables/auth');
 vi.mock('@/composables/session-vault');
 vi.mock('@ionic-enterprise/identity-vault');
@@ -47,9 +49,9 @@ describe('DeviceInfoPage.vue', () => {
     (Device.isBiometricsAllowed as Mock).mockResolvedValue(BiometricPermissionState.Denied);
     (Device.getBiometricStrengthLevel as Mock).mockResolvedValue(BiometricSecurityStrength.Weak);
     (Device.isSystemPasscodeSet as Mock).mockResolvedValue(false);
-    (Device.isHideScreenOnBackgroundEnabled as Mock).mockResolvedValue(false);
     (Device.isLockedOutOfBiometrics as Mock).mockResolvedValue(false);
     (Device.getAvailableHardware as Mock).mockResolvedValue([]);
+    (PrivacyScreen.isEnabled as Mock).mockResolvedValue({ enabled: false });
   });
 
   it('displays the title', async () => {
@@ -115,7 +117,7 @@ describe('DeviceInfoPage.vue', () => {
   });
 
   it.each([[true], [false]])('privacy screen displays %s', async (value: boolean) => {
-    (Device.isHideScreenOnBackgroundEnabled as Mock).mockResolvedValue(value);
+    (PrivacyScreen.isEnabled as Mock).mockResolvedValue({ enabled: value });
     const wrapper = await mountView();
     const item = wrapper.findComponent('[data-testid="privacy-screen"]');
     const note = item.findComponent('ion-note');
@@ -157,17 +159,17 @@ describe('DeviceInfoPage.vue', () => {
       it('toggles the privacy screen', async () => {
         const wrapper = await mountView();
         const button = wrapper.findComponent('[data-testid="toggle-privacy-screen-button"]');
-        (Device.isHideScreenOnBackgroundEnabled as Mock).mockClear();
-        (Device.isHideScreenOnBackgroundEnabled as Mock).mockResolvedValue(true);
+        (PrivacyScreen.isEnabled as Mock).mockClear();
+        (PrivacyScreen.isEnabled as Mock).mockResolvedValue({ enabled: true });
         await button.trigger('click');
-        expect(Device.setHideScreenOnBackground).toHaveBeenCalledTimes(1);
-        expect(Device.setHideScreenOnBackground).toHaveBeenCalledWith(true);
-        expect(Device.isHideScreenOnBackgroundEnabled).toHaveReturnedTimes(1);
+        expect(PrivacyScreen.enable).toHaveBeenCalledTimes(1);
+        expect(PrivacyScreen.disable).not.toHaveBeenCalled();
+        expect(PrivacyScreen.isEnabled).toHaveBeenCalledTimes(1);
         await flushPromises();
-        (Device.setHideScreenOnBackground as Mock).mockClear();
+        (PrivacyScreen.enable as Mock).mockClear();
         await button.trigger('click');
-        expect(Device.setHideScreenOnBackground).toHaveBeenCalledTimes(1);
-        expect(Device.setHideScreenOnBackground).toHaveBeenCalledWith(false);
+        expect(PrivacyScreen.disable).toHaveBeenCalledTimes(1);
+        expect(PrivacyScreen.enable).not.toHaveBeenCalled();
       });
     });
   });

@@ -52,7 +52,7 @@ describe('Basic Authentication Service', () => {
 
       it('throws an error without setting a session', async () => {
         const { setValue } = useSessionVault();
-        expect(() => authService.login('test@test.com', 'password')).rejects.toThrow();
+        await expect(() => authService.login('test@test.com', 'password')).rejects.toThrow();
         expect(setValue).not.toHaveBeenCalled();
       });
     });

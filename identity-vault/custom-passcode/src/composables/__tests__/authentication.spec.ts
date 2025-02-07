@@ -29,13 +29,13 @@ describe('', () => {
       expect(getSession).toHaveBeenCalledOnce();
     });
 
-    it('resolves false if there is no session', () => {
+    it('resolves false if there is no session', async () => {
       const { session } = useSessionVault();
       session.value = null;
-      expect(isAuthenticated()).resolves.toBe(false);
+      await expect(isAuthenticated()).resolves.toBe(false);
     });
 
-    it('resolves true if there is a session', () => {
+    it('resolves true if there is a session', async () => {
       const { session } = useSessionVault();
       session.value = {
         email: 'test@ionic.io',
@@ -44,7 +44,7 @@ describe('', () => {
         accessToken: 'f00fiif93',
         refreshToken: '99r9r328324sndf',
       };
-      expect(isAuthenticated()).resolves.toBe(true);
+      await expect(isAuthenticated()).resolves.toBe(true);
     });
   });
 

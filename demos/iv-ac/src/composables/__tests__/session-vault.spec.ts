@@ -1,6 +1,7 @@
 import { UnlockMode, useSessionVault } from '@/composables/session-vault';
 import { useVaultFactory } from '@/composables/vault-factory';
 import { Preferences } from '@capacitor/preferences';
+import { PrivacyScreen } from '@capacitor/privacy-screen';
 import { AuthResult } from '@ionic-enterprise/auth';
 import {
   AndroidBiometricCryptoPreference,
@@ -13,6 +14,7 @@ import { isPlatform } from '@ionic/vue';
 import { Mock, beforeEach, describe, expect, it, vi } from 'vitest';
 
 vi.mock('@capacitor/preferences');
+vi.mock('@capacitor/privacy-screen');
 vi.mock('@/composables/vault-factory');
 vi.mock('@/router', () => ({
   default: {
@@ -175,12 +177,19 @@ describe('useSessionVault', () => {
     });
 
     describe('hideContentsInBackground', () => {
-      it.each([[true], [false]])('calls the device API', async (value: boolean) => {
-        Device.setHideScreenOnBackground = vi.fn();
+      it('enables properly', async () => {
         const { hideContentsInBackground } = useSessionVault();
-        await hideContentsInBackground(value);
-        expect(Device.setHideScreenOnBackground).toHaveBeenCalledTimes(1);
-        expect(Device.setHideScreenOnBackground).toHaveBeenCalledWith(value, true);
+        await hideContentsInBackground(true);
+        expect(PrivacyScreen.enable).toHaveBeenCalledTimes(1);
+        expect(PrivacyScreen.enable).toHaveBeenCalledWith({ android: { dimBackground: true } });
+        expect(PrivacyScreen.disable).not.toHaveBeenCalled();
+      });
+
+      it('disables properly', async () => {
+        const { hideContentsInBackground } = useSessionVault();
+        await hideContentsInBackground(false);
+        expect(PrivacyScreen.disable).toHaveBeenCalledTimes(1);
+        expect(PrivacyScreen.enable).not.toHaveBeenCalled();
       });
 
       it.each([[true], [false]])('saves the value to preferences', async (value: boolean) => {
