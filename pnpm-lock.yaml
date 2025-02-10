@@ -51,11 +51,11 @@ importers:
         specifier: ^7.0.1
         version: 7.0.1(@capacitor/core@7.0.1)
       '@ionic/vue':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       '@ionic/vue-router':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       ionicons:
         specifier: ^7.4.0
         version: 7.4.0
@@ -139,11 +139,11 @@ importers:
         specifier: ^7.0.1
         version: 7.0.1(@capacitor/core@7.0.1)
       '@ionic/vue':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       '@ionic/vue-router':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       ionicons:
         specifier: ^7.4.0
         version: 7.4.0
@@ -227,11 +227,11 @@ importers:
         specifier: ^7.0.1
         version: 7.0.1(@capacitor/core@7.0.1)
       '@ionic/vue':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       '@ionic/vue-router':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       axios:
         specifier: ^1.7.9
         version: 1.7.9
@@ -318,11 +318,11 @@ importers:
         specifier: ^7.0.1
         version: 7.0.1(@capacitor/core@7.0.1)
       '@ionic/vue':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       '@ionic/vue-router':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       ionicons:
         specifier: ^7.4.0
         version: 7.4.0
@@ -409,11 +409,11 @@ importers:
         specifier: ^5.14.5
         version: 5.14.5(typescript@5.7.3)
       '@ionic/vue':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       '@ionic/vue-router':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       axios:
         specifier: ^1.7.9
         version: 1.7.9
@@ -515,11 +515,11 @@ importers:
         specifier: ^5.14.5
         version: 5.14.5(typescript@5.7.3)
       '@ionic/vue':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       '@ionic/vue-router':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       axios:
         specifier: ^1.7.9
         version: 1.7.9
@@ -621,11 +621,11 @@ importers:
         specifier: ^3.0.4
         version: 3.0.4(@awesome-cordova-plugins/core@6.14.0(rxjs@7.8.1))(rxjs@7.8.1)
       '@ionic/vue':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       '@ionic/vue-router':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       axios:
         specifier: ^1.7.9
         version: 1.7.9
@@ -830,11 +830,11 @@ importers:
         specifier: ^7.0.0
         version: 7.0.0(@capacitor/core@7.0.1)
       '@ionic/vue':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       '@ionic/vue-router':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       cordova-sqlcipher-adapter:
         specifier: ^0.6.0
         version: 0.6.0
@@ -927,11 +927,11 @@ importers:
         specifier: ^7.0.0
         version: 7.0.0(@capacitor/core@7.0.1)
       '@ionic/vue':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       '@ionic/vue-router':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       axios:
         specifier: ^1.7.9
         version: 1.7.9
@@ -1024,11 +1024,11 @@ importers:
         specifier: ^5.14.5
         version: 5.14.5(typescript@5.7.3)
       '@ionic/vue':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       '@ionic/vue-router':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       ionicons:
         specifier: ^7.4.0
         version: 7.4.0
@@ -1112,11 +1112,11 @@ importers:
         specifier: ^5.14.5
         version: 5.14.5(typescript@5.7.3)
       '@ionic/vue':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       '@ionic/vue-router':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       ionicons:
         specifier: ^7.4.0
         version: 7.4.0
@@ -1200,11 +1200,11 @@ importers:
         specifier: ^5.14.5
         version: 5.14.5(typescript@5.7.3)
       '@ionic/vue':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       '@ionic/vue-router':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       ionicons:
         specifier: ^7.4.0
         version: 7.4.0
@@ -1288,11 +1288,11 @@ importers:
         specifier: ^5.14.5
         version: 5.14.5(typescript@5.7.3)
       '@ionic/vue':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       '@ionic/vue-router':
-        specifier: ^8.4.3
-        version: 8.4.3
+        specifier: ^8.4.2
+        version: 8.4.2
       ionicons:
         specifier: ^7.4.0
         version: 7.4.0
@@ -2187,8 +2187,8 @@ packages:
     resolution: {integrity: sha512-TshtaFQsovB4NWRBydbNFawql6yul7d5bMiW1WYYf17hd99V6xdDdk3vtF51bw6sLkxON3bDQpWsnUc9/hVo3g==}
     engines: {node: '>=16.0.0'}
 
-  '@ionic/core@8.4.3':
-    resolution: {integrity: sha512-U9HdZ32bre6OKA5akJVmQMxNB8Art3Nqdn3s7m2W83I5NhLg9Tehaf8ua8jxPZtxCa1nuN7tUbzHmMCkcdqDTw==}
+  '@ionic/core@8.4.2':
+    resolution: {integrity: sha512-p1/avROJi+z/rTw07nkIi0hBsWw3oITVK3KCMrAccaViQpqQ6a692jX6xdnoycsj/ixeVjXgfV1Useu6hTNaHA==}
 
   '@ionic/prettier-config@4.0.0':
     resolution: {integrity: sha512-0DqL6CggVdgeJAWOLPUT73rF1VD5p0tVlCpC5GXz5vTIUBxNwsJ5085Q7wXjKiE5Odx3aOHGTcuRWCawFsLFag==}
@@ -2239,11 +2239,11 @@ packages:
     resolution: {integrity: sha512-3cKScz9Jx2/Pr9ijj1OzGlBDfcmx7OMVBt4+P1uRR0SSW4cm1/y3Mo4OY3lfkuaYifMNBW8Wz6lQHbs1bihr7A==}
     engines: {node: '>=16.0.0'}
 
-  '@ionic/vue-router@8.4.3':
-    resolution: {integrity: sha512-KjOJrzrLMxJn0yYNs+8HMKjhVnCNTPrSiTBmfVUt8xOTFAbVJ1KOaC1SZIucpmoU9N1gaRjn9V5r3rk5ELfFtQ==}
+  '@ionic/vue-router@8.4.2':
+    resolution: {integrity: sha512-ekfsUnpZpsPMz/LvT4r+Er5NiPRWecUbO0g1BhrlseWlRczBvJxFUhb4Beth23tKCyaYgh5RjslMO9vBS8ok6Q==}
 
-  '@ionic/vue@8.4.3':
-    resolution: {integrity: sha512-jg4zDRfSrk3jSx3jvYf618Nf4pwTngB2viNihsOcXd2o04JvNHytouEQ7zES40/u9+tctRd0Db98nRyDOqwrCw==}
+  '@ionic/vue@8.4.2':
+    resolution: {integrity: sha512-GJZJJMXRZ1LP7bpIJquSrL8HC5Gwpz9ak/H6BzdhGIhDLEPfe//4EMkijbNGEnrlW6XSamN2lf6SrRZ1Lk5NMA==}
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -6192,7 +6192,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@ionic/core@8.4.3':
+  '@ionic/core@8.4.2':
     dependencies:
       '@stencil/core': 4.20.0
       ionicons: 7.4.0
@@ -6315,13 +6315,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@ionic/vue-router@8.4.3':
+  '@ionic/vue-router@8.4.2':
     dependencies:
-      '@ionic/vue': 8.4.3
+      '@ionic/vue': 8.4.2
 
-  '@ionic/vue@8.4.3':
+  '@ionic/vue@8.4.2':
     dependencies:
-      '@ionic/core': 8.4.3
+      '@ionic/core': 8.4.2
       ionicons: 7.4.0
 
   '@isaacs/cliui@8.0.2':
