@@ -4,7 +4,11 @@ const config: CapacitorConfig = {
   appId: 'io.ionic.authplaygroundvue',
   appName: 'Auth Playground Vue',
   webDir: 'dist',
-  bundledWebRuntime: false,
+  plugins: {
+    StatusBar: {
+      overlaysWebView: false,
+    },
+  },
 };
 
 export default config;

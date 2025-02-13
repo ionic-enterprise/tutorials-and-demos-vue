@@ -4,10 +4,12 @@ const config: CapacitorConfig = {
   appId: 'io.ionic.sectrivuetify',
   appName: 'Security Trifecta',
   webDir: 'dist',
-  bundledWebRuntime: false,
   plugins: {
     SplashScreen: {
       launchAutoHide: false,
+    },
+    StatusBar: {
+      overlaysWebView: false,
     },
   },
 };
