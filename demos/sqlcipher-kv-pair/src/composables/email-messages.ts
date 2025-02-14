@@ -77,7 +77,7 @@ const messagePool: EmailMessage[] = [
   },
 ];
 
-const { initialize: initializeStorage, clear, getAll, getKeys, getValue, removeValue, setValue } = useInboxStorage();
+const { clear, getAll, getKeys, getValue, removeValue, setValue } = useInboxStorage();
 
 const messages = ref<EmailMessage[]>([]);
 
@@ -97,7 +97,6 @@ const getMessage = async (idx: number): Promise<EmailMessage | null> => {
 };
 
 const initialize = async () => {
-  await initializeStorage();
   await setMessages();
 };
 

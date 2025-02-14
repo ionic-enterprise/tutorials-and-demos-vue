@@ -95,7 +95,7 @@ This application does not define multiple collections but it does provide the in
 
 1. Add a new collection name to the [KeyValueCollection](./src/composables/kv-types.ts#L1).
 1. Nothing needs to be done to support this in the mobile implementation.
-1. In the Web implementation, [bump the database version](./src/composables/web-kv-store.ts#L8) and add a new [object store](./src/composables/web-kv-store.ts#L13) with the new name.
+1. In the Web implementation, [bump the database version](./src/composables/web-kv-store.ts#L4) and add a new [object store](./src/composables/web-kv-store.ts#L9) with the new name.
 1. Create a storage abstraction similar to the [Inbox Storage](./src/composables/inbox-storage.ts) abstraction.
 
 ### Encrypting Web Data

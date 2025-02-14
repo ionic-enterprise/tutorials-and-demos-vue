@@ -3,10 +3,6 @@ import { KeyValuePair, KeyValueKey, KeyValueCollection } from './kv-types';
 const { getHandle } = useDatabase();
 
 export const useMobileKVStore = (collection: KeyValueCollection) => {
-  const initialize = (): Promise<void> => {
-    return Promise.resolve();
-  };
-
   const clear = async (): Promise<void> => {
     const handle = await getHandle();
     if (handle) {
@@ -112,5 +108,5 @@ export const useMobileKVStore = (collection: KeyValueCollection) => {
     return keys;
   };
 
-  return { initialize, clear, getAll, getKeys, getValue, removeValue, setValue };
+  return { clear, getAll, getKeys, getValue, removeValue, setValue };
 };
