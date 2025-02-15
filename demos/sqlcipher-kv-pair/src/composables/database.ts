@@ -1,11 +1,11 @@
 import { useEncryptionKeys } from '@/composables/encryption-keys';
 import { DbTransaction, SQLite, SQLiteObject } from '@awesome-cordova-plugins/sqlite';
-import { isPlatform } from '@ionic/vue';
+import { Capacitor } from '@capacitor/core';
 
 let handle: SQLiteObject | null = null;
 
 const openDatabase = async (): Promise<SQLiteObject | null> => {
-  if (isPlatform('hybrid')) {
+  if (Capacitor.isNativePlatform()) {
     const { getDatabaseKey } = useEncryptionKeys();
     const key = getDatabaseKey();
     if (key) {
