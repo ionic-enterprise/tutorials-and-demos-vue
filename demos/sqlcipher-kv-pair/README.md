@@ -16,13 +16,13 @@ This app is part of a mono-repo containing other demos but can also be [built on
 
 Our key-value pair implementation exposes the following API:
 
--- **`initialize`**: Initialize the key-value collection.
--- **`clear`**: Remove all items from the collection.
--- **`getAll`**: Get all key-value pairs from the collection.
--- **`getKeys`**: Get a list of all of the keys used in a collection.
--- **`getValue`**: Given a `key`, get the value from the collection associated with that `key` or `undeinfed` if that `key` does not exist in the collection.
--- **`removeValue`**: Given a `key`, remove the data associated with that `key` in the collection. Do nothing if the `key` does not exist.
--- **`setValue`**: Associate the `key` in the collection with the given data. This function creates a new record if the `key` does not exist, and updates the existing record if the `key` already exists.
+- **`initialize`**: Initialize the key-value collection.
+- **`clear`**: Remove all items from the collection.
+- **`getAll`**: Get all key-value pairs from the collection.
+- **`getKeys`**: Get a list of all of the keys used in a collection.
+- **`getValue`**: Given a `key`, get the value from the collection associated with that `key` or `undeinfed` if that `key` does not exist in the collection.
+- **`removeValue`**: Given a `key`, remove the data associated with that `key` in the collection. Do nothing if the `key` does not exist.
+- **`setValue`**: Associate the `key` in the collection with the given data. This function creates a new record if the `key` does not exist, and updates the existing record if the `key` already exists.
 
 Base implementations exist for Mobile and Web. The Web implementation is intended for development and is not secure. The Mobile implementation is secure.
 
@@ -88,6 +88,9 @@ export const useInboxStorage = () => {
 
 The [Email Messages Composable](./src/composables/email-messages.ts) exercises the API, and is used in the [Home Page](./src/views/HomePage.vue) and [Message Page](./src/views/ViewMessagePage.vue)
 to access and manipulate the email sample data.
+
+Note that some of the purpose of this service is to fully exercise the Key-Value API we created. As such, some design decisions, such as using an ordinal index to specify the email message rather than
+directly using the key may not match best practices for a production application.
 
 ### Using Multiple Key Value Collections
 
