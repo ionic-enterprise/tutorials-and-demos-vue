@@ -7,7 +7,7 @@ export const useMobileKVStore = (collection: KeyValueCollection) => {
     const handle = await getHandle();
     if (handle) {
       await handle.transaction((tx) => {
-        tx.executeSql('DELETE FROM KeyValuePairs', undefined, () => {});
+        tx.executeSql('DELETE FROM KeyValuePairs WHERE collection = ?', [collection], () => {});
       });
     }
   };
