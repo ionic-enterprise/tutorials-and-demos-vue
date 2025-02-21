@@ -1,6 +1,7 @@
 import AppPinDialog from '@/components/AppPinDialog.vue';
 import { useVaultFactory } from '@/composables/vault-factory';
 import router from '@/router';
+import { Capacitor } from '@capacitor/core';
 import { AuthResult } from '@ionic-enterprise/auth';
 import {
   BiometricPermissionState,
@@ -9,7 +10,7 @@ import {
   IdentityVaultConfig,
   VaultType,
 } from '@ionic-enterprise/identity-vault';
-import { isPlatform, modalController } from '@ionic/vue';
+import { modalController } from '@ionic/vue';
 
 export type UnlockMode = 'Device' | 'SessionPIN' | 'NeverLock' | 'ForceLogin';
 
@@ -28,7 +29,7 @@ const initializeVault = async (): Promise<void> => {
       lockAfterBackgrounded: 5000,
       shouldClearVaultAfterTooManyFailedAttempts: true,
       customPasscodeInvalidUnlockAttempts: 2,
-      unlockVaultOnLoad: !isPlatform('hybrid'),
+      unlockVaultOnLoad: !Capacitor.isNativePlatform(),
     });
   } catch {
     await vault.clear();
@@ -67,10 +68,10 @@ const setSession = async (s: AuthResult): Promise<void> => {
 };
 
 const canUnlock = async (): Promise<boolean> => {
-  return isPlatform('hybrid') && !(await vault.isEmpty()) && (await vault.isLocked());
+  return Capacitor.isNativePlatform() && !(await vault.isEmpty()) && (await vault.isLocked());
 };
 
-const canUseLocking = (): boolean => isPlatform('hybrid');
+const canUseLocking = (): boolean => Capacitor.isNativePlatform();
 
 const getVaultType = async (): Promise<VaultType | undefined> => {
   const exists = !(await vault.isEmpty());

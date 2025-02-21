@@ -1,8 +1,8 @@
 import { useSessionVault } from '@/composables/session-vault';
+import { Capacitor } from '@capacitor/core';
 import { Auth0Provider, AuthConnect, AuthResult, ProviderOptions, TokenType } from '@ionic-enterprise/auth';
-import { isPlatform } from '@ionic/vue';
 
-const isMobile = isPlatform('hybrid');
+const isMobile = Capacitor.isNativePlatform();
 const url = isMobile ? 'io.ionic.acdemo://auth-action-complete' : 'http://localhost:8100/auth-action-complete';
 
 const options: ProviderOptions = {

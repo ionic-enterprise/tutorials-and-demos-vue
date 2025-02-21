@@ -6,9 +6,9 @@ import { useTeaCategories } from '@/composables/tea-categories';
 import { TastingNote } from '@/models';
 import { Mock, beforeEach, describe, expect, it, vi } from 'vitest';
 
-vi.mock('@ionic/vue', async () => {
-  const actual = (await vi.importActual('@ionic/vue')) as any;
-  return { ...actual, isPlatform: vi.fn() };
+vi.mock('@capacitor/core', async () => {
+  const actual = (await vi.importActual('@capacitor/core')) as any;
+  return { ...actual, Capacitor: { isNativePlatform: vi.fn() } };
 });
 vi.mock('@/composables/database');
 vi.mock('@/composables/tasting-notes');

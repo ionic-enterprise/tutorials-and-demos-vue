@@ -1,18 +1,15 @@
-import { flushPromises, mount, VueWrapper } from '@vue/test-utils';
-import { isPlatform } from '@ionic/vue';
-import { createRouter, createWebHistory } from '@ionic/vue-router';
-import { Device, VaultType } from '@ionic-enterprise/identity-vault';
-import VaultControlPage from '@/views/VaultControlPage.vue';
 import { useSessionVault } from '@/composables/session-vault';
-import waitForExpect from 'wait-for-expect';
-import { Router } from 'vue-router';
+import VaultControlPage from '@/views/VaultControlPage.vue';
+import { Capacitor } from '@capacitor/core';
+import { Device, VaultType } from '@ionic-enterprise/identity-vault';
+import { createRouter, createWebHistory } from '@ionic/vue-router';
+import { flushPromises, mount, VueWrapper } from '@vue/test-utils';
 import { beforeEach, describe, expect, it, Mock, vi } from 'vitest';
+import { Router } from 'vue-router';
+import waitForExpect from 'wait-for-expect';
 
+vi.mock('@capacitor/core');
 vi.mock('@/composables/session-vault');
-vi.mock('@ionic/vue', async () => {
-  const actual = (await vi.importActual('@ionic/vue')) as any;
-  return { ...actual, isPlatform: vi.fn() };
-});
 
 describe('VaultControlPage.vue', () => {
   let router: Router;
@@ -46,7 +43,7 @@ describe('VaultControlPage.vue', () => {
 
   describe('on web', () => {
     beforeEach(() => {
-      (isPlatform as Mock).mockReturnValue(false);
+      (Capacitor.isNativePlatform as Mock).mockReturnValue(false);
     });
 
     describe('use biometrics button', () => {
@@ -114,7 +111,7 @@ describe('VaultControlPage.vue', () => {
 
   describe('on mobile', () => {
     beforeEach(() => {
-      (isPlatform as Mock).mockReturnValue(true);
+      (Capacitor.isNativePlatform as Mock).mockReturnValue(true);
       Device.isSystemPasscodeSet = vi.fn().mockResolvedValue(true);
       Device.isBiometricsEnabled = vi.fn().mockResolvedValue(true);
     });

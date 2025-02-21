@@ -2,13 +2,10 @@ import { useTeaCategories } from '@/composables/tea-categories';
 import { useTeaCategoriesAPI } from '@/composables/tea-categories-api';
 import { useTeaCategoriesDatabase } from '@/composables/tea-categories-database';
 import { TeaCategory } from '@/models';
-import { isPlatform } from '@ionic/vue';
+import { Capacitor } from '@capacitor/core';
 import { Mock, beforeEach, describe, expect, it, vi } from 'vitest';
 
-vi.mock('@ionic/vue', async () => {
-  const actual = (await vi.importActual('@ionic/vue')) as any;
-  return { ...actual, isPlatform: vi.fn() };
-});
+vi.mock('@capacitor/core');
 vi.mock('@/composables/tea-categories-api');
 vi.mock('@/composables/tea-categories-database');
 
@@ -67,13 +64,13 @@ describe('useTeaCategories', () => {
     vi.clearAllMocks();
     (getAllFromAPI as Mock).mockResolvedValue(teaCategories);
     (getAllFromDatabase as Mock).mockResolvedValue(teaCategories);
-    (isPlatform as Mock).mockImplementation((key: string) => key === 'web');
+    (Capacitor.isNativePlatform as Mock).mockReturnValue(false);
   });
 
   describe('load', () => {
     describe('on mobile', () => {
       beforeEach(() => {
-        (isPlatform as Mock).mockImplementation((key: string) => key === 'hybrid');
+        (Capacitor.isNativePlatform as Mock).mockReturnValue(true);
       });
 
       it('gets the tea categories', async () => {
@@ -116,7 +113,7 @@ describe('useTeaCategories', () => {
   describe('refresh', () => {
     describe('on mobile', () => {
       beforeEach(() => {
-        (isPlatform as Mock).mockImplementation((key: string) => key === 'hybrid');
+        (Capacitor.isNativePlatform as Mock).mockReturnValue(true);
       });
 
       it('gets the tea categories from the database', async () => {

@@ -1,13 +1,13 @@
 import { useTastingNotesAPI } from '@/composables/tasting-notes-api';
 import { useTastingNotesDatabase } from '@/composables/tasting-notes-database';
 import { TastingNote } from '@/models';
-import { isPlatform } from '@ionic/vue';
+import { Capacitor } from '@capacitor/core';
 import { ref } from 'vue';
 
 const notes = ref<Array<TastingNote>>([]);
 
 const load = async (): Promise<void> => {
-  if (isPlatform('hybrid')) {
+  if (Capacitor.isNativePlatform()) {
     const { getAll } = useTastingNotesAPI();
     const { trim, upsert } = useTastingNotesDatabase();
 
@@ -19,7 +19,7 @@ const load = async (): Promise<void> => {
 };
 
 const refresh = async (): Promise<void> => {
-  const { getAll } = isPlatform('hybrid') ? useTastingNotesDatabase() : useTastingNotesAPI();
+  const { getAll } = Capacitor.isNativePlatform() ? useTastingNotesDatabase() : useTastingNotesAPI();
   notes.value = await getAll();
 };
 
@@ -31,7 +31,7 @@ const find = async (id: number): Promise<TastingNote | undefined> => {
 };
 
 const save = async (note: TastingNote): Promise<TastingNote | undefined> => {
-  const { save } = isPlatform('hybrid') ? useTastingNotesDatabase() : useTastingNotesAPI();
+  const { save } = Capacitor.isNativePlatform() ? useTastingNotesDatabase() : useTastingNotesAPI();
   const savedNote = await save(note);
 
   const idx = notes.value.findIndex((n) => n.id === savedNote.id);
@@ -44,7 +44,7 @@ const save = async (note: TastingNote): Promise<TastingNote | undefined> => {
 };
 
 const remove = async (note: TastingNote): Promise<void> => {
-  const { remove } = isPlatform('hybrid') ? useTastingNotesDatabase() : useTastingNotesAPI();
+  const { remove } = Capacitor.isNativePlatform() ? useTastingNotesDatabase() : useTastingNotesAPI();
   await remove(note);
   const idx = notes.value.findIndex((n) => n.id === note.id);
   notes.value.splice(idx, 1);

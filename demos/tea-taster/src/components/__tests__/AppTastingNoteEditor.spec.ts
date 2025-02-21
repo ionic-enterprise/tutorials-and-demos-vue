@@ -1,20 +1,17 @@
 import AppTastingNoteEditor from '@/components/AppTastingNoteEditor.vue';
+import { useTastingNotes } from '@/composables/tasting-notes';
 import { useTea } from '@/composables/tea';
+import { Capacitor } from '@capacitor/core';
+import { Share } from '@capacitor/share';
+import { IonTitle, modalController } from '@ionic/vue';
 import { flushPromises, mount, VueWrapper } from '@vue/test-utils';
 import { afterEach, beforeEach, describe, expect, it, Mock, vi } from 'vitest';
 import waitForExpect from 'wait-for-expect';
-import { useTastingNotes } from '@/composables/tasting-notes';
-import { Share } from '@capacitor/share';
-import { IonTitle, isPlatform, modalController } from '@ionic/vue';
 
+vi.mock('@capacitor/core');
 vi.mock('@capacitor/share');
 vi.mock('@/composables/tasting-notes');
 vi.mock('@/composables/tea');
-
-vi.mock('@ionic/vue', async () => {
-  const actual = (await vi.importActual('@ionic/vue')) as any;
-  return { ...actual, isPlatform: vi.fn() };
-});
 
 describe('AppTastingNoteEditor.vue', () => {
   let wrapper: VueWrapper<any>;
@@ -45,7 +42,7 @@ describe('AppTastingNoteEditor.vue', () => {
       },
     ];
     vi.resetAllMocks();
-    (isPlatform as Mock).mockImplementation((key: string) => key === 'hybrid');
+    (Capacitor.isNativePlatform as Mock).mockReturnValue(true);
     wrapper = mount(AppTastingNoteEditor);
   });
 
@@ -268,11 +265,11 @@ describe('AppTastingNoteEditor.vue', () => {
   describe('share button', () => {
     describe('in a web context', () => {
       beforeEach(() => {
-        (isPlatform as Mock).mockImplementation((key: string) => key !== 'hybrid');
+        (Capacitor.isNativePlatform as Mock).mockReturnValue(false);
       });
 
       afterEach(() => {
-        (isPlatform as Mock).mockImplementation((key: string) => key === 'hybrid');
+        (Capacitor.isNativePlatform as Mock).mockReturnValue(true);
       });
 
       it('does not exist', () => {

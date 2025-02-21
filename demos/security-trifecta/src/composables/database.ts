@@ -1,6 +1,6 @@
 import { useEncryption } from '@/composables/encryption';
+import { Capacitor } from '@capacitor/core';
 import { DbTransaction, SQLite, SQLiteObject } from '@ionic-enterprise/secure-storage';
-import { isPlatform } from '@ionic/vue';
 
 interface Column {
   name: string;
@@ -10,7 +10,7 @@ interface Column {
 let handle: SQLiteObject | null = null;
 
 const openDatabase = async (): Promise<SQLiteObject | null> => {
-  if (isPlatform('hybrid')) {
+  if (Capacitor.isNativePlatform()) {
     const { getDatabaseKey } = useEncryption();
     const key = await getDatabaseKey();
     if (key) {

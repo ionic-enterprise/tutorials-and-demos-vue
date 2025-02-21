@@ -1,13 +1,13 @@
-import { ref } from 'vue';
 import { TeaCategory } from '@/models';
+import { Capacitor } from '@capacitor/core';
+import { ref } from 'vue';
 import { useTeaCategoriesAPI } from './tea-categories-api';
 import { useTeaCategoriesDatabase } from './tea-categories-database';
-import { isPlatform } from '@ionic/vue';
 
 const categories = ref<Array<TeaCategory>>([]);
 
 const load = async (): Promise<void> => {
-  if (isPlatform('hybrid')) {
+  if (Capacitor.isNativePlatform()) {
     const { getAll } = useTeaCategoriesAPI();
     const { trim, upsert } = useTeaCategoriesDatabase();
     const cats = await getAll();
@@ -18,7 +18,7 @@ const load = async (): Promise<void> => {
 };
 
 const refresh = async (): Promise<void> => {
-  const { getAll } = isPlatform('hybrid') ? useTeaCategoriesDatabase() : useTeaCategoriesAPI();
+  const { getAll } = Capacitor.isNativePlatform() ? useTeaCategoriesDatabase() : useTeaCategoriesAPI();
   categories.value = await getAll();
 };
 

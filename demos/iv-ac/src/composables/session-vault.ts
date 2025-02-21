@@ -1,5 +1,6 @@
 import AppPinDialog from '@/components/AppPinDialog.vue';
 import { useVaultFactory } from '@/composables/vault-factory';
+import { Capacitor } from '@capacitor/core';
 import { Preferences } from '@capacitor/preferences';
 import { PrivacyScreen } from '@capacitor/privacy-screen';
 import { AuthResult } from '@ionic-enterprise/auth';
@@ -10,7 +11,7 @@ import {
   DeviceSecurityType,
   VaultType,
 } from '@ionic-enterprise/identity-vault';
-import { isPlatform, modalController } from '@ionic/vue';
+import { modalController } from '@ionic/vue';
 import { ref } from 'vue';
 
 export type UnlockMode =
@@ -69,10 +70,12 @@ const initializeVault = async (): Promise<void> => {
   });
 };
 
-const canHideContentsInBackground = (): boolean => isPlatform('hybrid');
-const canUseBiometrics = async (): Promise<boolean> => isPlatform('hybrid') && (await Device.isBiometricsEnabled());
-const canUseCustomPasscode = (): boolean => isPlatform('hybrid');
-const canUseSystemPasscode = async (): Promise<boolean> => isPlatform('hybrid') && (await Device.isSystemPasscodeSet());
+const canHideContentsInBackground = (): boolean => Capacitor.isNativePlatform();
+const canUseBiometrics = async (): Promise<boolean> =>
+  Capacitor.isNativePlatform() && (await Device.isBiometricsEnabled());
+const canUseCustomPasscode = (): boolean => Capacitor.isNativePlatform();
+const canUseSystemPasscode = async (): Promise<boolean> =>
+  Capacitor.isNativePlatform() && (await Device.isSystemPasscodeSet());
 
 const hideContentsInBackground = async (value: boolean): Promise<void> => {
   if (value) {

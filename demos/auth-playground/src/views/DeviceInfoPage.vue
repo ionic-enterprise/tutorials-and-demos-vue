@@ -105,6 +105,14 @@
 </template>
 
 <script setup lang="ts">
+import { Capacitor } from '@capacitor/core';
+import { PrivacyScreen } from '@capacitor/privacy-screen';
+import {
+  BiometricPermissionState,
+  BiometricSecurityStrength,
+  Device,
+  SupportedBiometricType,
+} from '@ionic-enterprise/identity-vault';
 import {
   IonBackButton,
   IonButton,
@@ -119,16 +127,8 @@ import {
   IonTitle,
   IonToolbar,
   alertController,
-  isPlatform,
 } from '@ionic/vue';
 import { ref } from 'vue';
-import {
-  BiometricPermissionState,
-  BiometricSecurityStrength,
-  Device,
-  SupportedBiometricType,
-} from '@ionic-enterprise/identity-vault';
-import { PrivacyScreen } from '@capacitor/privacy-screen';
 
 const hasSecureHardware = ref(false);
 const biometricsSupported = ref(false);
@@ -139,7 +139,7 @@ const privacyScreen = ref(false);
 const systemPasscode = ref(false);
 const lockedOut = ref(false);
 const availableHardware = ref<Array<SupportedBiometricType>>([]);
-const isNativePlatform = isPlatform('hybrid');
+const isNativePlatform = Capacitor.isNativePlatform();
 
 Device.hasSecureHardware().then((x) => (hasSecureHardware.value = x));
 Device.isBiometricsSupported().then((x) => (biometricsSupported.value = x));
