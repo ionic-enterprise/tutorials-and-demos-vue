@@ -5,9 +5,9 @@ import { useSessionVault } from '@/composables/session-vault';
 import { beforeEach, describe, expect, it, Mock, vi } from 'vitest';
 
 vi.mock('@ionic-enterprise/auth');
-vi.mock('@ionic/vue', async () => {
+vi.mock('@capacitor/core', async () => {
   const actual = (await vi.importActual('@ionic/vue')) as any;
-  return { ...actual, isPlatform: vi.fn().mockReturnValue(true) };
+  return { ...actual, Capacitor: { isNativePlatform: vi.fn().mockReturnValue(true) } };
 });
 vi.mock('@/composables/session-vault');
 vi.mock('@/composables/vault-factory');

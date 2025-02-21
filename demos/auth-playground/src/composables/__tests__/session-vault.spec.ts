@@ -1,16 +1,14 @@
 import AppPinDialog from '@/components/AppPinDialog.vue';
-import { BiometricPermissionState, Device, DeviceSecurityType, VaultType } from '@ionic-enterprise/identity-vault';
-import { modalController, isPlatform } from '@ionic/vue';
-import { Preferences } from '@capacitor/preferences';
+import { UnlockMode, useSessionVault } from '@/composables/session-vault';
 import { useVaultFactory } from '@/composables/vault-factory';
-import { useSessionVault, UnlockMode } from '@/composables/session-vault';
+import { Capacitor } from '@capacitor/core';
+import { Preferences } from '@capacitor/preferences';
+import { BiometricPermissionState, Device, DeviceSecurityType, VaultType } from '@ionic-enterprise/identity-vault';
+import { modalController } from '@ionic/vue';
 import { beforeEach, describe, expect, it, Mock, vi } from 'vitest';
 
+vi.mock('@capacitor/core');
 vi.mock('@capacitor/preferences');
-vi.mock('@ionic/vue', async () => {
-  const actual = (await vi.importActual('@ionic/vue')) as any;
-  return { ...actual, isPlatform: vi.fn() };
-});
 vi.mock('@/composables/vault-factory');
 
 describe('useSessionVault', () => {
@@ -104,7 +102,7 @@ describe('useSessionVault', () => {
     describe('initialize unlock type', () => {
       describe('on mobile', () => {
         beforeEach(() => {
-          (isPlatform as Mock).mockReturnValue(true);
+          (Capacitor.isNativePlatform as Mock).mockReturnValue(true);
         });
 
         it('uses a session PIN if no system PIN is set', async () => {
@@ -151,7 +149,7 @@ describe('useSessionVault', () => {
 
       describe('on web', () => {
         beforeEach(() => {
-          (isPlatform as Mock).mockReturnValue(false);
+          (Capacitor.isNativePlatform as Mock).mockReturnValue(false);
         });
 
         it('uses secure storage', async () => {

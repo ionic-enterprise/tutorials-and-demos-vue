@@ -1,4 +1,6 @@
+import { useSessionVault } from '@/composables/session-vault';
 import { AuthVendor } from '@/models';
+import { Capacitor } from '@capacitor/core';
 import {
   Auth0Provider,
   AuthConnect,
@@ -7,11 +9,9 @@ import {
   CognitoProvider,
   ProviderOptions,
 } from '@ionic-enterprise/auth';
-import { isPlatform } from '@ionic/vue';
 import { Authenticator } from './authenticator';
-import { useSessionVault } from '@/composables/session-vault';
 
-const isMobile = isPlatform('hybrid');
+const isMobile = Capacitor.isNativePlatform();
 
 // NOTE: All of our auth providers are configured to use almost identical values for redirectUri and logoutUrl.
 //       For mobile, these URIs all use the msauth scheme. This is done to be consistent with the Azure AD

@@ -1,4 +1,5 @@
 import DeviceInfoPage from '@/views/DeviceInfoPage.vue';
+import { Capacitor } from '@capacitor/core';
 import { PrivacyScreen } from '@capacitor/privacy-screen';
 import {
   BiometricPermissionState,
@@ -6,20 +7,21 @@ import {
   Device,
   SupportedBiometricType,
 } from '@ionic-enterprise/identity-vault';
-import { alertController, isPlatform } from '@ionic/vue';
+import { alertController } from '@ionic/vue';
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { flushPromises, mount, VueWrapper } from '@vue/test-utils';
 import { beforeEach, describe, expect, it, Mock, vi } from 'vitest';
 import { Router } from 'vue-router';
 import waitForExpect from 'wait-for-expect';
 
+vi.mock('@capacitor/core');
 vi.mock('@capacitor/privacy-screen');
 vi.mock('@/composables/auth');
 vi.mock('@/composables/session-vault');
 vi.mock('@ionic-enterprise/identity-vault');
 vi.mock('@ionic/vue', async () => {
   const actual = (await vi.importActual('@ionic/vue')) as any;
-  return { ...actual, isPlatform: vi.fn(), alertController: { create: vi.fn() } };
+  return { ...actual, alertController: { create: vi.fn() } };
 });
 
 let router: Router;
@@ -135,7 +137,7 @@ describe('DeviceInfoPage.vue', () => {
   describe('toggle privacy screen button', () => {
     describe('on web', () => {
       beforeEach(() => {
-        (isPlatform as Mock).mockReturnValue(false);
+        (Capacitor.isNativePlatform as Mock).mockReturnValue(false);
       });
 
       it('is disabled', async () => {
@@ -147,7 +149,7 @@ describe('DeviceInfoPage.vue', () => {
 
     describe('on mobile', () => {
       beforeEach(() => {
-        (isPlatform as Mock).mockReturnValue(true);
+        (Capacitor.isNativePlatform as Mock).mockReturnValue(true);
       });
 
       it('is enabled', async () => {
@@ -177,7 +179,7 @@ describe('DeviceInfoPage.vue', () => {
   describe('show biometrics prompt', () => {
     describe('on web', () => {
       beforeEach(() => {
-        (isPlatform as Mock).mockReturnValue(false);
+        (Capacitor.isNativePlatform as Mock).mockReturnValue(false);
       });
 
       it('is disabled', async () => {
@@ -190,7 +192,7 @@ describe('DeviceInfoPage.vue', () => {
     describe('on mobile', () => {
       const alert = { present: vi.fn().mockResolvedValue(undefined) };
       beforeEach(() => {
-        (isPlatform as Mock).mockReturnValue(true);
+        (Capacitor.isNativePlatform as Mock).mockReturnValue(true);
         (Device.isBiometricsAllowed as Mock).mockResolvedValue(BiometricPermissionState.Granted);
         (Device.isBiometricsEnabled as Mock).mockResolvedValue(true);
         (alertController.create as Mock).mockResolvedValueOnce(alert);

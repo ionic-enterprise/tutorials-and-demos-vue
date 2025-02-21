@@ -1,6 +1,7 @@
 import AppPinDialog from '@/components/AppPinDialog.vue';
 import { useVaultFactory } from '@/composables/vault-factory';
 import router from '@/router';
+import { Capacitor } from '@capacitor/core';
 import { Preferences } from '@capacitor/preferences';
 import {
   BiometricPermissionState,
@@ -9,7 +10,7 @@ import {
   IdentityVaultConfig,
   VaultType,
 } from '@ionic-enterprise/identity-vault';
-import { isPlatform, modalController } from '@ionic/vue';
+import { modalController } from '@ionic/vue';
 
 export type UnlockMode = 'Device' | 'SystemPIN' | 'SessionPIN' | 'NeverLock' | 'ForceLogin';
 
@@ -105,7 +106,7 @@ const setUnlockMode = async (unlockMode: UnlockMode): Promise<void> => {
 };
 
 const initializeUnlockMode = async (): Promise<void> => {
-  if (isPlatform('hybrid')) {
+  if (Capacitor.isNativePlatform()) {
     if (await Device.isSystemPasscodeSet()) {
       if (await Device.isBiometricsEnabled()) {
         await setUnlockMode('Device');

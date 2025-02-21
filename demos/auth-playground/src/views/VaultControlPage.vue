@@ -20,44 +20,65 @@
 
         <ion-item>
           <ion-label>
-            <ion-button expand="block" :disabled="disableDeviceUnlock" @click="setMode('Device')"
-              data-testid="use-device-button">Use Biometrics (System PIN Backup)</ion-button>
+            <ion-button
+              expand="block"
+              :disabled="disableDeviceUnlock"
+              @click="setMode('Device')"
+              data-testid="use-device-button"
+              >Use Biometrics (System PIN Backup)</ion-button
+            >
           </ion-label>
         </ion-item>
 
         <ion-item>
           <ion-label>
-            <ion-button expand="block" :disabled="disableSystemPasscode" @click="setMode('SystemPIN')"
-              data-testid="use-system-passcode-button">Use System PIN (No Biometrics)</ion-button>
+            <ion-button
+              expand="block"
+              :disabled="disableSystemPasscode"
+              @click="setMode('SystemPIN')"
+              data-testid="use-system-passcode-button"
+              >Use System PIN (No Biometrics)</ion-button
+            >
           </ion-label>
         </ion-item>
 
         <ion-item>
           <ion-label>
-            <ion-button expand="block" :disabled="disableCustomPasscode" @click="setMode('SessionPIN')"
-              data-testid="use-custom-passcode-button">Use Custom Passcode (Session PIN)</ion-button>
+            <ion-button
+              expand="block"
+              :disabled="disableCustomPasscode"
+              @click="setMode('SessionPIN')"
+              data-testid="use-custom-passcode-button"
+              >Use Custom Passcode (Session PIN)</ion-button
+            >
           </ion-label>
         </ion-item>
 
         <ion-item>
           <ion-label>
-            <ion-button expand="block" @click="setMode('NeverLock')" data-testid="never-lock-button">Never Lock (Secure
-              Storage)
+            <ion-button expand="block" @click="setMode('NeverLock')" data-testid="never-lock-button"
+              >Never Lock (Secure Storage)
             </ion-button>
           </ion-label>
         </ion-item>
 
         <ion-item>
           <ion-label>
-            <ion-button expand="block" :disabled="disableInMemory" @click="setMode('ForceLogin')"
-              data-testid="clear-on-lock-button">Clear on Lock (In Memory)</ion-button>
+            <ion-button
+              expand="block"
+              :disabled="disableInMemory"
+              @click="setMode('ForceLogin')"
+              data-testid="clear-on-lock-button"
+              >Clear on Lock (In Memory)</ion-button
+            >
           </ion-label>
         </ion-item>
 
         <ion-item>
           <ion-label>
-            <ion-button expand="block" :disabled="disableLock" @click="lock" data-testid="lock-vault-button">Lock the
-              Vault</ion-button>
+            <ion-button expand="block" :disabled="disableLock" @click="lock" data-testid="lock-vault-button"
+              >Lock the Vault</ion-button
+            >
           </ion-label>
         </ion-item>
 
@@ -147,8 +168,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { UnlockMode, useSessionVault } from '@/composables/session-vault';
+import { Capacitor } from '@capacitor/core';
+import { Device, VaultType } from '@ionic-enterprise/identity-vault';
 import {
   IonButton,
   IonContent,
@@ -163,11 +185,10 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
-  isPlatform,
 } from '@ionic/vue';
 import { ellipsisVerticalOutline, hardwareChipOutline, listOutline } from 'ionicons/icons';
-import { useSessionVault, UnlockMode } from '@/composables/session-vault';
-import { Device, VaultType } from '@ionic-enterprise/identity-vault';
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 const router = useRouter();
 const { getConfig, lock, setUnlockMode, clear } = useSessionVault();
@@ -190,7 +211,7 @@ const openValuesPage = async (): Promise<void> => {
   router.push('/tabs/vault-control/values');
 };
 
-if (isPlatform('hybrid')) {
+if (Capacitor.isNativePlatform()) {
   disableCustomPasscode.value = false;
   disableInMemory.value = false;
   disableLock.value = getConfig().type === VaultType.SecureStorage;
