@@ -16,7 +16,6 @@ This app is part of a mono-repo containing other demos but can also be [built on
 
 Our key-value pair implementation exposes the following API:
 
-- **`initialize`**: Initialize the key-value collection.
 - **`clear`**: Remove all items from the collection.
 - **`getAll`**: Get all key-value pairs from the collection.
 - **`getKeys`**: Get a list of all of the keys used in a collection.
