@@ -7,9 +7,9 @@ vi.mock('@/composables/session-vault');
 vi.mock('@/composables/vault-factory');
 vi.mock('@capacitor/preferences');
 vi.mock('@ionic-enterprise/auth');
-vi.mock('@ionic/vue', async () => {
-  const actual = (await vi.importActual('@ionic/vue')) as any;
-  return { ...actual, isPlatform: vi.fn().mockReturnValue(true) };
+vi.mock('@capacitor/core', async () => {
+  const actual = (await vi.importActual('@capacitor/core')) as any;
+  return { ...actual, Capacitor: { isNativePlatform: vi.fn().mockReturnValue(true) } };
 });
 
 describe('useAuth', () => {

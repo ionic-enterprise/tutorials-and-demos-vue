@@ -73,6 +73,11 @@
 </template>
 
 <script setup lang="ts">
+import { useTastingNotes } from '@/composables/tasting-notes';
+import { useTea } from '@/composables/tea';
+import { TastingNote } from '@/models';
+import { Capacitor } from '@capacitor/core';
+import { Share } from '@capacitor/share';
 import {
   IonButton,
   IonButtons,
@@ -89,21 +94,16 @@ import {
   IonTextarea,
   IonTitle,
   IonToolbar,
-  isPlatform,
   modalController,
 } from '@ionic/vue';
 import { shareOutline } from 'ionicons/icons';
+import { useField, useForm } from 'vee-validate';
 import { computed } from 'vue';
-import { useForm, useField } from 'vee-validate';
 import { number as yupNumber, object as yupObject, string as yupString } from 'yup';
-import { useTea } from '@/composables/tea';
 import AppRating from './AppRating.vue';
-import { useTastingNotes } from '@/composables/tasting-notes';
-import { TastingNote } from '@/models';
-import { Share } from '@capacitor/share';
 
 const allowShare = computed(() => !!(brand.value && name.value && rating.value));
-const sharingIsAvailable = isPlatform('hybrid');
+const sharingIsAvailable = Capacitor.isNativePlatform();
 const share = async (): Promise<void> => {
   await Share.share({
     title: `${brand.value}: ${name.value}`,

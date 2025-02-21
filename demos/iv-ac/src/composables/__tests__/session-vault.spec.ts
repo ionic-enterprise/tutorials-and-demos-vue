@@ -1,5 +1,6 @@
 import { UnlockMode, useSessionVault } from '@/composables/session-vault';
 import { useVaultFactory } from '@/composables/vault-factory';
+import { Capacitor } from '@capacitor/core';
 import { Preferences } from '@capacitor/preferences';
 import { PrivacyScreen } from '@capacitor/privacy-screen';
 import { AuthResult } from '@ionic-enterprise/auth';
@@ -10,9 +11,9 @@ import {
   DeviceSecurityType,
   VaultType,
 } from '@ionic-enterprise/identity-vault';
-import { isPlatform } from '@ionic/vue';
 import { Mock, beforeEach, describe, expect, it, vi } from 'vitest';
 
+vi.mock('@capacitor/core');
 vi.mock('@capacitor/preferences');
 vi.mock('@capacitor/privacy-screen');
 vi.mock('@/composables/vault-factory');
@@ -21,13 +22,6 @@ vi.mock('@/router', () => ({
     replace: vi.fn(),
   },
 }));
-vi.mock('@ionic/vue', async () => {
-  const actual = (await vi.importActual('@ionic/vue')) as any;
-  return {
-    ...actual,
-    isPlatform: vi.fn().mockReturnValue(false),
-  };
-});
 
 describe('useSessionVault', () => {
   let mockVault: any;
@@ -75,7 +69,7 @@ describe('useSessionVault', () => {
     describe('canUseBiometrics', () => {
       describe('on the web', () => {
         beforeEach(() => {
-          (isPlatform as Mock).mockReturnValue(false);
+          (Capacitor.isNativePlatform as Mock).mockReturnValue(false);
         });
 
         it('resolves false if biometrics is not set up', async () => {
@@ -93,7 +87,7 @@ describe('useSessionVault', () => {
 
       describe('on mobile', () => {
         beforeEach(() => {
-          (isPlatform as Mock).mockReturnValue(true);
+          (Capacitor.isNativePlatform as Mock).mockReturnValue(true);
         });
 
         it('resolves false if biometrics is not set up', async () => {
@@ -113,7 +107,7 @@ describe('useSessionVault', () => {
     describe('canUseSystemPasscode', () => {
       describe('on the web', () => {
         beforeEach(() => {
-          (isPlatform as Mock).mockReturnValue(false);
+          (Capacitor.isNativePlatform as Mock).mockReturnValue(false);
         });
 
         it('resolves false if the system passcode is not set', async () => {
@@ -131,7 +125,7 @@ describe('useSessionVault', () => {
 
       describe('on mobile', () => {
         beforeEach(() => {
-          (isPlatform as Mock).mockReturnValue(true);
+          (Capacitor.isNativePlatform as Mock).mockReturnValue(true);
         });
 
         it('resolves false if the system passcode is not set', async () => {
@@ -151,13 +145,13 @@ describe('useSessionVault', () => {
     describe('canUseCustomPasscode', () => {
       it('returns false if on the web ', () => {
         const { canUseCustomPasscode } = useSessionVault();
-        (isPlatform as Mock).mockReturnValue(false);
+        (Capacitor.isNativePlatform as Mock).mockReturnValue(false);
         expect(canUseCustomPasscode()).toBe(false);
       });
 
       it('returns true if on hybrid', () => {
         const { canUseCustomPasscode } = useSessionVault();
-        (isPlatform as Mock).mockReturnValue(true);
+        (Capacitor.isNativePlatform as Mock).mockReturnValue(true);
         expect(canUseCustomPasscode()).toBe(true);
       });
     });
@@ -165,13 +159,13 @@ describe('useSessionVault', () => {
     describe('canHideContentsInBackground', () => {
       it('returns false if on the web ', () => {
         const { canHideContentsInBackground } = useSessionVault();
-        (isPlatform as Mock).mockReturnValue(false);
+        (Capacitor.isNativePlatform as Mock).mockReturnValue(false);
         expect(canHideContentsInBackground()).toBe(false);
       });
 
       it('returns true if on hybrid', () => {
         const { canHideContentsInBackground } = useSessionVault();
-        (isPlatform as Mock).mockReturnValue(true);
+        (Capacitor.isNativePlatform as Mock).mockReturnValue(true);
         expect(canHideContentsInBackground()).toBe(true);
       });
     });
