@@ -1,5 +1,5 @@
 import { useEncryption } from '@/composables/encryption';
-import { isPlatform } from '@ionic/vue';
+import { Capacitor } from '@capacitor/core';
 import { useKeyValueStorage } from './key-value-storage';
 
 const storage = useKeyValueStorage();
@@ -7,7 +7,7 @@ let isReady: Promise<void>;
 
 const createDatabase = async (): Promise<void> => {
   const { getDatabaseKey } = useEncryption();
-  const key = isPlatform('hybrid') ? await getDatabaseKey() : '';
+  const key = Capacitor.isNativePlatform() ? await getDatabaseKey() : '';
   await storage.create(key || '');
 };
 

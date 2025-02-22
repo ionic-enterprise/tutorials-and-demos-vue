@@ -1,9 +1,9 @@
 import { UnlockMode, useSessionVault } from '@/composables/session-vault';
 import { useVaultFactory } from '@/composables/vault-factory';
 import router from '@/router';
+import { Capacitor } from '@capacitor/core';
 import { AuthResult } from '@ionic-enterprise/auth';
 import { BiometricPermissionState, Device, DeviceSecurityType, VaultType } from '@ionic-enterprise/identity-vault';
-import { isPlatform } from '@ionic/vue';
 import { Mock, beforeEach, describe, expect, it, vi } from 'vitest';
 
 vi.mock('@/router', () => ({
@@ -11,10 +11,7 @@ vi.mock('@/router', () => ({
     replace: vi.fn(),
   },
 }));
-vi.mock('@ionic/vue', async () => {
-  const actual = (await vi.importActual('@ionic/vue')) as any;
-  return { ...actual, isPlatform: vi.fn().mockReturnValue(true) };
-});
+vi.mock('@capacitor/core');
 vi.mock('@/composables/vault-factory');
 vi.mock('@/router');
 
@@ -37,7 +34,7 @@ describe('useSessionVault', () => {
     // customPasscodeInvalidUnlockAttempts: 2,
     // unlockVaultOnLoad: false,
     vi.clearAllMocks();
-    (isPlatform as Mock).mockImplementation((key: string) => key === 'hybrid');
+    (Capacitor.isNativePlatform as Mock).mockReturnValue(true);
   });
 
   describe('after initialize', () => {
@@ -180,13 +177,13 @@ describe('useSessionVault', () => {
 
     describe('canUseLocking', () => {
       it('is false for web', () => {
-        (isPlatform as Mock).mockImplementation((key: string) => key === 'web');
+        (Capacitor.isNativePlatform as Mock).mockReturnValue(false);
         const { canUseLocking } = useSessionVault();
         expect(canUseLocking()).toBe(false);
       });
 
-      it('is true for hybrid', () => {
-        (isPlatform as Mock).mockImplementation((key: string) => key === 'hybrid');
+      it('is true for native', () => {
+        (Capacitor.isNativePlatform as Mock).mockReturnValue(true);
         const { canUseLocking } = useSessionVault();
         expect(canUseLocking()).toBe(true);
       });
@@ -194,14 +191,14 @@ describe('useSessionVault', () => {
 
     describe('canUnlock', () => {
       it.each([
-        [true, false, true, 'hybrid'],
-        [false, true, true, 'hybrid'],
-        [false, false, false, 'hybrid'],
-        [false, false, true, 'web'],
+        [true, false, true, true],
+        [false, true, true, true],
+        [false, false, false, true],
+        [false, false, true, false],
       ])(
-        'is %s for exists: %s locked %s on %s',
-        async (expected: boolean, empty: boolean, locked: boolean, platform: string) => {
-          (isPlatform as Mock).mockImplementation((key: string) => key === platform);
+        'is %s for exists: %s, locked: %s, native: %s',
+        async (expected: boolean, empty: boolean, locked: boolean, isNative: boolean) => {
+          (Capacitor.isNativePlatform as Mock).mockReturnValue(isNative);
           const { canUnlock } = useSessionVault();
           mockVault.isLocked.mockResolvedValue(locked);
           mockVault.isEmpty.mockResolvedValue(empty);

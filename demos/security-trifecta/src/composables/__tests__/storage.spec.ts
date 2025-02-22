@@ -1,14 +1,11 @@
 import { useEncryption } from '@/composables/encryption';
 import { useKeyValueStorage } from '@/composables/key-value-storage';
 import { useStorage } from '@/composables/storage';
+import { Capacitor } from '@capacitor/core';
 import { KeyValueStorage } from '@ionic-enterprise/secure-storage';
-import { isPlatform } from '@ionic/vue';
 import { Mock, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 
-vi.mock('@ionic/vue', async () => {
-  const actual = (await vi.importActual('@ionic/vue')) as any;
-  return { ...actual, isPlatform: vi.fn().mockReturnValue(true) };
-});
+vi.mock('@capacitor/core');
 vi.mock('@/composables/encryption');
 vi.mock('@/composables/key-value-storage');
 vi.mock('@/composables/vault-factory');
@@ -22,14 +19,14 @@ describe('useStorage', () => {
 
   beforeEach(() => {
     vi.clearAllMocks();
-    (isPlatform as Mock).mockImplementation((key: string) => key === 'web');
+    (Capacitor.isNativePlatform as Mock).mockReturnValue(false);
   });
 
   it('creates the storage on the first call', async () => {
     const { setValue } = useStorage();
     const { getDatabaseKey } = useEncryption();
     (getDatabaseKey as Mock).mockResolvedValue('foo-bar-key');
-    (isPlatform as Mock).mockImplementation((key: string) => key === 'hybrid');
+    (Capacitor.isNativePlatform as Mock).mockReturnValue(true);
     expect(store.create).not.toHaveBeenCalled();
     await setValue('some-key', false);
     expect(store.create).toHaveBeenCalledTimes(1);

@@ -3,13 +3,10 @@ import { useTastingNotes } from '@/composables/tasting-notes';
 import { useTastingNotesAPI } from '@/composables/tasting-notes-api';
 import { useTastingNotesDatabase } from '@/composables/tasting-notes-database';
 import { TastingNote } from '@/models';
-import { isPlatform } from '@ionic/vue';
+import { Capacitor } from '@capacitor/core';
 import { Mock, beforeEach, describe, expect, it, vi } from 'vitest';
 
-vi.mock('@ionic/vue', async () => {
-  const actual = (await vi.importActual('@ionic/vue')) as any;
-  return { ...actual, isPlatform: vi.fn() };
-});
+vi.mock('@capacitor/core');
 vi.mock('@/composables/session-vault');
 vi.mock('@/composables/tasting-notes-api');
 vi.mock('@/composables/tasting-notes-database');
@@ -54,7 +51,7 @@ describe('useTastingNotes', () => {
     vi.clearAllMocks();
     (getAllFromAPI as Mock).mockResolvedValue(tastingNotes);
     (getAllFromDatabase as Mock).mockResolvedValue(tastingNotes);
-    (isPlatform as Mock).mockImplementation((key: string) => key === 'web');
+    (Capacitor.isNativePlatform as Mock).mockReturnValue(false);
     (getSession as Mock).mockResolvedValue({
       user: {
         id: 314159,
@@ -69,7 +66,7 @@ describe('useTastingNotes', () => {
   describe('load', () => {
     describe('on mobile', () => {
       beforeEach(() => {
-        (isPlatform as Mock).mockImplementation((key: string) => key === 'hybrid');
+        (Capacitor.isNativePlatform as Mock).mockReturnValue(true);
       });
 
       it('gets the tasting notes from the backend API', async () => {
@@ -112,7 +109,7 @@ describe('useTastingNotes', () => {
   describe('refresh', () => {
     describe('on mobile', () => {
       beforeEach(() => {
-        (isPlatform as Mock).mockImplementation((key: string) => key === 'hybrid');
+        (Capacitor.isNativePlatform as Mock).mockReturnValue(true);
       });
 
       it('gets the tasting notes from the database', async () => {
@@ -204,7 +201,7 @@ describe('useTastingNotes', () => {
 
         beforeEach(() => {
           (saveToDatabase as Mock).mockResolvedValue({ id: 73, ...note });
-          (isPlatform as Mock).mockImplementation((key: string) => key === 'hybrid');
+          (Capacitor.isNativePlatform as Mock).mockReturnValue(true);
         });
 
         it('saves the note to the database', async () => {
@@ -263,7 +260,7 @@ describe('useTastingNotes', () => {
 
         beforeEach(() => {
           (saveToDatabase as Mock).mockResolvedValue(note);
-          (isPlatform as Mock).mockImplementation((key: string) => key === 'hybrid');
+          (Capacitor.isNativePlatform as Mock).mockReturnValue(true);
         });
 
         it('save the note in the database', async () => {
@@ -314,7 +311,7 @@ describe('useTastingNotes', () => {
 
     describe('on mobile', () => {
       beforeEach(() => {
-        (isPlatform as Mock).mockImplementation((key: string) => key === 'hybrid');
+        (Capacitor.isNativePlatform as Mock).mockReturnValue(true);
       });
 
       it('marks the note for deletion', async () => {
