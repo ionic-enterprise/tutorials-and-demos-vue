@@ -165,6 +165,7 @@ describe('DeviceInfoPage.vue', () => {
         (PrivacyScreen.isEnabled as Mock).mockResolvedValue({ enabled: true });
         await button.trigger('click');
         expect(PrivacyScreen.enable).toHaveBeenCalledTimes(1);
+        expect(PrivacyScreen.enable).toHaveBeenCalledWith({ android: { privacyModeOnActivityHidden: 'dim' } });
         expect(PrivacyScreen.disable).not.toHaveBeenCalled();
         expect(PrivacyScreen.isEnabled).toHaveBeenCalledTimes(1);
         await flushPromises();

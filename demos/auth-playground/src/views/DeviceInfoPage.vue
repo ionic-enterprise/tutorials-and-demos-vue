@@ -155,7 +155,7 @@ const togglePrivacy = async () => {
   if (privacyScreen.value) {
     await PrivacyScreen.disable();
   } else {
-    await PrivacyScreen.enable();
+    await PrivacyScreen.enable({ android: { privacyModeOnActivityHidden: 'dim' } });
   }
   PrivacyScreen.isEnabled().then((x) => (privacyScreen.value = x.enabled));
 };

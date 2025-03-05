@@ -79,7 +79,7 @@ const canUseSystemPasscode = async (): Promise<boolean> =>
 
 const hideContentsInBackground = async (value: boolean): Promise<void> => {
   if (value) {
-    await PrivacyScreen.enable({ android: { dimBackground: true } });
+    await PrivacyScreen.enable({ android: { dimBackground: true, privacyModeOnActivityHidden: 'splash' } });
   } else {
     await PrivacyScreen.disable();
   }

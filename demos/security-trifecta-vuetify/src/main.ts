@@ -8,7 +8,7 @@ import { useEncryption } from './composables/encryption';
 import './styles/Button.css';
 import './styles/responsive.css';
 
-PrivacyScreen.enable();
+PrivacyScreen.enable({ android: { privacyModeOnActivityHidden: 'splash' } });
 
 const { initializeAuth } = useAuth();
 const { initializeEncryption } = useEncryption();

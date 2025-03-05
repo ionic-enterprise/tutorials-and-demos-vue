@@ -24,7 +24,7 @@
     "@capacitor/keyboard": "^7.0.0",
     "@capacitor/preferences": "^7.0.0",
     "@capacitor/status-bar": "^7.0.0",
-    "@ionic-enterprise/auth": "^7.0.1",
+    "@ionic-enterprise/auth": "^7.1.0",
     "@ionic/vue": "^8.4.3",
     "@ionic/vue-router": "^8.4.3",
     "ionicons": "^7.4.0",
@@ -33,19 +33,19 @@
   },
   "devDependencies": {
     "@capacitor/cli": "^7.0.1",
-    "@vitejs/plugin-legacy": "^6.0.1",
+    "@vitejs/plugin-legacy": "^6.0.2",
     "@vitejs/plugin-vue": "^5.2.1",
-    "@vitest/coverage-v8": "^3.0.6",
+    "@vitest/coverage-v8": "^3.0.7",
     "@vue/eslint-config-typescript": "^14.4.0",
     "@vue/test-utils": "^2.4.6",
     "eslint": "^9.21.0",
-    "eslint-plugin-vue": "^9.32.0",
+    "eslint-plugin-vue": "^9.33.0",
     "globals": "^16.0.0",
     "jsdom": "^26.0.0",
-    "typescript": "~5.7.3",
-    "vite": "^6.1.1",
-    "vitest": "^3.0.6",
-    "vue-tsc": "^2.2.4"
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0",
+    "vitest": "^3.0.7",
+    "vue-tsc": "^2.2.8"
   },
   "description": "An Ionic project"
 }

@@ -31,7 +31,7 @@ import './theme/variables.css';
 const { initializeAuthService } = useAuth();
 const { initializeVault } = useSessionVault();
 
-PrivacyScreen.enable();
+PrivacyScreen.enable({ android: { privacyModeOnActivityHidden: 'dim' } });
 
 Promise.all([initializeAuthService(), initializeVault()]).then(async () => {
   const app = createApp(App).use(IonicVue).use(router);

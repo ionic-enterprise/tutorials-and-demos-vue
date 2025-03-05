@@ -28,7 +28,7 @@ import '@ionic/vue/css/palettes/dark.class.css';
 import './theme/style.css';
 import './theme/variables.css';
 
-PrivacyScreen.enable();
+PrivacyScreen.enable({ android: { privacyModeOnActivityHidden: 'splash' } });
 
 const { initializeAuth } = useAuth();
 const { initializeEncryption } = useEncryption();
