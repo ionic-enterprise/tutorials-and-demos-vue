@@ -4,6 +4,9 @@ const config: CapacitorConfig = {
   appId: 'io.ionic.teatastervue',
   appName: 'Tea Taster',
   webDir: 'dist',
+  android: {
+    adjustMarginsForEdgeToEdge: 'auto',
+  },
   plugins: {
     SplashScreen: {
       launchAutoHide: false,

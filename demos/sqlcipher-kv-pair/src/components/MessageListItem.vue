@@ -1,5 +1,9 @@
 <template>
-  <ion-item v-if="message" :routerLink="'/message/' + key?.toString()" :detail="false" class="list-item">
+  <!--
+     The cast to any on the routerLink is to get past a bug:
+       https://github.com/ionic-team/ionic-framework/issues/30254
+  -->
+  <ion-item v-if="message" :routerLink="('/message/' + key?.toString()) as any" :detail="false" class="list-item">
     <div slot="start" :class="message.isUnread ? 'dot dot-unread' : 'dot'"></div>
     <ion-label class="ion-text-wrap">
       <h2>
