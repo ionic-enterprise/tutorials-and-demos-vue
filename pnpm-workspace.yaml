@@ -1,4 +1,8 @@
 packages:
-  - 'auth-connect/*'
-  - 'identity-vault/*'
-  - 'demos/*'
+  - auth-connect/*
+  - identity-vault/*
+  - demos/*
+onlyBuiltDependencies:
+  - core-js
+  - esbuild
+  - sharp
