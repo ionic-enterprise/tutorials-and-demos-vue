@@ -16,7 +16,7 @@ dependencies {
     implementation project(':capacitor-status-bar')
 
 }
-apply from: "../../../../node_modules/.pnpm/@ionic-enterprise+identity-vault@6.0.1_typescript@5.8.2/node_modules/@ionic-enterprise/identity-vault/src/android/ionicnativeauth.gradle"
+apply from: "../../../../node_modules/.pnpm/@ionic-enterprise+identity-vault@6.0.2_typescript@5.8.3/node_modules/@ionic-enterprise/identity-vault/src/android/ionicnativeauth.gradle"
 
 if (hasProperty('postBuildExtras')) {
   postBuildExtras()
