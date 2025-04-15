@@ -23,7 +23,7 @@
     "@capacitor/splash-screen": "^7.0.1",
     "@ionic-enterprise/auth": "^7.1.1",
     "@ionic-enterprise/identity-vault": "^6.0.2",
-    "@ionic-enterprise/secure-storage": "^3.0.5",
+    "@ionic-enterprise/secure-storage": "^3.0.6",
     "@mdi/font": "^7.4.47",
     "@vue/test-utils": "^2.4.6",
     "axios": "^1.8.4",

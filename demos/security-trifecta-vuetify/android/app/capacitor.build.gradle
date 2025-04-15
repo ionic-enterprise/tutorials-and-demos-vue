@@ -12,8 +12,8 @@ dependencies {
     implementation project(':capacitor-privacy-screen')
     implementation project(':capacitor-splash-screen')
     implementation project(':ionic-enterprise-auth')
-    implementation "net.zetetic:android-database-sqlcipher:4.5.2"
-    implementation "androidx.sqlite:sqlite:2.0.1"
+    implementation "net.zetetic:sqlcipher-android:4.6.1"
+    implementation "androidx.sqlite:sqlite:2.2.0"
 }
 apply from: "../../../../node_modules/.pnpm/@ionic-enterprise+identity-vault@6.0.2_typescript@5.8.3/node_modules/@ionic-enterprise/identity-vault/src/android/ionicnativeauth.gradle"
 

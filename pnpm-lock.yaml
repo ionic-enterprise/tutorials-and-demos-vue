@@ -627,8 +627,8 @@ importers:
         specifier: ^6.0.2
         version: 6.0.2(typescript@5.8.3)
       '@ionic-enterprise/secure-storage':
-        specifier: ^3.0.5
-        version: 3.0.5(@awesome-cordova-plugins/core@6.16.0(rxjs@7.8.1))(rxjs@7.8.1)
+        specifier: ^3.0.6
+        version: 3.0.6(@awesome-cordova-plugins/core@6.16.0(rxjs@7.8.1))(rxjs@7.8.1)
       '@ionic/vue':
         specifier: ^8.5.4
         version: 8.5.4(@stencil/core@4.29.3)(vue-router@4.5.0(vue@3.5.13(typescript@5.8.3)))(vue@3.5.13(typescript@5.8.3))
@@ -727,8 +727,8 @@ importers:
         specifier: ^6.0.2
         version: 6.0.2(typescript@5.8.3)
       '@ionic-enterprise/secure-storage':
-        specifier: ^3.0.5
-        version: 3.0.5(@awesome-cordova-plugins/core@6.16.0(rxjs@7.8.1))(rxjs@7.8.1)
+        specifier: ^3.0.6
+        version: 3.0.6(@awesome-cordova-plugins/core@6.16.0(rxjs@7.8.1))(rxjs@7.8.1)
       '@mdi/font':
         specifier: ^7.4.47
         version: 7.4.47
@@ -2201,8 +2201,8 @@ packages:
     peerDependencies:
       typescript: '>=3.5'
 
-  '@ionic-enterprise/secure-storage@3.0.5':
-    resolution: {integrity: sha512-tSu38SYLsIayySh5vXCfjqVZ/zrZc9zoSCcPm8sPybfp9I0Shb96wpAlr/6VbaZfPyypjaVVeZX2JDTBTG/s5A==}
+  '@ionic-enterprise/secure-storage@3.0.6':
+    resolution: {integrity: sha512-cjG/bd/ULiIuvOp9ihQODfo7x6XsBVFiNow1FVDHOiUoqRzU/3Db6i042UNg9+sVUF8Pp7C9xdzl48IVS8fXiA==}
     peerDependencies:
       '@awesome-cordova-plugins/core': ^6.0.0
       rxjs: ^5.5.0 || ^6.5.0 || ^7.3.0
@@ -4951,8 +4951,8 @@ packages:
     resolution: {integrity: sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==}
     engines: {node: '>=12.20'}
 
-  type-fest@4.39.1:
-    resolution: {integrity: sha512-uW9qzd66uyHYxwyVBYiwS4Oi0qZyUqwjU+Oevr6ZogYiXt99EOYtwvzMSLw1c3lYo2HzJsep/NB23iEVEgjG/w==}
+  type-fest@4.40.0:
+    resolution: {integrity: sha512-ABHZ2/tS2JkvH1PEjxFDTUWC8dB5OsIGZP4IFLhR293GqT5Y5qB1WwL2kMPYhQW9DVgVD8Hd7I8gjwPIf5GFkw==}
     engines: {node: '>=16'}
 
   typescript-eslint@8.30.1:
@@ -6303,7 +6303,7 @@ snapshots:
       tslib: 2.8.1
       typescript: 5.8.3
 
-  '@ionic-enterprise/secure-storage@3.0.5(@awesome-cordova-plugins/core@6.16.0(rxjs@7.8.1))(rxjs@7.8.1)':
+  '@ionic-enterprise/secure-storage@3.0.6(@awesome-cordova-plugins/core@6.16.0(rxjs@7.8.1))(rxjs@7.8.1)':
     dependencies:
       '@awesome-cordova-plugins/core': 6.16.0(rxjs@7.8.1)
       '@awesome-cordova-plugins/sqlite': 6.16.0(@awesome-cordova-plugins/core@6.16.0(rxjs@7.8.1))(rxjs@7.8.1)
@@ -9232,7 +9232,7 @@ snapshots:
 
   type-fest@2.19.0: {}
 
-  type-fest@4.39.1: {}
+  type-fest@4.40.0: {}
 
   typescript-eslint@8.30.1(eslint@9.24.0)(typescript@5.8.3):
     dependencies:
@@ -9301,7 +9301,7 @@ snapshots:
   vee-validate@4.15.0(vue@3.5.13(typescript@5.8.3)):
     dependencies:
       '@vue/devtools-api': 7.7.2
-      type-fest: 4.39.1
+      type-fest: 4.40.0
       vue: 3.5.13(typescript@5.8.3)
 
   vite-node@3.1.1(@types/node@22.14.1)(terser@5.39.0)(yaml@2.7.1):
