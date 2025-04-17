@@ -2,7 +2,7 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>About Tea Taster</ion-title>
+        <ion-title>About Tea Taster - The Demo</ion-title>
         <ion-buttons slot="end">
           <ion-button data-testid="logout-button" @click="logoutClicked">
             <ion-icon slot="icon-only" :icon="logOutOutline"></ion-icon>

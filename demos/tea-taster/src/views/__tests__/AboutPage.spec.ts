@@ -29,7 +29,7 @@ describe('TastingNotesPage.vue', () => {
     const wrapper = await mountView();
     const titles = wrapper.findAllComponents(IonTitle);
     expect(titles).toHaveLength(1);
-    expect(titles[0].text()).toBe('About Tea Taster');
+    expect(titles[0].text()).toBe('About Tea Taster - The Demo');
   });
 
   describe('logout button', () => {
