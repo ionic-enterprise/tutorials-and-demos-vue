@@ -31,7 +31,7 @@
     "vee-validate": "^4.15.0",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0",
-    "vuetify": "^3.8.1",
+    "vuetify": "^3.8.2",
     "webfontloader": "^1.6.28",
     "yup": "^1.6.1"
   },
@@ -49,7 +49,7 @@
     "globals": "^16.0.0",
     "jsdom": "^26.1.0",
     "typescript": "~5.8.3",
-    "vite": "^6.2.6",
+    "vite": "^6.3.1",
     "vite-plugin-vuetify": "^2.1.1",
     "vitest": "^3.1.1",
     "vue-tsc": "^2.2.8",
