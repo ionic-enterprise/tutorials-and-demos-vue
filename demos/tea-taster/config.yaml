@@ -1,0 +1,11 @@
+platforms:
+  android:
+    xml:
+      - resFile: values/ic_launcher_background.xml
+        target: /resources
+        inject: |
+          <color name="ic_launcher_background">#0000FF</color>
+      - resFile: values/styles.xml
+        target: /resources/style[@name="AppTheme.NoActionBarLaunch"]
+        inject: |
+          <item name="windowSplashScreenBackground">@color/ic_launcher_background</item>
