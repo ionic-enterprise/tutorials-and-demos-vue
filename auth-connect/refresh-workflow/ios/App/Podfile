@@ -1,4 +1,4 @@
-require_relative '../../../../node_modules/.pnpm/@capacitor+ios@7.2.0_@capacitor+core@7.2.0/node_modules/@capacitor/ios/scripts/pods_helpers'
+require_relative '../../../../node_modules/.pnpm/@capacitor+ios@7.3.0_@capacitor+core@7.3.0/node_modules/@capacitor/ios/scripts/pods_helpers'
 
 platform :ios, '14.0'
 use_frameworks!
@@ -9,14 +9,14 @@ use_frameworks!
 install! 'cocoapods', :disable_input_output_paths => true
 
 def capacitor_pods
-  pod 'Capacitor', :path => '../../../../node_modules/.pnpm/@capacitor+ios@7.2.0_@capacitor+core@7.2.0/node_modules/@capacitor/ios'
-  pod 'CapacitorCordova', :path => '../../../../node_modules/.pnpm/@capacitor+ios@7.2.0_@capacitor+core@7.2.0/node_modules/@capacitor/ios'
-  pod 'CapacitorApp', :path => '../../../../node_modules/.pnpm/@capacitor+app@7.0.1_@capacitor+core@7.2.0/node_modules/@capacitor/app'
-  pod 'CapacitorHaptics', :path => '../../../../node_modules/.pnpm/@capacitor+haptics@7.0.1_@capacitor+core@7.2.0/node_modules/@capacitor/haptics'
-  pod 'CapacitorKeyboard', :path => '../../../../node_modules/.pnpm/@capacitor+keyboard@7.0.1_@capacitor+core@7.2.0/node_modules/@capacitor/keyboard'
-  pod 'CapacitorPreferences', :path => '../../../../node_modules/.pnpm/@capacitor+preferences@7.0.1_@capacitor+core@7.2.0/node_modules/@capacitor/preferences'
-  pod 'CapacitorStatusBar', :path => '../../../../node_modules/.pnpm/@capacitor+status-bar@7.0.1_@capacitor+core@7.2.0/node_modules/@capacitor/status-bar'
-  pod 'IonicEnterpriseAuth', :path => '../../../../node_modules/.pnpm/@ionic-enterprise+auth@7.1.1_@capacitor+core@7.2.0/node_modules/@ionic-enterprise/auth'
+  pod 'Capacitor', :path => '../../../../node_modules/.pnpm/@capacitor+ios@7.3.0_@capacitor+core@7.3.0/node_modules/@capacitor/ios'
+  pod 'CapacitorCordova', :path => '../../../../node_modules/.pnpm/@capacitor+ios@7.3.0_@capacitor+core@7.3.0/node_modules/@capacitor/ios'
+  pod 'CapacitorApp', :path => '../../../../node_modules/.pnpm/@capacitor+app@7.0.1_@capacitor+core@7.3.0/node_modules/@capacitor/app'
+  pod 'CapacitorHaptics', :path => '../../../../node_modules/.pnpm/@capacitor+haptics@7.0.1_@capacitor+core@7.3.0/node_modules/@capacitor/haptics'
+  pod 'CapacitorKeyboard', :path => '../../../../node_modules/.pnpm/@capacitor+keyboard@7.0.1_@capacitor+core@7.3.0/node_modules/@capacitor/keyboard'
+  pod 'CapacitorPreferences', :path => '../../../../node_modules/.pnpm/@capacitor+preferences@7.0.1_@capacitor+core@7.3.0/node_modules/@capacitor/preferences'
+  pod 'CapacitorStatusBar', :path => '../../../../node_modules/.pnpm/@capacitor+status-bar@7.0.1_@capacitor+core@7.3.0/node_modules/@capacitor/status-bar'
+  pod 'IonicEnterpriseAuth', :path => '../../../../node_modules/.pnpm/@ionic-enterprise+auth@7.1.1_@capacitor+core@7.3.0/node_modules/@ionic-enterprise/auth'
 end
 
 target 'App' do
